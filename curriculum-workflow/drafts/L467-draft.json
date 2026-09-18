@@ -1066,37 +1066,37 @@
         },
         "suffixAudio": {
           "src": "/assets/lessons/L467/audio/L467-G02-suffix.m4a",
-          "durationMs": 3668,
+          "durationMs": 2740,
           "charTimings": [
             {
               "charIndex": 0,
               "startMs": 0,
-              "endMs": 500
+              "endMs": 780
             },
             {
               "charIndex": 1,
-              "startMs": 1300,
-              "endMs": 2060
+              "startMs": 1120,
+              "endMs": 1400
             },
             {
               "charIndex": 2,
-              "startMs": 2060,
-              "endMs": 2380
+              "startMs": 1400,
+              "endMs": 1640
             },
             {
               "charIndex": 3,
-              "startMs": 2380,
-              "endMs": 2800
+              "startMs": 1640,
+              "endMs": 1980
             },
             {
               "charIndex": 4,
-              "startMs": 2800,
-              "endMs": 3140
+              "startMs": 1980,
+              "endMs": 2300
             },
             {
               "charIndex": 5,
-              "startMs": 3140,
-              "endMs": 3440
+              "startMs": 2300,
+              "endMs": 2500
             }
           ]
         }
@@ -1388,37 +1388,37 @@
     },
     "L467-G02-suffix": {
       "src": "/assets/lessons/L467/audio/L467-G02-suffix.m4a",
-      "durationMs": 3668,
+      "durationMs": 2740,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 500
+          "endMs": 780
         },
         {
           "charIndex": 1,
-          "startMs": 1300,
-          "endMs": 2060
+          "startMs": 1120,
+          "endMs": 1400
         },
         {
           "charIndex": 2,
-          "startMs": 2060,
-          "endMs": 2380
+          "startMs": 1400,
+          "endMs": 1640
         },
         {
           "charIndex": 3,
-          "startMs": 2380,
-          "endMs": 2800
+          "startMs": 1640,
+          "endMs": 1980
         },
         {
           "charIndex": 4,
-          "startMs": 2800,
-          "endMs": 3140
+          "startMs": 1980,
+          "endMs": 2300
         },
         {
           "charIndex": 5,
-          "startMs": 3140,
-          "endMs": 3440
+          "startMs": 2300,
+          "endMs": 2500
         }
       ],
       "spokenText": "著快放回水裡"
@@ -1543,8 +1543,27 @@
     "audioPipeline": "Repo OpenAI gpt-4o-mini-tts with the coral voice and repo audio processing. Ten final mono AAC 44100 Hz M4A files are present. G05 wrong choices are separately generated complete sentences with no splicing. G02 prefix and suffix are independently generated fragments; suffix begins with 著 and excludes 活.",
     "timingReview": "Whisper word alignment recorded for all five sentences, both G02 fragments and both G05 wrong choices. Every timed track has one ordered timing per Han character and no terminal tail over 300 ms after final trimming.",
     "pronunciation": "Full-sentence ASR matched all five approved Han sequences after Traditional/Simplified normalization, including S05 小魚還活著快放回水裡. Both G05 wrong options matched exact approved Han sequences. Standalone 活 was independently regenerated and transcribed as 活. The short G02 prefix transcribed as pronunciation-equivalent 小愚孩 for 小魚還 (ㄒㄧㄠˇ ㄩˊ ㄏㄞˊ); suffix was generated with explicit neutral-tone 著 continuation instructions and transcribed its first syllable orthographically as 折 before exact 快放回水裡.",
-    "browserQA": "PASS on immutable asset commit e39bcd718414c510a8f1fb30d5a7ae81696670de: GitHub Pages lesson-asset-review loaded 5 sentence cards, 6 other audio entries, and 0 repair items. All five rendered images reported complete at 1024×1024. All 11 rendered audio controls (including the reused correct G05 sentence audio) were played through ended with readyState 4 and no media errors.",
-    "assetAudit": "PASS: lesson-local package audit (5 WebP, 10 mono AAC M4A, 1,385,508 total bytes), npm run validate:production, and npm run assets:audit -- --strict (517 units, 2,544 image references, 5,029 audio references, 0 warnings)."
+    "browserQA": "Previous browser QA applies to the original asset commit. Replacement S03 and G02 suffix playback QA will be recorded after the repair commit is pushed.",
+    "assetAudit": "PASS: lesson-local package audit (5 WebP, 10 mono AAC M4A, 1,385,508 total bytes), npm run validate:production, and npm run assets:audit -- --strict (517 units, 2,544 image references, 5,029 audio references, 0 warnings).",
+    "audioRepair": {
+      "source": "teacher asset review",
+      "reviewedRef": "c4433c6f55272fb15aa355d2d181f3d548ccd506",
+      "needsRepair": 2,
+      "items": [
+        {
+          "id": "L467-S03:audio",
+          "reportedAs": "L467-S03:image",
+          "issue": "兩個「期」聽成中國大陸口音的一聲，需為臺灣國語 ㄑㄧˊ。",
+          "resolution": "Regenerated the complete sentence with both 期 explicitly produced as rising second tone; candidate selection included exact ASR and acoustic F0 comparison."
+        },
+        {
+          "id": "L467-G02-suffix:audio",
+          "issue": "開頭的輕聲「著」太短，且近似「這」。",
+          "resolution": "Regenerated the independent suffix with a clear approximately 0.74-second neutral-tone 著, followed by a distinct pause before 快放回水裡."
+        }
+      ],
+      "status": "repaired-pending-pushed-ref-browser-qa"
+    }
   },
   "sentences": [
     {
@@ -1724,67 +1743,67 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L467/audio/L467-S03.m4a",
-        "durationMs": 3576,
+        "durationMs": 5294,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 380
+            "endMs": 520
           },
           {
             "charIndex": 1,
-            "startMs": 380,
-            "endMs": 660
+            "startMs": 520,
+            "endMs": 840
           },
           {
             "charIndex": 2,
-            "startMs": 660,
-            "endMs": 1000
+            "startMs": 840,
+            "endMs": 1160
           },
           {
             "charIndex": 3,
-            "startMs": 1000,
-            "endMs": 1280
+            "startMs": 1160,
+            "endMs": 1860
           },
           {
             "charIndex": 4,
-            "startMs": 1280,
-            "endMs": 1620
+            "startMs": 1860,
+            "endMs": 2280
           },
           {
             "charIndex": 5,
-            "startMs": 1620,
-            "endMs": 1840
+            "startMs": 2280,
+            "endMs": 2520
           },
           {
             "charIndex": 6,
-            "startMs": 1840,
-            "endMs": 2100
+            "startMs": 2520,
+            "endMs": 2840
           },
           {
             "charIndex": 7,
-            "startMs": 2100,
-            "endMs": 2360
+            "startMs": 2840,
+            "endMs": 3300
           },
           {
             "charIndex": 8,
-            "startMs": 2460,
-            "endMs": 2660
+            "startMs": 3380,
+            "endMs": 4140
           },
           {
             "charIndex": 9,
-            "startMs": 2660,
-            "endMs": 2980
+            "startMs": 4140,
+            "endMs": 4580
           },
           {
             "charIndex": 10,
-            "startMs": 2980,
-            "endMs": 3160
+            "startMs": 4580,
+            "endMs": 4840
           },
           {
             "charIndex": 11,
-            "startMs": 3160,
-            "endMs": 3340
+            "startMs": 4840,
+            "endMs": 5060
           }
         ]
       },
