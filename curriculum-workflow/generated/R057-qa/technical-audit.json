@@ -86,7 +86,17 @@
     "result": "PASS; style/cast/semantic audit; teacher review pending"
   },
   "browserQa": {
-    "status": "pending fixed-ref pushed preview"
+    "status": "PASS",
+    "assetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R057&ref=e6bd7143a64c0ab680b44b74bca425e7b842b747",
+    "browser": "Chrome",
+    "summary": "PASS: immutable pushed ref loaded 5 sentence cards and 5 other-audio cards with zero repair items; all 10 playback controls entered playing state and returned to ended/ready state.",
+    "scope": [
+      "R057-S01 through R057-S05",
+      "R057-G02 prefix and suffix",
+      "R057-G05 correct and two wrong options"
+    ],
+    "limitation": "Browser QA verifies rendering and complete playback. No human auditory-listening PASS is claimed; teacher image/audio review remains pending."
   },
   "releaseBlockers": [
     "Contiguous numbered lessons L462-L465",

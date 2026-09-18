@@ -2384,6 +2384,8 @@
 - Stage 4 order, Han-only indexes, option mapping and one-use-per-sentence checks: PASS.
 - Image style/cast/semantic comparison: PASS; teacher review pending.
 - Audio final-file exact-Han ASR and charTimings: PASS; no human listening claim; teacher review pending.
-- Browser QA: pending immutable pushed-ref preview.
+- Browser QA: PASS on immutable asset commit `e6bd7143a64c0ab680b44b74bca425e7b842b747`; 5 sentence cards + 5 other-audio cards loaded, zero repair items, and all 10 playback controls started and ended.
 - Release blockers: contiguous lessons L462-L465, then paired order L465 → R057 → R058 → L466.
 - Superseded R058-S02 audit: authoritative 中學生／小學生 mistaken-identity sentence, image, audio, timings and G02 are present; every prior archery sentence, image, audio, timing and G02 item is absent.
+
+- Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R058&ref=e6bd7143a64c0ab680b44b74bca425e7b842b747

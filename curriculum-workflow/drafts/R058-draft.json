@@ -1118,10 +1118,12 @@
     }
   ],
   "productionQa": {
-    "method": "Final WebP style/cast/semantic audit; OpenAI TTS final M4A; exact-Han ASR; final timing alignment; fixed-ref Browser QA pending",
-    "result": "PASS pending pushed-ref Browser QA",
+    "method": "Final WebP style/cast/semantic audit; OpenAI TTS final M4A; exact-Han ASR; final timing alignment; immutable pushed-ref Browser QA",
+    "result": "PASS",
     "imageStyleCast": "PASS",
     "audioTranscriptTiming": "PASS",
+    "browserQa": "PASS: 5 sentence cards + 5 other-audio cards; all 10 playback controls completed",
+    "browserQaAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747",
     "teacherReview": "pending",
     "manualListeningClaimed": false
   }
