@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L468 | 該 | claimed | Production C / parallel-c | codex/l468-complete-package | L466、L467; R057/R058 before Release | 絕、活 | curriculum-workflow/lesson-requests/L468.json; curriculum-workflow/generated/L468-generation-packet.md; curriculum-workflow/drafts/L468-draft.json | public/assets/lessons/L468/ | Teacher-approved Production handoff received. Source `origin/main` acd71a5b, formal L001-L465「招」with 469 learned chars; locked allowed set is formal union + 絕、活、該 = 472. Production package in progress; dependencies block Release only. |
 
 ## Status Values
 
