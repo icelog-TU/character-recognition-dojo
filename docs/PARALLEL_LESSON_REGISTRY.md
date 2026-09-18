@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L461 | 文 | ready-blocked-by-dependency | Production C / parallel-c | codex/l461-complete-package @ a567cf8a reviewed | L456-L460; R055/R056 after L450 | 突、實、其、中、午 | curriculum-workflow/lesson-requests/L461.json; curriculum-workflow/generated/L461-generation-packet.md; curriculum-workflow/drafts/L461-draft.json; curriculum-workflow/generated/L461-release-intake.md | public/assets/lessons/L461/ | Asset complete: five images, ten audio files, final timings and browser QA PASS. Teacher manual pre-merge image/audio QA PASS at a567cf8accdea4e3b245394ca9bcc76a7eaf7451; no reviewed media changed. Source main 80431be0; locked 456 allowed chars. Release remains blocked by L456-L460 and R055/R056. |
+| L461 | 文 | ready-blocked-by-dependency | Production C / parallel-c | codex/l461-complete-package @ a567cf8a reviewed | L456-L460; R055/R056 after L450 | 突、實、其、中、午 | curriculum-workflow/lesson-requests/L461.json; curriculum-workflow/generated/L461-generation-packet.md; curriculum-workflow/drafts/L461-draft.json; curriculum-workflow/generated/L461-release-intake.md | public/assets/lessons/L461/ | Asset complete: five images, ten audio files, final timings and browser QA PASS. Teacher manual pre-merge image/audio QA PASS at a567cf8accdea4e3b245394ca9bcc76a7eaf7451; no reviewed media changed; pushed metadata intake PASS at 619ed1da. Source main 80431be0; locked 456 allowed chars. Release remains blocked by L456-L460 and R055/R056. |
 
 ## Status Values
 
