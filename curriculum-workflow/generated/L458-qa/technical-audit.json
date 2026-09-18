@@ -91,9 +91,28 @@
   "images": {
     "filesExpected": 5,
     "filesActual": 5,
-    "result": "PASS"
+    "result": "REPAIRED PASS; S02 pushed preview pending"
   },
   "browserQa": {
+    "status": "pending-repair-preview",
+    "note": "Replacement L458-S02 WebP requires pushed fixed-ref preview verification."
+  },
+  "releaseBlockers": [
+    "R055/R056 after L450 before L451",
+    "Contiguous numbered predecessors L447-L457"
+  ],
+  "sharedReleaseFiles": "Untouched; Release-owned",
+  "repairHistory": [
+    {
+      "source": "teacher asset review",
+      "reviewedRef": "bcbc52d3ea8e10309fe8673233ecd550ce2be36d",
+      "item": "L458-S02:image",
+      "issue": "畫風跑掉，偏寫實且與課程水彩風格不一致",
+      "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers.",
+      "status": "resolved-locally-pending-fixed-ref-preview"
+    }
+  ],
+  "preRepairBrowserQa": {
     "status": "pass",
     "assetCommit": "9d028dda268af231a9f0508a219df4b80cdbea9a",
     "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=9d028dda268af231a9f0508a219df4b80cdbea9a",
@@ -105,10 +124,5 @@
       "L458-G02 prefix and suffix",
       "L458-G05 correct and two wrong options"
     ]
-  },
-  "releaseBlockers": [
-    "R055/R056 after L450 before L451",
-    "Contiguous numbered predecessors L447-L457"
-  ],
-  "sharedReleaseFiles": "Untouched; Release-owned"
+  }
 }

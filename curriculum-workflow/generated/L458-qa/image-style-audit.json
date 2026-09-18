@@ -1,11 +1,17 @@
 {
   "unit": "L458",
   "method": "Opened final exported WebPs and compared with L058/refined family style and cast anchors",
-  "result": "PASS",
+  "result": "REPAIRED PASS; S02 teacher style-drift issue resolved locally, pushed preview pending",
   "rejectedDrafts": [
     {
       "sentenceId": "L458-S04",
       "reason": "Graphic exclamation marks and extra father weakened the no-text/symbol and mother-only scene requirements; regenerated and not committed."
+    },
+    {
+      "sentenceId": "L458-S02",
+      "reviewedRef": "bcbc52d3ea8e10309fe8673233ecd550ce2be36d",
+      "reason": "畫風跑掉，偏寫實且與課程水彩風格不一致",
+      "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers."
     }
   ],
   "images": [
@@ -21,7 +27,7 @@
       "styleLock": "PASS",
       "cast": "PASS",
       "semantic": "PASS",
-      "notes": "Recurring protagonist inspects lifelike faux flowers; molded stem joint reads as subtle evidence and flowers are not paper."
+      "notes": "REPAIRED PASS: hard style reset restores visible pencil contours, translucent watercolor texture, warm course palette and stable protagonist proportions; extra adults removed; subtle molded flower connector preserves the faux-flower discovery."
     },
     {
       "sentenceId": "L458-S03",

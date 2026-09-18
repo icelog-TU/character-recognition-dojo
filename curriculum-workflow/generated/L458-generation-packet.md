@@ -3503,10 +3503,24 @@ AI 必須把這份課程序列視為鎖定邊界。
       "note": "Nine sentence/game files matched exact normalized Han unprompted. Isolated 其 returned homophone 起 unprompted and passed contextual glyph/pronunciation check as 其 ㄑㄧˊ; no manual listening claimed."
     },
     "images": {
-      "status": "PASS",
-      "note": "Five final WebPs passed style/cast/semantic review; first S04 draft rejected for graphic punctuation and extra father, regenerated before commit."
+      "status": "REPAIRED PASS",
+      "note": "S02 regenerated after teacher style-drift finding; final replacement passed side-by-side L058/L115/L154 style and cast comparison."
     },
     "browserQa": {
+      "status": "pending-repair-preview",
+      "note": "Replacement L458-S02 WebP requires pushed fixed-ref preview verification."
+    },
+    "repairHistory": [
+      {
+        "source": "teacher asset review",
+        "reviewedRef": "bcbc52d3ea8e10309fe8673233ecd550ce2be36d",
+        "item": "L458-S02:image",
+        "issue": "畫風跑掉，偏寫實且與課程水彩風格不一致",
+        "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers.",
+        "status": "resolved-locally-pending-fixed-ref-preview"
+      }
+    ],
+    "preRepairBrowserQa": {
       "status": "pass",
       "assetCommit": "9d028dda268af231a9f0508a219df4b80cdbea9a",
       "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=9d028dda268af231a9f0508a219df4b80cdbea9a",
@@ -3534,3 +3548,10 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Five final WebPs passed per-image style/cast/semantic review. One S04 draft was rejected and regenerated; rejected draft is not committed.
 - Fixed-ref Chrome Browser QA: PASS at asset commit `9d028dda268af231a9f0508a219df4b80cdbea9a`; 5 sentence cards, 6 other audio items, and 11/11 playback controls passed.
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=9d028dda268af231a9f0508a219df4b80cdbea9a
+
+
+### Teacher asset-review repair round
+
+- Reviewed ref: `bcbc52d3ea8e10309fe8673233ecd550ce2be36d`.
+- L458-S02 image: teacher found style drift. Regenerated with visible pencil contours, layered watercolor washes, stable recurring protagonist proportions, and no extra adults. Side-by-side L058/L115/L154 style/cast check: PASS.
+- Pushed fixed-ref verification: pending repair asset push.
