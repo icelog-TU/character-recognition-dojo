@@ -86,8 +86,16 @@
     "result": "REPAIRED PASS: R057-S04 equal-height repair complete; teacher repaired-image review pending"
   },
   "browserQa": {
-    "status": "pending repaired-ref preview",
-    "previousAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747"
+    "status": "PASS",
+    "assetCommit": "565ab4d1bf1cd9a35770aac4059a9c662d900efe",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R057&ref=565ab4d1bf1cd9a35770aac4059a9c662d900efe",
+    "browser": "Chrome",
+    "summary": "PASS: repaired fixed ref loaded all 5 sentence cards and 5 other-audio cards with zero repair flags; replacement R057-S04 image rendered and repaired R057-S04 audio entered playing state and returned after completion.",
+    "scope": [
+      "R057-S04 replacement image",
+      "R057-S04 replacement sentence audio"
+    ],
+    "limitation": "Browser QA verifies rendering and playback completion. Teacher visual/listening approval of repaired assets remains pending."
   },
   "releaseBlockers": [],
   "sharedReleaseFiles": "Untouched; Release-owned",
@@ -101,7 +109,11 @@
         "R057-S04:audio"
       ],
       "resolution": "Image regenerated with equal-height classmates; full sentence audio regenerated with verified ㄊㄧㄠˋ ㄨˇ and final timings.",
-      "status": "resolved; fixed-ref Browser QA and teacher repaired-asset review pending"
+      "status": "resolved; fixed-ref Browser QA PASS; teacher repaired-asset review pending"
     }
-  ]
+  ],
+  "preRepairBrowserQa": {
+    "status": "pending repaired-ref preview",
+    "previousAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747"
+  }
 }

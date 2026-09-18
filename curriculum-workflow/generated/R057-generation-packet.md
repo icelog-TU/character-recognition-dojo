@@ -2396,4 +2396,5 @@
 - Image issue: two same-age children had too large a height difference. Replacement keeps the protagonist and Xiaoyue at matching height and child scale while retaining Xiaoyue’s cast reference.
 - Audio issue: teacher heard 跳舞 as 造舞. The full sentence was regenerated; final Whisper transcript contains 跳舞 and an independent phonetic check identifies the final syllables as ㄊㄧㄠˋ ㄨˇ.
 - Final sentence charTimings regenerated from the repaired M4A.
-- Fixed-ref Browser QA and teacher review of the repaired image/audio remain pending.
+- Fixed-ref Browser QA: PASS at `565ab4d1bf1cd9a35770aac4059a9c662d900efe`; replacement image rendered, R057-S04 playback started and ended, and the page reported zero repair flags. Teacher review of the repaired image/audio remains pending.
+- Repaired pre-merge preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R057&ref=565ab4d1bf1cd9a35770aac4059a9c662d900efe
