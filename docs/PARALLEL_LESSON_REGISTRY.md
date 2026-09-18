@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L463 | 期 | claimed | Production A / parallel-a | codex/l463-complete-package | L454、L458-L462; R055/R056 after L450 | 表、其、中、午、文、日 | curriculum-workflow/lesson-requests/L463.json; curriculum-workflow/generated/L463-generation-packet.md; curriculum-workflow/drafts/L463-draft.json | public/assets/lessons/L463/ | Teacher-approved five sentences; source main 80431be0; locked 457 allowed chars. Earlier ordinary lessons and the R055/R056 milestone block Release only. |
+| L463 | 期 | dependency-blocked-asset-complete | Production A / parallel-a | codex/l463-complete-package | L454、L458-L462; R055/R056 after L450 | 表、其、中、午、文、日 | curriculum-workflow/lesson-requests/L463.json; curriculum-workflow/generated/L463-generation-packet.md; curriculum-workflow/drafts/L463-draft.json | public/assets/lessons/L463/ | Complete lesson-local package; package audit, format, production, playback, Stage 4 QA PASS. Release awaits listed ordinary lessons and review milestone. |
 
 ## Status Values
 
