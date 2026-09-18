@@ -1048,10 +1048,10 @@
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing and per-image style/cast QA",
-    "result": "PASS: complete dependency-blocked package; replacement standalone 日 passes technical QA and awaits teacher listening review",
+    "result": "PASS: complete dependency-blocked package; replacement standalone 日 passes technical QA and teacher listening review",
     "audio": {
-      "status": "TECHNICAL PASS — replacement awaiting teacher review",
-      "note": "Ten final processed M4A files decode. The regenerated standalone 日 is 1560 ms, passes volume thresholds, and transcribes exactly as 日 with gpt-4o-transcribe. The other nine audio files are unchanged from the teacher-approved package."
+      "status": "PASS — teacher approved",
+      "note": "Ten final processed M4A files decode. The regenerated standalone 日 is 1560 ms, passes volume thresholds, transcribes exactly as 日, and was approved by the teacher at the rescue ref. The other nine audio files are unchanged from the prior teacher-approved package."
     },
     "images": {
       "status": "PASS — teacher approved",
@@ -1066,14 +1066,14 @@
       "scope": "All five final L462 sentence images"
     },
     "teacherAudioReview": {
-      "status": "replacement-awaiting-teacher-review",
+      "status": "pass",
       "reviewedAt": "2026-09-18",
-      "source": "teacher handoff message",
-      "reviewedPackageRef": "039067bba77b7cf0b5b71d1b7a6f01017df2ee20",
-      "statement": "462圖檔音檔審核通過",
-      "originalScope": "All final L462 audio: standalone 日, five sentence files, G02 prefix/suffix, and two G05 wrong-option files",
-      "unchangedAssetsStatus": "Original teacher approval remains authoritative for the nine unchanged audio files.",
-      "replacementStatus": "The regenerated standalone 日 file was created after the reviewed package ref and requires teacher listening at the rescue ref."
+      "source": "teacher review message",
+      "reviewedPackageRef": "364c665cd0842a7e9de36d9882ba445bec71827d",
+      "statement": "音档没有问题，日的发音标准。",
+      "scope": "Regenerated standalone 日 character audio at the L462 Package Rescue ref",
+      "priorPackageApprovalRef": "039067bba77b7cf0b5b71d1b7a6f01017df2ee20",
+      "unchangedAssetsStatus": "The prior teacher approval remains authoritative for the nine unchanged audio files."
     },
     "browserQa": {
       "status": "pass",
@@ -1113,7 +1113,13 @@
         "transcript": "日",
         "transcriptResult": "PASS"
       },
-      "unchanged": "Five approved sentences, five images, nine other audio files, sentence/G02 timings, Stage 4 mapping, and all learner-facing text are unchanged."
+      "unchanged": "Five approved sentences, five images, nine other audio files, sentence/G02 timings, Stage 4 mapping, and all learner-facing text are unchanged.",
+      "teacherReview": {
+        "status": "pass",
+        "reviewedAt": "2026-09-18",
+        "reviewedPackageRef": "364c665cd0842a7e9de36d9882ba445bec71827d",
+        "statement": "音档没有问题，日的发音标准。"
+      }
     }
   }
 }
