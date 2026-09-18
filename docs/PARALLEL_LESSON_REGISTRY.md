@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L455 | 現 | ready-blocked-by-dependency | Production C / parallel-c | codex/l455-complete-package @ 1d86c309 | L450-L454; R055/R056 after L450 | 舞、台、候、演、表 | curriculum-workflow/lesson-requests/L455.json; curriculum-workflow/generated/L455-generation-packet.md; curriculum-workflow/drafts/L455-draft.json | public/assets/lessons/L455/ | Asset complete: five images, ten audio files, final timings and browser QA PASS. Teacher review repair applied to S05: explicit handheld game screen, no protagonist girl. Source main 5622c827; locked 453 allowed chars. Earlier ordinary lessons and the R055/R056 milestone block Release only. |
+| L455 | 現 | ready-blocked-by-dependency | Production C / parallel-c | codex/l455-complete-package @ 543a8a9e (teacher S05 image PASS) | L450-L454; R055/R056 after L450 | 舞、台、候、演、表 | curriculum-workflow/lesson-requests/L455.json; curriculum-workflow/generated/L455-generation-packet.md; curriculum-workflow/drafts/L455-draft.json | public/assets/lessons/L455/ | Asset complete: five images, ten audio files, final timings and browser QA PASS. Teacher reviewed repaired S05 at immutable ref 543a8a9e63d703860c4ecb20de934ea223cddb2e on 2026-09-18 and reported image PASS. Source main 5622c827; locked 453 allowed chars. Earlier ordinary lessons and the R055/R056 milestone block Release only. |
 
 ## Status Values
 
