@@ -1,7 +1,7 @@
 {
   "unit": "L463",
   "sourceReviewRef": "4fefcda2545b2456c814ba59cf36ffc42c414166",
-  "repairStatus": "implemented-awaiting-teacher-re-review",
+  "repairStatus": "second-s01-repair-implemented-awaiting-teacher-re-review",
   "assets": {
     "L463-S01": {
       "beforeSha256": "5c3008c55628324ffe0ed6dd249bf5e22140282bc69456f73fae63c15915a2ef",
@@ -23,8 +23,23 @@
   },
   "timingEvidence": {
     "L463-S02-opening": "日 0-220ms; 文 220-520ms; 課 520-820ms; 改 820-1140ms; 到 1140-1400ms. No inserted gap after 日 or 課.",
-    "L463-S01-期": "Target interval 400-640ms; stable voiced contour dips near 188Hz then rises to about 195Hz before release. Old reviewed file fell from about 281Hz to 258Hz.",
+    "L463-S01-期": "Second repair target interval 500-760ms; after onset, voiced contour reaches about 170Hz then rises to about 191Hz before 日 begins immediately at 760ms.",
     "L463-S05-期": "Final target voiced contour rises from about 100Hz to 127Hz (approximately 2620-2860ms); sentence-final falling intonation is excluded from the target timing."
   },
-  "scopeCheck": "Only the three reported M4A assets, their transcripts/timings, package metadata, and QA evidence are intended to change."
+  "scopeCheck": "Second repair changes only L463-S01 M4A, its transcript/timings, reproducibility instruction, and package QA metadata. S02 and S05 remain byte-identical to eadce586.",
+  "secondReview": {
+    "reviewedRef": "eadce58637b06aecee2e9ba01bc5e76a2710708b",
+    "teacherResult": {
+      "L463-S01": "FAIL — 星期的期仍像第一聲欺",
+      "L463-S02": "PASS",
+      "L463-S05": "PASS"
+    },
+    "secondRepair": {
+      "asset": "L463-S01.m4a",
+      "sha256": "1c9dde1cedd3076263bb06045bf3f1b75e07284656c86b8d5f6822e14c9765a8",
+      "asr": "星期日下午文具店沒開",
+      "timing": "星 0-500ms; 期 500-760ms; 日 begins immediately at 760ms.",
+      "pitch": "期 reaches a low point near 170Hz then rises to about 191Hz before 日; materially stronger rise than the rejected first repair."
+    }
+  }
 }

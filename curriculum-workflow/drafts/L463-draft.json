@@ -890,57 +890,57 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L463/audio/L463-S01.m4a",
-        "durationMs": 2873,
+        "durationMs": 4259,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 400
+            "endMs": 500
           },
           {
             "charIndex": 1,
-            "startMs": 400,
-            "endMs": 640
+            "startMs": 500,
+            "endMs": 760
           },
           {
             "charIndex": 2,
-            "startMs": 640,
-            "endMs": 900
+            "startMs": 760,
+            "endMs": 1460
           },
           {
             "charIndex": 3,
-            "startMs": 900,
-            "endMs": 1120
+            "startMs": 1460,
+            "endMs": 1880
           },
           {
             "charIndex": 4,
-            "startMs": 1120,
-            "endMs": 1360
+            "startMs": 1880,
+            "endMs": 2080
           },
           {
             "charIndex": 5,
-            "startMs": 1720,
-            "endMs": 1800
+            "startMs": 2080,
+            "endMs": 2520
           },
           {
             "charIndex": 6,
-            "startMs": 1800,
-            "endMs": 1980
+            "startMs": 2520,
+            "endMs": 2720
           },
           {
             "charIndex": 7,
-            "startMs": 1980,
-            "endMs": 2140
+            "startMs": 2720,
+            "endMs": 3040
           },
           {
             "charIndex": 8,
-            "startMs": 2140,
-            "endMs": 2380
+            "startMs": 3040,
+            "endMs": 3460
           },
           {
             "charIndex": 9,
-            "startMs": 2380,
-            "endMs": 2580
+            "startMs": 3460,
+            "endMs": 3740
           }
         ]
       }
@@ -1432,7 +1432,7 @@
       ]
     }
   },
-  "productionQA": "# L463 Production QA\n\n- Unit: L463「期」\n- Production owner: Production A / `parallel-a`\n- Source boundary: `80431be079de2085bbab084db7da0a3698461a92` (formal L001-L446, latest「音」)\n- Package status: `dependency-blocked-asset-complete`\n- Release blockers: L454、L458-L462 and R055/R056 after L450 must enter `main` in playable order.\n\n## Curriculum and package audit\n\n- Locked `allowedChars`: 457 unique Han characters, fully expanded in the request and draft.\n- Allowed-character sweep: PASS for all five sentences, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text.\n- Coverage: 期 3、日 3、文 2、午 2、中 1、其 1 — PASS.\n- Sentence Han counts: 10、9、11、11、11; `spokenText` Han sequence and `displayLines` joins — PASS.\n- Stage 4 order, one-use sentence assignment, zero-based target indexes, missing indexes, and single-Han partial-order mapping — PASS.\n\n## Image QA\n\n- L463-S01: PASS — recurring father and girl are outside a closed stationery shop; stationery is visible through the window; daytime context is clear; no readable signage.\n- L463-S02: PASS — recurring mother shows a phone notice at home while the girl puts the lesson book back into her bag; no readable phone or book text.\n- L463-S03: PASS — recurring mother reminds the girl and the girl places the borrowed book into an outing bag; this is preparation at home, not a return counter; no due-date text.\n- L463-S04: PASS — exactly six apples: three on the table and three fully visible inside the open gift bag; recurring mother and girl; no numeric labels.\n- L463-S05: PASS — generic worker is visually distinct from the recurring parents, points at a registration form, while the girl holds a pencil and father accompanies her; form content is not readable.\n- All five: 1024×1024 WebP, established L058 style lock, recurring cast consistency, no readable text/numbers/logos, and each file below 400 KiB — PASS.\n\n## Audio, timing, and interaction QA\n\n- Five sentence tracks, `char-u671f.m4a`, dedicated G02 prefix/suffix, and both complete G05 wrong-choice tracks exist and decode as AAC 44.1 kHz mono — PASS.\n- `char-u671f.m4a`: three independent transcription trials returned「期」; pitch evidence retained — PASS.\n- G02 prefix: three trials returned「借的書明天到」after Traditional normalization — PASS.\n- G02 suffix: three trials returned「別忘了還」after Traditional normalization; final「還」is ㄏㄨㄢˊ — PASS.\n- S03 full sentence alignment recognized final「還」and the draft carries `zhuyinOverrides[\"10\"] = \"ㄏㄨㄢˊ\"` — PASS.\n- All nine timed tracks have one timing per Han character, monotonic 80–900 ms spans, and at most 300 ms final tail — PASS.\n- G05 mean-volume spread: 0.4 dB — PASS.\n- Real `LessonPanel` at phone width: Stage 1 played `char-u671f.m4a`; Stage 2 showed exactly three「期」targets; Stage 3 played S01-S05 through `ended`; G01 correct index completed; G02 displayed the red frame on S03 index 6 and reached the hold-to-record state; G03 accepted「期」; G04 accepted 明→天→下→午; G05 played the correct plus both referenced wrong tracks and accepted the correct option — PASS.\n- Physical microphone capture was not invoked by the browser control surface; the hold-to-record transition and lesson data wiring were verified. This is recorded as a browser-control limitation under the SOP fallback, with all non-browser asset/timing/format gates passing.\n\n## Teacher pre-merge audio repair — source review 4fefcda2\n\n- Teacher reported three audio defects at `4fefcda2545b2456c814ba59cf36ffc42c414166`: S01 期 sounded like first-tone 欺, S02 paused unnaturally after the first character, and S05 日期 ended as 日欺 instead of 日奇.\n- S01, S02 and S05 were independently regenerated as complete sentences. No image or other lesson audio was changed.\n- S01: 期 is explicitly ㄑㄧˊ; acoustic target contour dips near 188 Hz and rises to about 195 Hz before release, replacing the reviewed file's falling contour.\n- S02: alignment is continuous across 日 0–220 ms, 文 220–520 ms, 課 520–820 ms, 改 820–1140 ms and 到 1140–1400 ms; no pause remains after 日 or 課.\n- S05: 日期 is explicitly ㄖˋ ㄑㄧˊ; final 期 rises approximately 100→127 Hz through the voiced target interval.\n- AI transcription matches all three approved Han sequences. Timings and package-local validation are regenerated. Teacher re-review is requested on the new immutable repair ref.\n- Actual phone-width `LessonPanel` Stage 3 playback emitted `playing` then `ended` for repaired S01, S02 and S05.\n",
+  "productionQA": "# L463 Production QA\n\n- Unit: L463「期」\n- Production owner: Production A / `parallel-a`\n- Source boundary: `80431be079de2085bbab084db7da0a3698461a92` (formal L001-L446, latest「音」)\n- Package status: `dependency-blocked-asset-complete`\n- Release blockers: L454、L458-L462 and R055/R056 after L450 must enter `main` in playable order.\n\n## Curriculum and package audit\n\n- Locked `allowedChars`: 457 unique Han characters, fully expanded in the request and draft.\n- Allowed-character sweep: PASS for all five sentences, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text.\n- Coverage: 期 3、日 3、文 2、午 2、中 1、其 1 — PASS.\n- Sentence Han counts: 10、9、11、11、11; `spokenText` Han sequence and `displayLines` joins — PASS.\n- Stage 4 order, one-use sentence assignment, zero-based target indexes, missing indexes, and single-Han partial-order mapping — PASS.\n\n## Image QA\n\n- L463-S01: PASS — recurring father and girl are outside a closed stationery shop; stationery is visible through the window; daytime context is clear; no readable signage.\n- L463-S02: PASS — recurring mother shows a phone notice at home while the girl puts the lesson book back into her bag; no readable phone or book text.\n- L463-S03: PASS — recurring mother reminds the girl and the girl places the borrowed book into an outing bag; this is preparation at home, not a return counter; no due-date text.\n- L463-S04: PASS — exactly six apples: three on the table and three fully visible inside the open gift bag; recurring mother and girl; no numeric labels.\n- L463-S05: PASS — generic worker is visually distinct from the recurring parents, points at a registration form, while the girl holds a pencil and father accompanies her; form content is not readable.\n- All five: 1024×1024 WebP, established L058 style lock, recurring cast consistency, no readable text/numbers/logos, and each file below 400 KiB — PASS.\n\n## Audio, timing, and interaction QA\n\n- Five sentence tracks, `char-u671f.m4a`, dedicated G02 prefix/suffix, and both complete G05 wrong-choice tracks exist and decode as AAC 44.1 kHz mono — PASS.\n- `char-u671f.m4a`: three independent transcription trials returned「期」; pitch evidence retained — PASS.\n- G02 prefix: three trials returned「借的書明天到」after Traditional normalization — PASS.\n- G02 suffix: three trials returned「別忘了還」after Traditional normalization; final「還」is ㄏㄨㄢˊ — PASS.\n- S03 full sentence alignment recognized final「還」and the draft carries `zhuyinOverrides[\"10\"] = \"ㄏㄨㄢˊ\"` — PASS.\n- All nine timed tracks have one timing per Han character, monotonic 80–900 ms spans, and at most 300 ms final tail — PASS.\n- G05 mean-volume spread: 0.4 dB — PASS.\n- Real `LessonPanel` at phone width: Stage 1 played `char-u671f.m4a`; Stage 2 showed exactly three「期」targets; Stage 3 played S01-S05 through `ended`; G01 correct index completed; G02 displayed the red frame on S03 index 6 and reached the hold-to-record state; G03 accepted「期」; G04 accepted 明→天→下→午; G05 played the correct plus both referenced wrong tracks and accepted the correct option — PASS.\n- Physical microphone capture was not invoked by the browser control surface; the hold-to-record transition and lesson data wiring were verified. This is recorded as a browser-control limitation under the SOP fallback, with all non-browser asset/timing/format gates passing.\n\n## Teacher pre-merge audio repair — source review 4fefcda2\n\n- Teacher reported three audio defects at `4fefcda2545b2456c814ba59cf36ffc42c414166`: S01 期 sounded like first-tone 欺, S02 paused unnaturally after the first character, and S05 日期 ended as 日欺 instead of 日奇.\n- S01, S02 and S05 were independently regenerated as complete sentences. No image or other lesson audio was changed.\n- S01 first repair was rejected by the teacher at `eadce58637b06aecee2e9ba01bc5e76a2710708b`: the uploaded file was confirmed present, but 期 still sounded like first-tone 欺. The second repair uses a different voice and prosodic treatment; the target reaches a low point near 170 Hz and then rises to about 191 Hz before 日 begins immediately, providing a materially stronger second-tone contour without a long pause.\n- S02: alignment is continuous across 日 0–220 ms, 文 220–520 ms, 課 520–820 ms, 改 820–1140 ms and 到 1140–1400 ms; no pause remains after 日 or 課.\n- S05: 日期 is explicitly ㄖˋ ㄑㄧˊ; final 期 rises approximately 100→127 Hz through the voiced target interval.\n- AI transcription matches all three approved Han sequences. Timings and package-local validation are regenerated. Teacher re-review is requested on the new immutable repair ref.\n- Actual phone-width `LessonPanel` Stage 3 playback emitted `playing` then `ended` for repaired S01, S02 and S05.\n- Repair asset commit: `87237ed7881e07d98cd1f2f512066ae4c0b5c621`.\n- Pushed-ref package intake at `origin/codex/l463-complete-package`: PASS; package status remains `dependency-blocked-asset-complete`.\n- S02 and S05 passed the teacher's second review and remain byte-identical to `eadce58637b06aecee2e9ba01bc5e76a2710708b`; only S01 is included in the second repair.\n",
   "assetReviewRepair": {
     "sourceReviewRef": "4fefcda2545b2456c814ba59cf36ffc42c414166",
     "sourceReviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L463&ref=4fefcda2545b2456c814ba59cf36ffc42c414166",
@@ -1453,7 +1453,9 @@
         "resolution": "Regenerated full sentence; 日期 explicitly ㄖˋ ㄑㄧˊ and sentence-final 期 retains a rising second-tone contour."
       }
     ],
-    "repairStatus": "implemented-awaiting-teacher-re-review",
-    "unchangedAssets": "All images and all audio except L463-S01.m4a, L463-S02.m4a, and L463-S05.m4a remain byte-identical to the reviewed ref."
+    "repairStatus": "second-s01-repair-implemented-awaiting-teacher-re-review",
+    "unchangedAssets": "All images and all audio except L463-S01.m4a, L463-S02.m4a, and L463-S05.m4a remain byte-identical to the reviewed ref.",
+    "secondReviewRef": "eadce58637b06aecee2e9ba01bc5e76a2710708b",
+    "secondTeacherFinding": "S01 still pronounced 星期 as 星欺; S02 and S05 passed."
   }
 }
