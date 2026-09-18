@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L469 | 應 / 普通五句課 | assets | Production D | codex/l469-complete-package; claim e266eefc | L466, L467, L468; R057/R058 | 絕、活、該 | curriculum-workflow/lesson-requests/L469.json; generated/L469-generation-packet.md; drafts/L469-draft.json | public/assets/lessons/L469/; 5 WebP, 10 M4A, 9 alignments | Base acd71a5b L465/R056; 473 allowed; final style/cast reviewed; Browser QA in progress. |
+| L469 | 應 / 普通五句課 | needs-rework | Production D | codex/l469-complete-package; claim e266eefc; assets 1624da90 | L466, L467, L468; R057/R058 | 絕、活、該 | curriculum-workflow/lesson-requests/L469.json; generated/L469-generation-packet.md; drafts/L469-draft.json | public/assets/lessons/L469/; 5 WebP, 10 M4A, 9 alignments | Media/style/cast PASS; Browser QA found shared-app G04 initial order already correct; shared app owner follow-up required. G02 hold/replay tooling fallback. |
 
 ## Status Values
 

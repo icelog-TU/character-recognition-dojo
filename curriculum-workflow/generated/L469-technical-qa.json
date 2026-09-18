@@ -10,7 +10,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "8d8bd7e21f15d3af5c076c22033b452a955ad6260521be7c53dbbcadc47b192d"
     },
     {
       "filename": "L469-G02-prefix.m4a",
@@ -21,7 +22,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "5a3a0a97cb55f41ef697463dabf8de2b058480503cb1c2dcd5a82fc2e809346c"
     },
     {
       "filename": "L469-G02-suffix.m4a",
@@ -32,7 +34,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "1530fd81175c5a36b3440fd6e535dac77bf74b114980424717b7207074996499"
     },
     {
       "filename": "L469-G05-wrong-one.m4a",
@@ -43,7 +46,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "927b862c84d20f9df8b16eb690404237ecc365df80f4af466c61d90ff9527438"
     },
     {
       "filename": "L469-G05-wrong-two.m4a",
@@ -54,7 +58,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "b3d025a17e52a0a540b0fa48765622221c48f1ad8a34943e8ae483e44d312044"
     },
     {
       "filename": "L469-S01.m4a",
@@ -65,7 +70,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "c11291f06c8c38d03d44c637aeb00880ede1b2ac0d3ecaf19fd2568beea639ba"
     },
     {
       "filename": "L469-S02.m4a",
@@ -76,7 +82,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "2fc49c9de129929773af247ab9f88938926d108b971f88af4954145dd3182991"
     },
     {
       "filename": "L469-S03.m4a",
@@ -87,7 +94,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "1470cb0dcb57862029e734b868a664d09e13038b4a4d1b2301e80e73f9becff6"
     },
     {
       "filename": "L469-S04.m4a",
@@ -98,7 +106,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "73306eb39bfadbaa75fee393eaa6331699791e0a1111aaae1b2f88b918df298e"
     },
     {
       "filename": "L469-S05.m4a",
@@ -109,7 +118,8 @@
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
-      "decode": "PASS"
+      "decode": "PASS",
+      "sha256": "5d88b23fe48cac62a60a4de32517c795bb95cc7267df364d31c0d732eb7f7da8"
     }
   ],
   "images": [
@@ -119,7 +129,8 @@
       "height": 1024,
       "bytes": 208288,
       "styleLock": "PASS",
-      "cast": "PASS"
+      "cast": "PASS",
+      "review": "Girl rests after exercise, ball put down, fixed mother hands water bottle; no illness/running."
     },
     {
       "filename": "L469-S02.webp",
@@ -127,7 +138,8 @@
       "height": 1024,
       "bytes": 222900,
       "styleLock": "PASS",
-      "cast": "PASS"
+      "cast": "PASS",
+      "review": "Awake low-energy puppy with open eyes ignores nearby ball; fixed girl and mother care, no diagnosis/emergency."
     },
     {
       "filename": "L469-S03.webp",
@@ -135,7 +147,8 @@
       "height": 1024,
       "bytes": 178810,
       "styleLock": "PASS",
-      "cast": "PASS"
+      "cast": "PASS",
+      "review": "Distinct generic adult with both ordinary hands on lap, toes grip pen at fixed low desk; paper only beginning ink dab, no readable marks; fixed girl watches."
     },
     {
       "filename": "L469-S04.webp",
@@ -143,7 +156,8 @@
       "height": 1024,
       "bytes": 230184,
       "styleLock": "PASS",
-      "cast": "PASS"
+      "cast": "PASS",
+      "review": "Only fixed girl and striped-shirt older brother; TV hero charging attack while monster remains upright; no text or damage numbers."
     },
     {
       "filename": "L469-S05.webp",
@@ -151,7 +165,8 @@
       "height": 1024,
       "bytes": 211136,
       "styleLock": "PASS",
-      "cast": "PASS"
+      "cast": "PASS",
+      "review": "Fixed father and girl wait; distinct generic receptionist attends telephone facing away from visitors; no response gestures."
     }
   ],
   "optionMeanVolumeSpreadDb": 0.2,
@@ -159,11 +174,72 @@
   "sentenceTimingBounds": "PASS",
   "allowedCharacterAndStage4Audit": "PASS",
   "browserQA": {
-    "status": "in progress",
-    "attemptedUrl": "http://127.0.0.1:14269/character-recognition-dojo/",
-    "tool": "cua.getBrowser",
-    "result": "Browser initialized; playback tests in progress",
-    "durationSeconds": 30,
-    "manualPlayback": "Not verified; audio listening, synchronized highlights, G02 hold-to-record and stitched replay remain untested. No teacher manual PASS claimed."
+    "status": "390x844 checks performed; shared-app G04 initial ordering defect observed",
+    "url": "http://127.0.0.1:14269/character-recognition-dojo/",
+    "stage1": "應 ㄧㄥ visible; standalone control playback and completion observed",
+    "stage2": "Six cards, three 應 accepted; 3/3 completion observed",
+    "stage3": "All five sentence cards clicked individually, active highlighting/layouts inspected; S01/S02 應 ㄧㄥ and S05 應 ㄧㄥˋ verified in accessibility tree",
+    "stage4": {
+      "G01": "Correct 應 circled, Next shown",
+      "G02": "Dedicated prefix led to red 應 ㄧㄥˋ; answer reveal explicitly says 解答是「應」，念作ㄧㄥˋ。; replay sentence control clicked. No sustained pointer-hold API; recording/stitched replay untested, UI skip used.",
+      "G03": "應 restored correctly; Next shown",
+      "G04": "Input options 絕/拿/活/手 mechanically map to indices 9/7/10/8. Shared stableShuffledOptions produced 拿/手/絕/活 on initial entry, already the correct sequence. All four placements accepted. SOP initial scramble requirement not met.",
+      "G05": "All three reader controls clicked; fox choice red, frog choice green"
+    },
+    "isolation": "Canonical complete L469 draft only, original five games and order preserved. Earlier-character zhuyin absent in isolated fixture; new-character/explicit overrides verified.",
+    "manualPlayback": "No human listening or ear-verified syllable synchronization claimed. G02 recording and stitched replay untested under documented browser-tool fallback.",
+    "cleanup": "Temporary tab closed, viewport reset, preview stopped, curriculum and shared scripts restored byte-for-byte."
+  },
+  "sharedAppFinding": {
+    "file": "src/App.tsx",
+    "function": "stableShuffledOptions",
+    "line": 6613,
+    "seed": "L469:L469-G04:L469-S03",
+    "input": [
+      {
+        "id": "L469-G04-O1",
+        "text": "絕",
+        "correct": true,
+        "correctOrder": 2
+      },
+      {
+        "id": "L469-G04-O2",
+        "text": "拿",
+        "correct": true,
+        "correctOrder": 0
+      },
+      {
+        "id": "L469-G04-O3",
+        "text": "活",
+        "correct": true,
+        "correctOrder": 3
+      },
+      {
+        "id": "L469-G04-O4",
+        "text": "手",
+        "correct": true,
+        "correctOrder": 1
+      }
+    ],
+    "actualInitialOrder": [
+      "拿",
+      "手",
+      "絕",
+      "活"
+    ],
+    "actualCorrectOrder": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "cause": "Checks shuffled ids against input order only, not correctOrder sequence. Deterministic result matches observed UI.",
+    "requiredFollowup": "Shared-app owner must prevent already-correct partial-order starting layouts and recheck L469 G04. Production preserves approved handoff and does not edit shared app."
+  },
+  "audioVerification": {
+    "alignment": "Nine final-M4A exact-text Whisper alignments with traditional/simplified equivalents only",
+    "pronunciation": "Independent unprompted AI auditory review: standalone ying1, S01/S02 ying1, S05 ying4, G02 prefix ends hui2, suffix wo3. Standalone voiced plateau about 195–205Hz confirms level contour.",
+    "limitations": "AI audio model S04 transcript includes an extra 一 while its own pinyin has no yi; two Whisper passes report exact 用這招絕對能打倒怪物. Raw model output retained; no human PASS claimed.",
+    "timing": "Prompted exact-text realignment corrected S04 short 絕 span, G02-prefix overlapping 沒/回 and G05-wrong-two short 絕. G02 suffix transcript exactly 我; its timing remains AI-estimated."
   }
 }
