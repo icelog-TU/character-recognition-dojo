@@ -195,5 +195,15 @@
     "pronunciation": "Standalone dai4 confirmed by independent AI audio model; regenerated S01 independently confirmed qi2/dai4/xing1/qi2. S02 qi2 supported by rising acoustic contour and final auditory analysis; Whisper confirms exact approved birthday text.",
     "limitations": "Independent audio model hallucinated an alternate S02 opening despite exact Whisper transcription. Its raw output retained for transparency; human pronunciation approval not claimed.",
     "repairs": "S01 whole utterance regenerated with exact spokenText and explicit full pinyin instructions. S04 客 1ms alignment replaced by prompted exact-text AI realignment (800–1180ms)."
+  },
+  "validation": {
+    "baselineProduction": "PASS",
+    "lessonLocalProduction": "PASS",
+    "strictAssetAudit": "PASS; zero warnings",
+    "remoteIntake": {
+      "ref": "origin/codex/l464-complete-package",
+      "assetCommit": "3f783f39c800dfca5698724f4fa28939f6d44e6d",
+      "result": "PASS"
+    }
   }
 }
