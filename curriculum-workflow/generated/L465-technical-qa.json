@@ -107,8 +107,8 @@
     },
     {
       "path": "public/assets/lessons/L465/audio/L465-G02-prefix.m4a",
-      "bytes": 41848,
-      "sha256": "bde08ab6f453fcf58e6ab21fd7da16a4f652279526542d99d64a8cb2c99ce169",
+      "bytes": 41611,
+      "sha256": "4c1037ed73cdd58e723cd48ffbce87002b1f2efcf70de95c02738a43355cd4f7",
       "probe": {
         "programs": [],
         "streams": [
@@ -120,12 +120,12 @@
           }
         ],
         "format": {
-          "duration": "3.617007"
+          "duration": "3.421995"
         }
       },
       "volume": {
-        "meanDb": -19.9,
-        "maxDb": -2.3
+        "meanDb": -18.1,
+        "maxDb": -3.6
       }
     },
     {
@@ -199,8 +199,8 @@
     },
     {
       "path": "public/assets/lessons/L465/audio/L465-S01.m4a",
-      "bytes": 66028,
-      "sha256": "ff92bf861ed60f664e0b7efbd8a51ea72d1a4b879e66bd04d59bb402fa7b6261",
+      "bytes": 53944,
+      "sha256": "f87b1e7fd7546167947f8028fc6be8cdc9e7328db4fba5a8b9b4655b9059f326",
       "probe": {
         "programs": [],
         "streams": [
@@ -212,12 +212,12 @@
           }
         ],
         "format": {
-          "duration": "5.283991"
+          "duration": "4.533991"
         }
       },
       "volume": {
-        "meanDb": -18.9,
-        "maxDb": -2
+        "meanDb": -18.6,
+        "maxDb": -2.9
       }
     },
     {
@@ -336,10 +336,14 @@
       }
     }
   ],
-  "pushedIntake": {
-    "command": "npm run curriculum:package-intake -- --unit L465 --ref origin/codex/l465-complete-package --strict",
-    "commit": "021ad3a667ca2af8d32e1a7bbbbd29700bf3619e",
-    "result": "PASS",
-    "warnings": 0
+  "repair": {
+    "sourceRef": "1656891f23e9ebe0858b553e94f89cca31a1d9b3",
+    "assets": [
+      "L465-S01.m4a",
+      "L465-G02-prefix.m4a"
+    ],
+    "method": "complete-unit OpenAI TTS regeneration with shimmer; no cutting or splicing",
+    "technicalResult": "PASS: 期 second tone like 奇, Taiwan-natural 日 and overall accent",
+    "teacherReview": "pending on repaired commit"
   }
 }
