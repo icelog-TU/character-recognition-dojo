@@ -90,14 +90,14 @@
       },
       {
         "name": "L466-G05-wrong-one.m4a",
-        "duration": 3.123991,
-        "max": -2.1,
-        "mean": -18,
+        "duration": 2.809002,
+        "max": -3,
+        "mean": -18.9,
         "trailingSilenceStart": null,
         "codec": "aac",
         "sampleRate": "44100",
         "channels": 1,
-        "sha256": "5a05c3b94c46c71f8ec0923d44f26018989ad1f0de6577cda06e4b00212c89dd"
+        "sha256": "6bbb1ec681522953639c92706aa17caf832e0f907ee8212a27f518b950b0621c"
       },
       {
         "name": "L466-G05-wrong-two.m4a",
@@ -187,7 +187,7 @@
       {
         "name": "L466-G05-wrong-one",
         "model": "gpt-audio-1.5",
-        "result": "{\"transcriptTraditional\": \"爸爸做拿手菜招待日本朋友\", \"syllables\": [\"ba4\", \"ba4\", \"zuo4\", \"na2\", \"shou3\", \"cai4\", \"zhao1\", \"dai4\", \"ri4\", \"ben3\", \"peng2\", \"you3\"], \"uncertain\": \"\"}"
+        "result": "{\"transcriptTraditional\": \"爸爸做拿手菜招待日本朋友\", \"syllables\": [\"ba4\", \"ba4\", \"zuo4\", \"na2\", \"shou3\", \"cai4\", \"zhao1\", \"dai4\", \"ri4\", \"ben3\", \"peng2\", \"you3\"], \"uncertainNotes\": \"\"}"
       },
       {
         "name": "L466-G05-wrong-two",
@@ -230,7 +230,17 @@
     },
     "processing": "All sentences, fragments and wrong choices were generated independently as complete requested utterances. Final media was start/end silence trimmed, loudness-normalized, and never cut or spliced at word or syllable boundaries."
   },
-  "mediaBytes": 931557,
+  "mediaBytes": 927424,
+  "repairHistory": [
+    {
+      "date": "2026-09-18",
+      "sourceReviewRef": "64f55b674752ab0968ccdf4224810f00e12cd1c6",
+      "item": "L466-G05-L466-G05-O2:audio",
+      "teacherFinding": "朋友的發音跑掉，聽起來變成 pung 有。",
+      "action": "Regenerated the complete wrong-one sentence 爸爸做拿手菜招待日本朋友 with explicit Taiwan Mandarin ㄆㄥˊ ㄧㄡˇ / peng2 you3 control; no cutting or splicing. Reprocessed, realigned and volume-matched the whole track.",
+      "result": "Final acoustic input-audio verification returned peng2 you3 with no uncertainty; package-local, isolated production and strict asset checks PASS."
+    }
+  ],
   "releaseDependencies": {
     "orderedLessonsThrough": "L465",
     "reviewMilestones": [
@@ -247,8 +257,8 @@
   "validation": {
     "startupToolsAiAudit": "PASS",
     "textBoundarySchemaStage4Timings": "PASS",
-    "validateProduction": "PASS on isolated L466 fixture",
-    "assetAuditStrict": "PASS on isolated L466 fixture; zero warnings",
+    "validateProduction": "PASS on isolated L466 fixture after G05-O2 repair",
+    "assetAuditStrict": "PASS on isolated L466 fixture after G05-O2 repair; zero warnings",
     "fullVerify": "Skipped: dependency-blocked; shared production integration belongs to Release."
   }
 }

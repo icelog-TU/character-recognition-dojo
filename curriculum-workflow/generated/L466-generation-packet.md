@@ -20,11 +20,11 @@ G01 S01[3]=絕. G02 S02[5]=絕 with independently generated prefix 過期的點�
 
 ## Assets and validation
 
-Five square 1024px WebP, ten mono 44100Hz AAC M4A and nine complete timing records total 931557 bytes. Every image is under 250 KiB. Final audio decodes; G05 mean-volume spread is 0.9 dB. Acoustic checks on final processed media confirm 絕 jue2, 期 qi2, 待 dai4, 招待 zhao1 dai4, 再 zai4, and exact G02 fragments. Detailed final-audio SHA256, metrics and acoustic responses are in L466-qa-evidence.json; timings and timestamp repairs are in L466-alignment-evidence.json.
+Five square 1024px WebP, ten mono 44100Hz AAC M4A and nine complete timing records total 927424 bytes. Every image is under 250 KiB. Final audio decodes; G05 mean-volume spread is 0.9 dB. Acoustic checks on final processed media confirm 絕 jue2, 期 qi2, 待 dai4, 招待 zhao1 dai4, 再 zai4, and exact G02 fragments. Detailed final-audio SHA256, metrics and acoustic responses are in L466-qa-evidence.json; timings and timestamp repairs are in L466-alignment-evidence.json.
 
 - tools:check, ai:check, startup curriculum:audit-state: PASS.
-- Package-local text, boundary, schema, Stage 4, file, duration and timing assertions: PASS.
-- validate:production and assets:audit --strict on isolated L466 fixture: PASS, zero warnings.
+- Package-local text, boundary, schema, Stage 4, file, duration and timing assertions: PASS after G05-O2 repair.
+- validate:production and assets:audit --strict on isolated L466 fixture: PASS after G05-O2 repair, zero warnings.
 - Full verify skipped because shared production integration belongs to Release after dependencies merge.
 
 ## Per-image review
@@ -37,12 +37,14 @@ Five square 1024px WebP, ten mono 44100Hz AAC M4A and nine complete timing recor
 
 All final WebP were compared with the approved style/cast composite. No readable text, numbers, dates, labels, logos or watermarks appear. Exact final prompts and imageNotes remain in the draft.
 
+## Teacher audio repair checkpoint
+
+At source review `64f55b674752ab0968ccdf4224810f00e12cd1c6`, the teacher reported that L466-G05-O2「朋友」drifted toward “pung 有”. The complete wrong-one sentence「爸爸做拿手菜，招待日本朋友。」was regenerated without cutting or splicing. Final acoustic verification returned `peng2 you3` with no uncertainty; G05 mean-volume spread is 0.9 dB. All other image and audio assets remain unchanged.
+
 ## Release dependencies and ownership
 
 Vocabulary dependencies are L462日, L463期, L464待 and L465招. Release must preserve L465 → R057 → R058 → L466. These dependencies block main integration only. Production A does not merge main; Release owns current-main revalidation, shared production JSON/planner/ledger updates, full verify and deploy.
 
 ## Pre-merge asset QA
 
-Automated final-media playback/acoustic QA: PASS for all ten M4A files; every file decodes and the final processed audio was supplied as actual audio input for syllable verification. Teacher manual image/audio QA remains pending at the immutable package review:
-
-https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L466&ref=eec4b24661b0616303c58be39fc35726fdff5192
+Automated final-media playback/acoustic QA: PASS for all ten M4A files. Teacher manual re-review is pending on the repaired G05-O2 track at the new immutable repair ref.
