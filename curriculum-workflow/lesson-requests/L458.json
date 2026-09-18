@@ -1254,7 +1254,7 @@
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing, per-image style/cast and fixed-ref Chrome Browser QA",
-    "result": "PASS: 5 images, 10 M4As, complete sentence/G02 timings, transcript QA, and 11/11 review-page playback controls",
+    "result": "PASS: complete package retained; final images and audio teacher-approved after S02 style repair",
     "audio": {
       "status": "PASS",
       "note": "Nine sentence/game files matched exact normalized Han unprompted. Isolated 其 returned homophone 起 unprompted and passed contextual glyph/pronunciation check as 其 ㄑㄧˊ; no manual listening claimed."
@@ -1269,7 +1269,7 @@
       "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
       "browser": "Chrome",
       "summary": "PASS: pushed repair ref loaded the complete L458 manifest and rendered the replacement L458-S02 image element.",
-      "limitation": "Rendering check only; teacher re-review remains pending."
+      "limitation": "Browser QA verified pushed rendering; teacher image and audio approval was subsequently received and recorded separately."
     },
     "repairHistory": [
       {
@@ -1278,7 +1278,7 @@
         "item": "L458-S02:image",
         "issue": "畫風跑掉，偏寫實且與課程水彩風格不一致",
         "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers.",
-        "status": "resolved-and-fixed-ref-preview-pass"
+        "status": "resolved-fixed-ref-preview-pass-teacher-approved"
       }
     ],
     "preRepairBrowserQa": {
@@ -1293,6 +1293,24 @@
         "L458-G02 prefix and suffix",
         "L458-G05 correct and two wrong options"
       ]
+    },
+    "teacherImageReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "1c7e530a78ac5b3e28b5b6ba649894ea1269dcd8",
+      "repairedAssetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+      "scope": "All five final L458 images, including repaired L458-S02",
+      "statement": "可以，圖片跟音檔都審核通過。"
+    },
+    "teacherAudioReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "1c7e530a78ac5b3e28b5b6ba649894ea1269dcd8",
+      "repairedAssetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+      "scope": "All final L458 audio: charAudio, five sentence files, G02 prefix/suffix, and two G05 wrong-option files",
+      "statement": "可以，圖片跟音檔都審核通過。"
     }
   }
 }

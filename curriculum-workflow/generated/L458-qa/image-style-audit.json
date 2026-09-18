@@ -1,7 +1,7 @@
 {
   "unit": "L458",
   "method": "Opened final exported WebPs and compared with L058/refined family style and cast anchors",
-  "result": "REPAIRED PASS; S02 teacher style-drift issue resolved locally, pushed preview pending",
+  "result": "PASS; teacher approved all five final images after S02 repair",
   "rejectedDrafts": [
     {
       "sentenceId": "L458-S04",
@@ -50,5 +50,14 @@
       "semantic": "PASS",
       "notes": "Recurring protagonist and fixed father use intact wooden interlocking puzzle; alternate method is conveyed by natural gesture without arrows or text."
     }
-  ]
+  ],
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "1c7e530a78ac5b3e28b5b6ba649894ea1269dcd8",
+    "repairedAssetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "scope": "All five final L458 images, including repaired L458-S02",
+    "statement": "可以，圖片跟音檔都審核通過。"
+  }
 }

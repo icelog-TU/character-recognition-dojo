@@ -1,7 +1,7 @@
 {
   "unit": "L458",
   "method": "OpenAI whisper-1 transcript QA plus ffprobe duration and ffmpeg volumedetect on final M4A files",
-  "result": "PASS",
+  "result": "PASS; teacher approved all final L458 audio",
   "allNineSentenceAndGameAudioExpectedHanMatchedUnprompted": true,
   "charAudioCheck": "Contextual glyph and pronunciation PASS as 其 ㄑㄧˊ",
   "g05WrongOptionMeanVolumeSpreadDb": 0.6,
@@ -186,5 +186,14 @@
       "meanVolumeDb": -19.1,
       "maxVolumeDb": -2.6
     }
-  ]
+  ],
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "1c7e530a78ac5b3e28b5b6ba649894ea1269dcd8",
+    "repairedAssetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "scope": "All final L458 audio: charAudio, five sentence files, G02 prefix/suffix, and two G05 wrong-option files",
+    "statement": "可以，圖片跟音檔都審核通過。"
+  }
 }
