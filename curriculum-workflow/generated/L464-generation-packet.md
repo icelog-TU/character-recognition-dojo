@@ -306,3 +306,7 @@ Coverage 待4/3、期3/2、日4/2、文2/2、午1/1、中2/1 PASS. Han counts 10
 ## Pushed package checkpoint
 
 Asset commit 3f783f39c800dfca5698724f4fa28939f6d44e6d pushed to origin/codex/l464-complete-package. Remote package-intake PASS. Browser QA evidence heading normalized for intake detection. Full baseline validate:production PASS; lesson-local strict asset audit PASS with zero warnings.
+
+## Teacher-requested G05 O2 audio correction
+
+Reviewed ref 09fab9289cfba4525b67818d7f8de88180b41056: teacher reported 寫信 sounding like 寫心. Regenerated the complete exact 日本朋友用日文寫信給我 with explicit 信 xin4 falling-tone instruction. Final exact transcription and independent auditory analysis both support 寫信 / xie3 xin4. Replacement duration 3684ms, 11 aligned Han characters, final tail 184ms; AAC mono 44100Hz decode/volume checks PASS, G05 volume spread 1dB. Only this audio asset changed; sentence text/options/images unchanged. Updated draft optionAudioVerification and alignment. Replacement has not yet received teacher listening approval; prior browser QA is historical. Detailed generation and SHA256 evidence in L464-G05-O2-repair-audio-review.json and technical QA report.

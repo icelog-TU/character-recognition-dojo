@@ -39,15 +39,15 @@
     },
     {
       "filename": "L464-G05-wrong-one.m4a",
-      "bytes": 40330,
-      "durationMs": 3252,
-      "meanDb": -18.4,
-      "maxDb": -2.1,
+      "bytes": 46556,
+      "durationMs": 3684,
+      "meanDb": -18.3,
+      "maxDb": -4.4,
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
       "decode": "PASS",
-      "sha256": "1a9057ff2214c60003c04eb92e7d12a7e18e1b03bc179d618ea2145a572d50d4"
+      "sha256": "8a9927988f24c234efd3be7d0e6c3a24d5a81a24b8e2e4283058019112f6f016"
     },
     {
       "filename": "L464-G05-wrong-two.m4a",
@@ -170,7 +170,7 @@
     }
   ],
   "optionMeanVolumeSpreadDb": 1,
-  "totalBytes": 1399158,
+  "totalBytes": 1405384,
   "sentenceTimingBounds": "PASS",
   "allowedCharacterAndStage4Audit": "PASS",
   "browserQA": {
@@ -205,5 +205,23 @@
       "assetCommit": "3f783f39c800dfca5698724f4fa28939f6d44e6d",
       "result": "PASS"
     }
-  }
+  },
+  "repairs": [
+    {
+      "reviewedRef": "09fab9289cfba4525b67818d7f8de88180b41056",
+      "teacherFinding": "G05 O2 寫信 sounded 寫心",
+      "asset": "L464-G05-wrong-one.m4a",
+      "action": "Independently regenerated entire exact approved spokenText; no slicing/splicing or text changes",
+      "generation": {
+        "input": "日本朋友用日文寫信給我",
+        "instructions": "Speak this exact Taiwan Mandarin sentence naturally and clearly once. Mandatory phonetic reading: ri4 ben3 peng2 you3 yong4 ri4 wen2 xie3 xin4 gei3 wo3. In 寫信, 信 is xin4 ㄒㄧㄣˋ with an unmistakable falling fourth tone, NOT 心 xin1. Keep the final n audible; do not add syllables or commentary.",
+        "model": "gpt-4o-mini-tts",
+        "voice": "coral",
+        "speed": 0.9
+      },
+      "validation": "Final M4A exact Whisper transcript, independent audio-model xie3 xin4, decode/format/volume/timings PASS",
+      "humanReview": "Replacement not yet teacher-reviewed; previous QA remains scoped to original ref",
+      "sha256": "8a9927988f24c234efd3be7d0e6c3a24d5a81a24b8e2e4283058019112f6f016"
+    }
+  ]
 }
