@@ -1,0 +1,67 @@
+{
+  "unit": "L469",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "char-u61c9",
+      "sha256": "8d8bd7e21f15d3af5c076c22033b452a955ad6260521be7c53dbbcadc47b192d",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"yīng\",\"heardPronunciation\":[\"ying1\"],\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-S01",
+      "sha256": "c11291f06c8c38d03d44c637aeb00880ede1b2ac0d3ecaf19fd2568beea639ba",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"运动后应该喝一点水\",\"heardPronunciation\":\"yun4 dong4 hou4 ying1 gai1 he1 yi4 dian3 shui3\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-S02",
+      "sha256": "2fc49c9de129929773af247ab9f88938926d108b971f88af4954145dd3182991",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"小狗没活力，应该是生病了\",\"heardPronunciation\":\"xiao3 gou3 mei2 huo2 li4, ying1 gai1 shi4 sheng1 bing4 le5\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-S03",
+      "sha256": "1470cb0dcb57862029e734b868a664d09e13038b4a4d1b2301e80e73f9becff6",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"用脚写字是他的拿手绝活\",\"heardPronunciation\":\"yong4 jiao3 xie3 zi4 shi4 ta1 de na2 shou3 jue2 huo2\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-S04",
+      "sha256": "73306eb39bfadbaa75fee393eaa6331699791e0a1111aaae1b2f88b918df298e",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"用这一招绝对能打倒怪物\",\"heardPronunciation\":\"yong4 zhe4 zhao1 jue2 dui4 neng2 da3 dao3 guai4 wu4\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-S05",
+      "sha256": "5d88b23fe48cac62a60a4de32517c795bb95cc7267df364d31c0d732eb7f7da8",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"接待人员忙着通话没回应我\",\"heardPronunciation\":\"jie1 dai4 ren2 yuan2 mang2 zhe tong1 hua4 mei2 hui2 ying4 wo3\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-G02-prefix",
+      "sha256": "5a3a0a97cb55f41ef697463dabf8de2b058480503cb1c2dcd5a82fc2e809346c",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"接待人员忙着通话没回\",\"heardPronunciation\":\"jie1 dai4 ren2 yuan2 mang2 zhe tong1 hua4 mei2 hui2\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-G02-suffix",
+      "sha256": "1530fd81175c5a36b3440fd6e535dac77bf74b114980424717b7207074996499",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"我\",\"heardPronunciation\":\"wo3\",\"uncertainty\":0.0}"
+    },
+    {
+      "id": "L469-G05-wrong-one",
+      "sha256": "927b862c84d20f9df8b16eb690404237ecc365df80f4af466c61d90ff9527438",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"用这招绝对能打倒勇者\",\"heardPronunciation\":\"yong4 zhe4 zhao1 jue2 dui4 neng2 da3 dao3 yong3 zhe3\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L469-G05-wrong-two",
+      "sha256": "b3d025a17e52a0a540b0fa48765622221c48f1ad8a34943e8ae483e44d312044",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"用这招绝对能打跑怪物\", \"heardPronunciation\": \"yong4 zhe4 zhao1 jue2 dui4 neng2 da3 pao3 guai4 wu4\", \"uncertainty\": 0.02}"
+    }
+  ]
+}

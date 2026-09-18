@@ -1,0 +1,169 @@
+{
+  "unit": "L469",
+  "audio": [
+    {
+      "filename": "char-u61c9.m4a",
+      "bytes": 12055,
+      "durationMs": 1277,
+      "meanDb": -19,
+      "maxDb": -4.2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-G02-prefix.m4a",
+      "bytes": 41322,
+      "durationMs": 3311,
+      "meanDb": -18.4,
+      "maxDb": -2.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-G02-suffix.m4a",
+      "bytes": 16408,
+      "durationMs": 1263,
+      "meanDb": -16,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-G05-wrong-one.m4a",
+      "bytes": 51261,
+      "durationMs": 3626,
+      "meanDb": -18,
+      "maxDb": -2.9,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-G05-wrong-two.m4a",
+      "bytes": 50843,
+      "durationMs": 3761,
+      "meanDb": -17.8,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-S01.m4a",
+      "bytes": 41040,
+      "durationMs": 3299,
+      "meanDb": -17.8,
+      "maxDb": -4.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-S02.m4a",
+      "bytes": 49533,
+      "durationMs": 4003,
+      "meanDb": -17.4,
+      "maxDb": -3.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-S03.m4a",
+      "bytes": 53030,
+      "durationMs": 4219,
+      "meanDb": -19.1,
+      "maxDb": -2.9,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-S04.m4a",
+      "bytes": 43963,
+      "durationMs": 3545,
+      "meanDb": -18,
+      "maxDb": -2.5,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L469-S05.m4a",
+      "bytes": 48113,
+      "durationMs": 3840,
+      "meanDb": -17.7,
+      "maxDb": -2.8,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "filename": "L469-S01.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 208288,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L469-S02.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 222900,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L469-S03.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 178810,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L469-S04.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 230184,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L469-S05.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 211136,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "optionMeanVolumeSpreadDb": 0.2,
+  "totalBytes": 1458886,
+  "sentenceTimingBounds": "PASS",
+  "allowedCharacterAndStage4Audit": "PASS",
+  "browserQA": {
+    "status": "in progress",
+    "attemptedUrl": "http://127.0.0.1:14269/character-recognition-dojo/",
+    "tool": "cua.getBrowser",
+    "result": "Browser initialized; playback tests in progress",
+    "durationSeconds": 30,
+    "manualPlayback": "Not verified; audio listening, synchronized highlights, G02 hold-to-record and stitched replay remain untested. No teacher manual PASS claimed."
+  }
+}
