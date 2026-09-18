@@ -1,0 +1,204 @@
+{
+  "unit": "L456",
+  "packageStatus": "partial-package",
+  "purpose": "Preserve existing work for Package Rescue; not accepted final audio or completion claim",
+  "approvedTextsUnchanged": true,
+  "startupChecks": "tools:check, ai:check, curriculum:audit-state PASS",
+  "allowedCharacterAudit": "453 unique allowed characters; sentences/options PASS",
+  "coverage": {
+    "突": 3,
+    "現": 2,
+    "表": 2,
+    "演": 3,
+    "候": 1,
+    "台": 1
+  },
+  "images": [
+    {
+      "file": "L456-S01.webp",
+      "bytes": 172556,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+    },
+    {
+      "file": "L456-S02.webp",
+      "bytes": 223960,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+    },
+    {
+      "file": "L456-S03.webp",
+      "bytes": 166918,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+    },
+    {
+      "file": "L456-S04.webp",
+      "bytes": 220008,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+    },
+    {
+      "file": "L456-S05.webp",
+      "bytes": 231784,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+    }
+  ],
+  "audio": [
+    {
+      "file": "char-u7a81.m4a",
+      "bytes": 23117,
+      "sha256": "60f7571e29701806dc3852815db26dbde3ca487ae1c353ab7fe6259514f3ddc3",
+      "durationMs": 2624,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "needs Taiwan tu2 pronunciation repair"
+    },
+    {
+      "file": "L456-G02-prefix.m4a",
+      "bytes": 14265,
+      "sha256": "2a4f78138d67f1ef4bdea340a60da96e2da0c4b24f50f2b7619e0eedb5c0fcb3",
+      "durationMs": 1097,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "existing asset; human playback not verified"
+    },
+    {
+      "file": "L456-G02-suffix.m4a",
+      "bytes": 37844,
+      "sha256": "5f06a433adcf87aaf2e380d39c12f9e99d47894982a80b6ae7b1187882d6fa59",
+      "durationMs": 3063,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "existing asset; human playback not verified"
+    },
+    {
+      "file": "L456-G05-wrong-one.m4a",
+      "bytes": 28730,
+      "sha256": "8e8989b0415310b159364db7e5632325ed179e6965b4bd4b223ce9c06b4ab32a",
+      "durationMs": 2363,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "existing asset; human playback not verified"
+    },
+    {
+      "file": "L456-G05-wrong-two.m4a",
+      "bytes": 38937,
+      "sha256": "f45a15b4c74aa8e3b4db8305fa557ec58d397229945ad52a1f8a53b6a30cb785",
+      "durationMs": 3078,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "existing asset; human playback not verified"
+    },
+    {
+      "file": "L456-S01.m4a",
+      "bytes": 48704,
+      "sha256": "55e1928d9f59dc42bd0e87674ce249d617453391790f27e809fd6436db11fa59",
+      "durationMs": 3679,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "needs Taiwan tu2 pronunciation repair"
+    },
+    {
+      "file": "L456-S02.m4a",
+      "bytes": 59009,
+      "sha256": "a86e69ff3ee85dd2d5fe9789cffcdc59c214e13335de3a7028221f62c602f01f",
+      "durationMs": 4532,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "needs Taiwan tu2 pronunciation repair"
+    },
+    {
+      "file": "L456-S03.m4a",
+      "bytes": 43085,
+      "sha256": "71e7f2c7ae2b234f91f9dc5ac9a962acf95e9f44d94639e2be500c46679b6994",
+      "durationMs": 3337,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "existing asset; human playback not verified"
+    },
+    {
+      "file": "L456-S04.m4a",
+      "bytes": 38340,
+      "sha256": "e2112b910241bf6e863fa0fd693c1900dbff01d1bbd8762d738bed3ce7eff6c3",
+      "durationMs": 3086,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "existing asset; human playback not verified"
+    },
+    {
+      "file": "L456-S05.m4a",
+      "bytes": 44870,
+      "sha256": "baa0a05f4ee8da1dcb12eb3f40da56ae73fa06bab99f4abb808be224ba8a4252",
+      "durationMs": 3452,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS",
+      "status": "needs Taiwan tu2 pronunciation repair"
+    }
+  ],
+  "totalAssetBytes": 1392127,
+  "timingIssues": [
+    {
+      "id": "L456-S01",
+      "charIndex": 5,
+      "startMs": 2180,
+      "endMs": 2181,
+      "reason": "Short span or overlap; repair after final audio regeneration"
+    },
+    {
+      "id": "L456-S01",
+      "charIndex": 6,
+      "startMs": 2180,
+      "endMs": 2540,
+      "reason": "Short span or overlap; repair after final audio regeneration"
+    },
+    {
+      "id": "L456-S05",
+      "charIndex": 4,
+      "startMs": 1860,
+      "endMs": 1861,
+      "reason": "Short span or overlap; repair after final audio regeneration"
+    },
+    {
+      "id": "L456-S05",
+      "charIndex": 5,
+      "startMs": 1860,
+      "endMs": 2180,
+      "reason": "Short span or overlap; repair after final audio regeneration"
+    }
+  ],
+  "additionalTimingReview": [
+    "S02 charIndex 3 突 spans 1240-2140 ms (900 ms); regenerate alignment after tone repair.",
+    "G02 suffix charIndex 1 出 spans 400-1300 ms (900 ms); inspect audible boundaries, preserve 然出現一隻小鳥."
+  ],
+  "browserQA": "Not performed; all stages including G02 sustained recording and stitched replay remain untested",
+  "humanAudioQA": "Not performed. AI phonetic analysis and approximate pitch tracking suggest first-tone 突; do not claim Taiwan tu2 PASS.",
+  "sharedFiles": "No final curriculum/scripts/planner/ledger changes",
+  "intake": "Not yet rerun at this preservation checkpoint; completion gate expected to reject partial-package."
+}

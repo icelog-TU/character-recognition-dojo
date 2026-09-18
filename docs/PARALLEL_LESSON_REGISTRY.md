@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L456 | 突 | claimed | Production D | `codex/l456-complete-package` | L451:台; L452:候; L453:演; L454:表; L455:現; milestone L450 → R055 → R056 | 台、候、演、表、現 | `curriculum-workflow/lesson-requests/L456.json`; `curriculum-workflow/generated/L456-generation-packet.md`; `curriculum-workflow/drafts/L456-draft.json` | `public/assets/lessons/L456/`; `curriculum-workflow/audio-inbox/L456/` | Teacher-approved handoff; Taiwan 突 ㄊㄨˊ. Dependencies block Release only. |
+| L456 | 突 | needs-rework | Production D | `codex/l456-complete-package` | L451:台; L452:候; L453:演; L454:表; L455:現; milestone L450 → R055 → R056 | 台、候、演、表、現 | `curriculum-workflow/lesson-requests/L456.json`; `curriculum-workflow/generated/L456-generation-packet.md`; `curriculum-workflow/drafts/L456-draft.json` | `public/assets/lessons/L456/`; `curriculum-workflow/audio-inbox/L456/` | Partial-work checkpoint for Package Rescue. Five images style/cast PASS; current ten audio/nine alignments preserved. charAudio/S01/S02/S05 need tu2 repair; S01/S05 1ms timings invalid. See L456-package-notes.md. Not asset-complete. |
 
 ## Status Values
 

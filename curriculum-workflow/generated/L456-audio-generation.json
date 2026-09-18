@@ -1,0 +1,29 @@
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "speed": 0.9,
+  "repairInstructions": "請使用臺灣國語，清晰親切。這是臺灣兒童識字教材。所有「突」必須念第二聲ㄊㄨˊ，聲調由中低往上揚，與「圖」完全同音，不可念第一聲。「突然」讀作「圖然」的聲音：tú rán，兩字都是上揚的二聲。只念輸入文字一次，不加任何說明、不重複。「然出現一隻小鳥」第一個字是然，直接接出現，不可加「後」或「突」。語速自然，清楚保留尾音。",
+  "regenerated": [
+    {
+      "id": "char-u7a81",
+      "input": "突"
+    },
+    {
+      "id": "L456-S01",
+      "input": "表演的時候突然停電了"
+    },
+    {
+      "id": "L456-S02",
+      "input": "窗台上突然出現一隻小鳥"
+    },
+    {
+      "id": "L456-S05",
+      "input": "走到半路突然下起大雨"
+    },
+    {
+      "id": "L456-G02-suffix",
+      "input": "然出現一隻小鳥"
+    }
+  ],
+  "reason": "Resolve Taiwan rising second tone and exact suffix; whole utterance regenerated independently; no syllable extraction."
+}
