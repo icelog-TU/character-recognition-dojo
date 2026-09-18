@@ -13,7 +13,7 @@
     "活": "/assets/lessons/L467/audio/char-u6d3b.m4a"
   },
   "requiredRounds": 5,
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "dependsOnLessons": [
     "L462",
     "L463",
@@ -1035,9 +1035,79 @@
       "focusChar": "活",
       "imageNotes": "主角爸爸在家表演魔術，揭開手帕後，原本遮住的位置出現一隻小鳥，小鳥自然站在架子上；主角女孩與哥哥驚喜地看著。爸爸是表演者，不是 generic 魔術師。表現熟練的變鳥表演，不畫抓扯、擠壓小鳥或讓孩子模仿危險操作。",
       "imagePrompt": "Use case: illustration-story. ONE square 1:1 finished children picture-book illustration with generous safe margins and one phone-readable action. Match all five L058 images as STYLE ONLY and the refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: exquisite detailed traditional pencil-and-watercolor, delicate warm pencil linework, layered transparent pigment, rich paper and fabric texture, bright natural Taiwan light, sophisticated warm palette, expressive natural preschool proportions, crisp faces and hands, detailed but clean environments. Match family identity anchors L154-S01, L162-S04 and L163-S02. Recurring protagonist girl: preschool age, short dark-brown bob, pink hairclip, pink cardigan over a cream top, navy skirt and pink shoes. Recurring mother: shoulder-length dark hair, cream cardigan or blouse with practical blue clothing. Recurring father: short dark hair, pale-blue shirt and khaki trousers. Recurring older brother: elementary-school age, older and taller than the protagonist, short dark hair and simple striped or coordinated casual top. Keep every family member visually stable and generic visitors visually distinct. No photorealism, flat cartoon, anime, 3D render, coarse wash, readable text, letters, digits, labels, logos, speech bubbles, game UI, damage numbers or watermark. 主角爸爸在家表演魔術，揭開手帕後，原本遮住的位置出現一隻小鳥，小鳥自然站在架子上；主角女孩與哥哥驚喜地看著。爸爸是表演者，不是 generic 魔術師。表現熟練的變鳥表演，不畫抓扯、擠壓小鳥或讓孩子模仿危險操作。",
-      "imageSrc": null,
+      "imageSrc": "/assets/lessons/L467/images/L467-S01.webp",
       "approved": true,
-      "audio": null
+      "audio": {
+        "src": "/assets/lessons/L467/audio/L467-S01.m4a",
+        "durationMs": 4412,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1020,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1220,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1800,
+            "endMs": 2310
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2310,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2480,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3080,
+            "endMs": 3300
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3300,
+            "endMs": 3640
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3640,
+            "endMs": 3940
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3940,
+            "endMs": 4180
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
+      }
     },
     {
       "id": "L467-S02",
@@ -1050,9 +1120,69 @@
       "focusChar": "絕",
       "imageNotes": "家中電視前，主角女孩拿遊戲控制器，固定哥哥在旁指向畫面，向女孩介紹有把握打倒怪物的招數。遊戲中的勇者正在準備釋放明顯的特殊能量招數，怪物仍站著，尚未被打倒。重點是哥哥提供攻略，不是宣告怪物已經倒地；畫面非血腥，不使用招式名稱或傷害數字。",
       "imagePrompt": "Use case: illustration-story. ONE square 1:1 finished children picture-book illustration with generous safe margins and one phone-readable action. Match all five L058 images as STYLE ONLY and the refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: exquisite detailed traditional pencil-and-watercolor, delicate warm pencil linework, layered transparent pigment, rich paper and fabric texture, bright natural Taiwan light, sophisticated warm palette, expressive natural preschool proportions, crisp faces and hands, detailed but clean environments. Match family identity anchors L154-S01, L162-S04 and L163-S02. Recurring protagonist girl: preschool age, short dark-brown bob, pink hairclip, pink cardigan over a cream top, navy skirt and pink shoes. Recurring mother: shoulder-length dark hair, cream cardigan or blouse with practical blue clothing. Recurring father: short dark hair, pale-blue shirt and khaki trousers. Recurring older brother: elementary-school age, older and taller than the protagonist, short dark hair and simple striped or coordinated casual top. Keep every family member visually stable and generic visitors visually distinct. No photorealism, flat cartoon, anime, 3D render, coarse wash, readable text, letters, digits, labels, logos, speech bubbles, game UI, damage numbers or watermark. 家中電視前，主角女孩拿遊戲控制器，固定哥哥在旁指向畫面，向女孩介紹有把握打倒怪物的招數。遊戲中的勇者正在準備釋放明顯的特殊能量招數，怪物仍站著，尚未被打倒。重點是哥哥提供攻略，不是宣告怪物已經倒地；畫面非血腥，不使用招式名稱或傷害數字。",
-      "imageSrc": null,
+      "imageSrc": "/assets/lessons/L467/images/L467-S02.webp",
       "approved": true,
-      "audio": null
+      "audio": {
+        "src": "/assets/lessons/L467/audio/L467-S02.m4a",
+        "durationMs": 3877,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 940
+          },
+          {
+            "charIndex": 2,
+            "startMs": 940,
+            "endMs": 1250
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1250,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1800,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2020,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2340,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2680,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2980,
+            "endMs": 3420
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3420,
+            "endMs": 3640
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
+      }
     },
     {
       "id": "L467-S03",
@@ -1066,9 +1196,79 @@
       "focusChar": "活",
       "imageNotes": "出發前的家中，主角女孩興奮地與父母談論即將參加的親子活動；可用一個清楚的想像泡泡，呈現她和爸爸在戶外合作傳球、媽媽在旁參與的親子遊戲。要有大人與孩子共同參與，不是只有孩子自己玩。活動尚未發生，星期日由句子交代；不得改回游泳活動，也不要求可讀活動海報或日期。",
       "imagePrompt": "Use case: illustration-story. ONE square 1:1 finished children picture-book illustration with generous safe margins and one phone-readable action. Match all five L058 images as STYLE ONLY and the refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: exquisite detailed traditional pencil-and-watercolor, delicate warm pencil linework, layered transparent pigment, rich paper and fabric texture, bright natural Taiwan light, sophisticated warm palette, expressive natural preschool proportions, crisp faces and hands, detailed but clean environments. Match family identity anchors L154-S01, L162-S04 and L163-S02. Recurring protagonist girl: preschool age, short dark-brown bob, pink hairclip, pink cardigan over a cream top, navy skirt and pink shoes. Recurring mother: shoulder-length dark hair, cream cardigan or blouse with practical blue clothing. Recurring father: short dark hair, pale-blue shirt and khaki trousers. Recurring older brother: elementary-school age, older and taller than the protagonist, short dark hair and simple striped or coordinated casual top. Keep every family member visually stable and generic visitors visually distinct. No photorealism, flat cartoon, anime, 3D render, coarse wash, readable text, letters, digits, labels, logos, speech bubbles, game UI, damage numbers or watermark. 出發前的家中，主角女孩興奮地與父母談論即將參加的親子活動；可用一個清楚的想像泡泡，呈現她和爸爸在戶外合作傳球、媽媽在旁參與的親子遊戲。要有大人與孩子共同參與，不是只有孩子自己玩。活動尚未發生，星期日由句子交代；不得改回游泳活動，也不要求可讀活動海報或日期。",
-      "imageSrc": null,
+      "imageSrc": "/assets/lessons/L467/images/L467-S03.webp",
       "approved": true,
-      "audio": null
+      "audio": {
+        "src": "/assets/lessons/L467/audio/L467-S03.m4a",
+        "durationMs": 3576,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1000,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1620,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1840,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2100,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2460,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2660,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2980,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3160,
+            "endMs": 3340
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
+      }
     },
     {
       "id": "L467-S04",
@@ -1081,10 +1281,80 @@
       ],
       "focusChar": "招",
       "imageNotes": "主角家客廳，媽媽招待兩位來訪的 generic 成年朋友，主角女孩幫忙把水果或點心端到桌上。女孩是在幫媽媽，不是自己獨立辦聚會；客人不要畫成爸爸或其他家人，角色關係清楚。",
-      "imagePrompt": "Use case: illustration-story. ONE square 1:1 finished children picture-book illustration with generous safe margins and one phone-readable action. Match all five L058 images as STYLE ONLY and the refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: exquisite detailed traditional pencil-and-watercolor, delicate warm pencil linework, layered transparent pigment, rich paper and fabric texture, bright natural Taiwan light, sophisticated warm palette, expressive natural preschool proportions, crisp faces and hands, detailed but clean environments. Match family identity anchors L154-S01, L162-S04 and L163-S02. Recurring protagonist girl: preschool age, short dark-brown bob, pink hairclip, pink cardigan over a cream top, navy skirt and pink shoes. Recurring mother: shoulder-length dark hair, cream cardigan or blouse with practical blue clothing. Recurring father: short dark hair, pale-blue shirt and khaki trousers. Recurring older brother: elementary-school age, older and taller than the protagonist, short dark hair and simple striped or coordinated casual top. Keep every family member visually stable and generic visitors visually distinct. No photorealism, flat cartoon, anime, 3D render, coarse wash, readable text, letters, digits, labels, logos, speech bubbles, game UI, damage numbers or watermark. 主角家客廳，媽媽招待兩位來訪的 generic 成年朋友，主角女孩幫忙把水果或點心端到桌上。女孩是在幫媽媽，不是自己獨立辦聚會；客人不要畫成爸爸或其他家人，角色關係清楚。",
-      "imageSrc": null,
+      "imagePrompt": "Use case: illustration-story. ONE square 1:1 finished children picture-book illustration with generous safe margins and one phone-readable action. Match all five L058 images as STYLE ONLY and the refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: exquisite detailed traditional pencil-and-watercolor, delicate warm pencil linework, layered transparent pigment, rich paper and fabric texture, bright natural Taiwan light, sophisticated warm palette, expressive natural preschool proportions, crisp faces and hands, detailed but clean environments. Match family identity anchors L154-S01, L162-S04 and L163-S02. Recurring protagonist girl: preschool age, short dark-brown bob, pink hairclip, pink cardigan over a cream top, navy skirt and pink shoes. Recurring mother: shoulder-length dark hair, cream cardigan or blouse with practical blue clothing. Recurring father: short dark hair, pale-blue shirt and khaki trousers. Recurring older brother: elementary-school age, older and taller than the protagonist, short dark hair and simple striped or coordinated casual top. Keep every family member visually stable and generic visitors visually distinct. No photorealism, flat cartoon, anime, 3D render, coarse wash, readable text, letters, digits, labels, logos, speech bubbles, game UI, damage numbers or watermark. 主角家客廳，媽媽招待兩位來訪的 generic 成年朋友，主角女孩幫忙把水果或點心端到桌上。女孩是在幫媽媽，不是自己獨立辦聚會；客人不要畫成爸爸或其他家人，角色關係清楚。 Final accepted edit: exactly four people total—the recurring girl, recurring mother, and two visually distinct generic adult female friends. Father and older brother are absent.",
+      "imageSrc": "/assets/lessons/L467/images/L467-S04.webp",
       "approved": true,
-      "audio": null
+      "audio": {
+        "src": "/assets/lessons/L467/audio/L467-S04.m4a",
+        "durationMs": 3785,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1160,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1760,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2060,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2260,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 2880
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2880,
+            "endMs": 3000
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3000,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3220,
+            "endMs": 3390
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3390,
+            "endMs": 3560
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
+      }
     },
     {
       "id": "L467-S05",
@@ -1097,9 +1367,69 @@
       "focusChar": "活",
       "imageNotes": "家中魚缸旁，一條小魚剛跳出魚缸、落在濕潤的防水墊上，尾巴仍有活動姿態。主角女孩發現後提醒爸爸，爸爸已拿著盛水的小容器，準備迅速將魚送回水中。畫面是即將救回，不畫成魚已經回缸，也不畫流血、死亡或長時間折磨；不讓孩子徒手擠抓魚。",
       "imagePrompt": "Use case: illustration-story. ONE square 1:1 finished children picture-book illustration with generous safe margins and one phone-readable action. Match all five L058 images as STYLE ONLY and the refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: exquisite detailed traditional pencil-and-watercolor, delicate warm pencil linework, layered transparent pigment, rich paper and fabric texture, bright natural Taiwan light, sophisticated warm palette, expressive natural preschool proportions, crisp faces and hands, detailed but clean environments. Match family identity anchors L154-S01, L162-S04 and L163-S02. Recurring protagonist girl: preschool age, short dark-brown bob, pink hairclip, pink cardigan over a cream top, navy skirt and pink shoes. Recurring mother: shoulder-length dark hair, cream cardigan or blouse with practical blue clothing. Recurring father: short dark hair, pale-blue shirt and khaki trousers. Recurring older brother: elementary-school age, older and taller than the protagonist, short dark hair and simple striped or coordinated casual top. Keep every family member visually stable and generic visitors visually distinct. No photorealism, flat cartoon, anime, 3D render, coarse wash, readable text, letters, digits, labels, logos, speech bubbles, game UI, damage numbers or watermark. 家中魚缸旁，一條小魚剛跳出魚缸、落在濕潤的防水墊上，尾巴仍有活動姿態。主角女孩發現後提醒爸爸，爸爸已拿著盛水的小容器，準備迅速將魚送回水中。畫面是即將救回，不畫成魚已經回缸，也不畫流血、死亡或長時間折磨；不讓孩子徒手擠抓魚。",
-      "imageSrc": null,
+      "imageSrc": "/assets/lessons/L467/images/L467-S05.webp",
       "approved": true,
-      "audio": null
+      "audio": {
+        "src": "/assets/lessons/L467/audio/L467-S05.m4a",
+        "durationMs": 3576,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1360,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1620,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2200,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2620,
+            "endMs": 2880
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2880,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3120,
+            "endMs": 3320
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
+      }
     }
   ],
   "sentenceGames": [
@@ -1122,7 +1452,64 @@
         "prefixText": "小魚還",
         "suffixText": "著快放回水裡",
         "prefixSrc": "/assets/lessons/L467/audio/L467-G02-prefix.m4a",
-        "suffixSrc": "/assets/lessons/L467/audio/L467-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L467/audio/L467-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L467/audio/L467-G02-prefix.m4a",
+          "durationMs": 1811,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 740
+            },
+            {
+              "charIndex": 1,
+              "startMs": 740,
+              "endMs": 1200
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1200,
+              "endMs": 1580
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L467/audio/L467-G02-suffix.m4a",
+          "durationMs": 3668,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 500
+            },
+            {
+              "charIndex": 1,
+              "startMs": 1300,
+              "endMs": 2060
+            },
+            {
+              "charIndex": 2,
+              "startMs": 2060,
+              "endMs": 2380
+            },
+            {
+              "charIndex": 3,
+              "startMs": 2380,
+              "endMs": 2800
+            },
+            {
+              "charIndex": 4,
+              "startMs": 2800,
+              "endMs": 3140
+            },
+            {
+              "charIndex": 5,
+              "startMs": 3140,
+              "endMs": 3440
+            }
+          ]
+        }
       }
     },
     {
@@ -1199,23 +1586,374 @@
           "text": "這招絕對能把怪物打倒。",
           "spokenText": "這招絕對能把怪物打倒",
           "correct": true,
-          "audioSrc": "/assets/lessons/L467/audio/L467-S02.m4a"
+          "audioSrc": "/assets/lessons/L467/audio/L467-S02.m4a",
+          "audio": {
+            "src": "/assets/lessons/L467/audio/L467-S02.m4a",
+            "durationMs": 3877,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 940
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1440,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1460,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3420,
+                "endMs": 3640
+              }
+            ]
+          }
         },
         {
           "id": "wrong-one",
           "text": "這招絕對能把怪物打跑。",
           "spokenText": "這招絕對能把怪物打跑",
           "correct": false,
-          "audioSrc": "/assets/lessons/L467/audio/L467-G05-wrong-one.m4a"
+          "audioSrc": "/assets/lessons/L467/audio/L467-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L467/audio/L467-G05-wrong-one.m4a",
+            "durationMs": 3645,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 920
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1500,
+                "endMs": 1501
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2040,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3100,
+                "endMs": 3420
+              }
+            ]
+          }
         },
         {
           "id": "wrong-two",
           "text": "這招絕對能把勇者打倒。",
           "spokenText": "這招絕對能把勇者打倒",
           "correct": false,
-          "audioSrc": "/assets/lessons/L467/audio/L467-G05-wrong-two.m4a"
+          "audioSrc": "/assets/lessons/L467/audio/L467-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L467/audio/L467-G05-wrong-two.m4a",
+            "durationMs": 3576,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 900
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1360,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1400,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2660,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3140,
+                "endMs": 3320
+              }
+            ]
+          }
         }
       ]
     }
-  ]
+  ],
+  "stage4AudioAlignment": {
+    "L467-G02-prefix": {
+      "src": "/assets/lessons/L467/audio/L467-G02-prefix.m4a",
+      "durationMs": 1811,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 740
+        },
+        {
+          "charIndex": 1,
+          "startMs": 740,
+          "endMs": 1200
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1200,
+          "endMs": 1580
+        }
+      ],
+      "spokenText": "小魚還"
+    },
+    "L467-G02-suffix": {
+      "src": "/assets/lessons/L467/audio/L467-G02-suffix.m4a",
+      "durationMs": 3668,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 500
+        },
+        {
+          "charIndex": 1,
+          "startMs": 1300,
+          "endMs": 2060
+        },
+        {
+          "charIndex": 2,
+          "startMs": 2060,
+          "endMs": 2380
+        },
+        {
+          "charIndex": 3,
+          "startMs": 2380,
+          "endMs": 2800
+        },
+        {
+          "charIndex": 4,
+          "startMs": 2800,
+          "endMs": 3140
+        },
+        {
+          "charIndex": 5,
+          "startMs": 3140,
+          "endMs": 3440
+        }
+      ],
+      "spokenText": "著快放回水裡"
+    },
+    "L467-G05-wrong-one": {
+      "src": "/assets/lessons/L467/audio/L467-G05-wrong-one.m4a",
+      "durationMs": 3645,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 340
+        },
+        {
+          "charIndex": 1,
+          "startMs": 340,
+          "endMs": 920
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1500,
+          "endMs": 1501
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1500,
+          "endMs": 1820
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1820,
+          "endMs": 2040
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2040,
+          "endMs": 2280
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2280,
+          "endMs": 2560
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2560,
+          "endMs": 2760
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2760,
+          "endMs": 3100
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3100,
+          "endMs": 3420
+        }
+      ],
+      "spokenText": "這招絕對能把怪物打跑"
+    },
+    "L467-G05-wrong-two": {
+      "src": "/assets/lessons/L467/audio/L467-G05-wrong-two.m4a",
+      "durationMs": 3576,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 360
+        },
+        {
+          "charIndex": 1,
+          "startMs": 360,
+          "endMs": 900
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1360,
+          "endMs": 1400
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1400,
+          "endMs": 1640
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1640,
+          "endMs": 1820
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1820,
+          "endMs": 2080
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2080,
+          "endMs": 2440
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2440,
+          "endMs": 2660
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2660,
+          "endMs": 3140
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3140,
+          "endMs": 3320
+        }
+      ],
+      "spokenText": "這招絕對能把勇者打倒"
+    }
+  },
+  "productionQA": {
+    "imageStyle": "All five final 1024×1024 WebP images passed post-compression side-by-side style-lock, cast and semantic review. The set uses one coherent refined pencil-and-watercolor medium with stable recurring family identities and no readable text or digits. S04 first generation was rejected for adding father and brother; the accepted replacement contains exactly the recurring girl, mother and two generic adult friends.",
+    "audioPipeline": "Repo OpenAI gpt-4o-mini-tts with the coral voice and repo audio processing. Ten final mono AAC 44100 Hz M4A files are present. G05 wrong choices are separately generated complete sentences with no splicing. G02 prefix and suffix are independently generated fragments; suffix begins with 著 and excludes 活.",
+    "timingReview": "Whisper word alignment recorded for all five sentences, both G02 fragments and both G05 wrong choices. Every timed track has one ordered timing per Han character and no terminal tail over 300 ms after final trimming.",
+    "pronunciation": "Full-sentence ASR matched all five approved Han sequences after Traditional/Simplified normalization, including S05 小魚還活著快放回水裡. Both G05 wrong options matched exact approved Han sequences. Standalone 活 was independently regenerated and transcribed as 活. The short G02 prefix transcribed as pronunciation-equivalent 小愚孩 for 小魚還 (ㄒㄧㄠˇ ㄩˊ ㄏㄞˊ); suffix was generated with explicit neutral-tone 著 continuation instructions and transcribed its first syllable orthographically as 折 before exact 快放回水裡.",
+    "browserQA": "Pushed-commit asset-review load and playback smoke test will be recorded after the asset commit.",
+    "assetAudit": "PASS: lesson-local package audit (5 WebP, 10 mono AAC M4A, 1,385,508 total bytes), npm run validate:production, and npm run assets:audit -- --strict (517 units, 2,544 image references, 5,029 audio references, 0 warnings)."
+  }
 }
