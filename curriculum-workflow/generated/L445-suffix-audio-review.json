@@ -1,0 +1,13 @@
+{
+  "unit": "L445",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "L445-G02-suffix",
+      "sha256": "6bee0f2473489945901d9904249dd6ae92cf311854d9be7f7e374ecedc3640f0",
+      "model": "gpt-audio-1.5",
+      "review": "{\"initial_syllable\":\"tɕʰi˥˩ (strong aspiration, falling tone)\",\"whole_phrase\":\"tɕʰi˥˩ ʂɤ˨˩˦ kuŋ˥ tswɔ˥˩ tɤ\",\"uncertainty\":\"The initial consonant has clear aspiration and the tone sounds like a falling tone, so it seems closest to 'qi4', but there's always some uncertainty due to the synthetic nature of the sample.\"}"
+    }
+  ]
+}

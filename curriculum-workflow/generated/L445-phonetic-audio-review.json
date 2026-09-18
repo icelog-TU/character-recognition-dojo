@@ -1,0 +1,41 @@
+{
+  "unit": "L445",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "char-u6a02",
+      "sha256": "8be83d25208b8e1877c2130aa3961e174737f386f7a3a514515ed34e492c8b53",
+      "model": "gpt-audio-1.5",
+      "review": "{\"heardPinyin\": \"yue\", \"contour\": {\"start\": \"highish\", \"middle\": \"falls slightly\", \"end\": \"lower than start\"}, \"tone\": 4, \"uncertainty\": \"low\"}",
+      "repairReason": "Teacher reported prior audio sounded yue1 (約), expected yue4 (月). Prior AI approval superseded.",
+      "generation": {
+        "model": "gpt-4o-mini-tts",
+        "voice": "coral",
+        "input": "月。",
+        "instructions": "Speak this single Chinese word in Mandarin, with a stern emphatic exclamation. Very sharp high-to-low falling pitch from the very beginning. No questioning intonation, no upward glide.",
+        "speed": 1
+      },
+      "reviewPrompt": "Analyze the actual acoustic pitch contour of this isolated Mandarin syllable. Do not infer the tone from an assumed written word. What initial/final and tone is actually audible? Compare all four tones: high level (1), rising (2), dipping (3), falling (4). Explicitly describe perceived pitch start, middle and end. Return JSON with heardPinyin, contour, tone, uncertainty. No expected word or tone is supplied.",
+      "humanListening": "Pending teacher confirmation"
+    },
+    {
+      "id": "L445-S01",
+      "sha256": "e540691f3fc9d62e7dca50136e38680c4eabda9388a5339f7ffa5754df48c460",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"这些乐器是手工做的\", \"heardPinyin\": \"zhe4 xie1 yue4 qi4 shi4 shou3 gong1 zuo4 de\", \"leYueOccurrences\": [\"yue4\"], \"jiaoTone\": null, \"defects\": [], \"confidence\": 0.92}"
+    },
+    {
+      "id": "L445-S02",
+      "sha256": "6afd1948bd1c463e2481a9694990589d7a8a5e3e09344f9750da3e265da73999",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"乐队正在把乐器搬上车\",\"heardPinyin\":\"yue4 dui4 zheng4 zai4 ba3 yue4 qi4 ban1 shang4 che1\",\"leYueOccurrences\":[{\"character\":\"乐\",\"sound\":\"yue4\"},{\"character\":\"乐\",\"sound\":\"yue4\"}],\"jiaoTone\":null,\"defects\":[],\"confidence\":0.88}"
+    },
+    {
+      "id": "L445-S03",
+      "sha256": "ea1a442e4a1a6a225c3e76da5b9f9e3d48fbb65203121acf8c3511333ad3268d",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"我很乐意教你操作机器人\", \"heardPinyin\": [\"wo3\", \"hen3\", \"le4\", \"yi4\", \"jiao1\", \"ni3\", \"cao1\", \"zuo4\", \"ji1\", \"qi4\", \"ren2\"], \"leYueOccurrences\": [\"le4\"], \"jiaoTone\": \"jiao1\", \"defects\": [], \"confidence\": 0.82}"
+    }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+  "unit": "L446",
+  "method": "Repo assets:align:ai whisper-1 on final whole-utterance M4A. Traditional/simplified orthographic equivalents only. Repaired L446-S04 was independently realigned after measured trailing-silence trim; not human playback acceptance.",
+  "adjustments": [
+    {
+      "src": "/assets/lessons/L446/audio/L446-G05-wrong-two.m4a",
+      "index": 8,
+      "previous": {
+        "charIndex": 8,
+        "startMs": 3740,
+        "endMs": 3741
+      },
+      "corrected": {
+        "charIndex": 8,
+        "startMs": 3740,
+        "endMs": 3860
+      },
+      "reason": "Whisper returned a 1ms 畫 span; split the continuous 畫面 word interval into two audible syllable spans."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-G05-wrong-two.m4a",
+      "index": 9,
+      "previous": {
+        "charIndex": 9,
+        "startMs": 3740,
+        "endMs": 4000
+      },
+      "corrected": {
+        "charIndex": 9,
+        "startMs": 3860,
+        "endMs": 4000
+      },
+      "reason": "Preserve ordered nonoverlapping 畫/面 timing within the Whisper word interval."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-S01.m4a",
+      "index": 9,
+      "previous": {
+        "charIndex": 9,
+        "startMs": 3140,
+        "endMs": 3340
+      },
+      "corrected": {
+        "charIndex": 9,
+        "startMs": 3140,
+        "endMs": 3380
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-S02.m4a",
+      "index": 8,
+      "previous": {
+        "charIndex": 8,
+        "startMs": 3060,
+        "endMs": 3260
+      },
+      "corrected": {
+        "charIndex": 8,
+        "startMs": 3060,
+        "endMs": 3350
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-S03.m4a",
+      "index": 10,
+      "previous": {
+        "charIndex": 10,
+        "startMs": 3940,
+        "endMs": 4220
+      },
+      "corrected": {
+        "charIndex": 10,
+        "startMs": 3940,
+        "endMs": 4280
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-S04.m4a",
+      "index": 11,
+      "previous": {
+        "charIndex": 11,
+        "startMs": 3820,
+        "endMs": 4080
+      },
+      "corrected": {
+        "charIndex": 11,
+        "startMs": 3820,
+        "endMs": 4110
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-S05.m4a",
+      "index": 8,
+      "previous": {
+        "charIndex": 8,
+        "startMs": 2480,
+        "endMs": 2640
+      },
+      "corrected": {
+        "charIndex": 8,
+        "startMs": 2480,
+        "endMs": 2700
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-G02-prefix.m4a",
+      "index": 5,
+      "previous": {
+        "charIndex": 5,
+        "startMs": 1320,
+        "endMs": 1520
+      },
+      "corrected": {
+        "charIndex": 5,
+        "startMs": 1320,
+        "endMs": 1610
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-G02-suffix.m4a",
+      "index": 2,
+      "previous": {
+        "charIndex": 2,
+        "startMs": 840,
+        "endMs": 1020
+      },
+      "corrected": {
+        "charIndex": 2,
+        "startMs": 840,
+        "endMs": 1180
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-G05-wrong-one.m4a",
+      "index": 11,
+      "previous": {
+        "charIndex": 11,
+        "startMs": 3480,
+        "endMs": 3720
+      },
+      "corrected": {
+        "charIndex": 11,
+        "startMs": 3480,
+        "endMs": 3810
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L446/audio/L446-G05-wrong-two.m4a",
+      "index": 11,
+      "previous": {
+        "charIndex": 11,
+        "startMs": 4320,
+        "endMs": 4620
+      },
+      "corrected": {
+        "charIndex": 11,
+        "startMs": 4320,
+        "endMs": 4630
+      },
+      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "file": "L446-S04.m4a",
+      "kind": "teacher-pronunciation-repair",
+      "oldAssetCommit": "be84c26b5d1c27601c79751621d33f41bb2f0904",
+      "reason": "Teacher heard 聲音 as 審音. Replaced the full sentence asset, retained about 250ms measured tail, and regenerated all S04 timings."
+    }
+  ],
+  "signal": {
+    "char-u97f3.m4a": {
+      "duration": 1254,
+      "lastActiveMs": 1000,
+      "tailMs": 254
+    },
+    "L446-G02-prefix.m4a": {
+      "duration": 1881,
+      "lastActiveMs": 1610,
+      "tailMs": 271
+    },
+    "L446-G02-suffix.m4a": {
+      "duration": 1440,
+      "lastActiveMs": 1180,
+      "tailMs": 260
+    },
+    "L446-G05-wrong-one.m4a": {
+      "duration": 4064,
+      "lastActiveMs": 3810,
+      "tailMs": 254
+    },
+    "L446-G05-wrong-two.m4a": {
+      "duration": 4899,
+      "lastActiveMs": 4630,
+      "tailMs": 269
+    },
+    "L446-S01.m4a": {
+      "duration": 3646,
+      "lastActiveMs": 3380,
+      "tailMs": 266
+    },
+    "L446-S02.m4a": {
+      "duration": 3622,
+      "lastActiveMs": 3350,
+      "tailMs": 272
+    },
+    "L446-S03.m4a": {
+      "duration": 4551,
+      "lastActiveMs": 4280,
+      "tailMs": 271
+    },
+    "L446-S04.m4a": {
+      "duration": 4853,
+      "lastActiveMs": 4600,
+      "tailMs": 253
+    },
+    "L446-S05.m4a": {
+      "duration": 2972,
+      "lastActiveMs": 2700,
+      "tailMs": 272
+    }
+  },
+  "transcripts": {
+    "L446-G02-prefix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.569999933242798,
+      "text": "这个乐器的声",
+      "words": [
+        {
+          "word": "这个",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "乐",
+          "start": 0.41999998688697815,
+          "end": 0.8600000143051147
+        },
+        {
+          "word": "器",
+          "start": 0.8600000143051147,
+          "end": 1.0399999618530273
+        },
+        {
+          "word": "的",
+          "start": 1.0399999618530273,
+          "end": 1.3200000524520874
+        },
+        {
+          "word": "声",
+          "start": 1.3200000524520874,
+          "end": 1.5199999809265137
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L446-G02-suffix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.359999895095825,
+      "text": "真好听!",
+      "words": [
+        {
+          "word": "真",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "好",
+          "start": 0.46000000834465027,
+          "end": 0.8399999737739563
+        },
+        {
+          "word": "听",
+          "start": 0.8399999737739563,
+          "end": 1.0199999809265137
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L446-G05-wrong-one.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.690000057220459,
+      "text": "看比賽時,把手機的聲音打開。",
+      "words": [
+        {
+          "word": "看",
+          "start": 0,
+          "end": 0.3400000035762787
+        },
+        {
+          "word": "比",
+          "start": 0.3400000035762787,
+          "end": 0.6000000238418579
+        },
+        {
+          "word": "賽",
+          "start": 0.6000000238418579,
+          "end": 0.800000011920929
+        },
+        {
+          "word": "時",
+          "start": 0.800000011920929,
+          "end": 1.2400000095367432
+        },
+        {
+          "word": "把",
+          "start": 1.7599999904632568,
+          "end": 2.0199999809265137
+        },
+        {
+          "word": "手",
+          "start": 2.0199999809265137,
+          "end": 2.319999933242798
+        },
+        {
+          "word": "機",
+          "start": 2.319999933242798,
+          "end": 2.5
+        },
+        {
+          "word": "的",
+          "start": 2.5,
+          "end": 2.700000047683716
+        },
+        {
+          "word": "聲",
+          "start": 2.700000047683716,
+          "end": 2.9600000381469727
+        },
+        {
+          "word": "音",
+          "start": 2.9600000381469727,
+          "end": 3.180000066757202
+        },
+        {
+          "word": "打",
+          "start": 3.180000066757202,
+          "end": 3.4800000190734863
+        },
+        {
+          "word": "開。",
+          "start": 3.4800000190734863,
+          "end": 3.7200000286102295
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L446-G05-wrong-two.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 5.409999847412109,
+      "text": "看比賽時,把手機的畫面關掉。",
+      "words": [
+        {
+          "word": "看",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "比",
+          "start": 0.4000000059604645,
+          "end": 0.8799999952316284
+        },
+        {
+          "word": "賽",
+          "start": 0.8799999952316284,
+          "end": 1.100000023841858
+        },
+        {
+          "word": "時",
+          "start": 1.100000023841858,
+          "end": 1.600000023841858
+        },
+        {
+          "word": "把",
+          "start": 2.4600000381469727,
+          "end": 2.7200000286102295
+        },
+        {
+          "word": "手",
+          "start": 2.7200000286102295,
+          "end": 3.0799999237060547
+        },
+        {
+          "word": "機",
+          "start": 3.0799999237060547,
+          "end": 3.2799999713897705
+        },
+        {
+          "word": "的",
+          "start": 3.2799999713897705,
+          "end": 3.740000009536743
+        },
+        {
+          "word": "畫",
+          "start": 3.740000009536743,
+          "end": 3.740000009536743
+        },
+        {
+          "word": "面",
+          "start": 3.740000009536743,
+          "end": 4
+        },
+        {
+          "word": "關",
+          "start": 4,
+          "end": 4.320000171661377
+        },
+        {
+          "word": "掉。",
+          "start": 4.320000171661377,
+          "end": 4.619999885559082
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 6
+      }
+    },
+    "L446-S01.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.150000095367432,
+      "text": "这个乐器的声音真好听!",
+      "words": [
+        {
+          "word": "这个",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "乐",
+          "start": 0.41999998688697815,
+          "end": 0.8199999928474426
+        },
+        {
+          "word": "器",
+          "start": 0.8199999928474426,
+          "end": 1.0800000429153442
+        },
+        {
+          "word": "的",
+          "start": 1.0800000429153442,
+          "end": 1.6200000047683716
+        },
+        {
+          "word": "声",
+          "start": 1.6200000047683716,
+          "end": 1.9199999570846558
+        },
+        {
+          "word": "音",
+          "start": 1.9199999570846558,
+          "end": 2.1600000858306885
+        },
+        {
+          "word": "真",
+          "start": 2.1600000858306885,
+          "end": 2.7799999713897705
+        },
+        {
+          "word": "好",
+          "start": 2.7799999713897705,
+          "end": 3.140000104904175
+        },
+        {
+          "word": "听",
+          "start": 3.140000104904175,
+          "end": 3.3399999141693115
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L446-S02.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.920000076293945,
+      "text": "我們跟著音樂做體操",
+      "words": [
+        {
+          "word": "我們",
+          "start": 0,
+          "end": 0.5400000214576721
+        },
+        {
+          "word": "跟",
+          "start": 0.5400000214576721,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": "著",
+          "start": 1.4199999570846558,
+          "end": 1.7000000476837158
+        },
+        {
+          "word": "音",
+          "start": 1.7000000476837158,
+          "end": 2.059999942779541
+        },
+        {
+          "word": "樂",
+          "start": 2.059999942779541,
+          "end": 2.180000066757202
+        },
+        {
+          "word": "做",
+          "start": 2.180000066757202,
+          "end": 2.7799999713897705
+        },
+        {
+          "word": "體",
+          "start": 2.7799999713897705,
+          "end": 3.059999942779541
+        },
+        {
+          "word": "操",
+          "start": 3.059999942779541,
+          "end": 3.259999990463257
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L446-S03.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 5.03000020980835,
+      "text": "操作機器前,先聽老師說明。",
+      "words": [
+        {
+          "word": "操",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "作",
+          "start": 0.46000000834465027,
+          "end": 0.8999999761581421
+        },
+        {
+          "word": "機",
+          "start": 0.8999999761581421,
+          "end": 1.2000000476837158
+        },
+        {
+          "word": "器",
+          "start": 1.2000000476837158,
+          "end": 1.5
+        },
+        {
+          "word": "前",
+          "start": 1.5,
+          "end": 1.899999976158142
+        },
+        {
+          "word": "先",
+          "start": 2.359999895095825,
+          "end": 2.700000047683716
+        },
+        {
+          "word": "聽",
+          "start": 2.700000047683716,
+          "end": 3
+        },
+        {
+          "word": "老師",
+          "start": 3,
+          "end": 3.559999942779541
+        },
+        {
+          "word": "說",
+          "start": 3.559999942779541,
+          "end": 3.940000057220459
+        },
+        {
+          "word": "明。",
+          "start": 3.940000057220459,
+          "end": 4.21999979019165
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 6
+      }
+    },
+    "L446-S04.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.849999904632568,
+      "text": "看比赛时,把手机的声音关掉。",
+      "words": [
+        {
+          "word": "看",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "比",
+          "start": 0.41999998688697815,
+          "end": 0.7200000286102295
+        },
+        {
+          "word": "赛",
+          "start": 0.7200000286102295,
+          "end": 1
+        },
+        {
+          "word": "时",
+          "start": 1,
+          "end": 1.3600000143051147
+        },
+        {
+          "word": "把",
+          "start": 1.9800000190734863,
+          "end": 2.240000009536743
+        },
+        {
+          "word": "手",
+          "start": 2.240000009536743,
+          "end": 2.619999885559082
+        },
+        {
+          "word": "机",
+          "start": 2.619999885559082,
+          "end": 2.8399999141693115
+        },
+        {
+          "word": "的",
+          "start": 2.8399999141693115,
+          "end": 3.0999999046325684
+        },
+        {
+          "word": "声",
+          "start": 3.0999999046325684,
+          "end": 3.3399999141693115
+        },
+        {
+          "word": "音",
+          "start": 3.3399999141693115,
+          "end": 3.640000104904175
+        },
+        {
+          "word": "关",
+          "start": 3.640000104904175,
+          "end": 4.239999771118164
+        },
+        {
+          "word": "掉。",
+          "start": 4.239999771118164,
+          "end": 4.559999942779541
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L446-S05.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.359999895095825,
+      "text": "山洞里传来我的回音",
+      "words": [
+        {
+          "word": "山",
+          "start": 0,
+          "end": 0.5400000214576721
+        },
+        {
+          "word": "洞",
+          "start": 0.5400000214576721,
+          "end": 0.7400000095367432
+        },
+        {
+          "word": "里",
+          "start": 0.7400000095367432,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "传",
+          "start": 1.159999966621399,
+          "end": 1.4800000190734863
+        },
+        {
+          "word": "来",
+          "start": 1.4800000190734863,
+          "end": 1.7400000095367432
+        },
+        {
+          "word": "我的",
+          "start": 1.7400000095367432,
+          "end": 2.140000104904175
+        },
+        {
+          "word": "回",
+          "start": 2.140000104904175,
+          "end": 2.4800000190734863
+        },
+        {
+          "word": "音",
+          "start": 2.4800000190734863,
+          "end": 2.640000104904175
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    }
+  }
+}

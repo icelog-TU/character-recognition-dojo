@@ -1,0 +1,189 @@
+{
+  "unit": "L445",
+  "audio": [
+    {
+      "filename": "char-u6a02.m4a",
+      "bytes": 15377,
+      "durationMs": 1416,
+      "meanDb": -27.7,
+      "maxDb": -9.9,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-G02-prefix.m4a",
+      "bytes": 10850,
+      "durationMs": 861,
+      "meanDb": -17.9,
+      "maxDb": -5.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-G02-suffix.m4a",
+      "bytes": 36827,
+      "durationMs": 2458,
+      "meanDb": -24.4,
+      "maxDb": -6.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-G05-wrong-one.m4a",
+      "bytes": 47193,
+      "durationMs": 3748,
+      "meanDb": -18.3,
+      "maxDb": -2.4,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-G05-wrong-two.m4a",
+      "bytes": 42335,
+      "durationMs": 3411,
+      "meanDb": -17.8,
+      "maxDb": -3.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-S01.m4a",
+      "bytes": 34427,
+      "durationMs": 2760,
+      "meanDb": -18.1,
+      "maxDb": -3.2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-S02.m4a",
+      "bytes": 41336,
+      "durationMs": 3348,
+      "meanDb": -18,
+      "maxDb": -4.4,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-S03.m4a",
+      "bytes": 52537,
+      "durationMs": 3761,
+      "meanDb": -18.1,
+      "maxDb": -3.3,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-S04.m4a",
+      "bytes": 46772,
+      "durationMs": 3479,
+      "meanDb": -18.5,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L445-S05.m4a",
+      "bytes": 48313,
+      "durationMs": 3848,
+      "meanDb": -18.4,
+      "maxDb": -2.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "filename": "L445-S01.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 219408,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Fixed girl admiring recognizable completed instruments; distinct generic artisan doing hand finishing."
+    },
+    {
+      "filename": "L445-S02.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 200012,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Generic adult band loading visible drum/guitar; female cast revised to braid/glasses/mustard blouse/teal trousers to distinguish mother."
+    },
+    {
+      "filename": "L445-S03.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 211704,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Fixed girl teaching skyblue-shirt you-boy, not Xiaoguang or brother; controller and robot coherent."
+    },
+    {
+      "filename": "L445-S04.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 188056,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Four fixed family members seated in airplane; generic gymnast only inside thought bubble, on gym mat."
+    },
+    {
+      "filename": "L445-S05.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 244382,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Fixed mother and girl stretch indoors; clear rainy window and wet exterior."
+    }
+  ],
+  "optionMeanVolumeSpreadDb": 0.7,
+  "totalBytes": 1439529,
+  "sentenceTimingBounds": "PASS",
+  "allowedCharacterAndStage4Audit": "PASS",
+  "browserQA": {
+    "status": "UI playback and interaction inspection complete; browser-tooling fallback for human listening and sustained recording",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:14245/character-recognition-dojo/",
+    "stage1": "樂 ㄩㄝˋ rendered; single-character audio tapped, playback state observed and stage marked complete. Prior UI test predates the standalone audio repair; replacement audio decode verified separately.",
+    "stage2": "Six cards: three 樂 ㄩㄝˋ targets plus 些/器/這. All three accepted; 3/3 全部找到了 displayed.",
+    "stage3": "All five cards individually played; playback states and active highlights observed, approved line breaks and final images visible without clipping. S01/S02 樂 ㄩㄝˋ; S03 樂 ㄌㄜˋ and 教 ㄐㄧㄠ displayed. Stage 3 通關.",
+    "stage4": {
+      "G01": "S03 樂 ㄌㄜˋ and 教 ㄐㄧㄠ retained; correct 樂 accepted and next button appeared.",
+      "G02": "Dedicated 這些 prefix reached red 樂 ㄩㄝˋ and long-press prompt. Browser has no sustained pointer hold. Recording/stitched replay not tested; UI skip advanced.",
+      "G03": "Index 0 missing 樂 restored from three single-Han cards; second 樂 retained. Correct answer advanced.",
+      "G04": "Four shuffled single-Han cards placed 在/家/運/動 in order; advanced.",
+      "G05": "All three animal audio controls clicked; playback state observed. Fox incorrect red feedback, frog correct green feedback. Reward panel and Stage 4 通關 inspected."
+    },
+    "isolation": "Full unchanged canonical draft temporarily isolated in local curriculum; no subset test or game reorder.",
+    "manualPlayback": "No human audible pronunciation/syllable-synchronization PASS claimed. AI auditory analysis is separately labeled. G02 recording and stitched replay untested; G02 suffix 器 onset merits human confirmation due to differing model transcriptions.",
+    "cleanup": "Temporary shared curriculum/scripts restored byte-for-byte; preview stopped; created tab closed; viewport reset."
+  },
+  "timingArrays": "Nine final-M4A exact-text AI alignments; no manual timing edits. Ordered 80-900ms character spans, within duration, final tail <=300ms.",
+  "heteronymAudio": "Teacher rejected prior standalone as yue1. Regenerated standalone with 月。 alias; blind AI auditory review reports tone 4. Human confirmation remains pending. Sentence pronunciation evidence unchanged."
+}
