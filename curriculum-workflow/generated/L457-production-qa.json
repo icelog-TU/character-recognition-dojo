@@ -193,5 +193,10 @@
     "audioFinding": "S04 木橋 sounded clipped as mu橋",
     "repair": "Full S04 sentence regenerated; final targeted gpt-audio PASS for 木橋 ㄇㄨˋ ㄑㄧㄠˊ, 結實 ㄐㄧㄝ ˙ㄕ, 放心 ㄈㄤˋ ㄒㄧㄣ",
     "teacherAudioReview": "pending on new commit"
+  },
+  "assetCommit": "7989c873782a84a8b78b9e2cd480189022317005",
+  "intake": {
+    "command": "npm run curriculum:package-intake -- --unit L457 --ref 7989c873782a84a8b78b9e2cd480189022317005 --strict",
+    "result": "PASS"
   }
 }
