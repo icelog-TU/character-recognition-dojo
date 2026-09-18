@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R057 | 複習五十七 | claimed | Production F | `codex/r057-r058-complete-package` | L462:日; L463:期; L464:待; L465:招 | 日、期、待、招 | `curriculum-workflow/review-requests/R057.json`; `curriculum-workflow/generated/R057-generation-packet.md`; `curriculum-workflow/drafts/R057-draft.json` | `public/assets/reviews/R057/`; `curriculum-workflow/audio-inbox/R057/` | Updated teacher-approved pair handoff received 2026-09-18; L465 vocabulary ceiling locked to origin/main `c130f105` plus 日、期、待、招. |
+| R058 | 複習五十八 | claimed | Production F | `codex/r057-r058-complete-package` | L462:日; L463:期; L464:待; L465:招; paired after R057 | 日、期、待、招 | `curriculum-workflow/review-requests/R058.json`; `curriculum-workflow/generated/R058-generation-packet.md`; `curriculum-workflow/drafts/R058-draft.json` | `public/assets/reviews/R058/`; `curriculum-workflow/audio-inbox/R058/` | Updated handoff supersedes every older R058-S02 version; middle-school/elementary-school mistaken-identity scene is authoritative and all archery variants are forbidden. |
 
 ## Status Values
 
