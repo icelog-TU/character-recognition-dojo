@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L461 | 文 | claimed | Production C / parallel-c | codex/l461-complete-package | L456-L460; R055/R056 after L450 | 突、實、其、中、午 | curriculum-workflow/lesson-requests/L461.json; curriculum-workflow/generated/L461-generation-packet.md; curriculum-workflow/drafts/L461-draft.json | public/assets/lessons/L461/ | Teacher-approved five sentences; source main 80431be0; locked 456 allowed chars. Earlier ordinary lessons and the R055/R056 milestone block Release only. |
 
 ## Status Values
 
