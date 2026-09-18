@@ -1,0 +1,187 @@
+{
+  "unit": "R055",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "a5779c4bae03fa363689cc7ee4d6555b7dadeafb",
+  "latestMainChecked": "5622c827569df36e09c1767d61f114b35973bbea",
+  "checks": {
+    "allowedCharacters": "PASS",
+    "sentenceTimingCounts": [
+      {
+        "id": "R055-S01",
+        "han": 10,
+        "timings": 10
+      },
+      {
+        "id": "R055-S02",
+        "han": 11,
+        "timings": 11
+      },
+      {
+        "id": "R055-S03",
+        "han": 9,
+        "timings": 9
+      },
+      {
+        "id": "R055-S04",
+        "han": 9,
+        "timings": 9
+      },
+      {
+        "id": "R055-S05",
+        "han": 12,
+        "timings": 12
+      }
+    ],
+    "stage4Order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "stage4AudioMetadata": "PASS",
+    "imageStyleCast": "PASS",
+    "audioDecode": "pending validator",
+    "browserQA": "Browser QA fallback: current remote control has no reliable computer-audio return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run; teacher subjective review remains post-merge by default."
+  },
+  "visualAcceptance": [
+    "S01 teacher photographs one waiting group at a time; generic cast identities remain distinct",
+    "S02 class leader supports a classmate with one foot lifted and a clearly visible pale-blue ankle support; teacher receives them; no blood or treatment",
+    "S03 four generic teammates stack hands before a match; blank uniforms, no pump",
+    "S04 fixed girl tells fixed mother her wish; wordless thought bubble keeps the same child identity",
+    "S05 fixed mother and girl discuss a choice; wordless small-class thought bubble, no coercion"
+  ],
+  "pronunciation": {
+    "kind": "AI auditory review, not human QA",
+    "results": [
+      {
+        "name": "R055-S01",
+        "expected": "各組輪流到教室外拍照；輪 ㄌㄨㄣˊ",
+        "result": "{\n  \"heardText\": \"各組輪流到教室外拍照\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The syllable '輪' was clearly pronounced with the correct zhuyin ㄌㄨㄣˊ. The tones and syllables match the expected pattern without clipping. The overall pronunciation is consistent with the requested phonetic detail.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-S02",
+        "expected": "班長主動幫助受傷的同學；長 ㄓㄤˇ、助 ㄓㄨˋ",
+        "result": "{\n  \"heardText\": \"班長主動幫助受傷的同學\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字詞的發音都準確，尤其是「班長」中的「班 ㄅㄢ」和「長 ㄓㄤˇ」，還有「幫助」中的「助 ㄓㄨˋ」都發得很標準，且語調自然流暢。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-S03",
+        "expected": "比賽前隊員互相打氣",
+        "result": "{\n  \"heardText\": \"比賽前隊員互相打氣\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節清楚，聲調正確，沒有剪輯問題，字序完全吻合預期。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-S04",
+        "expected": "我的心願是當運動員；願 ㄩㄢˋ、運 ㄩㄣˋ",
+        "result": "{\n  \"heardText\": \"我的心願是當運動員\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"每個字的發音準確，'願'為ㄩㄢˋ，'運'為ㄩㄣˋ，聲調正確，語序和預期一致。沒有明顯的剪輯或失真。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-S05",
+        "expected": "要不要上補習班由你自己選；補 ㄅㄨˇ",
+        "result": "{\n  \"heardText\": \"要不要上補習班由你自己選\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The audio clearly matches the expected text. Syllables and tones are correct. '補' is accurately pronounced and corresponds to the requested zhuyin ㄅㄨˇ, so homophone check passes. No major clipping detected. All syllables are present and identifiable.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-G02-prefix",
+        "expected": "我的心",
+        "result": "{\n  \"heardText\": \"我的心\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"音節和聲調準確，完全符合「我的心」。語音沒有明顯剪切或缺失，每個字都清晰可辨。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-G02-suffix",
+        "expected": "是當運動員；首字是 ㄕˋ，不是適 ㄕˋ，當 ㄉㄤ、運 ㄩㄣˋ",
+        "result": "{\n  \"heardText\": \"是當運動員\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"All syllables and tones match the requested zhuyin. The first syllable is accurately pronounced as ㄕˋ, not 適. The other syllables 當 ㄉㄤ, 運 ㄩㄣˋ are correct. No clipping detected and tones sound correct.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-G05-wrong-one",
+        "expected": "要不要上補習班由我自己選",
+        "result": "{\n  \"heardText\": \"要不要上補習班由我自己選\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"聽到的句子和目標句子完全一致，語音清楚，發音準確，特別是「補」的發音：ㄅㄨˇ，聲調正確，讀音清晰，符合標準注音。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R055-G05-wrong-two",
+        "expected": "要不要上補習班由你自己教；末字教 ㄐㄧㄠ",
+        "result": "{\n  \"heardText\": \"要不要上補習班由你自己教\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The spoken phrase matches perfectly with the expected syllables and tones. The final syllable '教' is pronounced correctly as ㄐㄧㄠ, with no distortion or clipping issues. All tones and words are clear and align with the intended text.\",\n  \"finalSyllableAudible\": true\n}"
+      }
+    ]
+  },
+  "folderBytes": 1101021,
+  "assets": [
+    {
+      "path": "public/assets/reviews/R055/images/R055-S01.webp",
+      "bytes": 180524,
+      "sha256": "29e6e8a1a0434299c555bb2988f151ecf9cbf73b353b8f1f13173d311ae2480d"
+    },
+    {
+      "path": "public/assets/reviews/R055/images/R055-S02.webp",
+      "bytes": 110280,
+      "sha256": "2174824a304cebb9dcdd5211bb25d31b556a0f87697ff404fb1e5356ab44fd99"
+    },
+    {
+      "path": "public/assets/reviews/R055/images/R055-S03.webp",
+      "bytes": 152432,
+      "sha256": "bd560260607c5d6921490bbd63b2847518f009201096efc6cf2e7882787d3d3c"
+    },
+    {
+      "path": "public/assets/reviews/R055/images/R055-S04.webp",
+      "bytes": 134914,
+      "sha256": "706a1d7f83eb374d5959c1cfe891c834727c6030b23fefd77c0b1cd6f635e255"
+    },
+    {
+      "path": "public/assets/reviews/R055/images/R055-S05.webp",
+      "bytes": 122540,
+      "sha256": "3ea1f703e6008efdc85f8bf4c22806f5ff29911dd6b237fdc0f6aa8bb1d8f46a"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-G02-prefix.m4a",
+      "bytes": 28077,
+      "sha256": "a168fea893022cc3671addf283e497457682a5b98ac117232a8f8fc428e08ba8"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-G02-suffix.m4a",
+      "bytes": 37235,
+      "sha256": "190e87a6ec77316ab0e7cca2532934a900fb3e9f50be11fa79471afdc781c40b"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-G05-wrong-one.m4a",
+      "bytes": 51785,
+      "sha256": "c290a04cf4a5020ebc9f80fdcb3fb148412de3053b61da42e5f71d7b3b3205fb"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-G05-wrong-two.m4a",
+      "bytes": 50263,
+      "sha256": "b91ccd828e723dee4b60405b9425d4d61c0978484e9777a8f1d3b0dc6334f16e"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-S01.m4a",
+      "bytes": 42685,
+      "sha256": "6eb621a6b1a6f2cef773e1ddd0900ff364db95296b2b6218c0baca081ebc7f38"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-S02.m4a",
+      "bytes": 52042,
+      "sha256": "3d6c62212eb58bcceb4ea34ff94aaa24f28fe057902a3ac1191a542aef9ff228"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-S03.m4a",
+      "bytes": 40164,
+      "sha256": "a489a80fe1b79ee7d2e3f4fbcd746ab752265eb7e4978e68961969c170a95d3d"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-S04.m4a",
+      "bytes": 42691,
+      "sha256": "540707187144ff25cb9d2d6f68e7c3f6accab679405a7b421b3eb3d3007effce"
+    },
+    {
+      "path": "public/assets/reviews/R055/audio/R055-S05.m4a",
+      "bytes": 55389,
+      "sha256": "40f748dd9b8c5e6afba4f41b30764ae4b791fccaf1479a1973724e983037b655"
+    }
+  ],
+  "teacherManualReview": {
+    "result": "PASS",
+    "reviewedRef": "cb0ac7ab82d1d6f346926ea2f3f552f932592e1f",
+    "scope": [
+      "images",
+      "audio"
+    ],
+    "recordedAt": "2026-09-18",
+    "limitations": "Does not certify live highlight synchronization or G02 phone recording/replay."
+  }
+}

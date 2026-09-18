@@ -1,0 +1,143 @@
+[
+  {
+    "file": "public/assets/lessons/L455/audio/char-u73fe.m4a",
+    "sha256": "e14264b131b39225318f08f405cf311b7ecc01489a9a18968732e8517864d59a",
+    "model": "gpt-4o-transcribe",
+    "prompt": "這是臺灣華語單一漢字音。課程候選字是「現」，請只轉寫實際聽到的漢字。",
+    "trials": [
+      {
+        "text": "現",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 15
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "現",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 15
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "現",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 15
+          },
+          "output_tokens": 3
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L455/audio/L455-G02-prefix.m4a",
+    "sha256": "5425a0c0877ee32ff238c1280293604abe0fd4f181a41cb139e4a46dd9470742",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "小時候怕水",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 30,
+          "input_tokens": 23,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 23
+          },
+          "output_tokens": 7
+        }
+      },
+      {
+        "text": "小时候怕水。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 30,
+          "input_tokens": 23,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 23
+          },
+          "output_tokens": 7
+        }
+      },
+      {
+        "text": "小时候怕水。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 30,
+          "input_tokens": 23,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 23
+          },
+          "output_tokens": 7
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L455/audio/L455-G02-suffix.m4a",
+    "sha256": "8db07ac5454321bc4737acc558aeefe9a63428cfca38fdd07f5286d4f90c68ba",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "再会游泳了。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 25,
+          "input_tokens": 17,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 17
+          },
+          "output_tokens": 8
+        }
+      },
+      {
+        "text": "再会游泳了。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 25,
+          "input_tokens": 17,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 17
+          },
+          "output_tokens": 8
+        }
+      },
+      {
+        "text": "再会游泳了。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 25,
+          "input_tokens": 17,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 17
+          },
+          "output_tokens": 8
+        }
+      }
+    ]
+  }
+]

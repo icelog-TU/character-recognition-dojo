@@ -1,0 +1,55 @@
+{
+  "unit": "L448",
+  "provider": "whisper-1 through assets:align:ai",
+  "normalization": [
+    "这个→這個",
+    "乐→樂",
+    "声→聲",
+    "鸟→鳥",
+    "妈→媽",
+    "让→讓",
+    "着→著",
+    "鸡→雞",
+    "生→聲 for G02 suffix homophone; final acoustic check independently returned sheng1"
+  ],
+  "manualTimingAdjustments": [],
+  "processing": "Standard audio pipeline, measured trailing-silence-only AAC frame copy, and final AI alignment; no speech splicing. G02 suffix regenerated until actual acoustic check returned sheng1 and zhao2.",
+  "transcripts": [
+    {
+      "id": "L448-S01",
+      "text": "歌聲一停,大家就拍手。"
+    },
+    {
+      "id": "L448-S02",
+      "text": "我想和这位歌手一起拍照。"
+    },
+    {
+      "id": "L448-S03",
+      "text": "这个乐器的声音像鸟叫。"
+    },
+    {
+      "id": "L448-S04",
+      "text": "早操的音乐太快,我跟不上。"
+    },
+    {
+      "id": "L448-S05",
+      "text": "妈妈的歌声让我睡着了。"
+    },
+    {
+      "id": "L448-G02-prefix",
+      "text": "妈妈的"
+    },
+    {
+      "id": "L448-G02-suffix",
+      "text": "生让我睡着了"
+    },
+    {
+      "id": "L448-G05-wrong-one",
+      "text": "这个乐器的声音像狗叫。"
+    },
+    {
+      "id": "L448-G05-wrong-two",
+      "text": "这个乐器的声音像鸡叫。"
+    }
+  ]
+}

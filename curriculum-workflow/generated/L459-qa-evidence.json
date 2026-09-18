@@ -1,0 +1,263 @@
+{
+  "unit": "L459",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "80431be0",
+  "productionBoundary": "L001-L446 音; 450 unique learned Han",
+  "allowedCharCount": 457,
+  "imageChecks": [
+    {
+      "sentenceId": "L459-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Exactly three separated open boxes are visible from above; two contain blocks and the third is completely empty; protagonist points at the empty box.",
+      "castEvidence": "Recurring protagonist keeps fixed bob, pink clip, pink cardigan and stable preschool proportions.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L459-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Father points from a broad safe bank to a large natural root mass whose arched crown, snout-like root, branch stubs and eye-like knot create a clear monster-head silhouette through mist and reflection; grain, cracked bark, circular cross-section and splintered roots still make ordinary untouched wood explicit.",
+      "castEvidence": "Recurring father blue overshirt/khaki trousers and recurring girl match family anchors.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L459-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Father, protagonist girl and mother occupy exactly three adjacent seats with the girl clearly centered between her parents; all watch the stage.",
+      "castEvidence": "All three fixed family identities remain stable; girl is not Xiaoyue.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L459-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "One ordinary apple has just landed beside the girl with motion cues; matching apples remain on the low tree; mother is nearby and nobody is struck.",
+      "castEvidence": "Recurring mother and girl match family anchors.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L459-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "One bright short-tailed meteor crosses a starry sky above a safe illuminated garden lawn while the recurring family looks up; no impact or danger.",
+      "castEvidence": "Recurring mother, father and girl match family anchors.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+    }
+  ],
+  "browserQA": {
+    "environment": "Chrome 390x844; real LessonPanel imported by isolated local harness with approved L459 draft and only handoff provisional vocabulary; no production progress or cloud data written.",
+    "playback": "All 10 final M4A files emitted play and ended after explicit user-gesture playback.",
+    "G01": "S01 target 中 at Han index 5 selected; 下一題 appeared.",
+    "G02": "S03 target 中 at Han index 5 displayed with ㄓㄨㄥ; exact prefix 我坐在爸媽 completed and stopped at target. Dedicated suffix 間看表演 completed in ten-file playback.",
+    "G03": "Cards 下/中/上 were distinct; choosing 中 filled S05 index 2 and exposed 下一題.",
+    "G04": "Four single-Han cards 我→嚇→一→跳 completed S04 indexes 8/9/10/11 and exposed 下一題.",
+    "G05": "All three shuffled animal options played to ended and mapped to wrong-two, wrong-one and correct S02. Choosing correct S02 exposed 領取獎勵; reward callback displayed 下一課 and 回首頁休息.",
+    "limitations": [
+      "Sustained press-to-record and recorded-voice replay could not be operated reliably with the browser tool; microphone recording is not certified.",
+      "Direct human listening and physical-phone highlight smoothness are not claimed; pronunciation evidence uses final audio supplied to an acoustic AI model."
+    ],
+    "disposition": "Production SOP browser-tooling fallback for recording; all other Stage 4 interactions, playback, assets and technical gates complete."
+  },
+  "audio": {
+    "metrics": [
+      {
+        "name": "char-u4e2d.m4a",
+        "duration": 1.322993,
+        "max": -2,
+        "mean": -19,
+        "trailingSilenceStart": 0.896168,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "94550447af3dd3320e980389c745b15654e614a6dd2e58b9ac9755ad43469196"
+      },
+      {
+        "name": "L459-G02-prefix.m4a",
+        "duration": 2.879002,
+        "max": -2,
+        "mean": -19.5,
+        "trailingSilenceStart": 2.45018,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "39160514a2e2d6f3544df48a999ac0b59e0cad43879b4bc11f9651d53a33b566"
+      },
+      {
+        "name": "L459-G02-suffix.m4a",
+        "duration": 2.298005,
+        "max": -1.8,
+        "mean": -19.2,
+        "trailingSilenceStart": 1.83823,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "a0204ed82c23843041720c8e3ad3271815379b01de94a018ad9e7cb1e5954591"
+      },
+      {
+        "name": "L459-G05-wrong-one.m4a",
+        "duration": 4.569002,
+        "max": -2,
+        "mean": -19.7,
+        "trailingSilenceStart": 3.75143,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "96e8ebf5420ce06f9510a4c73947772eefeb80a2f6543cb814ed81803bc14bc5"
+      },
+      {
+        "name": "L459-G05-wrong-two.m4a",
+        "duration": 4.622993,
+        "max": -2.2,
+        "mean": -19,
+        "trailingSilenceStart": 3.79066,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "09c5072659dc7d0fc05bc88d3bed40720da15a840361327b3906f9844228368d"
+      },
+      {
+        "name": "L459-S01.m4a",
+        "duration": 4.756009,
+        "max": -2,
+        "mean": -19.5,
+        "trailingSilenceStart": 4.05179,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "3b2287733fdd5233bcf53c1e2abdf5f4f216a1e380e7c78080048fb7e2945b57"
+      },
+      {
+        "name": "L459-S02.m4a",
+        "duration": 4.310998,
+        "max": -4.5,
+        "mean": -18.8,
+        "trailingSilenceStart": 3.38156,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "304d35c4ca04349b74b8aebf4d16173671838055eebce4124f6e87a4239cdd1a"
+      },
+      {
+        "name": "L459-S03.m4a",
+        "duration": 4.633991,
+        "max": -2.8,
+        "mean": -18.9,
+        "trailingSilenceStart": 3.58034,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "41df997295f4f1cacad0b3ea3cbe4c9e99b1a7f9ac0ee259cdbae57422d788b9"
+      },
+      {
+        "name": "L459-S04.m4a",
+        "duration": 4.145011,
+        "max": -2,
+        "mean": -18.2,
+        "trailingSilenceStart": 3.74601,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "54d3466ac88436d993f266092e42c221bdc09e14e5ee80b3ee82aa746d41a5bc"
+      },
+      {
+        "name": "L459-S05.m4a",
+        "duration": 4.503991,
+        "max": -4.5,
+        "mean": -18.4,
+        "trailingSilenceStart": 4.06372,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "8c44907d3311c25871eb7f1feedd2d0f94dc488df261df76f8d34aa112983510"
+      }
+    ],
+    "g05MeanVolumeSpreadDb": 0.9,
+    "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; acoustic AI verification, not human listening.",
+    "hearing": [
+      {
+        "name": "char-u4e2d",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"zhong1\"]}"
+      },
+      {
+        "name": "L459-G02-prefix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"zuo4\", \"zai4\", \"ba4\", \"ma1\"]}"
+      },
+      {
+        "name": "L459-G02-suffix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"jian1\", \"kan4\", \"biao3\", \"yan3\"]}"
+      },
+      {
+        "name": "L459-G05-wrong-one",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"shui3\", \"zhong1\", \"na4\", \"ge4\", \"guai4\", \"wu4\", \"qi2\", \"shi2\", \"shi4\", \"xiao3\", \"gou3\"]}"
+      },
+      {
+        "name": "L459-G05-wrong-two",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"shui3\", \"zhong1\", \"na4\", \"ge4\", \"guai4\", \"wu4\", \"qi2\", \"shi2\", \"shi4\", \"xiao3\", \"chuan2\"]}"
+      },
+      {
+        "name": "L459-S01",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"san1\", \"ge4\", \"he2\", \"zi5\", \"qi2\", \"zhong1\", \"yi2\", \"ge4\", \"shi4\", \"kong1\", \"de5\"]}"
+      },
+      {
+        "name": "L459-S02",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\":[\"shui3\",\"zhong1\",\"na4\",\"ge4\",\"guai4\",\"wu4\",\"qi2\",\"shi2\",\"shi4\",\"mu4\",\"tou2\"]}"
+      },
+      {
+        "name": "L459-S03",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"zuo4\", \"zai4\", \"ba4\", \"ma1\", \"zhong1\", \"jian1\", \"kan4\", \"biao3\", \"yan3\"]}"
+      },
+      {
+        "name": "L459-S04",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"guo3\", \"shi2\", \"tu2\", \"ran2\", \"diao4\", \"xia4\", \"lai2\", \"ba3\", \"wo3\", \"xia4\", \"yi2\", \"tiao4\"]}"
+      },
+      {
+        "name": "L459-S05",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"ye4\", \"kong1\", \"zhong1\", \"tu1\", \"ran2\", \"chu1\", \"xian4\", \"liu2\", \"xing1\"]}"
+      }
+    ],
+    "pronunciationChecks": {
+      "中": "zhong1 in standalone, every sentence and every G05 option",
+      "空": "kong1 in S01 and S05",
+      "突然": "tu2 ran2 in S04; S05 also checked",
+      "G02Suffix": "jian1 kan4 biao3 yan3"
+    },
+    "processing": "Whole sentences and fragments generated independently, then processed with repo audio tooling. G02 fragments received gain-only normalization. S04 was regenerated as a complete sentence with phonetic control characters solely to enforce teacher-required Taiwan surface readings tu2 and yi2; final acoustic syllables exactly match the approved spokenText. No speech cutting, splicing, muting, or speed alteration."
+  },
+  "mediaBytes": 1444462,
+  "repairHistory": [
+    {
+      "date": "2026-09-18",
+      "sourceCommit": "112f8ad1fd4078963ea49cf84c1f144b5813379e",
+      "item": "L459-S02:image",
+      "teacherFinding": "The original floating log did not resemble a monster strongly enough to support the sentence.",
+      "action": "Replaced the plain log with a fresh natural driftwood-root composition whose silhouette reads as a monster head through its crown, snout-like root, branch stubs, wood knot, mist and reflection; retained visible grain, bark, cross-section and broken roots so it remains clearly wood rather than a carving or real creature.",
+      "result": "PASS"
+    }
+  ],
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L458",
+    "reviewMilestones": [
+      "R055",
+      "R056"
+    ]
+  },
+  "validation": {
+    "startupToolsAiAudit": "PASS",
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L459 fixture",
+    "assetAuditStrict": "PASS on isolated L459 fixture; zero warnings",
+    "fullVerify": "Skipped: dependency-blocked, shared production state left for Release."
+  }
+}

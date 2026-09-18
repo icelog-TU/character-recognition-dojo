@@ -1,0 +1,37 @@
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "speed": 0.88,
+  "sourcePackageSha": "dca9f5bdafbd88f63aac5b29eca33148c2ec50c7",
+  "method": "Whole utterances generated independently; no syllable cutting, copying, extraction or splicing.",
+  "pronunciationRequirement": "Taiwan 突 is ㄊㄨˊ (tu2), rising second tone.",
+  "exactInputAttempts": {
+    "result": "Rejected because all tested voices were acoustically assessed as tu1.",
+    "evidence": "L456-rescue-exact-input-candidates.json"
+  },
+  "accepted": [
+    {
+      "id": "char-u7a81",
+      "intendedText": "突",
+      "phoneticTtsRendering": "圖"
+    },
+    {
+      "id": "L456-S01",
+      "intendedText": "表演的時候突然停電了",
+      "phoneticTtsRendering": "表演的時候圖然停電了"
+    },
+    {
+      "id": "L456-S02",
+      "intendedText": "窗台上突然出現一隻小鳥",
+      "phoneticTtsRendering": "窗台上圖然出現一隻小鳥"
+    },
+    {
+      "id": "L456-S05",
+      "intendedText": "走到半路突然下起大雨",
+      "phoneticTtsRendering": "走到半路圖然下起大雨"
+    }
+  ],
+  "reason": "Use a homophonic TTS pronunciation rendering to produce Taiwan ㄊㄨˊ while preserving all learner-facing approved text and metadata.",
+  "candidateEvidence": "L456-rescue-phonetic-candidates.json",
+  "finalEvidence": "L456-rescue-final-listening.json"
+}

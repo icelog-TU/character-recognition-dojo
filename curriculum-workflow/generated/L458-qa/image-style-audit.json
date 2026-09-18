@@ -1,0 +1,63 @@
+{
+  "unit": "L458",
+  "method": "Opened final exported WebPs and compared with L058/refined family style and cast anchors",
+  "result": "PASS; teacher approved all five final images after S02 repair",
+  "rejectedDrafts": [
+    {
+      "sentenceId": "L458-S04",
+      "reason": "Graphic exclamation marks and extra father weakened the no-text/symbol and mother-only scene requirements; regenerated and not committed."
+    },
+    {
+      "sentenceId": "L458-S02",
+      "reviewedRef": "bcbc52d3ea8e10309fe8673233ecd550ce2be36d",
+      "reason": "畫風跑掉，偏寫實且與課程水彩風格不一致",
+      "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers."
+    }
+  ],
+  "images": [
+    {
+      "sentenceId": "L458-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Friendly generic actor visibly removes monster headpiece; fixed mother/protagonist remain distinct; actor is not father."
+    },
+    {
+      "sentenceId": "L458-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "REPAIRED PASS: hard style reset restores visible pencil contours, translucent watercolor texture, warm course palette and stable protagonist proportions; extra adults removed; subtle molded flower connector preserves the faux-flower discovery."
+    },
+    {
+      "sentenceId": "L458-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Recurring protagonist enters warm bedroom; family dog sits safely on bed with no magic or dangerous jump."
+    },
+    {
+      "sentenceId": "L458-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Regenerated final shows fixed mother and protagonist only; form is retained in the girl’s hand with non-readable grid marks and no graphic punctuation."
+    },
+    {
+      "sentenceId": "L458-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Recurring protagonist and fixed father use intact wooden interlocking puzzle; alternate method is conveyed by natural gesture without arrows or text."
+    }
+  ],
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "1c7e530a78ac5b3e28b5b6ba649894ea1269dcd8",
+    "repairedAssetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "scope": "All five final L458 images, including repaired L458-S02",
+    "statement": "可以，圖片跟音檔都審核通過。"
+  }
+}

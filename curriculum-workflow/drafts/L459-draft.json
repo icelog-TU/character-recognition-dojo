@@ -1,0 +1,1293 @@
+{
+  "id": "L459",
+  "kind": "lesson",
+  "order": 459,
+  "title": "中",
+  "newChars": [
+    "中"
+  ],
+  "zhuyin": {
+    "中": "ㄓㄨㄥ"
+  },
+  "charAudio": {
+    "中": "/assets/lessons/L459/audio/char-u4e2d.m4a"
+  },
+  "requiredRounds": 5,
+  "packageStatus": "dependency-blocked-asset-complete",
+  "dependsOnLessons": [
+    "L453",
+    "L454",
+    "L455",
+    "L456",
+    "L457",
+    "L458"
+  ],
+  "provisionalLearnedChars": [
+    "演",
+    "表",
+    "現",
+    "突",
+    "實",
+    "其"
+  ],
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L458",
+    "reviewMilestones": [
+      "R055",
+      "R056"
+    ]
+  },
+  "teacherNotes": "Formal Production A handoff. Base 80431be0 with production through L446 音 and 450 unique learned Han. L453-L458 are direct lesson dependencies; Release must preserve ordered L447-L458 and R055/R056 after L450. Allowed set has 457 unique Han. Teach only 中 ㄓㄨㄥ; do not introduce ㄓㄨㄥˋ. 中午/中獎 forbidden. Fixed sentences and Stage 4 data must not drift. S01 exactly three boxes and exactly one empty. S02 is ordinary driftwood, never a real monster. S05 is the replacement meteor sentence, never reuse shadow imagery. No image text or numbers. Production package only; Release owns shared production JSON/planner/ledger integration and main merge.",
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已",
+    "近",
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名",
+    "第",
+    "念",
+    "號",
+    "數",
+    "報",
+    "頁",
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙",
+    "選",
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算",
+    "弱",
+    "越",
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "果",
+    "如",
+    "結",
+    "合",
+    "教",
+    "室",
+    "班",
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員",
+    "自",
+    "己",
+    "主",
+    "由",
+    "意",
+    "願",
+    "互",
+    "助",
+    "補",
+    "修",
+    "習",
+    "練",
+    "運",
+    "賽",
+    "機",
+    "操",
+    "器",
+    "樂",
+    "音",
+    "演",
+    "表",
+    "現",
+    "突",
+    "實",
+    "其",
+    "中"
+  ],
+  "sentences": [
+    {
+      "id": "L459-S01",
+      "text": "三個盒子，其中一個是空的。",
+      "spokenText": "三個盒子其中一個是空的",
+      "displayLines": [
+        "三個盒子，",
+        "其中一個",
+        "是空的。"
+      ],
+      "focusChar": "中",
+      "imageNotes": "桌上恰好三個打開的盒子，從斜上方看得清內部；其中兩個放著積木，另一個完全空著。主角女孩指向空盒，盒子之間有清楚間隔。不能多畫盒子，空盒裡也不能有紙、包裝物或看似物件的裝飾；不加數字標籤。",
+      "imagePrompt": "Modern children’s picture-book illustration locked to the approved L058 style anchors and refined L115/L118/L119/L128 proportion references: warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, stable expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy its people. Preserve recurring cast identities from the approved L154/L162/L163 family anchors. No visible text, letters, numbers, logos, captions, labels, or watermarks. Slight overhead view of a tabletop with exactly three and only three clearly separated open boxes, all interiors fully visible. Two boxes contain colorful wooden building blocks; the third box is completely empty, with no paper, packing material, shadow-object, decoration, or contents. The recurring protagonist girl points specifically to the empty box. Make the three-box count and one-empty/two-filled contrast unmistakable. No extra boxes anywhere, no number labels. Square 1:1.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L459/images/L459-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L459/audio/L459-S01.m4a",
+        "durationMs": 4756,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 920
+          },
+          {
+            "charIndex": 2,
+            "startMs": 920,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1240,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1900,
+            "endMs": 2220
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2220,
+            "endMs": 2500
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2500,
+            "endMs": 2710
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2710,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2920,
+            "endMs": 3560
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3560,
+            "endMs": 3760
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3760,
+            "endMs": 4040
+          }
+        ]
+      }
+    },
+    {
+      "id": "L459-S02",
+      "text": "水中那個怪物，其實是木頭。",
+      "spokenText": "水中那個怪物其實是木頭",
+      "displayLines": [
+        "水中",
+        "那個怪物，",
+        "其實是木頭。"
+      ],
+      "focusChar": "中",
+      "imageNotes": "主角女孩和爸爸站在安全岸邊，望向水中一段天然盤根漂流木；半浸在水中的拱形輪廓、鼻吻般樹根、角耳般枝杈和眼睛般木節，配合水霧與倒影，遠看明顯像怪物頭部，近看則能由木紋、樹皮、斷面與裂枝確認只是木頭。爸爸指著木頭向女孩說明；不做成人工雕刻或真正怪物，不畫真眼睛、牙齒、發光或恐怖水景。",
+      "imagePrompt": "Modern children’s picture-book illustration locked to the approved L058 style anchors and refined L115/L118/L119/L128 proportion references: warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, stable expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy its people. Preserve recurring cast identities from the approved L154/L162/L163 family anchors. No visible text, letters, numbers, logos, captions, labels, or watermarks. The recurring protagonist girl and recurring father stay together on a broad safe pond bank; father calmly points and explains. Make one large naturally formed half-submerged driftwood root the focal point. From a distance its arched crown, snout-like root, asymmetrical ear-or-horn-like branch stubs, and eye-like dark wood knot must strongly resemble a strange water monster head. Gentle mist, ripples, shadow, and reflection partly obscure its lower outline. At close range it remains unmistakably ordinary untouched wood through visible grain, cracked bark, a circular broken cross-section, splintered branch ends, and tangled roots. Accidental pareidolia only: no carved sculpture, real creature, literal eyes, teeth, glow, transformation, danger, fear, or horror mood. Square 1:1.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L459/images/L459-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L459/audio/L459-S02.m4a",
+        "durationMs": 4311,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 840
+          },
+          {
+            "charIndex": 2,
+            "startMs": 840,
+            "endMs": 1050
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1050,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1540
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1540,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1800,
+            "endMs": 2180
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2180,
+            "endMs": 2560
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2560,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2920,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3080,
+            "endMs": 3340
+          }
+        ]
+      }
+    },
+    {
+      "id": "L459-S03",
+      "text": "我坐在爸媽中間看表演。",
+      "spokenText": "我坐在爸媽中間看表演",
+      "displayLines": [
+        "我坐在爸媽",
+        "中間看表演。"
+      ],
+      "focusChar": "中",
+      "imageNotes": "觀眾席上，固定主角爸爸、主角女孩、主角媽媽坐在連續三個座位，女孩明確位於爸媽之間；三人面向前方舞台觀看表演。可從側後方構圖，同時看清座位關係及前方活動；不要讓其他人插在三人中間，不用小月替代主角女孩。",
+      "imagePrompt": "Modern children’s picture-book illustration locked to the approved L058 style anchors and refined L115/L118/L119/L128 proportion references: warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, stable expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy its people. Preserve recurring cast identities from the approved L154/L162/L163 family anchors. No visible text, letters, numbers, logos, captions, labels, or watermarks. Side-rear view in an auditorium showing exactly the recurring father, recurring preschool protagonist girl, and recurring mother seated in three adjacent continuous seats in that clear left-to-right family grouping, with the girl unmistakably between her parents. All three look toward a warmly lit performance on the stage ahead. Their seating relationship and the stage action are both visible. No other person sits between them; use the fixed protagonist, not Xiaoyue. Preserve recurring family faces, hair, and proportions. No readable stage text. Square 1:1.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L459/images/L459-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L459/audio/L459-S03.m4a",
+        "durationMs": 4634,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1420,
+            "endMs": 1640
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1640,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1960,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2280,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2920,
+            "endMs": 3260
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3260,
+            "endMs": 3540
+          }
+        ]
+      }
+    },
+    {
+      "id": "L459-S04",
+      "text": "果實突然掉下來，把我嚇一跳。",
+      "spokenText": "果實突然掉下來把我嚇一跳",
+      "displayLines": [
+        "果實突然",
+        "掉下來，",
+        "把我嚇一跳。"
+      ],
+      "focusChar": "嚇",
+      "imageNotes": "果園裡，一顆果實剛從低矮果樹落到主角女孩身旁地面，女孩驚訝地稍微退一步；樹上仍有同類果實，讓掉落來源明確。媽媽在近旁，不砸中女孩、不受傷、不畫巨大椰子或高空重物。",
+      "imagePrompt": "Modern children’s picture-book illustration locked to the approved L058 style anchors and refined L115/L118/L119/L128 proportion references: warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, stable expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy its people. Preserve recurring cast identities from the approved L154/L162/L163 family anchors. No visible text, letters, numbers, logos, captions, labels, or watermarks. In a bright orchard, exactly one ordinary apple-like fruit has just dropped from a low fruit tree and is captured just beside the recurring protagonist girl's feet, with a small natural motion cue. Several matching fruits remain visibly on the same low tree so the source is obvious. The girl takes one small surprised step back; recurring mother stands nearby reassuringly. The fruit does not hit anyone; no injury, giant coconut, high falling object, panic, or danger. Square 1:1.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L459/images/L459-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L459/audio/L459-S04.m4a",
+        "durationMs": 4145,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1500,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1720,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2420,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2540,
+            "endMs": 3121
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3121,
+            "endMs": 3241
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3241,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3460,
+            "endMs": 3640
+          }
+        ]
+      }
+    },
+    {
+      "id": "L459-S05",
+      "text": "夜空中突然出現流星。",
+      "spokenText": "夜空中突然出現流星",
+      "displayLines": [
+        "夜空中突然",
+        "出現流星。"
+      ],
+      "focusChar": "中",
+      "imageNotes": "安全的戶外觀星空間，主角女孩與家人抬頭看夜空，一道清楚的流星帶著短光尾劃過；流星不同於背景靜止星點。保留足夠環境光看清人物，不畫隕石撞地、火災、爆炸或危險懸崖。已取代原本的影子句，不能沿用影子配圖。",
+      "imagePrompt": "Modern children’s picture-book illustration locked to the approved L058 style anchors and refined L115/L118/L119/L128 proportion references: warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, stable expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy its people. Preserve recurring cast identities from the approved L154/L162/L163 family anchors. No visible text, letters, numbers, logos, captions, labels, or watermarks. A safe gently lit outdoor stargazing space at night, such as a flat garden lawn. The recurring protagonist girl and her recurring family look upward together. One clear meteor with a short luminous trail crosses the dark blue sky, visibly different from the many small stationary stars. Keep enough warm environmental light to recognize family faces and identities. No meteor impact, ground fire, explosion, cliff, danger, shadow-focused scene, or old shadow imagery. Square 1:1.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L459/images/L459-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L459/audio/L459-S05.m4a",
+        "durationMs": 4504,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 500
+          },
+          {
+            "charIndex": 1,
+            "startMs": 500,
+            "endMs": 920
+          },
+          {
+            "charIndex": 2,
+            "startMs": 920,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1380,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2160,
+            "endMs": 2500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2500,
+            "endMs": 2840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2840,
+            "endMs": 3280
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3280,
+            "endMs": 3720
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3720,
+            "endMs": 3960
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L459-G01",
+      "type": "find-character",
+      "sentenceId": "L459-S01",
+      "targetChar": "中",
+      "targetCharIndex": 5,
+      "prompt": "請幫小兔子找出中，點一下句子中的中。"
+    },
+    {
+      "id": "L459-G02",
+      "type": "teach-character",
+      "sentenceId": "L459-S03",
+      "targetChar": "中",
+      "targetCharIndex": 5,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "我坐在爸媽",
+        "suffixText": "間看表演",
+        "prefixSrc": "/assets/lessons/L459/audio/L459-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L459/audio/L459-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L459/audio/L459-G02-prefix.m4a",
+          "durationMs": 2879,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 440
+            },
+            {
+              "charIndex": 1,
+              "startMs": 950,
+              "endMs": 1070
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1070,
+              "endMs": 1440
+            },
+            {
+              "charIndex": 3,
+              "startMs": 2060,
+              "endMs": 2180
+            },
+            {
+              "charIndex": 4,
+              "startMs": 2281,
+              "endMs": 2401
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L459/audio/L459-G02-suffix.m4a",
+          "durationMs": 2298,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 340
+            },
+            {
+              "charIndex": 1,
+              "startMs": 340,
+              "endMs": 1220
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1220,
+              "endMs": 1500
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1500,
+              "endMs": 1740
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L459-G03",
+      "type": "missing-character",
+      "sentenceId": "L459-S05",
+      "targetChar": "中",
+      "targetCharIndex": 2,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "L459-G03-O1",
+          "text": "上",
+          "correct": false
+        },
+        {
+          "id": "L459-G03-O2",
+          "text": "中",
+          "correct": true
+        },
+        {
+          "id": "L459-G03-O3",
+          "text": "下",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L459-G04",
+      "type": "partial-order",
+      "sentenceId": "L459-S04",
+      "targetChar": "嚇",
+      "targetCharIndex": 9,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "options": [
+        {
+          "id": "L459-G04-O1",
+          "text": "跳",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "L459-G04-O2",
+          "text": "我",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L459-G04-O3",
+          "text": "一",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L459-G04-O4",
+          "text": "嚇",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L459-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L459-S02",
+      "targetChar": "中",
+      "targetCharIndex": 1,
+      "prompt": "先按朋友的頭聽，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "L459-G05-O1",
+          "text": "水中那個怪物，其實是小狗。",
+          "spokenText": "水中那個怪物其實是小狗",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L459/audio/L459-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L459/audio/L459-G05-wrong-one.m4a",
+            "durationMs": 4569,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1440,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1720,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2160,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2600,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3040,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3360,
+                "endMs": 3580
+              }
+            ]
+          }
+        },
+        {
+          "id": "L459-G05-O2",
+          "text": "水中那個怪物，其實是木頭。",
+          "spokenText": "水中那個怪物其實是木頭",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L459/audio/L459-S02.m4a",
+          "audio": {
+            "src": "/assets/lessons/L459/audio/L459-S02.m4a",
+            "durationMs": 4311,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 840
+              },
+              {
+                "charIndex": 2,
+                "startMs": 840,
+                "endMs": 1050
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1050,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1540,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1800,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2920,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3080,
+                "endMs": 3340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L459-G05-O3",
+          "text": "水中那個怪物，其實是小船。",
+          "spokenText": "水中那個怪物其實是小船",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L459/audio/L459-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L459/audio/L459-G05-wrong-two.m4a",
+            "durationMs": 4623,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1400,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1700,
+                "endMs": 2170
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2170,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2640,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3100,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3420,
+                "endMs": 3660
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionQA": {
+    "imageChecks": [
+      {
+        "sentenceId": "L459-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Exactly three separated open boxes are visible from above; two contain blocks and the third is completely empty; protagonist points at the empty box.",
+        "castEvidence": "Recurring protagonist keeps fixed bob, pink clip, pink cardigan and stable preschool proportions.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L459-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Father points from a broad safe bank to a single floating driftwood shape; grain, bark, cut end and branch forks make ordinary wood explicit; no real monster.",
+        "castEvidence": "Recurring father blue overshirt/khaki trousers and recurring girl match family anchors.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L459-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Father, protagonist girl and mother occupy exactly three adjacent seats with the girl clearly centered between her parents; all watch the stage.",
+        "castEvidence": "All three fixed family identities remain stable; girl is not Xiaoyue.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L459-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "One ordinary apple has just landed beside the girl with motion cues; matching apples remain on the low tree; mother is nearby and nobody is struck.",
+        "castEvidence": "Recurring mother and girl match family anchors.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L459-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "One bright short-tailed meteor crosses a starry sky above a safe illuminated garden lawn while the recurring family looks up; no impact or danger.",
+        "castEvidence": "Recurring mother, father and girl match family anchors.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
+      }
+    ],
+    "browserQA": {
+      "environment": "Chrome 390x844; real LessonPanel imported by isolated local harness with approved L459 draft and only handoff provisional vocabulary; no production progress or cloud data written.",
+      "playback": "All 10 final M4A files emitted play and ended after explicit user-gesture playback.",
+      "G01": "S01 target 中 at Han index 5 selected; 下一題 appeared.",
+      "G02": "S03 target 中 at Han index 5 displayed with ㄓㄨㄥ; exact prefix 我坐在爸媽 completed and stopped at target. Dedicated suffix 間看表演 completed in ten-file playback.",
+      "G03": "Cards 下/中/上 were distinct; choosing 中 filled S05 index 2 and exposed 下一題.",
+      "G04": "Four single-Han cards 我→嚇→一→跳 completed S04 indexes 8/9/10/11 and exposed 下一題.",
+      "G05": "All three shuffled animal options played to ended and mapped to wrong-two, wrong-one and correct S02. Choosing correct S02 exposed 領取獎勵; reward callback displayed 下一課 and 回首頁休息.",
+      "limitations": [
+        "Sustained press-to-record and recorded-voice replay could not be operated reliably with the browser tool; microphone recording is not certified.",
+        "Direct human listening and physical-phone highlight smoothness are not claimed; pronunciation evidence uses final audio supplied to an acoustic AI model."
+      ],
+      "disposition": "Production SOP browser-tooling fallback for recording; all other Stage 4 interactions, playback, assets and technical gates complete."
+    },
+    "evidence": "curriculum-workflow/generated/L459-qa-evidence.json",
+    "alignmentEvidence": "curriculum-workflow/generated/L459-alignment-evidence.json"
+  }
+}

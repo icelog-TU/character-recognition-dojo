@@ -1,0 +1,38 @@
+{
+  "unit": "L450",
+  "generator": "OpenAI imagegen",
+  "styleReference": "public/assets/lessons/L058/images",
+  "castReferences": {
+    "protagonistFamily": "latest LESSON_VISUAL_CAST_SOP",
+    "xiaoyue": "public/assets/reference/lesson-cast/xiaoyue.webp"
+  },
+  "images": [
+    {
+      "sentenceId": "L450-S01",
+      "generationId": "exec-74e04726-1436-45eb-a586-8d821a56eddd",
+      "review": "PASS: Xiaoyue identity, open-mouth singing and full dance pose are clear; no text or numbers."
+    },
+    {
+      "sentenceId": "L450-S02",
+      "generationId": "exec-58528892-af38-404e-beeb-64238bd68fe5",
+      "review": "PASS: recurring protagonist and mother are distinct from generic families; music-start event and group dancing are clear; no text or numbers."
+    },
+    {
+      "sentenceId": "L450-S03",
+      "generationId": "exec-c3ddfd7d-b3cd-4079-b274-fe89ca97c3cf",
+      "review": "PASS: recurring protagonist sings while one hand taps the other palm; no text or numbers."
+    },
+    {
+      "sentenceId": "L450-S04",
+      "generationId": "exec-3d28c5cf-376e-4c83-bb4a-063bb661343c",
+      "review": "PASS: recurring father records the recurring protagonist's full dance pose; phone has no readable interface or branding."
+    },
+    {
+      "sentenceId": "L450-S05",
+      "generationId": "exec-d2d4769b-f962-4a37-8c2a-5d238d1d46b1",
+      "review": "PASS after edit: recurring mother presents a completed child-size dance dress to the recurring protagonist; all measurement text and numbers were removed."
+    }
+  ],
+  "overallStyleLock": "PASS",
+  "overallCastLock": "PASS"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "file": "L456-S01-coral.mp3",
+    "sha256": "c5732daf7a4f27fb1f19c81e21b11563d3a64a779f6a931effc176b68ae591ed",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"表演的時候 突然停電了\",\"tu_syllables\":[{\"syllable\":\"突\",\"tone\":\"2\",\"pitch_contour\":\"rising\"}],\"audio_quality\":{\"final_syllable_complete\":true,\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}}"
+  },
+  {
+    "file": "L456-S01-nova.mp3",
+    "sha256": "f8caf450758911b6a34178283b79ed52efda470918b91354f1d7ee6f9e4e5c15",
+    "model": "gpt-audio-1.5",
+    "result": "{\n  \"transcript\": \"表演的時候，突然停電了。\",\n  \"tu_syllables\": [\n    {\n      \"syllable\": \"突\",\n      \"heard_tone\": \"4\",\n      \"pitch_contour\": \"falling sharply\"\n    }\n  ],\n  \"audio_quality\": {\n    \"final_syllable_complete\": true,\n    \"omissions\": false,\n    \"repetitions\": false,\n    \"clipping\": false,\n    \"unnatural_pauses\": false\n  }\n}"
+  },
+  {
+    "file": "L456-S01-sage.mp3",
+    "sha256": "abdea1ae2e47509aa212dd8498e5bc59ff266f99034a8ea2de37df926102eeca",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"表演的時候突然停電了\",\"tu_syllables\":[{\"syllable\":\"突然\",\"position\":3,\"tone\":\"2\",\"pitch_contour\":\"rising\"}],\"completeness\":\"all syllables complete; no omissions, repetitions, clipping, or unnatural pauses\"}"
+  },
+  {
+    "file": "L456-S02-coral.mp3",
+    "sha256": "df0b26f7fa3e752d34739b5fa900045ec8c0e67caaef9f56d501c4a5c06773cb",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"窗台上突然出現一隻小鳥\",\"tones\":{\"tu\":\"2\"},\"pitch_contour\":\"rising from mid to high\",\"completeness\":{\"all_syllables_complete\":true,\"final_syllable_complete\":true},\"artifacts\":{\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}}"
+  },
+  {
+    "file": "L456-S02-nova.mp3",
+    "sha256": "d840d0d200ba1a327a0f3c34dd0b88c4fd967ef013af9c2f1f84033a4691bcdf",
+    "model": "gpt-audio-1.5",
+    "result": "{\n  \"transcript\": \"窗台上突然出現一隻小鳥\",\n  \"tu_details\": [\n    {\n      \"syllable\": \"突然\",\n      \"heard_tone\": 2,\n      \"pitch_contour\": \"rising\"\n    }\n  ],\n  \"audio_quality\": {\n    \"every_syllable_complete\": true,\n    \"final_syllable_complete\": true,\n    \"omissions\": false,\n    \"repetitions\": false,\n    \"clipping\": false,\n    \"unnatural_pauses\": false\n  }\n}"
+  },
+  {
+    "file": "L456-S02-sage.mp3",
+    "sha256": "b705d90d2b06d5b23328c456e26325842f203cec38c9b4c110d561dca1a40ddb",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"床上突然出現一隻小鳥\",\"tu_syllables\":[{\"syllable\":\"突\",\"heard_tone\":4,\"pitch_contour\":\"falls quickly from a higher pitch to a lower pitch\"}],\"syllable_completeness\":\"All syllables, including the final syllable, are complete.\",\"disfluencies\":\"No omissions, repetitions, clipping, or unnatural pauses detected.\"}"
+  },
+  {
+    "file": "L456-S05-coral.mp3",
+    "sha256": "1a7b5d6afd0234dbb4c414ae40b2ad284fbdfc0736903bfff1368fac0d595963",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"走到半路，突然下起大雨。\", \"tu_syllables\": [{\"syllable\": \"突\", \"tone_heard\": 2, \"pitch_contour\": \"mid-rising\"}], \"completeness\": \"All syllables are complete, no omissions, repetitions, clipping, or unnatural pauses.\"}"
+  },
+  {
+    "file": "L456-S05-nova.mp3",
+    "sha256": "9c241a9c5cebde1485ca947c796e9771d8b227ddf47805b2c79db8a754498894",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"走到半路，突然下起大雨。\", \"tones\": [{\"syllable\": \"突\", \"tone_heard\": 2, \"pitch_contour\": \"rising\"}], \"audio_quality\": {\"all_syllables_complete\": true, \"omissions\": false, \"repetitions\": false, \"clipping\": false, \"unnatural_pauses\": false}}"
+  },
+  {
+    "file": "L456-S05-sage.mp3",
+    "sha256": "7dc7ff241909e5f3b4ca3a808e53ee82985bedd5d67cccdb1d16b823cd8a4d1f",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"走到半路 突然 下起大雨\", \"tu_syllables\": [{\"syllable\": \"突\", \"tone_heard\": 2, \"pitch_contour\": \"mid rising\"}], \"quality\": {\"all_syllables_complete\": true, \"omissions\": false, \"repetitions\": false, \"clipping\": false, \"unnatural_pauses\": false}}"
+  },
+  {
+    "file": "char-u7a81-coral.mp3",
+    "sha256": "92bf5b3f8f6faf743459a14690d05d0219179ef1592b0bead2b37107661fe91c",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"突\",\"tu_syllables\":[{\"tone\":\"2\",\"pitch_contour\":\"rising\"}],\"syllables_complete\":true,\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}"
+  },
+  {
+    "file": "char-u7a81-nova.mp3",
+    "sha256": "9d1024b29baeeb4845f1e00b56f15b1de3f8af6249365efcff6492716f5d636e",
+    "model": "gpt-audio-1.5",
+    "result": "{\"error\": \"No audio provided.\"}"
+  },
+  {
+    "file": "char-u7a81-sage.mp3",
+    "sha256": "b74e1e6af0b3123807eb1d50bdb8b7226ec1502c0766baeedd7021afec2f5afa",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"土\",\"tu_syllable\":{\"heard_tone\":3,\"pitch_contour\":\"mid falling then rising\"},\"completeness\":{\"final_syllable_complete\":true,\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}}"
+  }
+]

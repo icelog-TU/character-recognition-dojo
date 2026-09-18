@@ -1,0 +1,93 @@
+{
+  "unit": "L453",
+  "provider": "whisper-1 through assets:align:ai",
+  "normalization": [
+    "这→這",
+    "员→員",
+    "从→從",
+    "练→練",
+    "听→聽",
+    "爱→愛",
+    "们→們",
+    "车→車",
+    "里→裡",
+    "书→書",
+    "买→買",
+    "伙→火 for S04 Whisper homophone; acoustic check returned huo3",
+    "后车→候車 for S05/G05 Whisper homophone; acoustic check returned hou4 che1"
+  ],
+  "manualTimingAdjustments": [],
+  "processing": "Standard audio generation and processing followed by Whisper AI alignment; no speech splicing. Initial silent/too-short char and G02 prefix drafts were rejected and independently regenerated. Two degenerate Whisper timestamps were automatically repaired from acoustic and adjacent-boundary evidence.",
+  "transcripts": [
+    {
+      "id": "L453-S01",
+      "text": "演出前,我在舞台後方等候。"
+    },
+    {
+      "id": "L453-S02",
+      "text": "这位演员从小就很会跳舞"
+    },
+    {
+      "id": "L453-S03",
+      "text": "爸爸上台演唱我爱听的歌。"
+    },
+    {
+      "id": "L453-S04",
+      "text": "全班演练起伙时怎么走出去"
+    },
+    {
+      "id": "L453-S05",
+      "text": "我们在后车室里看书。"
+    },
+    {
+      "id": "L453-G02-prefix",
+      "text": "这位"
+    },
+    {
+      "id": "L453-G02-suffix",
+      "text": "员从小就很会跳舞"
+    },
+    {
+      "id": "L453-G05-wrong-one",
+      "text": "我们在后车室外看书。"
+    },
+    {
+      "id": "L453-G05-wrong-two",
+      "text": "我们在后车室里买书。"
+    }
+  ],
+  "automaticTimingFallbacks": [
+    {
+      "record": "L453-S02",
+      "charIndex": 2,
+      "reason": "Whisper returned 40ms for an audible character.",
+      "method": "Expand to 120ms around the AI midpoint and move the adjacent boundaries.",
+      "before": {
+        "charIndex": 2,
+        "startMs": 700,
+        "endMs": 740
+      },
+      "result": {
+        "charIndex": 2,
+        "startMs": 660,
+        "endMs": 780
+      }
+    },
+    {
+      "record": "L453-G02-suffix",
+      "charIndex": 1,
+      "reason": "Whisper returned 1ms for audible 從 despite exact acoustic syllable verification.",
+      "method": "Start from repo RMS onset; end at the next AI token start.",
+      "before": {
+        "charIndex": 1,
+        "startMs": 960,
+        "endMs": 961
+      },
+      "result": {
+        "charIndex": 1,
+        "startMs": 490,
+        "endMs": 960
+      }
+    }
+  ]
+}

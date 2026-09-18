@@ -1,0 +1,263 @@
+{
+  "unit": "L453",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "5622c827569df36e09c1767d61f114b35973bbea",
+  "productionBoundary": "L001-L443 操; 447 unique learned Han",
+  "allowedCharCount": 453,
+  "imageChecks": [
+    {
+      "sentenceId": "L453-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Backstage preparation area is explicit: fixed protagonist wears a yellow-and-white child dance costume coordinated with the dancers visible through the curtain and waits to perform next while the distinct teacher watches nearby.",
+      "castEvidence": "Recurring girl keeps the fixed dark bob, pink hair clip, soft-cheeked preschool proportions, and identity; short-curled-hair teacher with glasses and lavender cardigan remains distinct from mother.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L453-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Generic adult performer holds a childhood dance photo that preserves auburn hair and facial traits, clearly showing the same person from childhood; protagonist observes.",
+      "castEvidence": "Adult and child-in-photo are one generic performer identity and do not replace or age-change the fixed cast.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L453-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Recurring father sings into a microphone on a small family/community stage while the recurring girl listens happily below.",
+      "castEvidence": "Father blue shirt/khaki trousers and recurring girl match family anchors; mother is incidental audience.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L453-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Distinct teacher leads more than eight classmates in an orderly classroom-to-courtyard evacuation drill; no fire, smoke, injury, or panic.",
+      "castEvidence": "Recurring protagonist remains identifiable among generic classmates; teacher is distinct from mother.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+    },
+    {
+      "sentenceId": "L453-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Recurring girl and older brother read picture books on indoor station seating while mother accompanies them; travel bag, passengers, and train outside establish the setting.",
+      "castEvidence": "Girl, older brother, and mother match family anchors; rejected first draft text-like marks were removed.",
+      "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+    }
+  ],
+  "browserQA": {
+    "environment": "Chrome 390x844; real LessonPanel imported by isolated local harness with approved L453 draft and only handoff provisional vocabulary; no production progress or cloud data written.",
+    "playback": "All 10 final M4A files emitted play and ended. Initial autoplay denial was resolved by an explicit user-gesture click.",
+    "G01": "S01 target 演 at Han index 0 selected; 下一題 appeared.",
+    "G02": "S02 target 演 at Han index 2 displayed with ㄧㄢˇ; replay completed the exact short prefix 這位 and stopped at target. Dedicated suffix 員從小就很會跳舞 completed in the ten-file playback run.",
+    "G03": "Cards 跳/演/唱 were distinct; choosing 演 filled S03 index 4 and exposed 下一題.",
+    "G04": "Single-Han cards 走→出→去 completed S04 indexes 9/10/11 and exposed 下一題.",
+    "G05": "All three shuffled animal options played to ended and mapped to wrong-one, wrong-two, and correct S05. Choosing the correct S05 option exposed 領取獎勵; reward callback then displayed 下一課 and 回首頁休息.",
+    "limitations": [
+      "Sustained press-to-record and recorded-voice replay could not be operated reliably with the available browser tool; microphone recording is not certified.",
+      "Direct human listening and physical-phone highlight smoothness are not claimed; pronunciation evidence uses actual final audio supplied to an acoustic AI model."
+    ],
+    "disposition": "Production SOP browser-tooling fallback for recording; all other Stage 4 interactions, playback, assets, and technical gates complete."
+  },
+  "audio": {
+    "metrics": [
+      {
+        "name": "char-u6f14.m4a",
+        "duration": 1.207007,
+        "max": -2,
+        "mean": -17.6,
+        "trailingSilenceStart": 1.03132,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "e6eccfa8dca2cb2cb3196596cd86675a05267973ce3c5340a9b9ff4b077f2dd5"
+      },
+      {
+        "name": "L453-G02-prefix.m4a",
+        "duration": 0.859002,
+        "max": -2.1,
+        "mean": -16.6,
+        "trailingSilenceStart": 0.716485,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "fa5d79555f90047a0148207e3cb6c0c43c260612f5bd87182a680657a0bac8ce"
+      },
+      {
+        "name": "L453-G02-suffix.m4a",
+        "duration": 2.856009,
+        "max": -3,
+        "mean": -17.4,
+        "trailingSilenceStart": 2.68297,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "615d44e759558f4500cd5d1d2fc09dd92d3970c991cf20ceed079010f792f3c5"
+      },
+      {
+        "name": "L453-G05-wrong-one.m4a",
+        "duration": 2.67,
+        "max": -2,
+        "mean": -17.2,
+        "trailingSilenceStart": 2.49705,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "58e8cb1928c23bb128e6fdbd662bddf567b268a6c82e55dd0603e53d67189d32"
+      },
+      {
+        "name": "L453-G05-wrong-two.m4a",
+        "duration": 3.645011,
+        "max": -2,
+        "mean": -17.4,
+        "trailingSilenceStart": 3.46397,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "20c0963cd4b598c466925469e90825340e800cd36fa39abff376fa6f1c850bd4"
+      },
+      {
+        "name": "L453-S01.m4a",
+        "duration": 4.062993,
+        "max": -2,
+        "mean": -17.4,
+        "trailingSilenceStart": 3.8893,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "ab26df57d2f49e2b81655063728bf538ddaaf20a87e8630af03db6edcf1d5d44"
+      },
+      {
+        "name": "L453-S02.m4a",
+        "duration": 3.39,
+        "max": -2.6,
+        "mean": -18.1,
+        "trailingSilenceStart": 3.21202,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "b11b21827ccc4f6e98757669b32e83d600e51655b370c193667f9fe7ceecffa5"
+      },
+      {
+        "name": "L453-S03.m4a",
+        "duration": 3.436009,
+        "max": -2,
+        "mean": -17.5,
+        "trailingSilenceStart": 3.26168,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "57ec3082214aa9a4159429a15bd7807fd2b7c41a72933dd5bf510ec99e751cb2"
+      },
+      {
+        "name": "L453-S04.m4a",
+        "duration": 3.785011,
+        "max": -2.6,
+        "mean": -19,
+        "trailingSilenceStart": 3.61313,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "fc15cf87251f17413278f363b6c3b3b6d1566efb94be01a6e78c93085a94bf8f"
+      },
+      {
+        "name": "L453-S05.m4a",
+        "duration": 4.141995,
+        "max": -2,
+        "mean": -19.5,
+        "trailingSilenceStart": 4.02308,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "93d64d31c8eb87b2ce748be30ac13f8529ccbe672d5a072cfaba101da2d22f8c"
+      }
+    ],
+    "g05MeanVolumeSpreadDb": 2.3,
+    "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; acoustic AI verification, not human listening.",
+    "hearing": [
+      {
+        "name": "char-u6f14",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"yan3\"]}"
+      },
+      {
+        "name": "L453-G02-prefix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"zhe4\", \"wei4\"]}"
+      },
+      {
+        "name": "L453-G02-suffix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\":[\"yuan2\",\"cong2\",\"xiao3\",\"jiu4\",\"hen3\",\"hui4\",\"tiao4\",\"wu3\"]}"
+      },
+      {
+        "name": "L453-G05-wrong-one",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"men2\", \"zai4\", \"hou4\", \"che1\", \"shi4\", \"wai4\", \"kan4\", \"shu1\"]}"
+      },
+      {
+        "name": "L453-G05-wrong-two",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"men2\", \"zai4\", \"hou4\", \"che1\", \"shi4\", \"li3\", \"mai3\", \"shu1\"]}"
+      },
+      {
+        "name": "L453-S01",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"yan3\", \"chu1\", \"qian2\", \"wo3\", \"zai4\", \"wu3\", \"tai2\", \"hou4\", \"fang1\", \"deng3\", \"hou4\"]}"
+      },
+      {
+        "name": "L453-S02",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"zhe4\", \"wei4\", \"yan3\", \"yuan2\", \"cong2\", \"xiao3\", \"jiu4\", \"hen3\", \"hui4\", \"tiao4\", \"wu3\"]}"
+      },
+      {
+        "name": "L453-S03",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"ba4\", \"ba\", \"shang4\", \"tai2\", \"yan3\", \"chang4\", \"wo3\", \"ai4\", \"ting1\", \"de5\", \"ge1\"]}"
+      },
+      {
+        "name": "L453-S04",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"quan2\", \"ban1\", \"yan3\", \"lian4\", \"qi2\", \"huo3\", \"shi2\", \"zen3\", \"me\", \"zou3\", \"chu1\", \"qu4\"]}"
+      },
+      {
+        "name": "L453-S05",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"men2\", \"zai4\", \"hou4\", \"che1\", \"shi4\", \"li3\", \"kan4\", \"shu1\"]}"
+      }
+    ],
+    "pronunciationChecks": {
+      "演": "yan3",
+      "候": "hou4",
+      "唱": "chang4",
+      "歌": "ge1",
+      "S04起火": "qi2 huo3, standard third-tone sandhi surface before 火"
+    },
+    "processing": "Standard generated whole-sentence/fragment audio; tail-only AAC frame-copy silence shortening and prefix gain normalization; no speech cuts, speed changes, or splicing."
+  },
+  "mediaBytes": 1196866,
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L452",
+    "reviewMilestones": [
+      "R055",
+      "R056"
+    ]
+  },
+  "validation": {
+    "startupToolsAiAudit": "PASS",
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L453 fixture",
+    "assetAuditStrict": "PASS on isolated L453 fixture; zero warnings",
+    "fullVerify": "Skipped: dependency-blocked, shared production state left for Release."
+  },
+  "repairHistory": [
+    {
+      "scope": "L453-S01:image",
+      "sourceCommit": "c3ebb3645db478ff264ac9eb1a35ea1a3367e74f",
+      "teacherFinding": "女主角在舞台後方等候演出，應穿著表演服裝。",
+      "action": "Replaced S01 with a fresh final image preserving the approved backstage composition, teacher identity, protagonist identity, and style while dressing the protagonist in a coordinated yellow-and-white child dance costume.",
+      "result": "PASS; prior ordinary-clothes image superseded and not present at the repaired branch tip."
+    }
+  ]
+}

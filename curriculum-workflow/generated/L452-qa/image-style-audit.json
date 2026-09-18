@@ -1,0 +1,65 @@
+{
+  "unit": "L452",
+  "method": "Opened final exported WebPs and compared with style/cast anchors; S04 and S05 additionally checked against teacher repair notes",
+  "result": "PASS; teacher image review approved all five final images",
+  "rejectedDrafts": [
+    {
+      "reviewedRef": "6062820c3ae9e53e570d7c8cbffeb5101726b862",
+      "id": "L452-S04:image",
+      "issue": "爸爸右手穿過主角女孩頭部",
+      "resolution": "Regenerated with the father's phone, hand and forearm separated to the left of the protagonist's unobstructed head."
+    },
+    {
+      "reviewedRef": "6062820c3ae9e53e570d7c8cbffeb5101726b862",
+      "id": "L452-S05:image",
+      "issue": "單件舞衣不足以表達一套舞衣",
+      "resolution": "Regenerated as a visibly separate coordinated jacket, dance skirt, ballet shoes and tights set."
+    }
+  ],
+  "images": [
+    {
+      "sentenceId": "L452-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Warm backstage pencil-watercolor scene; protagonist waits nervously beside fixed teacher while a different child remains on stage; teacher is distinct from mother."
+    },
+    {
+      "sentenceId": "L452-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Warm memory scene; fixed father identity is retained and younger protagonist reads as the same child, not a new sibling; singing/listening interaction is clear."
+    },
+    {
+      "sentenceId": "L452-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Recurring protagonist dances safely on the indoor floor; rain and wet ground are clearly visible outside."
+    },
+    {
+      "sentenceId": "L452-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "REPAIRED PASS: 小月 retains the complete fixed reference identity. Father photographs from the far left; his phone, right hand and forearm remain visibly separate from the protagonist's unobstructed head, hair and face."
+    },
+    {
+      "sentenceId": "L452-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "REPAIRED PASS: Fixed mother and fully dressed protagonist retain identity. The undersized coordinated dance set is visibly multi-piece: separate lavender jacket, separate tutu skirt, ballet shoes and tights."
+    }
+  ],
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "50f49d863a3671b0aea680cfc3fcd93d87a6fccd",
+    "repairedImageAssetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
+    "scope": "All five L452 final images, including repaired L452-S04 and L452-S05",
+    "statement": "452圖片我看了，圖片審核通過。"
+  }
+}

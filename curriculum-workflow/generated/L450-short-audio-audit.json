@@ -1,0 +1,190 @@
+[
+  {
+    "file": "public/assets/lessons/L450/audio/char-u821e.m4a",
+    "sha256": "55fd4bcef083ac9eb6b32363881d4554e478410c7f1771076c04e6f232ba24ed",
+    "model": "gpt-4o-transcribe",
+    "prompt": "這是臺灣華語單一漢字音。課程候選字是「舞」，請只轉寫實際聽到的漢字。",
+    "trials": [
+      {
+        "text": "舞",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 55,
+          "input_tokens": 52,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 19
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "舞",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 55,
+          "input_tokens": 52,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 19
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "舞",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 55,
+          "input_tokens": 52,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 19
+          },
+          "output_tokens": 3
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L450/audio/L450-G02-prefix.m4a",
+    "sha256": "52341d9751d355177ff0b9b9d7812a5c59ae15c0a0e68fde3c391181930fd417",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "爸爸幫我拍下跳。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 36,
+          "input_tokens": 26,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 26
+          },
+          "output_tokens": 10
+        }
+      },
+      {
+        "text": "爸爸帮我拍下跳。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 35,
+          "input_tokens": 26,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 26
+          },
+          "output_tokens": 9
+        }
+      },
+      {
+        "text": "爸爸帮我拍下跳。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 35,
+          "input_tokens": 26,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 26
+          },
+          "output_tokens": 9
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L450/audio/L450-G02-suffix.m4a",
+    "sha256": "2e1d501152650c670e9abc537bbc4fe91f7037670995063d0b2ae2ae8b043543",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "的樣子",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 14,
+          "input_tokens": 9,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 9
+          },
+          "output_tokens": 5
+        }
+      },
+      {
+        "text": "的樣子",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 14,
+          "input_tokens": 9,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 9
+          },
+          "output_tokens": 5
+        }
+      },
+      {
+        "text": "的样子",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 14,
+          "input_tokens": 9,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 9
+          },
+          "output_tokens": 5
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L450/audio/L450-S02.m4a",
+    "sha256": "615bc6e2f7c44b2741e55abcbdef7dba7fae7400cc96105bf96ffff16e85d029",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "舞會的音樂一放，大家就跳舞。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 36,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 36
+          },
+          "output_tokens": 15
+        }
+      },
+      {
+        "text": "舞會的音樂一放，大家就跳舞。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 36,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 36
+          },
+          "output_tokens": 15
+        }
+      },
+      {
+        "text": "舞會的音樂一放，大家就跳舞。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 36,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 36
+          },
+          "output_tokens": 15
+        }
+      }
+    ]
+  }
+]

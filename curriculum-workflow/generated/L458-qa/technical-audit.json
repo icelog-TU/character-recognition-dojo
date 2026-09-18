@@ -1,0 +1,150 @@
+{
+  "unit": "L458",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "80431be0",
+  "lockedVocabularyRef": "f766046b",
+  "allowedChars": {
+    "expected": 454,
+    "actual": 454,
+    "result": "PASS"
+  },
+  "coverage": {
+    "其": 3,
+    "實": 2,
+    "突": 2,
+    "現": 2,
+    "表": 1,
+    "演": 1
+  },
+  "sentences": [
+    {
+      "id": "L458-S01",
+      "hanCount": 12,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "timingCount": 12,
+      "durationMs": 4140,
+      "tailMs": 200
+    },
+    {
+      "id": "L458-S02",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 4300,
+      "tailMs": 200
+    },
+    {
+      "id": "L458-S03",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "timingCount": 11,
+      "durationMs": 3560,
+      "tailMs": 200
+    },
+    {
+      "id": "L458-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "timingCount": 11,
+      "durationMs": 3560,
+      "tailMs": 200
+    },
+    {
+      "id": "L458-S05",
+      "hanCount": 12,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "timingCount": 12,
+      "durationMs": 3740,
+      "tailMs": 200
+    }
+  ],
+  "stage4": {
+    "order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "result": "PASS"
+  },
+  "audio": {
+    "filesExpected": 10,
+    "filesActual": 10,
+    "result": "PASS; teacher audio review PASS"
+  },
+  "images": {
+    "filesExpected": 5,
+    "filesActual": 5,
+    "result": "REPAIRED PASS; fixed-ref preview PASS; teacher image review PASS"
+  },
+  "browserQa": {
+    "status": "pass",
+    "assetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "browser": "Chrome",
+    "summary": "PASS: pushed repair ref loaded the complete L458 manifest and rendered the replacement L458-S02 image element.",
+    "limitation": "Browser QA verified pushed rendering; teacher image and audio approval was subsequently received and recorded separately."
+  },
+  "releaseBlockers": [
+    "R055/R056 after L450 before L451",
+    "Contiguous numbered predecessors L447-L457"
+  ],
+  "sharedReleaseFiles": "Untouched; Release-owned",
+  "repairHistory": [
+    {
+      "source": "teacher asset review",
+      "reviewedRef": "bcbc52d3ea8e10309fe8673233ecd550ce2be36d",
+      "item": "L458-S02:image",
+      "issue": "畫風跑掉，偏寫實且與課程水彩風格不一致",
+      "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers.",
+      "status": "resolved-fixed-ref-preview-pass-teacher-approved"
+    }
+  ],
+  "preRepairBrowserQa": {
+    "status": "pass",
+    "assetCommit": "9d028dda268af231a9f0508a219df4b80cdbea9a",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=9d028dda268af231a9f0508a219df4b80cdbea9a",
+    "browser": "Chrome",
+    "summary": "PASS: fixed-ref page loaded 5 sentence cards and 6 other audio items; all 11 playback controls entered playing state and returned after completion.",
+    "scope": [
+      "L458-S01 through L458-S05",
+      "char-u5176",
+      "L458-G02 prefix and suffix",
+      "L458-G05 correct and two wrong options"
+    ]
+  },
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "1c7e530a78ac5b3e28b5b6ba649894ea1269dcd8",
+    "repairedAssetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "scope": "All five final L458 images, including repaired L458-S02",
+    "statement": "可以，圖片跟音檔都審核通過。"
+  },
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "1c7e530a78ac5b3e28b5b6ba649894ea1269dcd8",
+    "repairedAssetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "scope": "All final L458 audio: charAudio, five sentence files, G02 prefix/suffix, and two G05 wrong-option files",
+    "statement": "可以，圖片跟音檔都審核通過。"
+  }
+}

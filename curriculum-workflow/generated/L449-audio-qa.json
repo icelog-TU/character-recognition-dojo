@@ -1,0 +1,368 @@
+{
+  "unit": "L449",
+  "notes": "Technical AI generation, decode, loudness, transcription and timing evidence. Not a substitute for teacher subjective listening.",
+  "coverage": {
+    "唱": 3,
+    "歌": 2,
+    "拍": 2,
+    "音": 2,
+    "樂": 3,
+    "器": 1
+  },
+  "allowed": 448,
+  "assetBytes": 1261237,
+  "g05MeanSpreadDb": 1.8999999999999986,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L449/images/L449-S01.webp",
+      "bytes": 139544,
+      "sha256": "425f48430648b617fccc157f532d60df89f9014ddb4fee5bc4e8d6d459330c1a"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S02.webp",
+      "bytes": 179384,
+      "sha256": "48e8e199d00726d32ef37893d22d3c7dff73bde4474d118d1f41f0bd301b5ab9"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S03.webp",
+      "bytes": 177922,
+      "sha256": "567f689fe95909582b0a8b258d1e293aa9dfef83deb97627f28aec63944e975a"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S04.webp",
+      "bytes": 173560,
+      "sha256": "7c6b927140cd45dac673bbe91b1f444b52ed6e0165655bed7ad99739df5e50a8"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S05.webp",
+      "bytes": 169904,
+      "sha256": "ada049c475eece831a0ea8637d636e979dfa40e733d5c3733040532195a0725d"
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/char-u5531.m4a",
+      "bytes": 26713,
+      "sha256": "c111217bc8dc30cc17a568ec2fe80dd1f10994108b9e2a82c63e6bfa32ce648f",
+      "durationMs": 2229,
+      "meanDb": -20.5,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G02-prefix.m4a",
+      "bytes": 41447,
+      "sha256": "5ba684cc0acdf798e644d1d6fb0866ca98e6cfc0d036875e41260548f19b45d7",
+      "durationMs": 3408,
+      "meanDb": -18.2,
+      "maxDb": -2.8
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G02-suffix.m4a",
+      "bytes": 9458,
+      "sha256": "0e0203c5921b91915e0dbc42fc76180c6d40a1c4367d638747bc1f0497deb88d",
+      "durationMs": 793,
+      "meanDb": -22.4,
+      "maxDb": -8.5
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G05-wrong-one.m4a",
+      "bytes": 45483,
+      "sha256": "0c05d3a1edbb72373431ddd2b01d425b219869a29446d1e06e93f2af7e59bb38",
+      "durationMs": 5418,
+      "meanDb": -20.4,
+      "maxDb": -2.9
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G05-wrong-two.m4a",
+      "bytes": 59925,
+      "sha256": "37d134161a0582be77e6164e11b8a68212edd977841d061ba751f93f1a06ea77",
+      "durationMs": 5378,
+      "meanDb": -21,
+      "maxDb": -2.2
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S01.m4a",
+      "bytes": 44121,
+      "sha256": "57fcd64da53749b298b179fc6e041eb6755155878f27ae7494d148ce4e8d1764",
+      "durationMs": 3876,
+      "meanDb": -18.7,
+      "maxDb": -2.3
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S02.m4a",
+      "bytes": 41604,
+      "sha256": "a088573c4bb46d7bb07128b8fb526fb497008443700ad0ed73000fc17a8f94a0",
+      "durationMs": 3709,
+      "meanDb": -18.5,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S03.m4a",
+      "bytes": 48786,
+      "sha256": "781d8a05438b5c60c2b36680021c2fe8d0018e28bea5f394eedb1e6e5642c4ba",
+      "durationMs": 4320,
+      "meanDb": -18.8,
+      "maxDb": -2.1
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S04.m4a",
+      "bytes": 44192,
+      "sha256": "1b53186350ad3b79e61f5ae3948db62f6c9cf5f70f5cbd2120c6181e835af34f",
+      "durationMs": 3859,
+      "meanDb": -19.1,
+      "maxDb": -2.4
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S05.m4a",
+      "bytes": 59194,
+      "sha256": "e211d01791ae9b80deadbb4f1a22e97ccb218fff8289a511f0f056d6d1e94d44",
+      "durationMs": 5121,
+      "meanDb": -19.9,
+      "maxDb": -2
+    }
+  ],
+  "charTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.2200000286102295,
+    "text": "唱。",
+    "words": [
+      {
+        "word": "唱。",
+        "start": 0,
+        "end": 0.699999988079071
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  },
+  "suffixTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 0.8100000023841858,
+    "text": "哥",
+    "words": [
+      {
+        "word": "哥",
+        "start": 0,
+        "end": 0.30000001192092896
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 1
+    }
+  },
+  "processing": {
+    "generation": "OpenAI gpt-4o-mini-tts, speed 0.9. Final G02 prefix uses sage with explicit Taiwan Mandarin 爸爸 ㄅㄚˋ・ㄅㄚ and both 一邊 ㄧˋ ㄅㄧㄢ instructions. Normal speech, never melodic singing. G05 choices are separate whole sentences.",
+    "conversion": "Repo assets:audio pipeline; mono AAC 44100 Hz and loudness normalization.",
+    "alignment": "Repo Whisper word alignment with simplified/traditional equivalences. 哥/歌 homophone normalization only for the G02 suffix. No speech splicing."
+  },
+  "prefixRepair": {
+    "reviewedCommit": "0bb76b31b29ee10ad084d47712493a9dd7c531f0",
+    "teacherFinding": "G02 prefix opening 爸爸 sounded like 巴吧.",
+    "action": "Regenerated the complete prefix with marin and explicit Taiwan Mandarin ㄅㄚˋ・ㄅㄚ instruction; no splice.",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.940000057220459,
+      "text": "爸爸一邊開車一邊。",
+      "words": [
+        {
+          "word": "爸爸",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "一",
+          "start": 0.46000000834465027,
+          "end": 0.8399999737739563
+        },
+        {
+          "word": "邊",
+          "start": 0.8399999737739563,
+          "end": 1.059999942779541
+        },
+        {
+          "word": "開",
+          "start": 1.059999942779541,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "車",
+          "start": 1.440000057220459,
+          "end": 1.659999966621399
+        },
+        {
+          "word": "一",
+          "start": 1.659999966621399,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "邊。",
+          "start": 1.9800000190734863,
+          "end": 2.180000066757202
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "alignedAudio": {
+      "src": "/assets/lessons/L449/audio/L449-G02-prefix.m4a",
+      "durationMs": 2933,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 230
+        },
+        {
+          "charIndex": 1,
+          "startMs": 230,
+          "endMs": 460
+        },
+        {
+          "charIndex": 2,
+          "startMs": 460,
+          "endMs": 840
+        },
+        {
+          "charIndex": 3,
+          "startMs": 840,
+          "endMs": 1060
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1060,
+          "endMs": 1440
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1440,
+          "endMs": 1660
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1660,
+          "endMs": 1980
+        },
+        {
+          "charIndex": 7,
+          "startMs": 1980,
+          "endMs": 2180
+        }
+      ]
+    }
+  },
+  "prefixRepairRound2": {
+    "reviewedCommit": "cba61a24554883b6b93a04a864ab97fd9edd591d",
+    "teacherFinding": "爸爸 accepted; 一邊 pronunciation was distorted.",
+    "action": "Regenerated the complete prefix with sage, a natural comma pause, and explicit complete ㄧˋ ㄅㄧㄢ pronunciation for both occurrences; no splice.",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.4100000858306885,
+      "text": "爸爸一邊開車,一邊……",
+      "words": [
+        {
+          "word": "爸爸",
+          "start": 0,
+          "end": 0.36000001430511475
+        },
+        {
+          "word": "一",
+          "start": 0.36000001430511475,
+          "end": 0.8399999737739563
+        },
+        {
+          "word": "邊",
+          "start": 0.8399999737739563,
+          "end": 1.100000023841858
+        },
+        {
+          "word": "開",
+          "start": 1.100000023841858,
+          "end": 1.5
+        },
+        {
+          "word": "車",
+          "start": 1.5,
+          "end": 1.8600000143051147
+        },
+        {
+          "word": "一",
+          "start": 2.359999895095825,
+          "end": 2.640000104904175
+        },
+        {
+          "word": "邊",
+          "start": 2.640000104904175,
+          "end": 2.880000114440918
+        },
+        {
+          "word": "……",
+          "start": 2.880000114440918,
+          "end": 3.380000114440918
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "alignedAudio": {
+      "src": "/assets/lessons/L449/audio/L449-G02-prefix.m4a",
+      "durationMs": 3408,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 180
+        },
+        {
+          "charIndex": 1,
+          "startMs": 180,
+          "endMs": 360
+        },
+        {
+          "charIndex": 2,
+          "startMs": 360,
+          "endMs": 840
+        },
+        {
+          "charIndex": 3,
+          "startMs": 840,
+          "endMs": 1080
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1080,
+          "endMs": 1500
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1500,
+          "endMs": 1840
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2340,
+          "endMs": 2640
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2640,
+          "endMs": 2860
+        }
+      ]
+    },
+    "teacherApproval": {
+      "status": "PASS",
+      "date": "2026-09-18",
+      "reviewedRef": "48d3f5efe729b42aade4f7f960bebbbacfaa50d6",
+      "note": "Teacher confirmed 爸爸 and both 一邊 pronunciations are correct."
+    }
+  }
+}

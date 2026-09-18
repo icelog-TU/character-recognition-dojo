@@ -1,0 +1,28 @@
+{
+  "unit": "L456",
+  "method": "AI acoustic listening of decoded final M4A; not teacher subjective listening.",
+  "model": "gpt-audio-1.5",
+  "results": [
+    {
+      "id": "char-u7a81",
+      "sha256": "be52e622c02224d4e0e817a2837948f9db305fd16ccf6cb34292961f91105de0",
+      "review": "{\"transcript\": \"突\", \"tu_syllables\": [{\"heard_tone\": 2, \"pitch_contour\": \"rising\"}], \"completeness\": \"complete syllable\", \"notes\": \"no omissions, repetitions, clipping, or unnatural pauses\"}"
+    },
+    {
+      "id": "L456-S01",
+      "sha256": "861014ac62d1795797c7ffb098f1ea3bfb04987f7de7648f45cbcedec123b49f",
+      "review": "{\"transcript\": \"表演的時候，突然停電了。\", \"tu_tone\": {\"突然\": {\"tu\": {\"tone\": 2, \"pitch_contour\": \"rising\"}}}, \"audio_quality\": {\"completeness\": \"all syllables complete\", \"final_syllable\": \"complete\", \"omissions\": false, \"repetitions\": false, \"clipping\": false, \"unnatural_pauses\": false}}"
+    },
+    {
+      "id": "L456-S02",
+      "sha256": "db80e7f65af246f902b75a6b6d2aed0e77eaa32d7484e1101023b6f43f300555",
+      "review": "{\"transcript\": \"窗台上突然出現一隻小鳥\", \"tu_syllables\": [{\"syllable\": \"突\", \"heard_tone\": 2, \"pitch_contour\": \"rising\"}], \"syllable_completeness\": \"All syllables are complete, no omissions, repetitions, clipping, or unnatural pauses.\"}"
+    },
+    {
+      "id": "L456-S05",
+      "sha256": "a88aac4c8eacafa3ef7a999e7d3b8363ef904b35779848e3a396f36d6decd9ab",
+      "review": "{\"transcript\":\"走到半路，突然下起大雨。\",\"tu_tone\":{\"syllable\":\"突\",\"tone\":\"2\",\"pitch_contour\":\"rising\"},\"audio_quality\":{\"final_syllable_complete\":true,\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}}"
+    }
+  ],
+  "assessment": "All repaired final files report tu2 with a rising contour, complete final syllables, and no omissions, repetitions or clipping."
+}

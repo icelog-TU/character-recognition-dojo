@@ -1,0 +1,188 @@
+{
+  "unit": "L451",
+  "audio": [
+    {
+      "filename": "char-u53f0.m4a",
+      "bytes": 29786,
+      "durationMs": 1788,
+      "meanDb": -19.2,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-G02-prefix.m4a",
+      "bytes": 20128,
+      "durationMs": 1582,
+      "meanDb": -16.7,
+      "maxDb": -2.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-G02-suffix.m4a",
+      "bytes": 21732,
+      "durationMs": 1685,
+      "meanDb": -22.9,
+      "maxDb": -8.6,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-G05-wrong-one.m4a",
+      "bytes": 42868,
+      "durationMs": 3359,
+      "meanDb": -18.3,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-G05-wrong-two.m4a",
+      "bytes": 53740,
+      "durationMs": 4246,
+      "meanDb": -18.2,
+      "maxDb": -2.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-S01.m4a",
+      "bytes": 55370,
+      "durationMs": 4454,
+      "meanDb": -17.8,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-S02.m4a",
+      "bytes": 56834,
+      "durationMs": 4479,
+      "meanDb": -18.1,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-S03.m4a",
+      "bytes": 39534,
+      "durationMs": 3144,
+      "meanDb": -18,
+      "maxDb": -2.2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-S04.m4a",
+      "bytes": 49215,
+      "durationMs": 3918,
+      "meanDb": -17.9,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L451-S05.m4a",
+      "bytes": 44859,
+      "durationMs": 3564,
+      "meanDb": -18.3,
+      "maxDb": -3.8,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "filename": "L451-S01.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 174474,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Three distinct generic performers: one singer, two dancers; raised stage edge and audience visible."
+    },
+    {
+      "filename": "L451-S02.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 130564,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Fixed girl below stage looking toward microphone with nervous anticipation; separate ponytail/glasses/teal teacher. Expression revised."
+    },
+    {
+      "filename": "L451-S03.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 189206,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Fixed girl photographing fixed mother on safe plant-filled balcony; phone screen faces girl and rear camera points to mother. Direction revised."
+    },
+    {
+      "filename": "L451-S04.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 190838,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Fixed girl listens to chirping sparrow on visible windowsill, distinct from balcony."
+    },
+    {
+      "filename": "L451-S05.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 166246,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "review": "Fixed girl gestures near ear beside single running washer; mother attends; no physical contact with machine or damage."
+    }
+  ],
+  "optionMeanVolumeSpreadDb": 0.2,
+  "totalBytes": 1265394,
+  "sentenceTimingBounds": "PASS",
+  "allowedCharacterAndStage4Audit": "PASS",
+  "browserQA": {
+    "status": "Phone UI playback and interaction inspection complete; SOP tooling fallback for audible manual QA and sustained recording",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:14251/character-recognition-dojo/",
+    "stage1": "Final standalone tapped; playback state and completion observed. 台 ㄊㄞˊ displayed.",
+    "stage2": "Six cards, three 台 targets accepted, 3/3 complete.",
+    "stage3": "All five cards tapped separately; playback state and active highlight observed; approved functional lines fit viewport, square images readable; S04 傳 ㄔㄨㄢˊ retained.",
+    "stage4": {
+      "G01": "S04 台 selected; completion and Next shown.",
+      "G02": "Dedicated 我在陽 prefix reached red 台 target. No sustained pointer-hold API; recording and stitched replay untested. UI skip used.",
+      "G03": "S05 index 1 台 restored from three single-Han choices.",
+      "G04": "Four shuffled cards placed 有/人/跳/舞; completion shown.",
+      "G05": "All three animal audio controls tapped. Correct frog choice immediately green; reward button and final return-home shown. No next lesson in isolated test."
+    },
+    "isolation": "Full canonical lesson draft temporarily isolated, all five original game types/order retained. No production integration.",
+    "manualPlayback": "Human audible pronunciation and syllable-sync QA not performed. Standalone consonant/tone needs human confirmation because automated models disagree. G02 hold-to-record and stitched replay untested.",
+    "cleanup": "Preview stopped, created tab closed, viewport reset; temporary shared files restored byte-for-byte."
+  },
+  "audioVerification": "Nine final-file exact-text AI alignments. Simplified equivalents normalized temporarily. G02 prefix initially transcribed homophonic 洋; vocabulary hint 陽台的陽 yields exact 我在陽. No target 台 added. Standalone Whisper without hint transcribes 台; separate audio-model phonetic analysis differs (cai2), retained as subjective listening follow-up."
+}

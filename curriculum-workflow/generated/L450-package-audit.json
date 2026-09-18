@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "coverage": {
+    "舞": 5,
+    "唱": 2,
+    "歌": 2,
+    "拍": 2,
+    "音": 1,
+    "樂": 1
+  },
+  "allowedChars": 448,
+  "timedTracks": 9,
+  "audio": [
+    {
+      "src": "/assets/lessons/L450/audio/L450-S01.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 4060,
+      "meanDb": -17.8,
+      "maxDb": -2.1,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-S02.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 3666,
+      "meanDb": -17.9,
+      "maxDb": -4.1,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-S03.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 4432,
+      "meanDb": -18.3,
+      "maxDb": -2.9,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-S04.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 3488,
+      "meanDb": -18.4,
+      "maxDb": -2.4,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-S05.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 3641,
+      "meanDb": -18.2,
+      "maxDb": -3.6,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-G02-prefix.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 2684,
+      "meanDb": -26.2,
+      "maxDb": -9.1,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-G02-suffix.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 971,
+      "meanDb": -16.7,
+      "maxDb": -2.1,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-G05-wrong-one.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 4235,
+      "meanDb": -18,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/L450-G05-wrong-two.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 3582,
+      "meanDb": -17.9,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L450/audio/char-u821e.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 1950,
+      "meanDb": -19,
+      "maxDb": -2.8,
+      "decodeExit": 0
+    }
+  ],
+  "images": [
+    {
+      "src": "/assets/lessons/L450/images/L450-S01.webp",
+      "bytes": 105628
+    },
+    {
+      "src": "/assets/lessons/L450/images/L450-S02.webp",
+      "bytes": 127568
+    },
+    {
+      "src": "/assets/lessons/L450/images/L450-S03.webp",
+      "bytes": 112386
+    },
+    {
+      "src": "/assets/lessons/L450/images/L450-S04.webp",
+      "bytes": 128552
+    },
+    {
+      "src": "/assets/lessons/L450/images/L450-S05.webp",
+      "bytes": 124364
+    }
+  ],
+  "assetBytes": 1014291,
+  "g05MeanSpreadDb": 0.10000000000000142,
+  "errors": []
+}

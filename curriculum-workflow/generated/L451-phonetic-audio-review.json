@@ -1,0 +1,38 @@
+{
+  "unit": "L451",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "char-u53f0",
+      "sha256": "55c8c3fe1973f70445f0b190047db907e53446dcc816d9f48adf1e366925ee1e",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"cái\", \"heardPronunciation\": \"cai2\", \"uncertainty\": \"low\"}",
+      "whisperWithoutPrompt": {
+        "model": "whisper-1",
+        "language": "zh",
+        "text": "台"
+      },
+      "generation": {
+        "model": "gpt-4o-mini-tts",
+        "voice": "coral",
+        "input": "台",
+        "instructions": "Use clear Taiwan Mandarin. Read the input character once.",
+        "speed": 0.9
+      },
+      "assessment": "Conflicting automated phonetic results: Whisper exact 台; audio model reports cai2. Human onset/tone confirmation pending; no human listening PASS."
+    },
+    {
+      "id": "L451-S04",
+      "sha256": "f05319a1b0617a68290e1f7086b4fc470fb7ae9ed8fab19601be9f50bb0d2d25",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"窗台上传来小鸟的叫声\",\"heardPronunciation\":\"chuang1 tai2 shang4 chuan2 lai2 xiao3 niao3 de5 jiao4 sheng1\",\"uncertainty\":\"None\"}"
+    },
+    {
+      "id": "L451-G02-prefix",
+      "sha256": "2b364692a89c6a3c61cb67fa3949053056a35c1557f06c49855c53e93c323385",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"wo zai yang\", \"heardPronunciation\": \"wo3 zai4 yang2\", \"uncertainty\": 0.14}"
+    }
+  ]
+}
