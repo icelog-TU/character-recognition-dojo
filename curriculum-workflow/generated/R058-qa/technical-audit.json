@@ -78,12 +78,12 @@
   "audio": {
     "filesExpected": 9,
     "filesActual": 9,
-    "result": "PASS; exact-Han final-file ASR and timing audit; teacher review pending"
+    "result": "PASS; teacher audio review PASS"
   },
   "images": {
     "filesExpected": 5,
     "filesActual": 5,
-    "result": "PASS; style/cast/semantic audit; teacher review pending"
+    "result": "PASS; teacher image review PASS"
   },
   "browserQa": {
     "status": "PASS",
@@ -102,5 +102,21 @@
   "sharedReleaseFiles": "Untouched; Release-owned",
   "supersededContent": "R058-S02 authoritative middle-school/elementary-school mistaken-identity package is present. Every prior archery sentence, image, audio, timing and G02 asset/data is absent.",
   "releaseSequence": "L465 → R057 → R058 → L466",
-  "dependencyResolution": "PASS: final fetch verified origin/main acd71a5b integrates L462-L465."
+  "dependencyResolution": "PASS: final fetch verified origin/main acd71a5b integrates L462-L465.",
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+    "scope": "All five final R058 images and all nine final R058 audio files",
+    "statement": "对了，忘记说复习课五十八没问题。"
+  },
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+    "scope": "All five final R058 images and all nine final R058 audio files",
+    "statement": "对了，忘记说复习课五十八没问题。"
+  }
 }

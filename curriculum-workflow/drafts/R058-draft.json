@@ -1121,8 +1121,24 @@
     "audioTranscriptTiming": "PASS",
     "browserQa": "PASS: 5 sentence cards + 5 other-audio cards; all 10 playback controls completed",
     "browserQaAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747",
-    "teacherReview": "pending",
-    "manualListeningClaimed": false
+    "teacherReview": "PASS: teacher confirmed review module R058 has no issues",
+    "manualListeningClaimed": false,
+    "teacherImageReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+      "scope": "All five final R058 images and all nine final R058 audio files",
+      "statement": "对了，忘记说复习课五十八没问题。"
+    },
+    "teacherAudioReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+      "scope": "All five final R058 images and all nine final R058 audio files",
+      "statement": "对了，忘记说复习课五十八没问题。"
+    }
   },
   "releaseSequence": "L465 → R057 → R058 → L466",
   "dependencyResolution": "Final fetch verified origin/main acd71a5b integrates L462-L465."

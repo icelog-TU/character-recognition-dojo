@@ -2389,3 +2389,12 @@
 - Superseded R058-S02 audit: authoritative 中學生／小學生 mistaken-identity sentence, image, audio, timings and G02 are present; every prior archery sentence, image, audio, timing and G02 item is absent.
 
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R058&ref=e6bd7143a64c0ab680b44b74bca425e7b842b747
+
+
+## Teacher asset approval
+
+- Reviewed package ref: `fc7c8e63eaa730d081aadb7436b262350559affb`.
+- Date: 2026-09-18.
+- Scope: all five R058 images and all nine R058 audio files.
+- Result: PASS; teacher reported that review module R058 has no issues.
+- Teacher statement: 「对了，忘记说复习课五十八没问题。」
