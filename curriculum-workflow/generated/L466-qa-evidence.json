@@ -1,0 +1,254 @@
+{
+  "unit": "L466",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "c130f105f1808588cb22f237519234527643b8fe",
+  "productionBoundary": "L001-L461 文; 465 unique learned Han",
+  "allowedCharCount": 470,
+  "imageChecks": [
+    {
+      "sentenceId": "L466-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Imaginary young-adult hero finishes a shield energy-wave special move; the soft fantasy monster sits defeated but unharmed; action and result are clear without realistic violence or text.",
+      "castEvidence": "Fantasy figures remain generic and distinct from the recurring child cast.",
+      "comparison": "Final exported WebP checked against the approved style/cast composite derived from L058 style-only references and recurring family anchors."
+    },
+    {
+      "sentenceId": "L466-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Mother gives a clear stop gesture and moves the sealed snack aside while the girl has stopped reaching; no mold, illness, consumption, or readable date.",
+      "castEvidence": "Recurring mother and protagonist girl match the fixed family anchors.",
+      "comparison": "Final exported WebP checked against the approved style/cast composite derived from L058 style-only references and recurring family anchors."
+    },
+    {
+      "sentenceId": "L466-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Mother, wearing an apron, is unmistakably serving her home-style dish to two generic adult guests; the girl accompanies her and no nationality stereotype is used.",
+      "castEvidence": "Recurring mother and girl match anchors; both guests are distinct from recurring father and family.",
+      "comparison": "Final exported WebP checked against the approved style/cast composite derived from L058 style-only references and recurring family anchors."
+    },
+    {
+      "sentenceId": "L466-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "A generic classmate points and laughs at the girl’s abstract-shape drawing; the girl pulls it back and objects firmly; no cheerful group laughter or violence.",
+      "castEvidence": "Recurring girl matches the fixed anchor; teasing classmate is generic and unlike Xiaoguang or Xiaoyue.",
+      "comparison": "Final exported WebP checked against the approved style/cast composite derived from L058 style-only references and recurring family anchors."
+    },
+    {
+      "sentenceId": "L466-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Girl lifts an illustrated book from a just-opened delivery carton while mother watches; arrival and unboxing are explicit and the cover has no text.",
+      "castEvidence": "Recurring mother and girl match the fixed family anchors.",
+      "comparison": "Final exported WebP checked against the approved style/cast composite derived from L058 style-only references and recurring family anchors."
+    }
+  ],
+  "browserQA": {
+    "phoneLayout": "Four-line S03 displayLines retained exactly as approved; each visible line is at most six characters. Static schema and package checks cover all five canonical Stage 4 games.",
+    "playback": "All ten final AAC tracks decode successfully; interactive pre-merge review is provided by the immutable asset-review URL after push.",
+    "limitations": [
+      "Physical microphone capture and human listening are not claimed; pronunciation evidence uses final processed audio supplied to an acoustic AI model."
+    ]
+  },
+  "audio": {
+    "metrics": [
+      {
+        "name": "char-u7d55.m4a",
+        "duration": 0.9,
+        "max": -9.4,
+        "mean": -25.9,
+        "trailingSilenceStart": 0.554014,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "a3a758245dec5a79fb23a0ca74d5be09ddaace4b46d60110e4afcdbd090aff7d"
+      },
+      {
+        "name": "L466-G02-prefix.m4a",
+        "duration": 1.997007,
+        "max": -2.8,
+        "mean": -19.1,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "88b6a3d6f35fa4e1781986bb38d624790f0dbb8d1daaa6083ae9b5042ffbbf47"
+      },
+      {
+        "name": "L466-G02-suffix.m4a",
+        "duration": 1.183991,
+        "max": -7.2,
+        "mean": -19.1,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "f16a5d43ff605fcdd19f3181b5bd1d4e575914d27b415624ea3b20a9d943c163"
+      },
+      {
+        "name": "L466-G05-wrong-one.m4a",
+        "duration": 3.123991,
+        "max": -2.1,
+        "mean": -18,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "5a05c3b94c46c71f8ec0923d44f26018989ad1f0de6577cda06e4b00212c89dd"
+      },
+      {
+        "name": "L466-G05-wrong-two.m4a",
+        "duration": 2.950998,
+        "max": -3.3,
+        "mean": -18,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "2a7934d805fa56dd8fe94230b2315c858d424e75a052445967844d099f6dc1d8"
+      },
+      {
+        "name": "L466-S01.m4a",
+        "duration": 3.182993,
+        "max": -2,
+        "mean": -17.9,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "dd296a4b5b2deaa294151b44a80eea0f38bb13dc4dfe6e3371bb782b2c398909"
+      },
+      {
+        "name": "L466-S02.m4a",
+        "duration": 2.851995,
+        "max": -0.6,
+        "mean": -17.4,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "714d72e37fb5f183660d61f51e8a9c99aeaa247dfcbb70a7ce7085bdc1808966"
+      },
+      {
+        "name": "L466-S03.m4a",
+        "duration": 3.609002,
+        "max": -2.1,
+        "mean": -18.9,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "b6f994b69511ebebdd8c97b84b0ff18e44032914d828f2a871c387cf85c3b937"
+      },
+      {
+        "name": "L466-S04.m4a",
+        "duration": 3.156009,
+        "max": -3.7,
+        "mean": -17.5,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "e340d8c78a869c687b8aca1a828ef708eac7ba5311c070096e1f3fc81271e86e"
+      },
+      {
+        "name": "L466-S05.m4a",
+        "duration": 2.925011,
+        "max": -4.5,
+        "mean": -19.1,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "027dcd0e4ac961e0f1abe99c752644d175ff8f6fe21e4d5d82beb1e7b6ae3e18"
+      }
+    ],
+    "g05MeanVolumeSpreadDb": 0.9,
+    "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; acoustic AI verification, not human listening.",
+    "hearing": [
+      {
+        "name": "char-u7d55",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"覺\", \"syllables\": [\"jue2\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L466-G02-prefix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"過期的點心\",\"syllables\":[\"guo4\",\"qi2\",\"de5\",\"dian3\",\"xin1\"],\"uncertainNotes\":\"All syllables recognized clearly; no uncertainties.\"}"
+      },
+      {
+        "name": "L466-G02-suffix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"對不能吃\", \"syllables\": [\"dui4\", \"bu4\", \"neng2\", \"chi1\"], \"uncertainNotes\": \"\"}"
+      },
+      {
+        "name": "L466-G05-wrong-one",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"爸爸做拿手菜招待日本朋友\", \"syllables\": [\"ba4\", \"ba4\", \"zuo4\", \"na2\", \"shou3\", \"cai4\", \"zhao1\", \"dai4\", \"ri4\", \"ben3\", \"peng2\", \"you3\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L466-G05-wrong-two",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"媽媽做拿手菜招待日本老師\", \"syllables\": [\"ma1\", \"ma1\", \"zuo4\", \"na2\", \"shou3\", \"cai4\", \"zhao1\", \"dai4\", \"ri4\", \"ben3\", \"lao3\", \"shi1\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L466-S01",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"勇者用絕招打倒了怪物\", \"syllables\": [\"yong3\", \"zhe3\", \"yong4\", \"jue2\", \"zhao1\", \"da3\", \"dao3\", \"le5\", \"guai4\", \"wu4\"], \"uncertainNotes\": \"\"}"
+      },
+      {
+        "name": "L466-S02",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"過期的點心絕對不能吃。\", \"syllables\": [\"guo4\", \"qi2\", \"de5\", \"dian3\", \"xin1\", \"jue2\", \"dui4\", \"bu4\", \"neng2\", \"chi1\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L466-S03",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"媽媽做拿手菜招待日本朋友。\",\"syllables\":[\"ma1\",\"ma1\",\"zuo4\",\"na2\",\"shou3\",\"cai4\",\"zhao1\",\"dai4\",\"ri4\",\"ben3\",\"peng2\",\"you3\"],\"uncertainNotes\":\"\"}"
+      },
+      {
+        "name": "L466-S04",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"你再笑我，我就跟你絕交。\",\"syllables\":[\"ni3\",\"zai4\",\"xiao4\",\"wo3\",\"wo3\",\"jiu4\",\"gen1\",\"ni3\",\"jue2\",\"jiao1\"],\"uncertainNotes\":\"No uncertain segments detected.\"}"
+      },
+      {
+        "name": "L466-S05",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"期待已久的日文書到了\", \"syllables\": [\"qi2\", \"dai4\", \"yi3\", \"jiu3\", \"de5\", \"ri4\", \"wen2\", \"shu1\", \"dao4\", \"le5\"], \"uncertain\": []}"
+      }
+    ],
+    "pronunciationChecks": {
+      "絕": "jue2 in standalone and every sentence use",
+      "期": "qi2 in 過期 and 期待",
+      "待": "dai4 in 招待 and 期待",
+      "招待": "zhao1 dai4 in correct and both wrong G05 options",
+      "再": "zai4 in S04, transcript explicitly 再",
+      "G02": "prefix 過期的點心; suffix 對不能吃, with no restored 絕"
+    },
+    "processing": "All sentences, fragments and wrong choices were generated independently as complete requested utterances. Final media was start/end silence trimmed, loudness-normalized, and never cut or spliced at word or syllable boundaries."
+  },
+  "mediaBytes": 931557,
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L465",
+    "reviewMilestones": [
+      "R057",
+      "R058"
+    ],
+    "releaseOrder": [
+      "L465",
+      "R057",
+      "R058",
+      "L466"
+    ]
+  },
+  "validation": {
+    "startupToolsAiAudit": "PASS",
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L466 fixture",
+    "assetAuditStrict": "PASS on isolated L466 fixture; zero warnings",
+    "fullVerify": "Skipped: dependency-blocked; shared production integration belongs to Release."
+  }
+}
