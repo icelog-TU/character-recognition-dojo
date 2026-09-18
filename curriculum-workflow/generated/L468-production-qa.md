@@ -18,7 +18,8 @@
 
 - OpenAI gpt-4o-mini-tts with Taiwan Mandarin instructions; repository assets:audio produced 9 final mono AAC M4As: standalone 該, five full sentences, independent G02 suffix, and two complete G05 wrong choices. G02 target is sentence-initial, so no empty prefix asset exists. No cutting or splicing.
 - Whisper word timestamps aligned five full sentences plus G02 suffix and both G05 wrong choices. Counts match exact Han-only sequences; all char indexes are ordered and non-overlapping. G02 has suffix only. Stage 4 target indexes, missing indexes and partial-order mapping mechanically PASS.
-- Teacher re-review of ref `304cd112f99dfdec81d224737af6d049b4b77deb` rejected L468-S05 as Mainland-accented. S05 was regenerated again as one complete sentence with the cedar voice and an explicit natural local Taiwan preschool-teacher accent; 星期日 is ㄒㄧㄥ ㄑㄧˊ ㄖˋ. Fresh alignment and AI listening report the exact transcript, second-tone 期, natural Taiwan Mandarin and no awkward pause. Teacher re-review is pending. S01 remains the previously repaired ㄅㄨˋ ㄍㄞ version. This is AI listening evidence, not teacher manual auditory approval.
+- Teacher re-review of ref `304cd112f99dfdec81d224737af6d049b4b77deb` rejected L468-S05 as Mainland-accented. S05 was regenerated again as one complete sentence with the cedar voice and an explicit natural local Taiwan preschool-teacher accent; 星期日 is ㄒㄧㄥ ㄑㄧˊ ㄖˋ. Fresh alignment and AI listening report the exact transcript, second-tone 期, natural Taiwan Mandarin and no awkward pause. S01 remains the previously repaired ㄅㄨˋ ㄍㄞ version.
+- Teacher manual pre-merge audio QA PASS on ref `2ca7fe330483c92b43de901227b42c8218f2fdf3` for final L468-S05. Exact accepted file SHA256: `62cacba41256b74451fd122d1f1d00c465f808b0616edb317dd7ed67a1c0243d`. Evidence: `curriculum-workflow/generated/L468-teacher-audio-review.json`. This verdict is scoped to the repaired S05 audio; no media bytes changed after approval.
 
 ## Interaction and intake
 
