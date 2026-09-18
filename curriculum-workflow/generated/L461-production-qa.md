@@ -38,3 +38,12 @@
 ## Release dependency state
 
 L456-L460 must enter main in playable order before L461 can be integrated. R055/R056 are the milestone after L450, cover L421-L450, and are excluded from this package. These dependencies do not affect asset completeness.
+
+## Teacher manual pre-merge asset QA
+
+- Result: **PASS**.
+- Reviewed commit: `a567cf8accdea4e3b245394ca9bcc76a7eaf7451`.
+- Review URL: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L461&ref=a567cf8accdea4e3b245394ca9bcc76a7eaf7451
+- Scope: all five L461 images and all ten referenced L461 audio files.
+- Teacher confirmation: L461 圖片與音檔可接受。
+- This is a metadata-only acceptance record; no reviewed media, timings, lesson text, or Stage 4 data changed after the reviewed commit. Release dependencies remain L456-L460 and R055/R056.
