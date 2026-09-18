@@ -1005,7 +1005,7 @@
     "L469",
     "L470"
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "kind": "lesson",
   "targetSentenceCount": 5,
   "requiredRounds": 5,
@@ -1719,5 +1719,11 @@
         }
       ]
     }
-  ]
+  ],
+  "productionQa": {
+    "status": "PASS",
+    "result": "Complete local lesson package; blocked only by R057/R058 and L466-L470 release order.",
+    "allowedCharacterCount": 475,
+    "manualListeningClaimed": false
+  }
 }

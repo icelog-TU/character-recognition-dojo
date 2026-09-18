@@ -2487,3 +2487,268 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## Production final approved records
+
+- Package status: dependency-blocked-asset-complete
+- Production base: acd71a5bd25e927c209ed749506aea1d3cc643a0 (L465; 469 formal learned characters)
+- Release blockers: R057, R058, L466, L467, L468, L469, L470
+- Allowed-character ceiling: 475 unique Han; learner-facing sweep PASS.
+
+### L471-S01
+
+- text: 這個問題，我應該怎麼回答？
+- spokenText: 這個問題我應該怎麼回答
+- displayLines: ["這個問題，","我應該","怎麼回答？"]
+- focusChar: 題
+- imageNotes: 家中書桌前，主角女孩指著作業本上的一道圖像算術題，轉頭詢問爸爸，表情疑惑。爸爸坐在旁邊，準備用桌上積木協助她理解。作業本以角度遮住文字，不要求生成可讀題目、算式或數字；重點是女孩不知道如何回答而求助。
+- imageSrc: /assets/lessons/L471/images/L471-S01.webp
+- audio: /assets/lessons/L471/audio/L471-S01.m4a; 4174 ms; 11 char timings
+
+### L471-S02
+
+- text: 這個問題，你不該答不出來。
+- spokenText: 這個問題你不該答不出來
+- displayLines: ["這個問題，","你不該","答不出來。"]
+- focusChar: 答
+- imageNotes: 教室裡，固定老師剛用紅、綠、白色卡帶孩子辨認顏色，接著指向紅色色卡詢問主角女孩，女孩卻遲疑。老師以「這個已經會了，再想一想」的提醒態度說話，不怒斥、不羞辱。桌上保留剛練習過的色卡，交代這不是突然問陌生內容；「你」指主角女孩。
+- imageSrc: /assets/lessons/L471/images/L471-S02.webp
+- audio: /assets/lessons/L471/audio/L471-S02.m4a; 3218 ms; 11 char timings
+
+### L471-S03
+
+- text: 這本書的主題是動物的生活。
+- spokenText: 這本書的主題是動物的生活
+- displayLines: ["這本書的","主題是","動物的生活。"]
+- focusChar: 題
+- imageNotes: 主角女孩和爸爸一起看一本攤開的圖畫書，書頁有幾個清楚的動物生活場景：鳥在巢裡餵小鳥、小狗吃東西、小魚在水裡游動。重點是動物如何生活，不是只排列動物肖像；不生成可讀書名、段落或標籤。
+- imageSrc: /assets/lessons/L471/images/L471-S03.webp
+- audio: /assets/lessons/L471/audio/L471-S03.m4a; 5046 ms; 12 char timings
+
+### L471-S04
+
+- text: 車子有問題，絕對不能開上路。
+- spokenText: 車子有問題絕對不能開上路
+- displayLines: ["車子有問題，","絕對不能","開上路。"]
+- focusChar: 題
+- imageNotes: 依老師指定，一位 generic 成年駕駛已被警察攔到路邊，故障車停妥，引擎蓋縫隙持續冒煙。警察指向冒煙的引擎，嚴肅告誡駕駛車有問題不能開上路；駕駛站在安全距離外，神情尷尬。畫面是已攔停後的告誡，不是正在追車。不得改回爸爸在家查看扁輪胎；不畫火焰、爆炸、傷者或孩子站在故障車旁，車牌及警察制服不放可讀字樣。
+- imageSrc: /assets/lessons/L471/images/L471-S04.webp
+- audio: /assets/lessons/L471/audio/L471-S04.m4a; 3887 ms; 12 char timings
+
+### L471-S05
+
+- text: 做不到的事，不該答應別人。
+- spokenText: 做不到的事不該答應別人
+- displayLines: ["做不到的事，","不該答應","別人。"]
+- focusChar: 應
+- imageNotes: 依老師最終批准的情境，主角女孩答應替外出的朋友照顧盆栽，卻連續幾天沒澆水，植物已枯死。家中，媽媽指向盆栽，嚴肅又失望地提醒女孩；女孩看著枯死植物，低頭懊悔。盆中土壤乾裂，原本的葉片全部乾褐、萎縮下垂，枝莖乾枯，沒有仍然茂盛的綠葉；要清楚是照顧失敗的結果，不只是土稍乾或一天忘澆。水壺放在附近，但不画已澆水復原。此處「做不到」是未能持續履行照顧承諾，不是體力搬不動；禁止改回搬書箱、照顧寵物或洗車版本。先前承諾及多日經過由句子與設定交代，不塞回憶分格或文字說明。
+- imageSrc: /assets/lessons/L471/images/L471-S05.webp
+- audio: /assets/lessons/L471/audio/L471-S05.m4a; 3061 ms; 11 char timings
+
+### Stage 4 final records
+
+```json
+[
+  {
+    "id": "L471-G01",
+    "type": "find-character",
+    "sentenceId": "L471-S01",
+    "targetChar": "題",
+    "targetCharIndex": 3,
+    "prompt": "找出句子裡的「題」。"
+  },
+  {
+    "id": "L471-G02",
+    "type": "teach-character",
+    "sentenceId": "L471-S04",
+    "targetChar": "題",
+    "targetCharIndex": 4,
+    "prompt": "請你幫小兔子念這個字。",
+    "teachAudio": {
+      "prefixText": "車子有問",
+      "suffixText": "絕對不能開上路",
+      "prefixSrc": "/assets/lessons/L471/audio/L471-G02-prefix.m4a",
+      "suffixSrc": "/assets/lessons/L471/audio/L471-G02-suffix.m4a",
+      "prefixAudio": {
+        "src": "/assets/lessons/L471/audio/L471-G02-prefix.m4a",
+        "durationMs": 1814,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1280,
+            "endMs": 1520
+          }
+        ]
+      },
+      "suffixAudio": {
+        "src": "/assets/lessons/L471/audio/L471-G02-suffix.m4a",
+        "durationMs": 2153,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1140,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1460,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1720,
+            "endMs": 1880
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "L471-G03",
+    "type": "missing-character",
+    "sentenceId": "L471-S03",
+    "targetChar": "題",
+    "targetCharIndex": 5,
+    "missingIndexes": [
+      5
+    ],
+    "prompt": "找回不見的字。",
+    "options": [
+      {
+        "id": "L471-G03-O1",
+        "text": "人",
+        "correct": false
+      },
+      {
+        "id": "L471-G03-O2",
+        "text": "題",
+        "correct": true
+      },
+      {
+        "id": "L471-G03-O3",
+        "text": "角",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "L471-G04",
+    "type": "partial-order",
+    "sentenceId": "L471-S02",
+    "targetChar": "答",
+    "targetCharIndex": 7,
+    "missingIndexes": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "prompt": "照順序把字卡放回去。",
+    "options": [
+      {
+        "id": "L471-G04-O1",
+        "text": "出",
+        "correct": true,
+        "correctOrder": 2
+      },
+      {
+        "id": "L471-G04-O2",
+        "text": "答",
+        "correct": true,
+        "correctOrder": 0
+      },
+      {
+        "id": "L471-G04-O3",
+        "text": "來",
+        "correct": true,
+        "correctOrder": 3
+      },
+      {
+        "id": "L471-G04-O4",
+        "text": "不",
+        "correct": true,
+        "correctOrder": 1
+      }
+    ]
+  },
+  {
+    "id": "L471-G05",
+    "type": "choose-pronunciation",
+    "sentenceId": "L471-S05",
+    "targetChar": "應",
+    "targetCharIndex": 8,
+    "prompt": "先聽每位朋友念，再選出念對的朋友。",
+    "options": [
+      {
+        "id": "L471-G05-O1",
+        "text": "做不到的事，不該答應別人。",
+        "spokenText": "做不到的事不該答應別人",
+        "correct": true,
+        "audioSrc": "/assets/lessons/L471/audio/L471-S05.m4a"
+      },
+      {
+        "id": "L471-G05-O2",
+        "text": "做不到的事，不該答應朋友。",
+        "spokenText": "做不到的事不該答應朋友",
+        "correct": false,
+        "audioSrc": "/assets/lessons/L471/audio/L471-G05-wrong-one.m4a"
+      },
+      {
+        "id": "L471-G05-O3",
+        "text": "做不到的事，不該答應老師。",
+        "spokenText": "做不到的事不該答應老師",
+        "correct": false,
+        "audioSrc": "/assets/lessons/L471/audio/L471-G05-wrong-two.m4a"
+      }
+    ]
+  }
+]
+```
+
+### Production QA
+
+- Allowed vocabulary: 475/475; PASS.
+- Coverage: 題4、答3、應2、該3、活1、絕1; PASS.
+- Han counts: 11, 11, 12, 12, 11; no sentence-length exception.
+- spokenText Han sequence, displayLines join, and <=6 visible characters per line: PASS.
+- Ten final M4As passed exact-Han transcript QA; manual listening is not claimed.
+- Five sentence files and both G02 segments contain complete timings.
+- Image style/cast: S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS.
+- Asset folder size: 1,241,307 bytes; PASS.
+- Immutable pushed-ref Browser QA: pending first complete asset push.
+
