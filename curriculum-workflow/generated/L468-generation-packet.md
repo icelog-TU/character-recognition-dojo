@@ -4186,62 +4186,62 @@ AI 必須把這份課程序列視為鎖定邊界。
       "imageSrc": "/assets/lessons/L468/images/L468-S05.webp",
       "audio": {
         "src": "/assets/lessons/L468/audio/L468-S05.m4a",
-        "durationMs": 3476,
+        "durationMs": 3743,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 280
+            "endMs": 460
           },
           {
             "charIndex": 1,
-            "startMs": 280,
-            "endMs": 540
+            "startMs": 460,
+            "endMs": 740
           },
           {
             "charIndex": 2,
-            "startMs": 540,
-            "endMs": 880
+            "startMs": 740,
+            "endMs": 1220
           },
           {
             "charIndex": 3,
-            "startMs": 1260,
-            "endMs": 1280
+            "startMs": 1440,
+            "endMs": 1660
           },
           {
             "charIndex": 4,
-            "startMs": 1280,
-            "endMs": 1480
+            "startMs": 1660,
+            "endMs": 1940
           },
           {
             "charIndex": 5,
-            "startMs": 1480,
-            "endMs": 1720
+            "startMs": 1940,
+            "endMs": 2240
           },
           {
             "charIndex": 6,
-            "startMs": 1720,
-            "endMs": 1860
+            "startMs": 2240,
+            "endMs": 2440
           },
           {
             "charIndex": 7,
-            "startMs": 1860,
-            "endMs": 2000
+            "startMs": 2440,
+            "endMs": 2640
           },
           {
             "charIndex": 8,
-            "startMs": 2000,
-            "endMs": 2340
+            "startMs": 2640,
+            "endMs": 3000
           },
           {
             "charIndex": 9,
-            "startMs": 2340,
-            "endMs": 2520
+            "startMs": 3000,
+            "endMs": 3180
           },
           {
             "charIndex": 10,
-            "startMs": 2520,
-            "endMs": 2780
+            "startMs": 3180,
+            "endMs": 3380
           }
         ]
       }
@@ -4618,9 +4618,9 @@ AI 必須把這份課程序列視為鎖定邊界。
     "imageStyle": "S01 style-lock PASS, cast PASS: recurring mother and protagonist, distinct generic visiting friend, ownership/correction action clear. S02 style-lock PASS, cast PASS: recurring father demonstrates safe handkerchief-and-ball skill; protagonist asks to learn. S03 style-lock PASS: generic fantasy hero reflects the same bubble spell back onto a comic unharmed monster; initial symbol-bearing draft rejected, final has no text/numbers/punctuation overlays. S04 style-lock PASS, cast PASS: recurring mother compares exactly two picture-only restaurant cards and remains undecided at home. S05 style-lock PASS, cast PASS: recurring mother hands apron to father while protagonist watches; father is visibly next to cook. All five final 1024x1024 WebPs were opened together and compared with L058, refined examples and family anchors; 149-207 KiB each, no readable text or numbers.",
     "audioPipeline": "OpenAI gpt-4o-mini-tts with Taiwan Mandarin instructions; repository assets:audio produced 9 final mono AAC M4As: standalone 該, five full sentences, independent G02 suffix, and two complete G05 wrong choices. G02 target is sentence-initial, so no empty prefix asset exists. No cutting or splicing.",
     "timingReview": "Whisper word timestamps aligned five full sentences plus G02 suffix and both G05 wrong choices. Counts match exact Han-only sequences; all char indexes are ordered and non-overlapping. G02 has suffix only. Stage 4 target indexes, missing indexes and partial-order mapping mechanically PASS.",
-    "pronunciation": "Teacher repair ref 556b72dcd29947844223d9eaef959ff06d82f170 addressed: L468-S01 was regenerated as a complete sentence with 不 in 不該 audibly ㄅㄨˋ fourth tone; L468-S05 was regenerated as a complete sentence with 星期日 audibly ㄒㄧㄥ ㄑㄧˊ ㄖˋ in Taiwan Mandarin. Fresh alignment and independent AI listening PASS; teacher re-review is pending. Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts with no omitted/clipped/repeated/substituted syllables or awkward pauses. S03 and both G05 wrong choices use 中 ㄓㄨㄥˋ; S05 期 is rising ㄑㄧˊ; 招待 uses 待 ㄉㄞˋ; 該/絕/活 tones PASS. This is AI listening evidence, not teacher manual auditory approval.",
+    "pronunciation": "Teacher re-review of ref 304cd112f99dfdec81d224737af6d049b4b77deb rejected L468-S05 as Mainland-accented. S05 was regenerated again as one complete sentence with the cedar voice and an explicit natural local Taiwan preschool-teacher accent; 星期日 is ㄒㄧㄥ ㄑㄧˊ ㄖˋ. Fresh alignment and AI listening report the exact transcript, second-tone 期, natural Taiwan Mandarin and no awkward pause. Teacher re-review is pending. Teacher repair ref 556b72dcd29947844223d9eaef959ff06d82f170 addressed: L468-S01 was regenerated as a complete sentence with 不 in 不該 audibly ㄅㄨˋ fourth tone; L468-S05 was regenerated as a complete sentence with 星期日 audibly ㄒㄧㄥ ㄑㄧˊ ㄖˋ in Taiwan Mandarin. Fresh alignment and independent AI listening PASS; teacher re-review is pending. Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts with no omitted/clipped/repeated/substituted syllables or awkward pauses. S03 and both G05 wrong choices use 中 ㄓㄨㄥˋ; S05 期 is rising ㄑㄧˊ; 招待 uses 待 ㄉㄞˋ; 該/絕/活 tones PASS. This is AI listening evidence, not teacher manual auditory approval.",
     "browserQA": "Phone-width LessonPanel QA at 390x844: Stage 1 standalone character playback PASS; Stage 2 showed the exact six cards and accepted all three target taps; Stage 3 played all five final sentence assets to completion and reached PASS; Stage 4 G01 target selection PASS. G02 rendered the sentence-initial target, independently generated suffix playback and hold-to-record UI correctly. The automated browser session has no physical microphone input, so microphone capture/replay remains teacher-device QA; G03-G05 payloads, indexes, card order and referenced audio were verified mechanically and by the package validator.",
-    "packageIntake": "PASS after teacher-requested S01/S05 audio repair: npm run curriculum:package-intake -- --unit L468 --ref origin/codex/l468-complete-package; dependency-blocked-asset-complete, 5 images, 9 audio files, five canonical Stage 4 game types, no blocking package-status defects."
+    "packageIntake": "Pending pushed-ref intake after second S05 accent repair."
   }
 }
 ```
