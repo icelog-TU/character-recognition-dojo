@@ -2750,5 +2750,5 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Five sentence files and both G02 segments contain complete timings.
 - Image style/cast: S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS.
 - Asset folder size: 1,241,307 bytes; PASS.
-- Immutable pushed-ref Browser QA: pending first complete asset push.
-
+- Immutable pushed-ref Chrome Browser QA: PASS at asset commit `7fbbc2b31cc3a39f75194ed29b1dde35cdedf111`; 5 sentence cards, 6 other audio items, all 5 images and 11/11 playback controls passed.
+- Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=7fbbc2b31cc3a39f75194ed29b1dde35cdedf111

@@ -1113,7 +1113,7 @@
   ],
   "productionQa": {
     "method": "Final local asset, exact-Han transcript, timing, per-image L058 style/cast and lesson-local mechanical QA",
-    "result": "PASS: package complete; immutable-ref Browser QA pending first asset push",
+    "result": "PASS: complete dependency-blocked package; immutable-ref Chrome image loading and 11/11 playback QA passed",
     "audio": {
       "status": "PASS",
       "note": "All ten final M4As match their exact expected Han transcripts. Pronunciation constraints were supplied independently for 題, 應該, 回答, 答不出來 and 答應; no manual listening claimed."
@@ -1130,6 +1130,19 @@
       "L468",
       "L469",
       "L470"
-    ]
+    ],
+    "browserQa": {
+      "status": "PASS",
+      "assetCommit": "7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
+      "browser": "Chrome",
+      "summary": "PASS: immutable commit page loaded 5 sentence cards and 6 other audio items; all five 1024x1024 images loaded; all 11 playback controls reached ended state with no media error.",
+      "scope": [
+        "L471-S01 through L471-S05",
+        "char-u984c",
+        "L471-G02 prefix and suffix",
+        "L471-G05 correct and two wrong options"
+      ]
+    }
   }
 }
