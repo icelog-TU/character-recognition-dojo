@@ -1919,7 +1919,7 @@
     "timingReview": "OpenAI whisper-1 word timestamps with exact text context produced complete main-sentence, G02-prefix and G05 distractor tracks. Independent listening verified the two-syllable G02 suffix after short-audio ASR hallucination; its two syllables were manually bounded. S05 final 我／招／手 span was redistributed after independent listening because Whisper assigned only 20ms to 招. All final spans are ordered, nonoverlapping, within duration and at least 80ms.",
     "pronunciation": "Independent gpt-audio-1.5 technical listening PASS on all 10 final processed M4As: standalone 答 and 答應 use ㄉㄚ; 回答、問答、答對 use ㄉㄚˊ; 應 is ㄧㄥˋ; 絕活 is ㄐㄩㄝˊ ㄏㄨㄛˊ. Exact wording and final syllables pass.",
     "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-    "packageIntake": "Pending pushed-branch strict intake.",
+    "packageIntake": "PASS on pushed origin/codex/l470-complete-package at e66f3136b1602b0798f7248a6fab1f848a4a57a0 with --strict: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
     "manualPlayback": "Teacher human image/audio review is pending. Independent technical image, transcript, pronunciation, timing and format checks pass."
   }
 }

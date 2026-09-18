@@ -2502,3 +2502,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Audio QA: exact-text alignment and independent gpt-audio-1.5 pronunciation PASS on all final files
 - Browser QA fallback: live highlight synchronization and G02 phone recording/replay are not claimed because the current control surface lacks reliable computer-audio return and a physical-phone microphone channel
 - Release owns production JSON, planner, ledger, review-pair sequencing, integration and deployment
+
+## Pushed package intake evidence
+
+Asset package commit `e66f3136b1602b0798f7248a6fab1f848a4a57a0` passed `npm run curriculum:package-intake -- --unit L470 --ref origin/codex/l470-complete-package --strict`: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.

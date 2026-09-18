@@ -23,3 +23,7 @@ Independent `gpt-audio-1.5` listening passes all files and exact wording. Standa
 Lesson-local production validation, strict asset audit, package audit and pushed-branch strict intake are required before handoff. Browser QA fallback applies: this control surface has no reliable computer-audio return or physical-phone microphone channel, so live highlight synchronization and G02 phone recording/replay are not claimed. Teacher human image/audio review remains pending.
 
 Release owns production JSON, planner, ledger, review-pair sequencing, integration and deployment.
+
+## Pushed package intake evidence
+
+Asset package commit `e66f3136b1602b0798f7248a6fab1f848a4a57a0` passed `npm run curriculum:package-intake -- --unit L470 --ref origin/codex/l470-complete-package --strict`: status `dependency-blocked-asset-complete`, 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.
