@@ -1,0 +1,34 @@
+[
+  {
+    "file": "char-u7a81.m4a",
+    "sha256": "be52e622c02224d4e0e817a2837948f9db305fd16ccf6cb34292961f91105de0",
+    "model": "gpt-audio-1.5",
+    "method": "AI acoustic listening, not human approval",
+    "prompt": "Listen to this Mandarin recording acoustically. Give the verbatim transcript in Traditional Chinese. If a tu syllable occurs, report the ACTUALLY HEARD tone as 1, 2, 3, 4, or uncertain and describe its pitch contour. Do not infer tone from spelling or meaning. Report whether every syllable, especially the final syllable, is complete and whether there are omissions, repetitions, clipping, or unnatural pauses. Return concise JSON only.",
+    "result": "{\"transcript\": \"突\", \"tu_syllables\": [{\"heard_tone\": 2, \"pitch_contour\": \"rising\"}], \"completeness\": \"complete syllable\", \"notes\": \"no omissions, repetitions, clipping, or unnatural pauses\"}"
+  },
+  {
+    "file": "L456-S01.m4a",
+    "sha256": "861014ac62d1795797c7ffb098f1ea3bfb04987f7de7648f45cbcedec123b49f",
+    "model": "gpt-audio-1.5",
+    "method": "AI acoustic listening, not human approval",
+    "prompt": "Listen to this Mandarin recording acoustically. Give the verbatim transcript in Traditional Chinese. If a tu syllable occurs, report the ACTUALLY HEARD tone as 1, 2, 3, 4, or uncertain and describe its pitch contour. Do not infer tone from spelling or meaning. Report whether every syllable, especially the final syllable, is complete and whether there are omissions, repetitions, clipping, or unnatural pauses. Return concise JSON only.",
+    "result": "{\"transcript\": \"表演的時候，突然停電了。\", \"tu_tone\": {\"突然\": {\"tu\": {\"tone\": 2, \"pitch_contour\": \"rising\"}}}, \"audio_quality\": {\"completeness\": \"all syllables complete\", \"final_syllable\": \"complete\", \"omissions\": false, \"repetitions\": false, \"clipping\": false, \"unnatural_pauses\": false}}"
+  },
+  {
+    "file": "L456-S02.m4a",
+    "sha256": "db80e7f65af246f902b75a6b6d2aed0e77eaa32d7484e1101023b6f43f300555",
+    "model": "gpt-audio-1.5",
+    "method": "AI acoustic listening, not human approval",
+    "prompt": "Listen to this Mandarin recording acoustically. Give the verbatim transcript in Traditional Chinese. If a tu syllable occurs, report the ACTUALLY HEARD tone as 1, 2, 3, 4, or uncertain and describe its pitch contour. Do not infer tone from spelling or meaning. Report whether every syllable, especially the final syllable, is complete and whether there are omissions, repetitions, clipping, or unnatural pauses. Return concise JSON only.",
+    "result": "{\"transcript\": \"窗台上突然出現一隻小鳥\", \"tu_syllables\": [{\"syllable\": \"突\", \"heard_tone\": 2, \"pitch_contour\": \"rising\"}], \"syllable_completeness\": \"All syllables are complete, no omissions, repetitions, clipping, or unnatural pauses.\"}"
+  },
+  {
+    "file": "L456-S05.m4a",
+    "sha256": "a88aac4c8eacafa3ef7a999e7d3b8363ef904b35779848e3a396f36d6decd9ab",
+    "model": "gpt-audio-1.5",
+    "method": "AI acoustic listening, not human approval",
+    "prompt": "Listen to this Mandarin recording acoustically. Give the verbatim transcript in Traditional Chinese. If a tu syllable occurs, report the ACTUALLY HEARD tone as 1, 2, 3, 4, or uncertain and describe its pitch contour. Do not infer tone from spelling or meaning. Report whether every syllable, especially the final syllable, is complete and whether there are omissions, repetitions, clipping, or unnatural pauses. Return concise JSON only.",
+    "result": "{\"transcript\":\"走到半路，突然下起大雨。\",\"tu_tone\":{\"syllable\":\"突\",\"tone\":\"2\",\"pitch_contour\":\"rising\"},\"audio_quality\":{\"final_syllable_complete\":true,\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}}"
+  }
+]

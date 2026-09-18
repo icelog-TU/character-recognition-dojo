@@ -1,0 +1,74 @@
+[
+  {
+    "file": "L456-S01-nova.mp3",
+    "sha256": "7e44b5c0071480b73f235b8b5d02ccbed0730bc07d314274fab29932279d096e",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"表演的時候，突然停電了。\",\"tu_syllables\":[{\"syllable\":\"tu\",\"tone\":\"1\",\"contour\":\"high level\"}],\"syllable_completeness\":\"All syllables including the final one are complete.\",\"issues\":\"No omissions, repetitions, clipping, or unnatural pauses detected.\"}"
+  },
+  {
+    "file": "L456-S01-sage.mp3",
+    "sha256": "8090ddfcc9161bae9dcf5dd20d4e33d13d2351483a622c0d78ce7148f6260e17",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"表演的時候，突然停電了。\",\"tu_tones\":[{\"syllable\":\"突\",\"tone\":1,\"pitch_contour\":\"high and level\"}],\"completeness\":\"All syllables, including the final one, are complete; no omissions, repetitions, clipping, or unnatural pauses detected.\"}"
+  },
+  {
+    "file": "L456-S01-shimmer.mp3",
+    "sha256": "c2e086bd5697aca5101a6e40cb5d0b3489fd0af7ecdae693e6134f978d7b7aec",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"表演的時候，突然停電了\", \"tu_syllables\": [{\"syllable\": \"突\", \"heard_tone\": 1, \"pitch_contour\": \"high and level\"}], \"syllable_completeness\": \"All syllables are complete including the final syllable\", \"notes\": \"No omissions, repetitions, clipping, or unnatural pauses detected\"}"
+  },
+  {
+    "file": "L456-S02-nova.mp3",
+    "sha256": "df0e8bb82889adc26ddb200576ad2bb3936d9be436d0041373690adeeaed7ea8",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"窗台上突然出現一隻小鳥。\",\"tu_syllables\":[{\"syllable\":\"突\",\"tone\":\"1\",\"pitch_contour\":\"high level\"}],\"audio_quality\":{\"all_syllables_complete\":true,\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}}"
+  },
+  {
+    "file": "L456-S02-sage.mp3",
+    "sha256": "db6cedf94140c7ffed4acb02f1697772cacc533258929109e9049ac678c1c2bc",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"窗台上 突然 出現 一隻 小鳥\", \"tu_syllables\": [{\"syllable\": \"突然\", \"heard_tones\": [1, 2], \"pitch_contours\": [\"high-level\", \"rising\"]}], \"completeness\": \"all syllables are complete, no omissions, no repetitions, no clipping, no unnatural pauses\"}"
+  },
+  {
+    "file": "L456-S02-shimmer.mp3",
+    "sha256": "574ba3123a5b11963f91e7bc849c8f035dc3e2230d6300808be505eff4aee540",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"窗臺上突然出現一隻小鳥\", \"tu_syllables\": [{\"syllable\": \"突\", \"tone\": 1, \"pitch_contour\": \"high level\"}], \"audio_integrity\": {\"all_syllables_complete\": true, \"omissions\": false, \"repetitions\": false, \"clipping\": false, \"unnatural_pauses\": false}}"
+  },
+  {
+    "file": "L456-S05-nova.mp3",
+    "sha256": "bff0e50a95d7c00fc7449434c79692175f716aa73efd6765b667b084b40107fe",
+    "model": "gpt-audio-1.5",
+    "result": "{\n  \"transcript\": \"走到半路，突然下起大雨。\",\n  \"tu_syllable_analysis\": [\n    {\n      \"syllable\": \"突\",\n      \"heard_tone\": 1,\n      \"pitch_contour\": \"high and level\"\n    }\n  ],\n  \"audio_integrity\": {\n    \"all_syllables_complete\": true,\n    \"final_syllable_complete\": true,\n    \"omissions\": false,\n    \"repetitions\": false,\n    \"clipping\": false,\n    \"unnatural_pauses\": false\n  }\n}"
+  },
+  {
+    "file": "L456-S05-sage.mp3",
+    "sha256": "838ac446e900683ab910cb83fdcc5bd35559013d16209fefeab20828bd3b801d",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"走到半路，突然下起大雨\",\"tu_tones\":[{\"syllable\":\"突\",\"tone\":1,\"pitch_contour\":\"high level\"}],\"completeness\":{\"all_syllables_complete\":true,\"final_syllable_complete\":true},\"issues\":{\"omissions\":false,\"repetitions\":false,\"clipping\":false,\"unnatural_pauses\":false}}"
+  },
+  {
+    "file": "L456-S05-shimmer.mp3",
+    "sha256": "b382a6de1ba86cdf17d01d56331cbbe1f2fc6fa6a9efa6fac7df3451dcd7f9c6",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"走到半路突然下起大雨\", \"tu_syllables\": [{\"syllable\": \"tu\", \"tone\": 1, \"pitch_contour\": \"high-level\"}], \"audio_quality\": {\"syllable_completeness\": \"every syllable is complete, including the final syllable\", \"omissions\": \"none\", \"repetitions\": \"none\", \"clipping\": \"none\", \"unnatural_pauses\": \"none\"}}"
+  },
+  {
+    "file": "char-u7a81-nova.mp3",
+    "sha256": "88f6ccfce85d4eb8eb86f38dc55b9dbca165e2ce1eafe4a17c5121a18a33a212",
+    "model": "gpt-audio-1.5",
+    "result": "I'm sorry, but I can't identify speakers from a voice sample. However, if you can provide the content of the recording or more details, I can help you with the requested analysis within those bounds. Please let me know how you'd like to proceed."
+  },
+  {
+    "file": "char-u7a81-sage.mp3",
+    "sha256": "302c6c75ae96cda2930e0ea3a37bfa30367c3897fe34392692ef5da74d33854b",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\":\"tu\",\"tu_tone\":\"uncertain\",\"pitch_contour\":\"single short syllable with unclear pitch movement\",\"syllable_completeness\":\"final syllable is clipped\",\"issues\":[\"clipping\"]}"
+  },
+  {
+    "file": "char-u7a81-shimmer.mp3",
+    "sha256": "1570fe2edb534e21195d44d3ab2df1693c53d2f83028227df8290327b4922572",
+    "model": "gpt-audio-1.5",
+    "result": "{\"transcript\": \"拖\", \"tu_syllables\": [{\"syllable\": \"tuo\", \"tone\": 1, \"pitch_contour\": \"high and level\"}], \"syllable_completeness\": {\"all_syllables_complete\": true, \"final_syllable_complete\": true}, \"issues\": {\"omissions\": false, \"repetitions\": false, \"clipping\": false, \"unnatural_pauses\": false}}"
+  }
+]

@@ -1,77 +1,71 @@
 {
   "unit": "L456",
-  "packageStatus": "partial-package",
-  "purpose": "Preserve existing work for Package Rescue; not accepted final audio or completion claim",
+  "sourcePackageSha": "dca9f5bdafbd88f63aac5b29eca33148c2ec50c7",
+  "packageStatus": "dependency-blocked-asset-complete",
   "approvedTextsUnchanged": true,
-  "startupChecks": "tools:check, ai:check, curriculum:audit-state PASS",
-  "allowedCharacterAudit": "453 unique allowed characters; sentences/options PASS",
-  "coverage": {
-    "突": 3,
-    "現": 2,
-    "表": 2,
-    "演": 3,
-    "候": 1,
-    "台": 1
-  },
+  "repairScope": [
+    "char-u7a81.m4a",
+    "L456-S01.m4a",
+    "L456-S02.m4a",
+    "L456-S05.m4a",
+    "S01/S02/S05 charTimings",
+    "G02 suffix 出 boundary"
+  ],
   "images": [
     {
       "file": "L456-S01.webp",
       "bytes": 172556,
+      "sha256": "0ab4a0c480650dd5fa5252970f8a3159422a1c2c2c4c89070207d9712a3412e8",
       "styleLock": "PASS",
       "cast": "PASS",
-      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+      "status": "unchanged from Production checkpoint"
     },
     {
       "file": "L456-S02.webp",
       "bytes": 223960,
+      "sha256": "20cccf86ba71c55b2b78a81893746e0e8024b99092403fd8bfb0c6d59ecd399a",
       "styleLock": "PASS",
       "cast": "PASS",
-      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+      "status": "unchanged from Production checkpoint"
     },
     {
       "file": "L456-S03.webp",
       "bytes": 166918,
+      "sha256": "bed2cf37a0de59f6326e49a219c21e5c826ce00c83d221f793dd91796f26b022",
       "styleLock": "PASS",
       "cast": "PASS",
-      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+      "status": "unchanged from Production checkpoint"
     },
     {
       "file": "L456-S04.webp",
       "bytes": 220008,
+      "sha256": "4e637d13620ca0b815c50d23e45e4b5e9786f27c58ce1c2d31fa3b477310e4c5",
       "styleLock": "PASS",
       "cast": "PASS",
-      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+      "status": "unchanged from Production checkpoint"
     },
     {
       "file": "L456-S05.webp",
       "bytes": 231784,
+      "sha256": "70371d86f5c4b5d1aef70dd5c1f40d8187d508e1d00057aa68725e8e43ae5513",
       "styleLock": "PASS",
       "cast": "PASS",
-      "review": "Actual exported WebP compared side by side with full L058 style set, refined preferred examples and family cast anchors."
+      "status": "unchanged from Production checkpoint"
     }
   ],
   "audio": [
-    {
-      "file": "char-u7a81.m4a",
-      "bytes": 23117,
-      "sha256": "60f7571e29701806dc3852815db26dbde3ca487ae1c353ab7fe6259514f3ddc3",
-      "durationMs": 2624,
-      "codec": "aac",
-      "sampleRate": "44100",
-      "channels": 1,
-      "decode": "PASS",
-      "status": "needs Taiwan tu2 pronunciation repair"
-    },
     {
       "file": "L456-G02-prefix.m4a",
       "bytes": 14265,
       "sha256": "2a4f78138d67f1ef4bdea340a60da96e2da0c4b24f50f2b7619e0eedb5c0fcb3",
       "durationMs": 1097,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -18.2,
+      "maxVolumeDb": -2.9,
       "decode": "PASS",
-      "status": "existing asset; human playback not verified"
+      "status": "preserved Production asset; browser playback ended"
     },
     {
       "file": "L456-G02-suffix.m4a",
@@ -79,10 +73,12 @@
       "sha256": "5f06a433adcf87aaf2e380d39c12f9e99d47894982a80b6ae7b1187882d6fa59",
       "durationMs": 3063,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -18.2,
+      "maxVolumeDb": -4.2,
       "decode": "PASS",
-      "status": "existing asset; human playback not verified"
+      "status": "preserved Production asset; browser playback ended"
     },
     {
       "file": "L456-G05-wrong-one.m4a",
@@ -90,10 +86,12 @@
       "sha256": "8e8989b0415310b159364db7e5632325ed179e6965b4bd4b223ce9c06b4ab32a",
       "durationMs": 2363,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -17.2,
+      "maxVolumeDb": -2,
       "decode": "PASS",
-      "status": "existing asset; human playback not verified"
+      "status": "preserved Production asset; browser playback ended"
     },
     {
       "file": "L456-G05-wrong-two.m4a",
@@ -101,32 +99,38 @@
       "sha256": "f45a15b4c74aa8e3b4db8305fa557ec58d397229945ad52a1f8a53b6a30cb785",
       "durationMs": 3078,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -17.9,
+      "maxVolumeDb": -2,
       "decode": "PASS",
-      "status": "existing asset; human playback not verified"
+      "status": "preserved Production asset; browser playback ended"
     },
     {
       "file": "L456-S01.m4a",
-      "bytes": 48704,
-      "sha256": "55e1928d9f59dc42bd0e87674ce249d617453391790f27e809fd6436db11fa59",
-      "durationMs": 3679,
+      "bytes": 48135,
+      "sha256": "861014ac62d1795797c7ffb098f1ea3bfb04987f7de7648f45cbcedec123b49f",
+      "durationMs": 4000,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -18.3,
+      "maxVolumeDb": -3,
       "decode": "PASS",
-      "status": "needs Taiwan tu2 pronunciation repair"
+      "status": "rescued; final AI acoustic review hears tone 2 rising"
     },
     {
       "file": "L456-S02.m4a",
-      "bytes": 59009,
-      "sha256": "a86e69ff3ee85dd2d5fe9789cffcdc59c214e13335de3a7028221f62c602f01f",
-      "durationMs": 4532,
+      "bytes": 58779,
+      "sha256": "db80e7f65af246f902b75a6b6d2aed0e77eaa32d7484e1101023b6f43f300555",
+      "durationMs": 4900,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -18.3,
+      "maxVolumeDb": -3.1,
       "decode": "PASS",
-      "status": "needs Taiwan tu2 pronunciation repair"
+      "status": "rescued; final AI acoustic review hears tone 2 rising"
     },
     {
       "file": "L456-S03.m4a",
@@ -134,10 +138,12 @@
       "sha256": "71e7f2c7ae2b234f91f9dc5ac9a962acf95e9f44d94639e2be500c46679b6994",
       "durationMs": 3337,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -18.2,
+      "maxVolumeDb": -2.1,
       "decode": "PASS",
-      "status": "existing asset; human playback not verified"
+      "status": "preserved Production asset; browser playback ended"
     },
     {
       "file": "L456-S04.m4a",
@@ -145,60 +151,57 @@
       "sha256": "e2112b910241bf6e863fa0fd693c1900dbff01d1bbd8762d738bed3ce7eff6c3",
       "durationMs": 3086,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -17.7,
+      "maxVolumeDb": -3.9,
       "decode": "PASS",
-      "status": "existing asset; human playback not verified"
+      "status": "preserved Production asset; browser playback ended"
     },
     {
       "file": "L456-S05.m4a",
-      "bytes": 44870,
-      "sha256": "baa0a05f4ee8da1dcb12eb3f40da56ae73fa06bab99f4abb808be224ba8a4252",
-      "durationMs": 3452,
+      "bytes": 55171,
+      "sha256": "a88aac4c8eacafa3ef7a999e7d3b8363ef904b35779848e3a396f36d6decd9ab",
+      "durationMs": 4600,
       "codec": "aac",
-      "sampleRate": "44100",
+      "sampleRate": 44100,
       "channels": 1,
+      "meanVolumeDb": -19,
+      "maxVolumeDb": -3.2,
       "decode": "PASS",
-      "status": "needs Taiwan tu2 pronunciation repair"
+      "status": "rescued; final AI acoustic review hears tone 2 rising"
+    },
+    {
+      "file": "char-u7a81.m4a",
+      "bytes": 35173,
+      "sha256": "be52e622c02224d4e0e817a2837948f9db305fd16ccf6cb34292961f91105de0",
+      "durationMs": 2904,
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "meanVolumeDb": -22.8,
+      "maxVolumeDb": -2.8,
+      "decode": "PASS",
+      "status": "rescued; final AI acoustic review hears tone 2 rising"
     }
   ],
-  "totalAssetBytes": 1392127,
-  "timingIssues": [
-    {
-      "id": "L456-S01",
-      "charIndex": 5,
-      "startMs": 2180,
-      "endMs": 2181,
-      "reason": "Short span or overlap; repair after final audio regeneration"
-    },
-    {
-      "id": "L456-S01",
-      "charIndex": 6,
-      "startMs": 2180,
-      "endMs": 2540,
-      "reason": "Short span or overlap; repair after final audio regeneration"
-    },
-    {
-      "id": "L456-S05",
-      "charIndex": 4,
-      "startMs": 1860,
-      "endMs": 1861,
-      "reason": "Short span or overlap; repair after final audio regeneration"
-    },
-    {
-      "id": "L456-S05",
-      "charIndex": 5,
-      "startMs": 1860,
-      "endMs": 2180,
-      "reason": "Short span or overlap; repair after final audio regeneration"
-    }
-  ],
-  "additionalTimingReview": [
-    "S02 charIndex 3 突 spans 1240-2140 ms (900 ms); regenerate alignment after tone repair.",
-    "G02 suffix charIndex 1 出 spans 400-1300 ms (900 ms); inspect audible boundaries, preserve 然出現一隻小鳥."
-  ],
-  "browserQA": "Not performed; all stages including G02 sustained recording and stitched replay remain untested",
-  "humanAudioQA": "Not performed. AI phonetic analysis and approximate pitch tracking suggest first-tone 突; do not claim Taiwan tu2 PASS.",
-  "sharedFiles": "No final curriculum/scripts/planner/ledger changes",
-  "intake": "Not yet rerun at this preservation checkpoint; completion gate expected to reject partial-package."
+  "totalAssetBytes": 1413685,
+  "timingIssues": [],
+  "timingQA": {
+    "automated": "All nine alignment records are ordered, non-overlapping and within duration; final validator result recorded in handoff.",
+    "manualAdjustments": [
+      "S05 突然 split at waveform valley after 1.944 s pause: 突 2040-2340 ms, 然 2340-2740 ms.",
+      "G02 suffix silence 489-898 ms; 出 highlight begins 900 ms and ends 1300 ms."
+    ],
+    "evidence": "L456-rescue-alignment-raw.json"
+  },
+  "phoneticQA": {
+    "method": "Final processed M4A decoded to PCM and submitted as input_audio to gpt-audio-1.5; AI acoustic evidence, not teacher subjective approval.",
+    "result": "All four repaired files report 突 as tone 2 with a rising contour; complete final syllables and no omissions, repetitions or clipping.",
+    "evidence": "L456-rescue-final-listening.json",
+    "ttsRendering": "圖 / 圖然 used only as homophonic pronunciation rendering for Taiwan ㄊㄨˊ; learner-facing text and metadata remain 突; whole utterances generated independently with no splicing."
+  },
+  "browserQA": "PASS on 2026-09-18: all ten M4A files loaded over localhost and played to ended in Codex in-app browser.",
+  "sharedFiles": "No production curriculum, scripts, planner, or ledger changes.",
+  "releaseState": "Ready for strict package intake; dependencies L451-L455 and milestone R055/R056 still govern integration order."
 }
