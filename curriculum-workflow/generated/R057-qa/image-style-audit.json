@@ -44,12 +44,12 @@
     {
       "sentenceId": "R057-S04",
       "path": "public/assets/reviews/R057/images/R057-S04.webp",
-      "bytes": 161656,
-      "sha256": "ebf59ab55197e9f2ef6b0cc831df539ec629683701d0af1e8da9876d7c24a478",
-      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
-      "cast": "PASS",
+      "bytes": 171928,
+      "sha256": "bda9f4517ef57b2b6d85f8958dbcaa1f033ff4917b4b237031dfa22d292bf5f3",
+      "styleLock": "REPAIRED PASS: exported WebP retains the established warm pencil-and-watercolor style.",
+      "cast": "REPAIRED PASS: protagonist and Xiaoyue are same-age classmates at matching height and body scale; Xiaoyue reference features retained.",
       "semantic": "PASS",
-      "notes": "Xiaoyue retains long wavy chestnut hair, moon clip, lavender cardigan and teal skirt while singing; protagonist alone dances to the music."
+      "notes": "Protagonist dances and Xiaoyue sings; both stand on the same floor plane with aligned head height. No extra people or text."
     },
     {
       "sentenceId": "R057-S05",
@@ -62,5 +62,12 @@
       "notes": "Generic performers bow on the raised stage after the show while the audience below visibly applauds."
     }
   ],
-  "rejectedAttempts": []
+  "rejectedAttempts": [
+    {
+      "sentenceId": "R057-S04",
+      "reviewedRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+      "reason": "Teacher found the two same-age children had too large a height difference.",
+      "resolution": "Regenerated with equal height and matching child proportions."
+    }
+  ]
 }

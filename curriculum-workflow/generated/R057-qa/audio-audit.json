@@ -186,70 +186,73 @@
     {
       "file": "R057-S04.m4a",
       "expected": "小月唱歌我跟著音樂跳舞",
-      "transcript": "小月唱歌我跟著音樂跳舞",
+      "transcript": "小月唱歌,我跟著音樂跳舞。",
       "shortClipTranscript": null,
       "expectedHan": "小月唱歌我跟著音樂跳舞",
       "actualHan": "小月唱歌我跟著音樂跳舞",
       "contentMatch": true,
-      "durationMs": 4880,
+      "durationMs": 3572,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 600
+          "endMs": 280
         },
         {
           "charIndex": 1,
-          "startMs": 600,
-          "endMs": 880
+          "startMs": 280,
+          "endMs": 500
         },
         {
           "charIndex": 2,
-          "startMs": 880,
-          "endMs": 1520
+          "startMs": 500,
+          "endMs": 820
         },
         {
           "charIndex": 3,
-          "startMs": 1520,
-          "endMs": 1840
+          "startMs": 820,
+          "endMs": 1100
         },
         {
           "charIndex": 4,
-          "startMs": 1840,
-          "endMs": 2380
+          "startMs": 1480,
+          "endMs": 1680
         },
         {
           "charIndex": 5,
-          "startMs": 2380,
-          "endMs": 2680
+          "startMs": 1680,
+          "endMs": 1920
         },
         {
           "charIndex": 6,
-          "startMs": 2680,
-          "endMs": 3020
+          "startMs": 1920,
+          "endMs": 2120
         },
         {
           "charIndex": 7,
-          "startMs": 3020,
-          "endMs": 3480
+          "startMs": 2120,
+          "endMs": 2420
         },
         {
           "charIndex": 8,
-          "startMs": 3480,
-          "endMs": 3700
+          "startMs": 2420,
+          "endMs": 2600
         },
         {
           "charIndex": 9,
-          "startMs": 3700,
-          "endMs": 4340
+          "startMs": 2600,
+          "endMs": 3000
         },
         {
           "charIndex": 10,
-          "startMs": 4340,
-          "endMs": 4660
+          "startMs": 3000,
+          "endMs": 3320
         }
       ],
-      "tailMs": 220
+      "tailMs": 252,
+      "independentTranscript": "小夜唱歌，我跟着音乐跳舞。",
+      "phoneticEvidence": "Transcription: 小葉唱歌，我跟著音樂跳舞。\n\nZhuyin for the final two syllables: ㄊㄧㄠˋ ㄨˇ",
+      "repair": "PASS: final 跳舞 independently identified as ㄊㄧㄠˋ ㄨˇ; ASR name variants 小夜/小葉 are homophones of 小月."
     },
     {
       "file": "R057-S05.m4a",
@@ -400,6 +403,15 @@
       "actualHan": "表演完台下的人一起招手",
       "contentMatch": true,
       "durationMs": 4289
+    }
+  ],
+  "repairHistory": [
+    {
+      "reviewedRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+      "file": "R057-S04.m4a",
+      "issue": "Teacher heard 跳舞 as 造舞.",
+      "resolution": "Full sentence regenerated; Whisper reads 跳舞 and independent audio phonetic check reports ㄊㄧㄠˋ ㄨˇ.",
+      "manualListeningClaimed": false
     }
   ]
 }

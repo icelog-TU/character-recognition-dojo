@@ -755,62 +755,62 @@
       "imageSrc": "/assets/reviews/R057/images/R057-S04.webp",
       "audio": {
         "src": "/assets/reviews/R057/audio/R057-S04.m4a",
-        "durationMs": 4880,
+        "durationMs": 3572,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 600
+            "endMs": 280
           },
           {
             "charIndex": 1,
-            "startMs": 600,
-            "endMs": 880
+            "startMs": 280,
+            "endMs": 500
           },
           {
             "charIndex": 2,
-            "startMs": 880,
-            "endMs": 1520
+            "startMs": 500,
+            "endMs": 820
           },
           {
             "charIndex": 3,
-            "startMs": 1520,
-            "endMs": 1840
+            "startMs": 820,
+            "endMs": 1100
           },
           {
             "charIndex": 4,
-            "startMs": 1840,
-            "endMs": 2380
+            "startMs": 1480,
+            "endMs": 1680
           },
           {
             "charIndex": 5,
-            "startMs": 2380,
-            "endMs": 2680
+            "startMs": 1680,
+            "endMs": 1920
           },
           {
             "charIndex": 6,
-            "startMs": 2680,
-            "endMs": 3020
+            "startMs": 1920,
+            "endMs": 2120
           },
           {
             "charIndex": 7,
-            "startMs": 3020,
-            "endMs": 3480
+            "startMs": 2120,
+            "endMs": 2420
           },
           {
             "charIndex": 8,
-            "startMs": 3480,
-            "endMs": 3700
+            "startMs": 2420,
+            "endMs": 2600
           },
           {
             "charIndex": 9,
-            "startMs": 3700,
-            "endMs": 4340
+            "startMs": 2600,
+            "endMs": 3000
           },
           {
             "charIndex": 10,
-            "startMs": 4340,
-            "endMs": 4660
+            "startMs": 3000,
+            "endMs": 3320
           }
         ]
       }
@@ -1074,7 +1074,19 @@
     "browserQa": "PASS: 5 sentence cards + 5 other-audio cards; all 10 playback controls completed",
     "browserQaAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747",
     "teacherReview": "pending",
-    "manualListeningClaimed": false
+    "manualListeningClaimed": false,
+    "repairHistory": [
+      {
+        "reviewedRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+        "item": "R057-S04 image/audio",
+        "issues": [
+          "兩位同齡女孩身高差過大",
+          "跳舞聽成造舞"
+        ],
+        "resolution": "Regenerated image with equal-height same-age classmates and regenerated full sentence audio with explicit ㄊㄧㄠˋ ㄨˇ pronunciation; final ASR, phonetic and timing checks PASS.",
+        "teacherReview": "pending repaired asset review"
+      }
+    ]
   },
   "releaseSequence": "L465 → R057 → R058 → L466",
   "dependencyResolution": "Final fetch verified origin/main acd71a5b integrates L462-L465."

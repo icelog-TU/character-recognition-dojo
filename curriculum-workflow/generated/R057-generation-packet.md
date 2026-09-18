@@ -2388,3 +2388,12 @@
 - Dependency resolution: final fetch verified `origin/main` `acd71a5b` integrates L462-L465; package is release-ready. Preserve paired order L465 → R057 → R058 → L466.
 
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R057&ref=e6bd7143a64c0ab680b44b74bca425e7b842b747
+
+
+## Teacher repair record — R057-S04
+
+- Reviewed ref: `fc7c8e63eaa730d081aadb7436b262350559affb`.
+- Image issue: two same-age children had too large a height difference. Replacement keeps the protagonist and Xiaoyue at matching height and child scale while retaining Xiaoyue’s cast reference.
+- Audio issue: teacher heard 跳舞 as 造舞. The full sentence was regenerated; final Whisper transcript contains 跳舞 and an independent phonetic check identifies the final syllables as ㄊㄧㄠˋ ㄨˇ.
+- Final sentence charTimings regenerated from the repaired M4A.
+- Fixed-ref Browser QA and teacher review of the repaired image/audio remain pending.
