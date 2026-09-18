@@ -1,0 +1,20 @@
+{
+  "unit": "L469",
+  "testedRef": "origin/codex/l469-complete-package",
+  "testedCommit": "8f6fedd83618ac23a46c8f89c991ed6f8ca00c3c",
+  "command": "npm run curriculum:package-intake -- --unit L469 --ref origin/codex/l469-complete-package --strict",
+  "exitCode": 1,
+  "result": "NOT PASS: explicit needs-rework status retained for shared-app G04 initial-order finding",
+  "errors": [
+    "Draft packageStatus needs-rework",
+    "Registry status needs-rework",
+    "Registry/packet/draft/request contain needs-rework"
+  ],
+  "missingAssetErrors": 0,
+  "assets": {
+    "images": 5,
+    "audio": 10,
+    "alignmentRecords": 9
+  },
+  "requiredFollowup": "Shared-app owner fixes stableShuffledOptions partial-order correctness guard; recheck L469 G04 and refresh package completion status before intake can pass."
+}
