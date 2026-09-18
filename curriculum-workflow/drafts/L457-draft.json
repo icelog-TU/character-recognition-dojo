@@ -747,7 +747,7 @@
       "imageSrc": "/assets/lessons/L457/images/L457-S04.webp",
       "audio": {
         "src": "/assets/lessons/L457/audio/L457-S04.m4a",
-        "durationMs": 5307,
+        "durationMs": 4703,
         "charTimings": [
           {
             "charIndex": 0,
@@ -757,52 +757,52 @@
           {
             "charIndex": 1,
             "startMs": 280,
-            "endMs": 580
+            "endMs": 620
           },
           {
             "charIndex": 2,
-            "startMs": 580,
-            "endMs": 920
+            "startMs": 620,
+            "endMs": 900
           },
           {
             "charIndex": 3,
-            "startMs": 920,
-            "endMs": 1160
+            "startMs": 900,
+            "endMs": 1140
           },
           {
             "charIndex": 4,
-            "startMs": 1160,
-            "endMs": 2020
+            "startMs": 1140,
+            "endMs": 1720
           },
           {
             "charIndex": 5,
-            "startMs": 2020,
-            "endMs": 2060
+            "startMs": 1720,
+            "endMs": 1920
           },
           {
             "charIndex": 6,
-            "startMs": 2060,
-            "endMs": 2300
+            "startMs": 1920,
+            "endMs": 2140
           },
           {
             "charIndex": 7,
-            "startMs": 3280,
-            "endMs": 3370
+            "startMs": 3020,
+            "endMs": 3250
           },
           {
             "charIndex": 8,
-            "startMs": 3370,
-            "endMs": 3460
+            "startMs": 3250,
+            "endMs": 3480
           },
           {
             "charIndex": 9,
-            "startMs": 3460,
-            "endMs": 3690
+            "startMs": 3480,
+            "endMs": 3710
           },
           {
             "charIndex": 10,
-            "startMs": 3690,
-            "endMs": 3920
+            "startMs": 3710,
+            "endMs": 3940
           }
         ]
       }
@@ -868,17 +868,17 @@
           {
             "charIndex": 8,
             "startMs": 3580,
-            "endMs": 4160
+            "endMs": 4140
           },
           {
             "charIndex": 9,
-            "startMs": 4160,
-            "endMs": 4400
+            "startMs": 4140,
+            "endMs": 4420
           },
           {
             "charIndex": 10,
-            "startMs": 4400,
-            "endMs": 4740
+            "startMs": 4420,
+            "endMs": 4720
           }
         ]
       }
@@ -1149,17 +1149,17 @@
               {
                 "charIndex": 8,
                 "startMs": 3580,
-                "endMs": 4160
+                "endMs": 4140
               },
               {
                 "charIndex": 9,
-                "startMs": 4160,
-                "endMs": 4400
+                "startMs": 4140,
+                "endMs": 4420
               },
               {
                 "charIndex": 10,
-                "startMs": 4400,
-                "endMs": 4740
+                "startMs": 4420,
+                "endMs": 4720
               }
             ]
           }
@@ -1413,11 +1413,11 @@
   },
   "latestMainChecked": "5622c827569df36e09c1767d61f114b35973bbea",
   "productionQA": {
-    "imageStyle": "Final 1024-square WebPs viewed as one contact sheet against L058 style and refined/family anchors: style-lock PASS, scene semantics PASS, no readable text. S04 first version was rejected for father outfit/cast drift and replaced before export.",
-    "audioPipeline": "OpenAI gpt-4o-mini-tts coral; repository assets:audio mono AAC 44.1kHz. Standalone 實 generated independently. G02 fragments generated independently; G05 distractors generated as complete whole sentences. No syllable splicing. Final M4A aligned with whisper-1.",
-    "timingReview": "Five sentences, G02 prefix/suffix and both G05 wrong-choice tracks have ordered per-Han timing metadata within final duration. Exact final transcript comparison PASS. G02 現了 Whisper orthography 限了 is a phonetic homophone; independent gpt-audio confirms actual ㄒㄧㄢˋ ˙ㄌㄜ. This is technical timing evidence, not human audiovisual synchronization QA.",
-    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips: 實 ㄕˊ standalone, 實現/果實 ㄕˊ, S04 結實 ㄐㄧㄝ ˙ㄕ, 突然 ㄊㄨˊ ㄖㄢˊ, G02 現了 ㄒㄧㄢˋ ˙ㄌㄜ, and complete G05 sentences. This is not human acceptance.",
+    "imageStyle": "Final 1024-square WebPs viewed as one contact sheet against L058 style and refined/family anchors: style-lock PASS, scene semantics PASS, no readable text. S04 first version was rejected for father outfit/cast drift and replaced before export. Teacher repair 2026-09-18: S02 black artificial-looking hole replaced with a small irregular opening showing creamy white apple flesh.",
+    "audioPipeline": "OpenAI gpt-4o-mini-tts coral; repository assets:audio mono AAC 44.1kHz. Standalone 實 generated independently. G02 fragments generated independently; G05 distractors generated as complete whole sentences. No syllable splicing. Teacher repair 2026-09-18: S04 was regenerated as a complete sentence to clarify 放心 ㄈㄤˋ ㄒㄧㄣ. Final M4A aligned with whisper-1.",
+    "timingReview": "Five sentences, G02 prefix/suffix and both G05 wrong-choice tracks have ordered per-Han timing metadata within final duration. Exact final transcript comparison PASS. G02 現了 Whisper orthography 限了 is a phonetic homophone; independent gpt-audio confirms actual ㄒㄧㄢˋ ˙ㄌㄜ. S04 timing was regenerated from the repaired final M4A. This is technical timing evidence, not human audiovisual synchronization QA.",
+    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips: 實 ㄕˊ standalone, 實現/果實 ㄕˊ, S04 結實 ㄐㄧㄝ ˙ㄕ and repaired 放心 ㄈㄤˋ ㄒㄧㄣ, 突然 ㄊㄨˊ ㄖㄢˊ, G02 現了 ㄒㄧㄢˋ ˙ㄌㄜ, and complete G05 sentences. This is not human acceptance.",
     "browserQA": "Browser QA fallback: current remote control surface has no reliable computer-audio return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run; teacher subjective review remains post-merge by default.",
-    "manualPlayback": "Not claimed. Teacher manual asset review remains post-merge by default."
+    "manualPlayback": "Teacher review at 7d59861cf9ae23b54117af59ee2a0c7caa20ae4a requested repairs to S02 image and S04 audio. Those assets were replaced; renewed teacher approval is pending on the new commit."
   }
 }

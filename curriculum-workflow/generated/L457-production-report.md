@@ -39,3 +39,8 @@ Base and latest checked main were `5622c827569df36e09c1767d61f114b35973bbea`, wi
 
 Immutable asset commit: `d7d37c780aa739cc2b32bd207d10be0acc3df14f`. `npm run curriculum:package-intake -- --unit L457 --ref origin/codex/l457-complete-package --strict` passed with 5 images, 10 audio files, canonical five-game order, complete G02 timing metadata, and no warning.
 
+
+## Teacher repair 2026-09-18
+
+Review ref 7d59861cf9ae23b54117af59ee2a0c7caa20ae4a reported two defects. S02's artificial black apple hole was replaced with a small irregular opening that visibly exposes creamy white apple flesh. S04 was regenerated as a complete sentence; final targeted auditory review confirms 放心 ㄈㄤˋ ㄒㄧㄣ and 結實 ㄐㄧㄝ ˙ㄕ. The repaired S04 final M4A was re-transcribed and re-aligned. Renewed teacher review is required on the new immutable commit.
+

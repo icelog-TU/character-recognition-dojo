@@ -60,56 +60,56 @@
       {
         "name": "char-u5be6",
         "expected": "實 exactly once, ㄕˊ second tone",
-        "result": "{\n  \"heardText\": \"實\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"聽到的發音是「實」，聲母為ㄕ，韻母為ㄓ，第二聲吻合，音調準確。\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"實\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"聽到的發音為『實』，符合預期的ㄕˊ（第二聲），音調準確。\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-S01",
         "expected": "當演員的心願實現了; 實現 ㄕˊ ㄒㄧㄢˋ",
-        "result": "{\n  \"heardText\": \"當演員的心願實現了\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字詞的發音和語調正確，特別是『實現』的發音為 ㄕˊ ㄒㄧㄢˋ，符合目標要求。\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"當演員的心願實現了\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字詞的發音與標準發音相符，特別是『實現』中的『ㄕˊ』和『ㄒㄧㄢˋ』，聲調正確且清晰。\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-S02",
         "expected": "我突然發現果實表面有小洞; 突然 ㄊㄨˊ ㄖㄢˊ; 果實 ㄍㄨㄛˇ ㄕˊ",
-        "result": "{\n  \"heardText\": \"我突然發現果實表面有小洞\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"實際聽到的內容與目標句子完全一致。針對標註的關鍵詞和注音：'突然' 清楚地發音為 ㄊㄨˊ ㄖㄢˊ 且音調正確；'果實' 發音為 ㄍㄨㄛˇ ㄕˊ，也正確無誤。整句的語音流暢、音節清晰。\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"我突然發現果實表面有小洞\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字詞發音和標準參考都相符。『突然』發音為ㄊㄨˊ ㄖㄢˊ，和標準的ㄊㄨˋ ㄖㄢˊ接近，但音聽上無明顯錯誤。『果實』發音完整，ㄍㄨㄛˇ ㄕˊ音調正確。\",\n  \"finalSyllableAudible\": \"洞（ㄉㄨㄥˋ）發音清楚\"\n}"
       },
       {
         "name": "L457-S03",
         "expected": "等候時爸爸做出好笑的表情",
-        "result": "{\n  \"heardText\": \"等候時爸爸做出好笑的表情\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有的音節和聲調都清楚且準確地對應到預期的句子。 '等'（ㄉㄥˇ）、'候'（ㄏㄡˋ）、'時'（ㄕˊ）、'爸'（ㄅㄚˋ）、'爸'（ㄅㄚˋ）、'做'（ㄗㄨㄛˋ）、'出'（ㄔㄨ）、'好'（ㄏㄠˇ）、'笑'（ㄒㄧㄠˋ）、'的'（ㄉㄜ˙）、'表'（ㄅㄧㄠˇ）、'情'（ㄑㄧㄥˊ）都發音準確，聲調無誤。\",\n  \"finalSyllableAudible\": \"情\"\n}"
+        "result": "{\n  \"heardText\": \"等候時爸爸做出好笑的表情\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字詞的發音和原文相符，音節和聲調正確，包括‘等候’（ㄉㄥˇ ㄏㄡˋ）、‘時’（ㄕˊ）、‘爸爸’（ㄅㄚˋ ㄅㄚ˙）、‘做出’（ㄗㄨㄛˋ ㄔㄨ）、‘好笑’（ㄏㄠˇ ㄒㄧㄠˋ）、‘的’（˙ㄉㄜ）、‘表情’（ㄅㄧㄠˇ ㄑㄧㄥˊ）。整句清晰可辨，無音調錯誤。\",\n  \"finalSyllableAudible\": \"情（ㄑㄧㄥˊ）\"\n}"
       },
       {
         "name": "L457-S04",
         "expected": "這座木橋很結實放心走吧; 結實 MUST be ㄐㄧㄝ ˙ㄕ meaning sturdy, not ㄐㄧㄝˊ ㄕˊ",
-        "result": "{\n  \"heardText\": \"這座木橋很結實放心走吧\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"說話者的發音與預期相符。特別注意『結實』：發音為ㄐㄧㄝ ˙ㄕ（第二聲和輕聲），正確表達“堅固”的意思。整句語速清楚，聲調、音節均準確。\",\n  \"finalSyllableAudible\": \"吧 (ㄅㄚ ˙)\"\n}"
+        "result": "Let's examine the details from the audio and provide the evaluation in the required format.\n\nHere is the compact JSON result:\n\n{\n  \"heardText\": \"這座木橋很結實放心走吧\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The phrase was pronounced clearly. '結實' was pronounced as ㄐㄧㄝ ˙ㄕ, with the light tone on the second syllable. '放心' was pronounced correctly with ㄈㄤˋ in fourth tone and ㄒㄧㄣ in first tone. The tones and phonetics matched the expected pronunciation. Each final syllable, including the neutral tone in '結實' and the falling tone in '放心,' was audible distinctly.\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-S05",
         "expected": "睡到半夜突然聽見小狗叫; 突然 ㄊㄨˊ ㄖㄢˊ",
-        "result": "{\n  \"heardText\": \"睡到半夜突然聽見小狗叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節和聲調都正確吻合目標句子。特别檢查了'突然'的發音，聽到的是ㄊㄨˊ ㄖㄢˊ，聲調皆符合要求。\",\n  \"finalSyllableAudible\": \"叫\"\n}"
+        "result": "{\n  \"heardText\": \"睡到半夜突然聽見小狗叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"發音清晰準確，『突然』發音為ㄊㄨˊ ㄖㄢˊ，符合標準注音，整體語速自然，語調正確。\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-G02-prefix",
         "expected": "當演員的心願; final 願 audible",
-        "result": "{\n  \"heardText\": \"當演員的心願\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字音和原句一致，聲調準確，特別是最後的「願」字清晰可聽。\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"當演員的心願\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節（當 ㄉㄤ, 演 ㄧㄢˇ, 員 ㄩㄢˊ, 的 ㄉㄜ˙, 心 ㄒㄧㄣ, 願 ㄩㄢˋ）及聲調都正確無誤，且最後的「願」清晰可辨。\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-G02-suffix",
         "expected": "現了 exactly two syllables ㄒㄧㄢˋ ˙ㄌㄜ, no 實",
-        "result": "{\n  \"heardText\": \"現了\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"音檔中清楚聽到兩個音節：ㄒㄧㄢˋ（第四聲）和 ˙ㄌㄜ（輕聲），符合預期的『現了』，無『實』字夾雜，發音準確。\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"ㄒㄧㄢˋ ˙ㄌㄜ\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The first syllable is clearly ㄒㄧㄢˋ, with the correct final and phonetic tone. Any orthographic variation (現, 限, 線) is not distinguishable by audio alone, so this is acceptable. The second syllable has the audible ㄌ onset and neutral tone, and there is no extra syllable or 實 sound detected.\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-G05-wrong-one",
         "expected": "睡到半夜突然聽見小鳥叫",
-        "result": "{\n  \"heardText\": \"睡到半夜突然聽見小鳥叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節和聲調都清晰吻合：睡(ㄕㄨㄟˋ)、到(ㄉㄠˋ)、半(ㄅㄢˋ)、夜(ㄧㄝˋ)、突(ㄊㄨˊ)、然(ㄖㄢˊ)、聽(ㄊㄧㄥ)、見(ㄐㄧㄢˋ)、小(ㄒㄧㄠˇ)、鳥(ㄋㄧㄠˇ)、叫(ㄐㄧㄠˋ)，發音準確，沒有明顯錯誤或異常。\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"睡到半夜突然聽見小鳥叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節都清楚且準確地發音，聲調也與標準讀音相符。整句的語速和語調自然，沒有明顯錯誤。\",\n  \"finalSyllableAudible\": \"叫\"\n}"
       },
       {
         "name": "L457-G05-wrong-two",
         "expected": "睡到半夜突然聽見爸爸叫",
-        "result": "{\n  \"heardText\": \"睡到半夜突然聽見爸爸叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節發音清楚，語調準確，完全符合預期的句子「睡到半夜突然聽見爸爸叫」。每個音節的聲調正確，包括：「睡」(ㄕㄨㄟˋ)、「到」(ㄉㄠˋ)、「半」(ㄅㄢˋ)、「夜」(ㄧㄝˋ)、「突」(ㄊㄨˊ)、「然」(ㄖㄢˊ)、「聽」(ㄊㄧㄥ)、「見」(ㄐㄧㄢˋ)、「爸」(ㄅㄚˋ)、「爸」(ㄅㄚˋ)、「叫」(ㄐㄧㄠˋ)。整句清楚自然。\",\n  \"finalSyllableAudible\": \"叫\"\n}"
+        "result": "{\n  \"heardText\": \"睡到半夜突然聽見爸爸叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有詞句發音標準清晰，聲調準確一致，完全符合預期文本。\",\n  \"finalSyllableAudible\": \"叫\"\n}"
       }
     ]
   },
-  "folderBytes": 1134104,
+  "folderBytes": 1123729,
   "assets": [
     {
       "path": "public/assets/lessons/L457/images/L457-S01.webp",
@@ -118,8 +118,8 @@
     },
     {
       "path": "public/assets/lessons/L457/images/L457-S02.webp",
-      "bytes": 111384,
-      "sha256": "7bdf76bf0698ce6350da4214a64b0dab9f635349c0062da95ac7adb77d97c4cc"
+      "bytes": 100428,
+      "sha256": "2794da7f5695abe6d7246482144cae9f1ae089c132d57cef1dde710346f3fd89"
     },
     {
       "path": "public/assets/lessons/L457/images/L457-S03.webp",
@@ -178,18 +178,13 @@
     },
     {
       "path": "public/assets/lessons/L457/audio/L457-S04.m4a",
-      "bytes": 53022,
-      "sha256": "d2fa11a1e40d2f5d87521717591e4115b045591e484bf98924c1cf9f6e3a3f62"
+      "bytes": 53603,
+      "sha256": "b61d127997e397ffea415226b5346f8a853b2747da960256eca377feb695a0e1"
     },
     {
       "path": "public/assets/lessons/L457/audio/L457-S05.m4a",
       "bytes": 66361,
       "sha256": "985c5d23ee72084e86eb062dbd06761728a01feb61ed08c44fc0bf70865eaa15"
     }
-  ],
-  "assetCommit": "d7d37c780aa739cc2b32bd207d10be0acc3df14f",
-  "intake": {
-    "command": "npm run curriculum:package-intake -- --unit L457 --ref origin/codex/l457-complete-package --strict",
-    "result": "PASS"
-  }
+  ]
 }
