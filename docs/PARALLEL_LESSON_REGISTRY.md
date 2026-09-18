@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L454 | 表 | claimed | Production B | codex/l454-complete-package | L448, L449, L450, L451, L452, L453 | 歌、唱、舞、台、候、演 | `curriculum-workflow/lesson-requests/L454.json`; `curriculum-workflow/generated/L454-generation-packet.md`; `curriculum-workflow/drafts/L454-draft.json` | `public/assets/lessons/L454/` | Teacher-approved handoff received. Production boundary L443「操」 at origin/main 5622c827; package work started. Release remains dependency- and milestone-blocked. |
 
 ## Status Values
 
