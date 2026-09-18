@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L466 | 絕 | claimed | Production A / parallel-a | codex/l466-complete-package | L462-L465; R057/R058 after L465 | 日、期、待、招 | curriculum-workflow/lesson-requests/L466.json; curriculum-workflow/generated/L466-generation-packet.md; curriculum-workflow/drafts/L466-draft.json | public/assets/lessons/L466/ (pending) | Teacher handoff accepted at origin/main c130f105. Production may proceed in parallel; release order is L465 → R057 → R058 → L466. |
+| L466 | 絕 | request-ready | Production A / parallel-a | codex/l466-complete-package | L462-L465; R057/R058 after L465 | 日、期、待、招 | curriculum-workflow/lesson-requests/L466.json; curriculum-workflow/generated/L466-generation-packet.md; curriculum-workflow/drafts/L466-draft.json | public/assets/lessons/L466/ (pending) | Request/draft lock 470 allowed Han and teacher-approved sentences/games against origin/main c130f105. Production proceeds in parallel; release order is L465 → R057 → R058 → L466. |
 
 ## Status Values
 
