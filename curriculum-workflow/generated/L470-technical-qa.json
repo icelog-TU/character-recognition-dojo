@@ -1,0 +1,31 @@
+{
+  "unit": "L470",
+  "status": "dependency-blocked-asset-complete",
+  "productionBase": "acd71a5b",
+  "releaseBlockers": [
+    "R057",
+    "R058",
+    "L466",
+    "L467",
+    "L468",
+    "L469"
+  ],
+  "assets": {
+    "images": 5,
+    "audio": 10,
+    "imageFormat": "WebP 1024x1024",
+    "audioFormat": "mono AAC 44.1kHz M4A"
+  },
+  "allowedChars": {
+    "expectedUnique": 474,
+    "actualUnique": 474,
+    "result": "PASS"
+  },
+  "images": "PASS",
+  "audio": "PASS",
+  "pronunciation": "PASS",
+  "timings": "PASS",
+  "stage4": "PASS",
+  "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
+  "packageIntake": "pending pushed ref"
+}

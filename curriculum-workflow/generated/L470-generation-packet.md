@@ -2491,3 +2491,14 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## Final Production record
+
+- Package status: dependency-blocked-asset-complete
+- Base main: acd71a5b; formal production through L465 招; Release blockers R057/R058 and L466-L469
+- Assets: 5 final square 1024 WebP images and 10 final mono AAC 44.1kHz M4A files
+- Timing: five sentence tracks, two G02 fragment tracks and both G05 wrong-option tracks complete
+- Image QA: per-image style-lock/cast/semantics/no-readable-text PASS; no rejected drafts
+- Audio QA: exact-text alignment and independent gpt-audio-1.5 pronunciation PASS on all final files
+- Browser QA fallback: live highlight synchronization and G02 phone recording/replay are not claimed because the current control surface lacks reliable computer-audio return and a physical-phone microphone channel
+- Release owns production JSON, planner, ledger, review-pair sequencing, integration and deployment

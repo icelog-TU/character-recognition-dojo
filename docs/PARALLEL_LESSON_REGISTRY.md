@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L470 | 答 | request-ready | Production E | codex/l470-complete-package @ 37bb6230 | L466, L467, L468, L469 | 絕 活 該 應 | curriculum-workflow/lesson-requests/L470.json; curriculum-workflow/generated/L470-generation-packet.md; curriculum-workflow/drafts/L470-draft.json | curriculum-workflow/audio-inbox/L470/; public/assets/lessons/L470/ | Teacher-approved request captured; 474-character ceiling, sentence pronunciation overrides, coverage and Stage 4 indexes mechanically checked. Allowed ceiling: origin/main L001-L465 plus provisional 絕活該應 and new 答 (474 unique Han). Production package only; dependencies and R057/R058 block Release integration, not package work. |
+| L470 | 答 | ready-blocked-by-dependency | Production E | codex/l470-complete-package @ 37bb6230 | L466, L467, L468, L469 | 絕 活 該 應 | curriculum-workflow/lesson-requests/L470.json; curriculum-workflow/generated/L470-generation-packet.md; curriculum-workflow/drafts/L470-draft.json; curriculum-workflow/generated/L470-production-report.md | public/assets/lessons/L470/ | Production package complete locally: 5 final images, 10 final audio files, main/Stage 4 timings, image provenance, pronunciation review and technical QA. 474-character ceiling, pronunciation overrides, coverage and canonical Stage 4 pass. Browser QA fallback: live highlight synchronization and G02 phone recording/replay remain unverified. Dependencies L466-L469 and R057/R058 block Release integration only. |
 
 ## Status Values
 
