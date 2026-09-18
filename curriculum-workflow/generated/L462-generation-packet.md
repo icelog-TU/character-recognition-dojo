@@ -2403,11 +2403,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Timings: five sentence files and both G02 fragments contain final word-derived `charTimings`; counts, order, positive spans and durations PASS.
 - Shared production curriculum, planner and ledger remain Release-owned and are not changed by this package.
 
-### Fixed-ref browser playback QA
+### Fixed-ref Browser QA
 
 - Asset commit: `7940d951ae19f3bc2467116f2329f6b43c2c1cfd`.
 - Preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L462&ref=7940d951ae19f3bc2467116f2329f6b43c2c1cfd
 - Chrome fixed-ref page loaded 5 sentence cards and 6 other audio items.
-- Playback QA: PASS; all 11/11 controls started and returned to the playback-ready state after completion.
+- Browser QA playback result: PASS; all 11/11 controls started and returned to the playback-ready state after completion.
 - Scope: five sentence files, standalone 日, G02 prefix/suffix, and G05 correct plus two wrong options.
 - Limitation: this verifies browser loading and playback completion; teacher/manual pronunciation approval remains pending.
