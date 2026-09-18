@@ -1048,10 +1048,10 @@
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing and per-image style/cast QA",
-    "result": "PASS: complete dependency-blocked package; fixed-ref Browser QA and teacher image/audio review PASS",
+    "result": "PASS: complete dependency-blocked package; replacement standalone 日 passes technical QA and awaits teacher listening review",
     "audio": {
-      "status": "PASS — teacher approved",
-      "note": "Ten final processed M4A files decode and exact Han transcription passed. 日 was generated as ㄖˋ; 假日 and G02 爸爸假 used explicit ㄐㄧㄚˋ instructions. No manual listening claimed."
+      "status": "TECHNICAL PASS — replacement awaiting teacher review",
+      "note": "Ten final processed M4A files decode. The regenerated standalone 日 is 1560 ms, passes volume thresholds, and transcribes exactly as 日 with gpt-4o-transcribe. The other nine audio files are unchanged from the teacher-approved package."
     },
     "images": {
       "status": "PASS — teacher approved",
@@ -1066,12 +1066,14 @@
       "scope": "All five final L462 sentence images"
     },
     "teacherAudioReview": {
-      "status": "pass",
+      "status": "replacement-awaiting-teacher-review",
       "reviewedAt": "2026-09-18",
       "source": "teacher handoff message",
       "reviewedPackageRef": "039067bba77b7cf0b5b71d1b7a6f01017df2ee20",
       "statement": "462圖檔音檔審核通過",
-      "scope": "All final L462 audio: standalone 日, five sentence files, G02 prefix/suffix, and two G05 wrong-option files"
+      "originalScope": "All final L462 audio: standalone 日, five sentence files, G02 prefix/suffix, and two G05 wrong-option files",
+      "unchangedAssetsStatus": "Original teacher approval remains authoritative for the nine unchanged audio files.",
+      "replacementStatus": "The regenerated standalone 日 file was created after the reviewed package ref and requires teacher listening at the rescue ref."
     },
     "browserQa": {
       "status": "pass",
@@ -1086,6 +1088,32 @@
         "L462-G05 correct and two wrong options"
       ],
       "limitation": "Browser playback QA verifies loading and playback completion. Exact Han transcription passed separately; no teacher/manual pronunciation approval is claimed."
+    },
+    "packageRescue": {
+      "sourcePackageSha": "0ff790d7861b6ad45b65cc263667a40cdee06a1f",
+      "sourceBranch": "origin/codex/l462-complete-package",
+      "file": "public/assets/lessons/L462/audio/char-u65e5.m4a",
+      "issue": "Standalone character audio was 448 ms, below the required 700-3500 ms range.",
+      "method": "Regenerated from the exact standalone input 日 with OpenAI TTS using the draft pronunciation ㄖˋ, then processed through npm run assets:audio -- --lesson L462. No sentence audio was used or cut.",
+      "before": {
+        "sha256": "0fd2a64cb3d6116220a1fe8c233bcdd7e243df36f51f06ff5981d52651d8765b",
+        "durationMs": 448,
+        "meanVolumeDb": -15.2,
+        "maxVolumeDb": -5.1
+      },
+      "after": {
+        "sha256": "39b5d496920d9724ad1eafb65d67254e4e7ef47cf3c1dc31ffc5f03c2f5d2c5e",
+        "durationMs": 1560,
+        "meanVolumeDb": -27.4,
+        "maxVolumeDb": -11.3,
+        "codec": "AAC",
+        "sampleRateHz": 44100,
+        "channels": 1,
+        "transcriptModel": "gpt-4o-transcribe",
+        "transcript": "日",
+        "transcriptResult": "PASS"
+      },
+      "unchanged": "Five approved sentences, five images, nine other audio files, sentence/G02 timings, Stage 4 mapping, and all learner-facing text are unchanged."
     }
   }
 }

@@ -2420,3 +2420,12 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Image scope: all five final L462 sentence images.
 - Audio scope: standalone 日, five sentence files, G02 prefix/suffix, and both G05 wrong-option files.
 - Teacher statement: 462圖檔音檔審核通過
+## Package Rescue character-audio replacement
+
+- Source package: `origin/codex/l462-complete-package` at `0ff790d7861b6ad45b65cc263667a40cdee06a1f`.
+- Release blocker: `char-u65e5.m4a` was `448 ms`, below the required `700-3500 ms` character-card range.
+- The standalone input `日` was regenerated with OpenAI TTS using the draft pronunciation `ㄖˋ`, then processed through `npm run assets:audio -- --lesson L462`. It was not cut or extracted from sentence audio.
+- Replacement: `1560 ms`, mono AAC `44100 Hz`, mean `-27.4 dB`, peak `-11.3 dB`, SHA-256 `39b5d496920d9724ad1eafb65d67254e4e7ef47cf3c1dc31ffc5f03c2f5d2c5e`.
+- `gpt-4o-transcribe` transcript: `日` — PASS.
+- Five approved sentences, five images, nine other audio files, sentence/G02 timings, Stage 4 mapping, and all learner-facing text are unchanged.
+- The teacher approval at `039067bba77b7cf0b5b71d1b7a6f01017df2ee20` remains authoritative for unchanged assets. The regenerated standalone `日` requires listening review at the rescue ref.
