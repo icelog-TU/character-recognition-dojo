@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L466 | 絕 | ready-blocked-by-dependency | Production A / parallel-a | codex/l466-complete-package | L462-L465; R057/R058 after L465 | 日、期、待、招 | curriculum-workflow/lesson-requests/L466.json; curriculum-workflow/generated/L466-generation-packet.md; curriculum-workflow/drafts/L466-draft.json | public/assets/lessons/L466/ | dependency-blocked-asset-complete; 5 WebP, 10 M4A, 9 timing records; package-local, isolated production, strict asset and acoustic checks PASS. Release order L465 → R057 → R058 → L466 remains blocking. Pre-merge teacher asset review pending. |
+| L466 | 絕 | ready-blocked-by-dependency | Production A / parallel-a | codex/l466-complete-package @ 16c97753 | L462-L465; R057/R058 after L465 | 日、期、待、招 | curriculum-workflow/lesson-requests/L466.json; curriculum-workflow/generated/L466-generation-packet.md; curriculum-workflow/drafts/L466-draft.json | public/assets/lessons/L466/ | dependency-blocked-asset-complete; 5 WebP, 10 M4A, 9 timing records; package-local, isolated production, strict asset and acoustic checks PASS. Release order L465 → R057 → R058 → L466 remains blocking. Pre-merge teacher asset review pending. |
 
 ## Status Values
 
