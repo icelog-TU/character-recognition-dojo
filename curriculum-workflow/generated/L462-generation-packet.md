@@ -2393,3 +2393,12 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## Production package record
+
+- Status: `dependency-blocked-asset-complete`; Release still waits for contiguous L447-L461 and milestone R055/R056.
+- Vocabulary lock: origin/main `80431be0` formal L001-L446 plus provisional 實、其、中、午、文 and current 日; 456 unique characters; allowed-character sweep PASS.
+- Images: five final 1024×1024 WebPs, per-image style/cast/semantics/anatomy/no-readable-text inspection PASS; teacher image review pending.
+- Audio: standalone 日, five sentence files, G02 prefix/suffix and two G05 wrong-option files processed to M4A; exact Han transcript audit PASS. 日 was prompted as ㄖˋ; 假日 and G02 爸爸假 were prompted as ㄐㄧㄚˋ. Teacher listening remains pending; no manual listening claim is made.
+- Timings: five sentence files and both G02 fragments contain final word-derived `charTimings`; counts, order, positive spans and durations PASS.
+- Shared production curriculum, planner and ledger remain Release-owned and are not changed by this package.

@@ -1,0 +1,109 @@
+{
+  "unit": "L462",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "80431be0",
+  "lockedVocabularyRef": "80431be0",
+  "allowedChars": {
+    "expected": 456,
+    "actual": 456,
+    "result": "PASS"
+  },
+  "coverage": {
+    "日": 4,
+    "文": 3,
+    "午": 2,
+    "中": 2,
+    "其": 1,
+    "實": 1
+  },
+  "sentences": [
+    {
+      "id": "L462-S01",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3383,
+      "tailMs": 63
+    },
+    {
+      "id": "L462-S02",
+      "hanCount": 9,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "timingCount": 9,
+      "durationMs": 3395,
+      "tailMs": 155
+    },
+    {
+      "id": "L462-S03",
+      "hanCount": 9,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 9,
+      "durationMs": 3394,
+      "tailMs": 314
+    },
+    {
+      "id": "L462-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3655,
+      "tailMs": 15
+    },
+    {
+      "id": "L462-S05",
+      "hanCount": 12,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 12,
+      "durationMs": 3250,
+      "tailMs": 90
+    }
+  ],
+  "stage4": {
+    "order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "result": "PASS",
+    "details": "All five sentences used once; zero-based target and missing indexes, G03 cards, G04 card mapping, G02 fragments and G05 options match teacher handoff."
+  },
+  "audio": {
+    "filesExpected": 10,
+    "filesActual": 10,
+    "result": "PASS — all final M4A files decode; exact Han transcripts pass; teacher listening pending",
+    "specialPronunciation": "日 generated as ㄖˋ; 假日 and G02 爸爸假 generated with explicit ㄐㄧㄚˋ instructions."
+  },
+  "images": {
+    "filesExpected": 5,
+    "filesActual": 5,
+    "result": "PASS — per-image style/cast/semantic inspection; teacher review pending"
+  },
+  "releaseBlockers": [
+    "R055/R056 after L450 before L451",
+    "Contiguous numbered predecessors L447-L461"
+  ],
+  "sharedReleaseFiles": "Untouched; Release-owned",
+  "teacherImageReview": {
+    "status": "pending"
+  },
+  "teacherAudioReview": {
+    "status": "pending"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "unit": "L462",
+  "method": "OpenAI Whisper word-timestamp transcription of final processed M4A",
+  "results": [
+    {
+      "id": "L462-S01",
+      "expected": "生日那天我收到一盒文具",
+      "transcript": "生日那天我收到一盒文具",
+      "result": "PASS",
+      "durationMs": 3383
+    },
+    {
+      "id": "L462-S02",
+      "expected": "媽媽會中文也會日文",
+      "transcript": "媽媽會中文也會日文",
+      "result": "PASS",
+      "durationMs": 3395
+    },
+    {
+      "id": "L462-S03",
+      "expected": "爸爸假日常睡到中午",
+      "transcript": "爸爸假日常睡到中午",
+      "result": "PASS",
+      "durationMs": 3394
+    },
+    {
+      "id": "L462-S04",
+      "expected": "我其實下午就寫完功課了",
+      "transcript": "我其實下午就寫完功課了",
+      "result": "PASS",
+      "durationMs": 3655
+    },
+    {
+      "id": "L462-S05",
+      "expected": "天還沒亮我們就出門看日出",
+      "transcript": "天還沒亮我們就出門看日出",
+      "result": "PASS",
+      "durationMs": 3250
+    },
+    {
+      "id": "L462-G02-prefix",
+      "expected": "爸爸假",
+      "transcript": "爸爸假",
+      "result": "PASS",
+      "durationMs": 801
+    },
+    {
+      "id": "L462-G02-suffix",
+      "expected": "常睡到中午",
+      "transcript": "常睡到中午",
+      "result": "PASS",
+      "durationMs": 2266
+    },
+    {
+      "id": "char-u65e5",
+      "expected": "日",
+      "transcript": "日",
+      "result": "PASS",
+      "durationMs": 448
+    },
+    {
+      "id": "L462-G05-wrong-one",
+      "expected": "我其實上午就寫完功課了",
+      "transcript": "我其實上午就寫完功課了",
+      "result": "PASS",
+      "durationMs": 3557
+    },
+    {
+      "id": "L462-G05-wrong-two",
+      "expected": "我其實下午就交完功課了",
+      "transcript": "我其實下午就交完功課了",
+      "result": "PASS",
+      "durationMs": 3011
+    }
+  ],
+  "pronunciationNotes": [
+    "Standalone 日 was generated explicitly as ㄖˋ.",
+    "L462-S03 假日 and L462-G02 prefix 爸爸假 were generated with explicit ㄐㄧㄚˋ instructions; transcript verifies glyph sequence but teacher listening remains the final tonal check."
+  ],
+  "manualListeningClaimed": false
+}
