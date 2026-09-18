@@ -1048,7 +1048,7 @@
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing and per-image style/cast QA",
-    "result": "PASS: complete dependency-blocked package; teacher image/audio review pending",
+    "result": "PASS: complete dependency-blocked package; fixed-ref browser playback QA PASS; teacher image/audio review pending",
     "audio": {
       "status": "PASS",
       "note": "Ten final processed M4A files decode and exact Han transcription passed. 日 was generated as ㄖˋ; 假日 and G02 爸爸假 used explicit ㄐㄧㄚˋ instructions. No manual listening claimed."
@@ -1062,6 +1062,20 @@
     },
     "teacherAudioReview": {
       "status": "pending"
+    },
+    "browserQa": {
+      "status": "pass",
+      "assetCommit": "7940d951ae19f3bc2467116f2329f6b43c2c1cfd",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L462&ref=7940d951ae19f3bc2467116f2329f6b43c2c1cfd",
+      "browser": "Chrome",
+      "summary": "PASS: fixed-ref page loaded 5 sentence cards and 6 other audio items; all 11/11 playback controls entered playing state and returned after completion.",
+      "scope": [
+        "L462-S01 through L462-S05",
+        "char-u65e5",
+        "L462-G02 prefix and suffix",
+        "L462-G05 correct and two wrong options"
+      ],
+      "limitation": "Browser playback QA verifies loading and playback completion. Exact Han transcription passed separately; no teacher/manual pronunciation approval is claimed."
     }
   }
 }
