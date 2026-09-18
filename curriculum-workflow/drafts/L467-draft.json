@@ -1543,8 +1543,8 @@
     "audioPipeline": "Repo OpenAI gpt-4o-mini-tts with the coral voice and repo audio processing. Ten final mono AAC 44100 Hz M4A files are present. G05 wrong choices are separately generated complete sentences with no splicing. G02 prefix and suffix are independently generated fragments; suffix begins with 著 and excludes 活.",
     "timingReview": "Whisper word alignment recorded for all five sentences, both G02 fragments and both G05 wrong choices. Every timed track has one ordered timing per Han character and no terminal tail over 300 ms after final trimming.",
     "pronunciation": "Full-sentence ASR matched all five approved Han sequences after Traditional/Simplified normalization, including S05 小魚還活著快放回水裡. Both G05 wrong options matched exact approved Han sequences. Standalone 活 was independently regenerated and transcribed as 活. The short G02 prefix transcribed as pronunciation-equivalent 小愚孩 for 小魚還 (ㄒㄧㄠˇ ㄩˊ ㄏㄞˊ); suffix was generated with explicit neutral-tone 著 continuation instructions and transcribed its first syllable orthographically as 折 before exact 快放回水裡.",
-    "browserQA": "Previous repair ref browser QA is superseded for G02 suffix. The S03 audio is teacher-approved. The new short-這 workaround suffix will receive pushed-ref playback QA after commit.",
-    "assetAudit": "PASS after audio repair: lesson-local package audit (5 WebP, 10 mono AAC M4A, 1,396,409 total bytes), npm run validate:production, and pushed-ref package intake.",
+    "browserQA": "Teacher manually reviewed immutable ref 293a6525c78c4dad9879ff35d763b458d0ad6b1a. S03 Taiwan pronunciation 星期日／期待 PASS. G02 suffix short, weakened 這 workaround for neutral 著 PASS. All L467 audio repair items are approved.",
+    "assetAudit": "PASS after final teacher-approved audio repair: lesson-local package audit, npm run validate:production, and pushed-ref package intake.",
     "audioRepair": {
       "source": "teacher asset review",
       "reviewedRef": "c4433c6f55272fb15aa355d2d181f3d548ccd506",
@@ -1560,11 +1560,13 @@
         {
           "id": "L467-G02-suffix:audio",
           "issue": "開頭的輕聲「著」太短，且近似「這」。",
-          "resolution": "Replaced the earlier lengthened-著 approach with the teacher-described workaround: generate 這快放回水裡, then shorten and weaken only the opening 這 from the same independently generated suffix take so its contextual listening effect is neutral 著. The following 快放回水裡 remains from the same take."
+          "resolution": "Replaced the earlier lengthened-著 approach with the teacher-described workaround: generate 這快放回水裡, then shorten and weaken only the opening 這 from the same independently generated suffix take so its contextual listening effect is neutral 著. The following 快放回水裡 remains from the same take.",
+          "teacherResult": "PASS: teacher manually listened on 293a6525c78c4dad9879ff35d763b458d0ad6b1a and confirmed the short, weakened 這 workaround is acceptable as the neutral 著 at the start of the suffix."
         }
       ],
-      "status": "S03-teacher-approved; G02-short-zhe-workaround-pending-teacher-review",
-      "repairedRef": "6b8dfa25a1665c4d1af794def2f6e8c5acaf647e"
+      "status": "teacher-audio-review-pass",
+      "repairedRef": "6b8dfa25a1665c4d1af794def2f6e8c5acaf647e",
+      "teacherApprovedRef": "293a6525c78c4dad9879ff35d763b458d0ad6b1a"
     }
   },
   "sentences": [
