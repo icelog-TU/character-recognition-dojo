@@ -18,9 +18,9 @@
 
 - OpenAI gpt-4o-mini-tts with Taiwan Mandarin instructions; repository assets:audio produced 9 final mono AAC M4As: standalone 該, five full sentences, independent G02 suffix, and two complete G05 wrong choices. G02 target is sentence-initial, so no empty prefix asset exists. No cutting or splicing.
 - Whisper word timestamps aligned five full sentences plus G02 suffix and both G05 wrong choices. Counts match exact Han-only sequences; all char indexes are ordered and non-overlapping. G02 has suffix only. Stage 4 target indexes, missing indexes and partial-order mapping mechanically PASS.
-- Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts with no omitted/clipped/repeated/substituted syllables or awkward pauses. S03 and both G05 wrong choices use 中 ㄓㄨㄥˋ; S05 期 is rising ㄑㄧˊ; 招待 uses 待 ㄉㄞˋ; 該/絕/活 tones PASS. This is AI listening evidence, not teacher manual auditory approval.
+- Teacher repair ref `556b72dcd29947844223d9eaef959ff06d82f170` addressed: L468-S01 was regenerated as a complete sentence with 不 in 不該 audibly ㄅㄨˋ fourth tone; L468-S05 was regenerated as a complete sentence with 星期日 audibly ㄒㄧㄥ ㄑㄧˊ ㄖˋ in Taiwan Mandarin. Fresh alignment and independent AI listening PASS; teacher re-review is pending. This is AI listening evidence, not teacher manual auditory approval.
 
 ## Interaction and intake
 
 - Phone-width LessonPanel QA at 390x844: Stage 1 standalone character playback PASS; Stage 2 showed the exact six cards and accepted all three target taps; Stage 3 played all five final sentence assets to completion and reached PASS; Stage 4 G01 target selection PASS. G02 rendered the sentence-initial target, independently generated suffix playback and hold-to-record UI correctly. The automated browser session has no physical microphone input, so microphone capture/replay remains teacher-device QA; G03-G05 payloads, indexes, card order and referenced audio were verified mechanically and by the package validator.
-- `npm run curriculum:package-intake -- --unit L468 --ref origin/codex/l468-complete-package`: PASS (dependency-blocked-asset-complete; 5 images; 9 audio files; all five canonical Stage 4 game types).
+- Pending pushed-ref intake after teacher-requested S01/S05 audio repair.
