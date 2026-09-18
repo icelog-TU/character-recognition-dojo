@@ -1,0 +1,75 @@
+[
+  {
+    "name": "L461-G02-prefix.m4a",
+    "beforeSeconds": 2.460998,
+    "silenceStart": 2.01508,
+    "keptSeconds": 2.2150800000000004,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-G02-suffix.m4a",
+    "beforeSeconds": 3.449002,
+    "silenceStart": 1.64002,
+    "keptSeconds": 1.84002,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-G05-wrong-one.m4a",
+    "beforeSeconds": 2.879002,
+    "silenceStart": 2.28279,
+    "keptSeconds": 2.48279,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-G05-wrong-two.m4a",
+    "beforeSeconds": 3.701995,
+    "silenceStart": 3.0932,
+    "keptSeconds": 3.2932,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-S01.m4a",
+    "beforeSeconds": 3.141995,
+    "silenceStart": 2.72748,
+    "keptSeconds": 2.92748,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-S02.m4a",
+    "beforeSeconds": 5.166009,
+    "silenceStart": 4.56739,
+    "keptSeconds": 4.76739,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-S03.m4a",
+    "beforeSeconds": 4.793991,
+    "silenceStart": 3.1139,
+    "keptSeconds": 3.3139000000000003,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-S04.m4a",
+    "beforeSeconds": 4.426009,
+    "silenceStart": 3.9242,
+    "keptSeconds": 4.1242,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45
+  },
+  {
+    "name": "L461-S05.m4a",
+    "beforeSeconds": 4.377007,
+    "silenceStart": 4.10923,
+    "keptSeconds": 3.94,
+    "bufferSeconds": 0.2,
+    "thresholdDb": -45,
+    "manualTailTrim": true
+  }
+]

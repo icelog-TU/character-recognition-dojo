@@ -1,0 +1,143 @@
+[
+  {
+    "file": "public/assets/lessons/L461/audio/char-u6587.m4a",
+    "sha256": "f418069ec440ef89617713f9c2149298f3ad7e2edbf2ebf02bdba39f9babca68",
+    "model": "gpt-4o-transcribe",
+    "prompt": "這是臺灣華語單一漢字音。課程候選字是「文」，請只轉寫實際聽到的漢字。",
+    "trials": [
+      {
+        "text": "文",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 53,
+          "input_tokens": 50,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 17
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "文",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 53,
+          "input_tokens": 50,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 17
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "文",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 53,
+          "input_tokens": 50,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 17
+          },
+          "output_tokens": 3
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L461/audio/L461-G02-prefix.m4a",
+    "sha256": "c82c4c5b3bb6f946fd82ae1e6d9b6bedcdc054d1b91f64b09c4eb708b75474eb",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "爸爸，你看我的座。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 30,
+          "input_tokens": 22,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 22
+          },
+          "output_tokens": 8
+        }
+      },
+      {
+        "text": "爸爸，你看我的座。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 30,
+          "input_tokens": 22,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 22
+          },
+          "output_tokens": 8
+        }
+      },
+      {
+        "text": "爸爸，你看我的座。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 30,
+          "input_tokens": 22,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 22
+          },
+          "output_tokens": 8
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L461/audio/L461-G02-suffix.m4a",
+    "sha256": "a03ef3698cf29433f23fe1d7f78f6bf987446f23ec3fec930f73950764ce3fa7",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "也在其中。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 24,
+          "input_tokens": 18,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 18
+          },
+          "output_tokens": 6
+        }
+      },
+      {
+        "text": "也在其中。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 24,
+          "input_tokens": 18,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 18
+          },
+          "output_tokens": 6
+        }
+      },
+      {
+        "text": "也在其中。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 24,
+          "input_tokens": 18,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 18
+          },
+          "output_tokens": 6
+        }
+      }
+    ]
+  }
+]
