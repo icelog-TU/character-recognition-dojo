@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L458 | 其 | claimed | Production F / `parallel-f` | `codex/l458-complete-package` / claim pending | Text: L453:演, L454:表, L455:現, L456:突, L457:實; Release order: L447-L457 and R055/R056 after L450 | 演、表、現、突、實 | `curriculum-workflow/lesson-requests/L458.json`; `curriculum-workflow/generated/L458-generation-packet.md`; `curriculum-workflow/drafts/L458-draft.json` | `curriculum-workflow/audio-inbox/L458/`; `public/assets/lessons/L458/` | Branch base `origin/main@80431be0` is formally through L446:音. Teacher-approved vocabulary is locked to `f766046b` formal L001-L444 plus 演、表、現、突、實、其 (454 chars). Production may proceed; Release waits for all listed predecessors and R055/R056. |
 
 ## Status Values
 
