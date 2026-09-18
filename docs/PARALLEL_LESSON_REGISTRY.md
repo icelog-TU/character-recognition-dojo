@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L462 | 日 | claimed | Production F covering Production D worktree | `codex/l462-complete-package` | L457:實; L458:其; L459:中; L460:午; L461:文; milestone L450 → R055 → R056 | 實、其、中、午、文 | `curriculum-workflow/lesson-requests/L462.json`; `curriculum-workflow/generated/L462-generation-packet.md`; `curriculum-workflow/drafts/L462-draft.json` | `public/assets/lessons/L462/`; `curriculum-workflow/audio-inbox/L462/` | Teacher-approved Production handoff received 2026-09-18; vocabulary boundary locked to origin/main `80431be0` plus listed provisional characters and 日. |
 
 ## Status Values
 
