@@ -1,6 +1,6 @@
 {
   "unit": "L471",
-  "result": "PASS",
+  "result": "REPAIRED PASS",
   "method": "Side-by-side visual inspection of exported WebPs against full L058 style anchors, refined L115/L118/L119/L128 examples, and relevant family/teacher cast references.",
   "files": [
     {
@@ -22,7 +22,7 @@
       "styleLock": "PASS",
       "cast": "PASS",
       "semantic": "PASS",
-      "note": "Recurring girl and father; open book depicts three clear animal-life actions without labels."
+      "note": "Replacement: equal-width symmetric left/right pages, centered binding and no illustration crossing the gutter; recurring girl/father and style retained."
     },
     {
       "id": "L471-S04",
@@ -36,8 +36,22 @@
       "styleLock": "PASS",
       "cast": "PASS",
       "semantic": "PASS",
-      "note": "Recurring mother and girl; plant is fully dead with all-brown leaves and dry stems, cracked soil and unused watering can; no healthy green growth."
+      "note": "Replacement: watering can fully separated from table geometry; teacher-requested thought bubble shows same girl watering a healthy plant; present plant remains fully dead."
     }
   ],
-  "manualTeacherReview": "pending"
+  "manualTeacherReview": "pending repaired-ref re-review",
+  "repairHistory": [
+    {
+      "item": "L471-S03:image",
+      "issue": "Open-book left/right page geometry and page sizes were inconsistent",
+      "resolution": "Regenerated with equal-width symmetric pages, centered binding, bird scene confined to left page and puppy/fish panels confined to right page.",
+      "status": "repaired-awaiting-teacher-re-review"
+    },
+    {
+      "item": "L471-S05:image",
+      "issue": "Watering can intersected the plant table; teacher requested a thought bubble showing daily watering",
+      "resolution": "Regenerated with the watering can fully separated on open floor and a mother-linked thought bubble showing the same girl watering a healthy plant.",
+      "status": "repaired-awaiting-teacher-re-review"
+    }
+  ]
 }

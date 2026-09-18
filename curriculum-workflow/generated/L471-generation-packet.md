@@ -2503,7 +2503,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 - focusChar: 題
 - imageNotes: 家中書桌前，主角女孩指著作業本上的一道圖像算術題，轉頭詢問爸爸，表情疑惑。爸爸坐在旁邊，準備用桌上積木協助她理解。作業本以角度遮住文字，不要求生成可讀題目、算式或數字；重點是女孩不知道如何回答而求助。
 - imageSrc: /assets/lessons/L471/images/L471-S01.webp
-- audio: /assets/lessons/L471/audio/L471-S01.m4a; 4174 ms; 11 char timings
+- audio: /assets/lessons/L471/audio/L471-S01.m4a; 2989 ms; 11 char timings
 
 ### L471-S02
 
@@ -2521,7 +2521,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 - spokenText: 這本書的主題是動物的生活
 - displayLines: ["這本書的","主題是","動物的生活。"]
 - focusChar: 題
-- imageNotes: 主角女孩和爸爸一起看一本攤開的圖畫書，書頁有幾個清楚的動物生活場景：鳥在巢裡餵小鳥、小狗吃東西、小魚在水裡游動。重點是動物如何生活，不是只排列動物肖像；不生成可讀書名、段落或標籤。
+- imageNotes: 主角女孩和爸爸一起看一本攤開的圖畫書；書本是左右兩頁等寬、中央裝訂線清楚的正常對稱跨頁。左頁是鳥在巢裡餵小鳥；右頁分成小狗吃東西與小魚在水裡游動兩個完整圖區，所有圖區不跨越裝訂線。重點是動物如何生活，不生成可讀書名、段落或標籤。
 - imageSrc: /assets/lessons/L471/images/L471-S03.webp
 - audio: /assets/lessons/L471/audio/L471-S03.m4a; 5046 ms; 12 char timings
 
@@ -2541,7 +2541,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 - spokenText: 做不到的事不該答應別人
 - displayLines: ["做不到的事，","不該答應","別人。"]
 - focusChar: 應
-- imageNotes: 依老師最終批准的情境，主角女孩答應替外出的朋友照顧盆栽，卻連續幾天沒澆水，植物已枯死。家中，媽媽指向盆栽，嚴肅又失望地提醒女孩；女孩看著枯死植物，低頭懊悔。盆中土壤乾裂，原本的葉片全部乾褐、萎縮下垂，枝莖乾枯，沒有仍然茂盛的綠葉；要清楚是照顧失敗的結果，不只是土稍乾或一天忘澆。水壺放在附近，但不画已澆水復原。此處「做不到」是未能持續履行照顧承諾，不是體力搬不動；禁止改回搬書箱、照顧寵物或洗車版本。先前承諾及多日經過由句子與設定交代，不塞回憶分格或文字說明。
+- imageNotes: 主角女孩答應替外出的朋友照顧盆栽，卻連續幾天沒澆水，植物已枯死。家中，媽媽指向盆栽，嚴肅又失望地提醒女孩；女孩低頭懊悔。盆中土壤乾裂，所有葉片乾褐萎縮、枝莖乾枯，沒有綠葉。澆水壺完整放在小桌左側的空地，與桌面、桌腳清楚分離，不穿透家具。依老師修復指示，媽媽上方有一個小型思考泡泡，呈現同一女孩每天替健康盆栽澆水的正確做法；泡泡與現場枯死植物清楚區隔，不放文字或數字。
 - imageSrc: /assets/lessons/L471/images/L471-S05.webp
 - audio: /assets/lessons/L471/audio/L471-S05.m4a; 3061 ms; 11 char timings
 
@@ -2752,3 +2752,14 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Asset folder size: 1,241,307 bytes; PASS.
 - Immutable pushed-ref Chrome Browser QA: PASS at asset commit `7fbbc2b31cc3a39f75194ed29b1dde35cdedf111`; 5 sentence cards, 6 other audio items, all 5 images and 11/11 playback controls passed.
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=7fbbc2b31cc3a39f75194ed29b1dde35cdedf111
+
+
+### Teacher asset-review repair round
+
+- Reviewed ref: `ca8f00546f161003a4afba476ce2d03ecabfbf30`.
+- L471-S01 audio: regenerated full sentence; phonetic QA identifies 回答 as ㄏㄨㄟˊ ㄉㄚˊ.
+- L471-S03 image: regenerated with equal-width left/right pages, centered binding and no panel crossing the gutter.
+- L471-S05 image: regenerated with watering can fully separated from the table and a teacher-requested thought bubble showing the same girl watering a healthy plant.
+- L471-G05 wrong-one and wrong-two: regenerated as complete sentences; phonetic QA identifies 答應 as ㄉㄚ ㄧㄥˋ in both.
+- Exact-Han transcript and affected timing QA: PASS. Manual teacher listening/image re-review remains pending.
+- Repaired-ref strict intake and Browser QA: pending first repair push.

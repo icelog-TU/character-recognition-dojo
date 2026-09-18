@@ -1556,7 +1556,7 @@
         "動物的生活。"
       ],
       "focusChar": "題",
-      "imageNotes": "主角女孩和爸爸一起看一本攤開的圖畫書，書頁有幾個清楚的動物生活場景：鳥在巢裡餵小鳥、小狗吃東西、小魚在水裡游動。重點是動物如何生活，不是只排列動物肖像；不生成可讀書名、段落或標籤。"
+      "imageNotes": "主角女孩和爸爸一起看一本攤開的圖畫書；書本是左右兩頁等寬、中央裝訂線清楚的正常對稱跨頁。左頁是鳥在巢裡餵小鳥；右頁分成小狗吃東西與小魚在水裡游動兩個完整圖區，所有圖區不跨越裝訂線。重點是動物如何生活，不生成可讀書名、段落或標籤。"
     },
     {
       "id": "L471-S04",
@@ -1584,7 +1584,7 @@
         "7": "ㄉㄚ",
         "8": "ㄧㄥˋ"
       },
-      "imageNotes": "依老師最終批准的情境，主角女孩答應替外出的朋友照顧盆栽，卻連續幾天沒澆水，植物已枯死。家中，媽媽指向盆栽，嚴肅又失望地提醒女孩；女孩看著枯死植物，低頭懊悔。盆中土壤乾裂，原本的葉片全部乾褐、萎縮下垂，枝莖乾枯，沒有仍然茂盛的綠葉；要清楚是照顧失敗的結果，不只是土稍乾或一天忘澆。水壺放在附近，但不画已澆水復原。此處「做不到」是未能持續履行照顧承諾，不是體力搬不動；禁止改回搬書箱、照顧寵物或洗車版本。先前承諾及多日經過由句子與設定交代，不塞回憶分格或文字說明。"
+      "imageNotes": "主角女孩答應替外出的朋友照顧盆栽，卻連續幾天沒澆水，植物已枯死。家中，媽媽指向盆栽，嚴肅又失望地提醒女孩；女孩低頭懊悔。盆中土壤乾裂，所有葉片乾褐萎縮、枝莖乾枯，沒有綠葉。澆水壺完整放在小桌左側的空地，與桌面、桌腳清楚分離，不穿透家具。依老師修復指示，媽媽上方有一個小型思考泡泡，呈現同一女孩每天替健康盆栽澆水的正確做法；泡泡與現場枯死植物清楚區隔，不放文字或數字。"
     }
   ],
   "approvedSentenceGames": [
@@ -1722,10 +1722,10 @@
   ],
   "productionQa": {
     "status": "PASS",
-    "result": "Complete local lesson package; blocked only by R057/R058 and L466-L470 release order.",
+    "result": "PASS: five teacher-reported repair items replaced; remote strict intake and immutable repaired-ref browser QA pending",
     "allowedCharacterCount": 475,
     "manualListeningClaimed": false,
-    "browserQa": {
+    "preRepairBrowserQa": {
       "status": "PASS",
       "assetCommit": "7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
       "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
@@ -1737,6 +1737,39 @@
         "L471-G02 prefix and suffix",
         "L471-G05 correct and two wrong options"
       ]
-    }
+    },
+    "repairHistory": [
+      {
+        "item": "L471-S01:audio",
+        "issue": "回答的回被老師聽成會",
+        "resolution": "Regenerated full sentence; selected S01-c after phonetic model identified 回答 as ㄏㄨㄟˊ ㄉㄚˊ; rebuilt S01 timing alignment.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-S03:image",
+        "issue": "Open-book left/right page geometry and page sizes were inconsistent",
+        "resolution": "Regenerated with equal-width symmetric pages, centered binding, bird scene confined to left page and puppy/fish panels confined to right page.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-S05:image",
+        "issue": "Watering can intersected the plant table; teacher requested a thought bubble showing daily watering",
+        "resolution": "Regenerated with the watering can fully separated on open floor and a mother-linked thought bubble showing the same girl watering a healthy plant.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-G05-O2:audio",
+        "issue": "答應 required the audible 搭應 reading",
+        "resolution": "Regenerated full wrong-one sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-G05-O3:audio",
+        "issue": "答應 required the audible 搭應 reading",
+        "resolution": "Regenerated full wrong-two sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+        "status": "repaired-awaiting-teacher-re-review"
+      }
+    ],
+    "teacherReReview": "pending"
   }
 }

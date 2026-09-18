@@ -1,6 +1,6 @@
 {
   "unit": "L471",
-  "result": "PASS",
+  "result": "REPAIRED PASS",
   "packageStatus": "dependency-blocked-asset-complete",
   "productionBase": {
     "ref": "acd71a5bd25e927c209ed749506aea1d3cc643a0",
@@ -36,7 +36,7 @@
       "spokenHanMatch": true,
       "displayJoinMatch": true,
       "maxDisplayLineVisibleChars": 5,
-      "audioDurationMs": 4174,
+      "audioDurationMs": 2989,
       "charTimingCount": 11,
       "expectedTimingCount": 11
     },
@@ -157,16 +157,38 @@
   ],
   "sharedReleaseFilesTouched": false,
   "browserQa": {
-    "status": "PASS",
-    "assetCommit": "7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
-    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
-    "browser": "Chrome",
-    "summary": "PASS: immutable commit page loaded 5 sentence cards and 6 other audio items; all five 1024x1024 images loaded; all 11 playback controls reached ended state with no media error.",
-    "scope": [
-      "L471-S01 through L471-S05",
-      "char-u984c",
-      "L471-G02 prefix and suffix",
-      "L471-G05 correct and two wrong options"
-    ]
-  }
+    "status": "pending repaired asset push"
+  },
+  "repairHistory": [
+    {
+      "item": "L471-S01:audio",
+      "issue": "回答的回被老師聽成會",
+      "resolution": "Regenerated full sentence; selected S01-c after phonetic model identified 回答 as ㄏㄨㄟˊ ㄉㄚˊ; rebuilt S01 timing alignment.",
+      "status": "repaired-awaiting-teacher-re-review"
+    },
+    {
+      "item": "L471-S03:image",
+      "issue": "Open-book left/right page geometry and page sizes were inconsistent",
+      "resolution": "Regenerated with equal-width symmetric pages, centered binding, bird scene confined to left page and puppy/fish panels confined to right page.",
+      "status": "repaired-awaiting-teacher-re-review"
+    },
+    {
+      "item": "L471-S05:image",
+      "issue": "Watering can intersected the plant table; teacher requested a thought bubble showing daily watering",
+      "resolution": "Regenerated with the watering can fully separated on open floor and a mother-linked thought bubble showing the same girl watering a healthy plant.",
+      "status": "repaired-awaiting-teacher-re-review"
+    },
+    {
+      "item": "L471-G05-O2:audio",
+      "issue": "答應 required the audible 搭應 reading",
+      "resolution": "Regenerated full wrong-one sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+      "status": "repaired-awaiting-teacher-re-review"
+    },
+    {
+      "item": "L471-G05-O3:audio",
+      "issue": "答應 required the audible 搭應 reading",
+      "resolution": "Regenerated full wrong-two sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+      "status": "repaired-awaiting-teacher-re-review"
+    }
+  ]
 }

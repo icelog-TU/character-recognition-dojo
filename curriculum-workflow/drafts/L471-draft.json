@@ -539,62 +539,62 @@
       "imageSrc": "/assets/lessons/L471/images/L471-S01.webp",
       "audio": {
         "src": "/assets/lessons/L471/audio/L471-S01.m4a",
-        "durationMs": 4174,
+        "durationMs": 2989,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 210
+            "endMs": 180
           },
           {
             "charIndex": 1,
-            "startMs": 210,
-            "endMs": 420
+            "startMs": 180,
+            "endMs": 360
           },
           {
             "charIndex": 2,
-            "startMs": 420,
-            "endMs": 730
+            "startMs": 360,
+            "endMs": 660
           },
           {
             "charIndex": 3,
-            "startMs": 730,
-            "endMs": 1040
+            "startMs": 660,
+            "endMs": 960
           },
           {
             "charIndex": 4,
-            "startMs": 1040,
-            "endMs": 1700
+            "startMs": 960,
+            "endMs": 1540
           },
           {
             "charIndex": 5,
-            "startMs": 1700,
-            "endMs": 2020
+            "startMs": 1540,
+            "endMs": 1710
           },
           {
             "charIndex": 6,
-            "startMs": 2020,
-            "endMs": 2340
+            "startMs": 1710,
+            "endMs": 1880
           },
           {
             "charIndex": 7,
-            "startMs": 2340,
-            "endMs": 2760
+            "startMs": 1880,
+            "endMs": 2100
           },
           {
             "charIndex": 8,
-            "startMs": 2760,
-            "endMs": 3180
+            "startMs": 2100,
+            "endMs": 2320
           },
           {
             "charIndex": 9,
-            "startMs": 3180,
-            "endMs": 3660
+            "startMs": 2320,
+            "endMs": 2580
           },
           {
             "charIndex": 10,
-            "startMs": 3660,
-            "endMs": 3920
+            "startMs": 2580,
+            "endMs": 2800
           }
         ]
       }
@@ -688,8 +688,8 @@
         "動物的生活。"
       ],
       "focusChar": "題",
-      "imageNotes": "主角女孩和爸爸一起看一本攤開的圖畫書，書頁有幾個清楚的動物生活場景：鳥在巢裡餵小鳥、小狗吃東西、小魚在水裡游動。重點是動物如何生活，不是只排列動物肖像；不生成可讀書名、段落或標籤。",
-      "imagePrompt": "Square 1:1 modern children's picture-book illustration matching the approved L058 STYLE ONLY and refined L115/L118/L119/L128 examples: warm natural light, fine pencil-and-watercolor linework, softly layered gouache texture, detailed but clean Taiwan environment, stable preschool proportions, gentle expressive faces, bright warm palette, phone-readable composition and safe margins. Use recurring family identity anchors L154-S01, L162-S04 and L163-S02 whenever protagonist family appears. Protagonist girl: preschool age, short dark bob, small pink hairclip, pink cardigan, cream blouse, navy skirt and pink shoes. Fixed father: short dark hair, blue overshirt and cream shirt. Fixed mother: chin-length dark hair, cream cardigan and practical blue clothing. Teacher must be a distinct adult teacher in tidy classroom clothing and must not resemble the mother. Generic adults must not reuse the father or mother identity. Do not copy any L058 person. No readable text, letters, numbers, equations, labels, logos, watermarks, captions or speech bubbles. The recurring protagonist girl and fixed father read a large open picture book together at home. Its visible pages contain three clear text-free animal-life mini-scenes: a parent bird feeding chicks in a nest, a puppy eating from a bowl, and fish swimming underwater. Show actions and habitats rather than portrait rows. No title, labels, paragraphs or readable marks.",
+      "imageNotes": "主角女孩和爸爸一起看一本攤開的圖畫書；書本是左右兩頁等寬、中央裝訂線清楚的正常對稱跨頁。左頁是鳥在巢裡餵小鳥；右頁分成小狗吃東西與小魚在水裡游動兩個完整圖區，所有圖區不跨越裝訂線。重點是動物如何生活，不生成可讀書名、段落或標籤。",
+      "imagePrompt": "Square 1:1 polished warm pencil-and-watercolor children’s illustration matching L058 style and recurring family anchors. Preserve the recurring protagonist girl and fixed father reading at home. The open book must be a physically correct symmetric two-page spread: left and right pages equal width, one centered binding crease, aligned corners and perspective. Left page contains only a parent bird feeding chicks. Right page contains two balanced text-free panels: puppy eating above and fish swimming below. No art crosses the gutter; no extra page; no readable text.",
       "approved": true,
       "imageSrc": "/assets/lessons/L471/images/L471-S03.webp",
       "audio": {
@@ -854,8 +854,8 @@
         "7": "ㄉㄚ",
         "8": "ㄧㄥˋ"
       },
-      "imageNotes": "依老師最終批准的情境，主角女孩答應替外出的朋友照顧盆栽，卻連續幾天沒澆水，植物已枯死。家中，媽媽指向盆栽，嚴肅又失望地提醒女孩；女孩看著枯死植物，低頭懊悔。盆中土壤乾裂，原本的葉片全部乾褐、萎縮下垂，枝莖乾枯，沒有仍然茂盛的綠葉；要清楚是照顧失敗的結果，不只是土稍乾或一天忘澆。水壺放在附近，但不画已澆水復原。此處「做不到」是未能持續履行照顧承諾，不是體力搬不動；禁止改回搬書箱、照顧寵物或洗車版本。先前承諾及多日經過由句子與設定交代，不塞回憶分格或文字說明。",
-      "imagePrompt": "Square 1:1 modern children's picture-book illustration matching the approved L058 STYLE ONLY and refined L115/L118/L119/L128 examples: warm natural light, fine pencil-and-watercolor linework, softly layered gouache texture, detailed but clean Taiwan environment, stable preschool proportions, gentle expressive faces, bright warm palette, phone-readable composition and safe margins. Use recurring family identity anchors L154-S01, L162-S04 and L163-S02 whenever protagonist family appears. Protagonist girl: preschool age, short dark bob, small pink hairclip, pink cardigan, cream blouse, navy skirt and pink shoes. Fixed father: short dark hair, blue overshirt and cream shirt. Fixed mother: chin-length dark hair, cream cardigan and practical blue clothing. Teacher must be a distinct adult teacher in tidy classroom clothing and must not resemble the mother. Generic adults must not reuse the father or mother identity. Do not copy any L058 person. No readable text, letters, numbers, equations, labels, logos, watermarks, captions or speech bubbles. At home, the fixed mother points with serious disappointed concern to a completely dead neglected potted plant. The recurring protagonist girl looks down at the plant with clear remorse. Soil is deeply dry and cracked; every leaf is dry brown, shriveled and hanging down, stems are brittle and dry, with no healthy green foliage. A watering can rests nearby but nobody is watering and the plant is not recovering. One continuous present scene only, no flashback panels. Do not substitute boxes, pets or a car.",
+      "imageNotes": "主角女孩答應替外出的朋友照顧盆栽，卻連續幾天沒澆水，植物已枯死。家中，媽媽指向盆栽，嚴肅又失望地提醒女孩；女孩低頭懊悔。盆中土壤乾裂，所有葉片乾褐萎縮、枝莖乾枯，沒有綠葉。澆水壺完整放在小桌左側的空地，與桌面、桌腳清楚分離，不穿透家具。依老師修復指示，媽媽上方有一個小型思考泡泡，呈現同一女孩每天替健康盆栽澆水的正確做法；泡泡與現場枯死植物清楚區隔，不放文字或數字。",
+      "imagePrompt": "Square 1:1 polished warm pencil-and-watercolor children’s illustration matching L058 style and recurring mother/girl anchors. Present scene: mother points seriously at a completely dead plant with all-brown drooping leaves, brittle stems and cracked soil; remorseful girl looks down. Watering can rests fully on open floor left of the small table, with no overlap or penetration. Above mother is one small thought bubble showing the same girl watering a healthy potted plant as the daily routine she should have followed. Bubble and present scene are clearly separate. No text, numbers or extra people.",
       "approved": true,
       "imageSrc": "/assets/lessons/L471/images/L471-S05.webp",
       "audio": {
@@ -1112,37 +1112,40 @@
     }
   ],
   "productionQa": {
-    "method": "Final local asset, exact-Han transcript, timing, per-image L058 style/cast and lesson-local mechanical QA",
-    "result": "PASS: complete dependency-blocked package; immutable-ref Chrome image loading and 11/11 playback QA passed",
-    "audio": {
-      "status": "PASS",
-      "note": "All ten final M4As match their exact expected Han transcripts. Pronunciation constraints were supplied independently for 題, 應該, 回答, 答不出來 and 答應; no manual listening claimed."
-    },
-    "images": {
-      "status": "PASS",
-      "note": "Five 1024x1024 WebPs passed side-by-side style/cast/semantic inspection against L058/refined examples and relevant recurring cast anchors."
-    },
-    "releaseBlockers": [
-      "R057",
-      "R058",
-      "L466",
-      "L467",
-      "L468",
-      "L469",
-      "L470"
+    "method": "OpenAI TTS final M4A; whisper-1 exact-Han transcript audit; final word timing alignment; L058 style/cast audit; immutable-ref browser playback QA pending",
+    "result": "PASS: five teacher-reported repair items replaced; remote strict intake and immutable repaired-ref browser QA pending",
+    "repairHistory": [
+      {
+        "item": "L471-S01:audio",
+        "issue": "回答的回被老師聽成會",
+        "resolution": "Regenerated full sentence; selected S01-c after phonetic model identified 回答 as ㄏㄨㄟˊ ㄉㄚˊ; rebuilt S01 timing alignment.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-S03:image",
+        "issue": "Open-book left/right page geometry and page sizes were inconsistent",
+        "resolution": "Regenerated with equal-width symmetric pages, centered binding, bird scene confined to left page and puppy/fish panels confined to right page.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-S05:image",
+        "issue": "Watering can intersected the plant table; teacher requested a thought bubble showing daily watering",
+        "resolution": "Regenerated with the watering can fully separated on open floor and a mother-linked thought bubble showing the same girl watering a healthy plant.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-G05-O2:audio",
+        "issue": "答應 required the audible 搭應 reading",
+        "resolution": "Regenerated full wrong-one sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+        "status": "repaired-awaiting-teacher-re-review"
+      },
+      {
+        "item": "L471-G05-O3:audio",
+        "issue": "答應 required the audible 搭應 reading",
+        "resolution": "Regenerated full wrong-two sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+        "status": "repaired-awaiting-teacher-re-review"
+      }
     ],
-    "browserQa": {
-      "status": "PASS",
-      "assetCommit": "7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
-      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=7fbbc2b31cc3a39f75194ed29b1dde35cdedf111",
-      "browser": "Chrome",
-      "summary": "PASS: immutable commit page loaded 5 sentence cards and 6 other audio items; all five 1024x1024 images loaded; all 11 playback controls reached ended state with no media error.",
-      "scope": [
-        "L471-S01 through L471-S05",
-        "char-u984c",
-        "L471-G02 prefix and suffix",
-        "L471-G05 correct and two wrong options"
-      ]
-    }
+    "teacherReReview": "pending"
   }
 }
