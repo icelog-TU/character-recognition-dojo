@@ -186,5 +186,10 @@
       "bytes": 66361,
       "sha256": "985c5d23ee72084e86eb062dbd06761728a01feb61ed08c44fc0bf70865eaa15"
     }
-  ]
+  ],
+  "assetCommit": "d7d37c780aa739cc2b32bd207d10be0acc3df14f",
+  "intake": {
+    "command": "npm run curriculum:package-intake -- --unit L457 --ref origin/codex/l457-complete-package --strict",
+    "result": "PASS"
+  }
 }

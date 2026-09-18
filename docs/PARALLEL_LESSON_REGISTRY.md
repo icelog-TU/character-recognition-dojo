@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L457 | 實 | ready-blocked-by-dependency | Production E | codex/l457-complete-package | L452, L453, L454, L455, L456 | 候 演 表 現 突 | curriculum-workflow/lesson-requests/L457.json; curriculum-workflow/generated/L457-generation-packet.md; curriculum-workflow/drafts/L457-draft.json | public/assets/lessons/L457/; curriculum-workflow/audio-inbox/L457/ | Complete package: 5 WebP, 10 M4A, final sentence/G02/G05 timings and technical QA recorded; human playback remains post-merge. Allowed ceiling: origin/main L001-L443 plus 候演表現突 and 實. Production package only; Release owns ordered integration. |
+| L457 | 實 | ready-blocked-by-dependency | Production E | codex/l457-complete-package @ d7d37c78 | L452, L453, L454, L455, L456 | 候 演 表 現 突 | curriculum-workflow/lesson-requests/L457.json; curriculum-workflow/generated/L457-generation-packet.md; curriculum-workflow/drafts/L457-draft.json | public/assets/lessons/L457/; curriculum-workflow/audio-inbox/L457/ | Complete package: 5 WebP, 10 M4A, final sentence/G02/G05 timings and technical QA recorded; strict intake PASS at d7d37c78; human playback remains post-merge. Allowed ceiling: origin/main L001-L443 plus 候演表現突 and 實. Production package only; Release owns ordered integration. |
 
 ## Status Values
 

@@ -2389,4 +2389,5 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Visual QA: final contact sheet style/cast/scene/no-text checks PASS; rejected S04 draft not shipped
 - Audio QA: Whisper exact transcript and targeted gpt-audio pronunciation checks PASS; teacher human listening remains post-merge
 - Browser QA fallback: no reliable computer-audio return or physical-phone microphone channel; continuous human listening, live highlight synchronization and G02 recording/replay are not claimed
+- Immutable asset commit: d7d37c780aa739cc2b32bd207d10be0acc3df14f; pushed strict intake PASS
 - Release owns production JSON, planner, ledger, ordered integration and deployment
