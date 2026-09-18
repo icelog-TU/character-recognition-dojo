@@ -2377,7 +2377,7 @@
 
 ## Production completion record
 
-- Package status: `dependency-blocked-asset-complete`.
+- Package status: `asset-complete-package`.
 - Assets: 5 final 1024×1024 WebP images and 9 independent OpenAI M4A files.
 - Allowed vocabulary: 469 locked characters; sentence and Stage 4 sweep PASS.
 - Pair coverage: 30/30 required characters PASS.
@@ -2385,7 +2385,7 @@
 - Image style/cast/semantic comparison: PASS; teacher review pending.
 - Audio final-file exact-Han ASR and charTimings: PASS; no human listening claim; teacher review pending.
 - Browser QA: PASS on immutable asset commit `e6bd7143a64c0ab680b44b74bca425e7b842b747`; 5 sentence cards + 5 other-audio cards loaded, zero repair items, and all 10 playback controls started and ended.
-- Release blockers: contiguous lessons L462-L465, then paired order L465 → R057 → R058 → L466.
+- Dependency resolution: final fetch verified `origin/main` `acd71a5b` integrates L462-L465; package is release-ready. Preserve paired order L465 → R057 → R058 → L466.
 - Superseded R058-S02 audit: authoritative 中學生／小學生 mistaken-identity sentence, image, audio, timings and G02 are present; every prior archery sentence, image, audio, timing and G02 item is absent.
 
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R058&ref=e6bd7143a64c0ab680b44b74bca425e7b842b747

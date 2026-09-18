@@ -45,7 +45,7 @@
     "待",
     "招"
   ],
-  "packageStatus": "dependency-blocked-asset-complete",
+  "packageStatus": "asset-complete-package",
   "dependsOnLessons": [
     "L462",
     "L463",
@@ -531,10 +531,7 @@
   ],
   "baseMainSha": "c130f105",
   "lockedVocabularyRef": "c130f105",
-  "releaseBlockers": [
-    "Contiguous numbered lessons L462-L465",
-    "Paired playable order L465 -> R057 -> R058 -> L466"
-  ],
+  "releaseBlockers": [],
   "coverageBoundaryNote": "Normal milestone review pair after L465. Allowed ceiling is locked to L465: formal L001-L461 plus 日、期、待、招, 469 unique Han.",
   "teacherNotes": "Updated teacher-approved R057/R058 pair handoff. Shared production curriculum, planner and ledger remain Release-owned. Production completed 5 final WebP images and 9 independent OpenAI M4A files with final transcript/timing QA. Teacher image/audio review remains pending.",
   "approvedSentences": [
@@ -727,5 +724,7 @@
         }
       ]
     }
-  ]
+  ],
+  "releaseSequence": "L465 → R057 → R058 → L466",
+  "dependencyResolution": "Final fetch verified origin/main acd71a5b integrates L462-L465."
 }
