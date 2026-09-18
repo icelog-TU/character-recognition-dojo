@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L465 | 招 | claimed | Production E | codex/l465-complete-package | L462, L463, L464 | 日 期 待 | curriculum-workflow/lesson-requests/L465.json; curriculum-workflow/generated/L465-generation-packet.md; curriculum-workflow/drafts/L465-draft.json | curriculum-workflow/audio-inbox/L465/; public/assets/lessons/L465/ | Formal teacher handoff received. Allowed ceiling: origin/main L001-L461 plus provisional 日期待 and new 招 (469 unique Han). Production package only; dependencies block Release integration, not package work. |
 
 ## Status Values
 
