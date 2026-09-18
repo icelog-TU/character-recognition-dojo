@@ -89,4 +89,3 @@ if (!scripts[action]) throw new Error('Unknown action');
 process.argv = ['node', 'script', '--lesson', 'L468'];
 if (action === 'formats') process.argv.push('--strict');
 import(pathToFileURL(path.resolve(`scripts/${scripts[action]}.mjs`)).href);
-
