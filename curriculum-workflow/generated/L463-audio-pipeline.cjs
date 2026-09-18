@@ -24,7 +24,9 @@ globalThis.fetch = async (...args) => {
   if (String(args[0]).includes('/audio/speech')) {
     const body = JSON.parse(args[1].body);
     body.instructions = 'Read only the exact input text once in warm natural Taiwan Mandarin for young children. No explanations or added words. 期 is ㄑㄧˊ in 星期、到期、日期; 日 is ㄖˋ; 文 is ㄨㄣˊ; 午 is ㄨˇ; 中 is ㄓㄨㄥ; 其 is ㄑㄧˊ. In 借的書明天到期別忘了還, 還 means return and must be pronounced ㄏㄨㄢˊ. Use relaxed pacing, clear consonants, correct Taiwan tones, and complete first and final syllables. Never add erhua, music, singing, or sound effects.';
-    if (body.input === '星期日下午文具店沒開') body.instructions = '只念「星期日下午文具店沒開」一次，使用溫暖自然、清楚的臺灣華語。在「星期日」之後做極短自然停頓，再清楚念「下午」ㄒㄧㄚˋ ㄨˇ。必須發出下的 ㄒㄧㄚˋ，絕不能念成「上午」；期讀 ㄑㄧˊ，文讀 ㄨㄣˊ。句首與句尾完整，不解釋、不加字。';
+    if (body.input === '星期日下午文具店沒開') { body.voice = 'cedar'; body.instructions = '只念「星期日下午文具店沒開」一次，使用溫暖自然、清楚的臺灣華語，整句流暢。星期讀 ㄒㄧㄥ ㄑㄧˊ：星是第一聲，期一定是明顯上揚的第二聲 ㄑㄧˊ，不能念成第一聲的「欺」ㄑㄧ。日讀 ㄖˋ，下午讀 ㄒㄧㄚˋ ㄨˇ。句首與句尾完整，不解釋、不加字。'; }
+    if (body.input === '日文課改到明天下午') { body.voice = 'cedar'; body.instructions = '只念「日文課改到明天下午」一次，使用溫暖自然、流暢的臺灣華語。整句一氣呵成，不插入停頓。開頭「日文課改到」五字必須連續自然地念，尤其第一字「日」後與「課」後都不可停頓、拉長或重新起句。句首日與句尾午完整，不解釋、不加字。'; }
+    if (body.input === '報名表上要寫名字和日期') { body.voice = 'cedar'; body.instructions = '只念「報名表上要寫名字和日期」一次，使用溫暖自然、清楚的臺灣華語。最後「日期」讀 ㄖˋ ㄑㄧˊ：日是第四聲。最後一字「期」必須做清楚、幅度明顯的第二聲上揚，音高由較低處升到較高處，絕不能平讀成第一聲「欺」ㄑㄧ，也不要套用句尾下降語調。完整收尾，不解釋、不加字。'; }
     if (body.input === '期') body.instructions = '請用溫暖自然的臺灣華語，只念「期」這一個字一次。期讀 ㄑㄧˊ，第二聲，和「星期」的期相同。聲音短而完整，音高自然上揚，正常音量，不念注音、不拼音、不加例詞或解釋。';
     if (body.input === '借的書明天到') body.voice = 'marin';
     if (body.input === '借的書明天到') body.instructions = '這是教學用的不完整句子片段。只念「借的書明天到」七個字一次，使用自然清楚的臺灣華語。第一個字「借」讀 ㄐㄧㄝˋ，清楚發音，不能念成「一切」或增加任何字；末字「到」必須完整收尾；不可補回「期」，不可改字或加其他內容。';
@@ -38,7 +40,7 @@ globalThis.fetch = async (...args) => {
   const raw = await response.json();
   fs.mkdirSync('curriculum-workflow/generated/L463-transcripts', { recursive: true });
   write(`curriculum-workflow/generated/L463-transcripts/${args[1].body.get('file').name}.json`, `${JSON.stringify(raw, null, 2)}\n`);
-  const equivalents = { 这: '這', 书: '書', 还: '還', 卖: '賣', 写: '寫', 没: '沒', 开: '開', 课: '課', 别: '別' };
+  const equivalents = { 报: '報', 这: '這', 书: '書', 还: '還', 卖: '賣', 写: '寫', 没: '沒', 开: '開', 课: '課', 别: '別' };
   const normalize = (value) => typeof value === 'string'
     ? [...value].map((char) => equivalents[char] ?? char).join('')
     : Array.isArray(value) ? value.map(normalize)
@@ -90,6 +92,3 @@ if (!scripts[action]) throw new Error('Unknown action');
 process.argv = ['node', 'script', '--lesson', 'L463'];
 if (action === 'formats') process.argv.push('--strict');
 import(pathToFileURL(path.resolve(`scripts/${scripts[action]}.mjs`)).href);
-
-
-

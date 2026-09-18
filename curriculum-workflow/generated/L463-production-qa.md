@@ -35,3 +35,12 @@
 - Real `LessonPanel` at phone width: Stage 1 played `char-u671f.m4a`; Stage 2 showed exactly three「期」targets; Stage 3 played S01-S05 through `ended`; G01 correct index completed; G02 displayed the red frame on S03 index 6 and reached the hold-to-record state; G03 accepted「期」; G04 accepted 明→天→下→午; G05 played the correct plus both referenced wrong tracks and accepted the correct option — PASS.
 - Physical microphone capture was not invoked by the browser control surface; the hold-to-record transition and lesson data wiring were verified. This is recorded as a browser-control limitation under the SOP fallback, with all non-browser asset/timing/format gates passing.
 
+## Teacher pre-merge audio repair — source review 4fefcda2
+
+- Teacher reported three audio defects at `4fefcda2545b2456c814ba59cf36ffc42c414166`: S01 期 sounded like first-tone 欺, S02 paused unnaturally after the first character, and S05 日期 ended as 日欺 instead of 日奇.
+- S01, S02 and S05 were independently regenerated as complete sentences. No image or other lesson audio was changed.
+- S01: 期 is explicitly ㄑㄧˊ; acoustic target contour dips near 188 Hz and rises to about 195 Hz before release, replacing the reviewed file's falling contour.
+- S02: alignment is continuous across 日 0–220 ms, 文 220–520 ms, 課 520–820 ms, 改 820–1140 ms and 到 1140–1400 ms; no pause remains after 日 or 課.
+- S05: 日期 is explicitly ㄖˋ ㄑㄧˊ; final 期 rises approximately 100→127 Hz through the voiced target interval.
+- AI transcription matches all three approved Han sequences. Timings and package-local validation are regenerated. Teacher re-review is requested on the new immutable repair ref.
+- Actual phone-width `LessonPanel` Stage 3 playback emitted `playing` then `ended` for repaired S01, S02 and S05.

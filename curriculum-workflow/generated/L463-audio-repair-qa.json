@@ -1,0 +1,30 @@
+{
+  "unit": "L463",
+  "sourceReviewRef": "4fefcda2545b2456c814ba59cf36ffc42c414166",
+  "repairStatus": "implemented-awaiting-teacher-re-review",
+  "assets": {
+    "L463-S01": {
+      "beforeSha256": "5c3008c55628324ffe0ed6dd249bf5e22140282bc69456f73fae63c15915a2ef",
+      "afterSha256": "8003b1cfd339895ad1c96e39fef3b1f5d5982ab261518608a7f96cc047314c68"
+    },
+    "L463-S02": {
+      "beforeSha256": "057b5e2b25d544d172cb17fb84501d25e2fd93103523b65b867b8bfdd2f3906f",
+      "afterSha256": "bc67ec8cc1f55690649b0a669fdfbf2204031a4c66825a6519e80b2bc6ca69ee"
+    },
+    "L463-S05": {
+      "beforeSha256": "d71e75eb9fb10107c7db45c656e89f04566ca81c8dc06ec8280b1b72bb87251f",
+      "afterSha256": "a0ebedb31b34fdd0403326fd102716de82816a127044fa18c96e32fb33d4703b"
+    }
+  },
+  "asr": {
+    "L463-S01": "星期日下午,文具店沒開。",
+    "L463-S02": "日文课改到明天下午",
+    "L463-S05": "报名表上要写名字和日期"
+  },
+  "timingEvidence": {
+    "L463-S02-opening": "日 0-220ms; 文 220-520ms; 課 520-820ms; 改 820-1140ms; 到 1140-1400ms. No inserted gap after 日 or 課.",
+    "L463-S01-期": "Target interval 400-640ms; stable voiced contour dips near 188Hz then rises to about 195Hz before release. Old reviewed file fell from about 281Hz to 258Hz.",
+    "L463-S05-期": "Final target voiced contour rises from about 100Hz to 127Hz (approximately 2620-2860ms); sentence-final falling intonation is excluded from the target timing."
+  },
+  "scopeCheck": "Only the three reported M4A assets, their transcripts/timings, package metadata, and QA evidence are intended to change."
+}
