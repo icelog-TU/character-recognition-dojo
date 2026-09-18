@@ -186,5 +186,18 @@
       "bytes": 66361,
       "sha256": "985c5d23ee72084e86eb062dbd06761728a01feb61ed08c44fc0bf70865eaa15"
     }
-  ]
+  ],
+  "assetCommit": "e22f8478f978409b87f9b91b988d73c9103cbae0",
+  "repairReview": {
+    "sourceRef": "7d59861cf9ae23b54117af59ee2a0c7caa20ae4a",
+    "items": [
+      "L457-S02 image: expose white apple flesh",
+      "L457-S04 audio: 放心 ㄈㄤˋ ㄒㄧㄣ"
+    ],
+    "result": "repaired; strict intake PASS; renewed teacher review pending"
+  },
+  "intake": {
+    "command": "npm run curriculum:package-intake -- --unit L457 --ref e22f8478f978409b87f9b91b988d73c9103cbae0 --strict",
+    "result": "PASS"
+  }
 }
