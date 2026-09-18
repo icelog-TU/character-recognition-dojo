@@ -1,0 +1,35 @@
+{
+  "unit": "L444",
+  "sourcePackageBranch": "codex/l444-complete-package",
+  "sourcePackageSha": "c41cdbec1d8d3f90be8bcadf2bf325aed4308aec",
+  "repair": "Proportional resize to 1024x1024, metadata strip, WebP quality 82",
+  "contentPolicy": "Preserve the five approved compositions, cast, objects, actions and sentence meaning; no regeneration or semantic edit",
+  "visualComparison": "PASS: source row and repaired row compared side by side; no semantic or composition changes observed",
+  "assets": [
+    {
+      "path": "public/assets/lessons/L444/images/L444-S01.webp",
+      "before": { "dimensions": "1254x1254", "bytes": 203170, "sha256": "c19889c65112e0b1a593b9b4d23ee7eac2d2e87f5dfc732f6387a37be05cf624" },
+      "after": { "dimensions": "1024x1024", "bytes": 185038, "sha256": "ad9752ca3e19268a776e2fb2f3ec01550f25f8012324bc0db7757b29e697341c" }
+    },
+    {
+      "path": "public/assets/lessons/L444/images/L444-S02.webp",
+      "before": { "dimensions": "1254x1254", "bytes": 177916, "sha256": "72837eaf365170dc721422c4ac17a669cac3ed1fe4ea9696080ec481f55a9797" },
+      "after": { "dimensions": "1024x1024", "bytes": 156042, "sha256": "5d7522576d6bbb278448bb23b1963bae4aabf274b831bc93f5c7d501bb19ea20" }
+    },
+    {
+      "path": "public/assets/lessons/L444/images/L444-S03.webp",
+      "before": { "dimensions": "1254x1254", "bytes": 186086, "sha256": "f9b91a03a6e0ed6fb9163be8c49f6d57911bf3549e780a48a03a2f319a457e51" },
+      "after": { "dimensions": "1024x1024", "bytes": 162280, "sha256": "71df2a13456832981c2302129329b41265108804f9f0b3ca0d216612fbca3ecb" }
+    },
+    {
+      "path": "public/assets/lessons/L444/images/L444-S04.webp",
+      "before": { "dimensions": "1254x1254", "bytes": 144950, "sha256": "62e8c816382e6e9c4e03e2a2f74adfb779ee1e5e54103f45791b151f07481b34" },
+      "after": { "dimensions": "1024x1024", "bytes": 125360, "sha256": "965f28a6c155e2250dfc2e721ca4f4d9c007a01dcad8387b29cd207b9d549231" }
+    },
+    {
+      "path": "public/assets/lessons/L444/images/L444-S05.webp",
+      "before": { "dimensions": "1254x1254", "bytes": 140802, "sha256": "d7f18bcaf0b7b7fb8a85d8a5baeac7b237e4596cc21c295168f013f2e7e24754" },
+      "after": { "dimensions": "1024x1024", "bytes": 124132, "sha256": "8dcad87ba897c196338453e1ddb30fab7e230ca3032c21bd0435a769b656b9b4" }
+    }
+  ]
+}
