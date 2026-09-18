@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L467 | 活 | claimed | Production B | codex/l467-complete-package | L462, L463, L464, L465, L466 | 日、期、待、招、絕 | `curriculum-workflow/lesson-requests/L467.json`; `curriculum-workflow/generated/L467-generation-packet.md`; `curriculum-workflow/drafts/L467-draft.json` | `public/assets/lessons/L467/` | Formal handoff received 2026-09-18. Production package in progress; awaiting L462-L466 and R057/R058 release dependencies. Production must not merge main. |
 
 ## Status Values
 
