@@ -27,3 +27,7 @@ The first S01 attempts were rejected because independent transcript alignment he
 ## Verification scope
 
 Lesson-local `validate:production` PASS. Lesson-local strict asset format audit PASS with 5 image references, 10 audio references and zero warnings. Browser playback QA was not certified because this control surface has no reliable computer-audio return or physical-phone microphone channel; live highlight synchronization and G02 phone recording/replay remain unverified. `verify` is skipped because this dependency-blocked Production package intentionally leaves shared production JSON, planner and ledger to Release.
+
+## Pushed package intake evidence
+
+`npm run curriculum:package-intake -- --unit L465 --ref origin/codex/l465-complete-package --strict` passed at `021ad3a667ca2af8d32e1a7bbbbd29700bf3619e`: package status `dependency-blocked-asset-complete`, 5 images, 10 audio files, canonical Stage 4, zero warnings.

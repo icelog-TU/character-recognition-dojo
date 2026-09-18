@@ -335,5 +335,11 @@
         "maxDb": -2.5
       }
     }
-  ]
+  ],
+  "pushedIntake": {
+    "command": "npm run curriculum:package-intake -- --unit L465 --ref origin/codex/l465-complete-package --strict",
+    "commit": "021ad3a667ca2af8d32e1a7bbbbd29700bf3619e",
+    "result": "PASS",
+    "warnings": 0
+  }
 }

@@ -2702,3 +2702,7 @@ The following records are the authoritative teacher-approved L465 content used b
 - Audio QA: exact-text alignment PASS and independent gpt-audio-1.5 pronunciation PASS on all final files
 - Browser QA fallback: the current control surface has no reliable computer-audio return or physical-phone microphone channel; live highlight synchronization and G02 phone recording/replay are not claimed
 - Release owns production JSON, planner, ledger, R057/R058 sequencing, integration and deployment
+
+## Pushed package intake evidence
+
+`npm run curriculum:package-intake -- --unit L465 --ref origin/codex/l465-complete-package --strict` passed at `021ad3a667ca2af8d32e1a7bbbbd29700bf3619e`: package status `dependency-blocked-asset-complete`, 5 images, 10 audio files, canonical Stage 4, zero warnings.
