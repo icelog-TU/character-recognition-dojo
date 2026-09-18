@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L453 | 演 | claimed | Production A (Remote) | codex/l453-complete-package | L448歌; L449唱; L450舞; L451台; L452候; ordered L444-L452; R055/R056 after L450 | 歌唱舞台候 | curriculum-workflow/lesson-requests/L453.json; curriculum-workflow/generated/L453-generation-packet.md; curriculum-workflow/drafts/L453-draft.json | public/assets/lessons/L453/ | Formal Production handoff accepted. Base 5622c827: production L001-L443, latest 操, 443 learned Han. Allowed453. Package production proceeds in parallel; Release owns ordered integration and review milestone gates. |
+| L453 | 演 | ready-blocked-by-dependency | Production A (Remote) | codex/l453-complete-package | L448歌; L449唱; L450舞; L451台; L452候; ordered L444-L452; R055/R056 after L450 | 歌唱舞台候 | curriculum-workflow/lesson-requests/L453.json; curriculum-workflow/generated/L453-generation-packet.md; curriculum-workflow/drafts/L453-draft.json | public/assets/lessons/L453/ | dependency-blocked-asset-complete; 5 WebP, 10 M4A, 9 timing records; technical/browser checks PASS except microphone hold/replay tooling limitation. Base 5622c827 L443操. Ordered L444-L452 and R055/R056 after L450 remain Release blockers. Teacher subjective review post-merge. |
 
 ## Status Values
 

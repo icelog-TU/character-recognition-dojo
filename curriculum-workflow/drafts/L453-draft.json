@@ -1,0 +1,1259 @@
+{
+  "id": "L453",
+  "kind": "lesson",
+  "order": 453,
+  "title": "演",
+  "newChars": [
+    "演"
+  ],
+  "zhuyin": {
+    "演": "ㄧㄢˇ"
+  },
+  "charAudio": {
+    "演": "/assets/lessons/L453/audio/char-u6f14.m4a"
+  },
+  "requiredRounds": 5,
+  "packageStatus": "dependency-blocked-asset-complete",
+  "dependsOnLessons": [
+    "L448",
+    "L449",
+    "L450",
+    "L451",
+    "L452"
+  ],
+  "provisionalLearnedChars": [
+    "歌",
+    "唱",
+    "舞",
+    "台",
+    "候"
+  ],
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L452",
+    "reviewMilestones": [
+      "R055",
+      "R056"
+    ]
+  },
+  "teacherNotes": "Formal Production A handoff. Base 5622c827 with production through L443 操 and 447 unique learned Han. L448-L452 are direct lesson dependencies; Release must also preserve ordered L444-L452 and R055/R056 after L450. Allowed set has 453 unique Han. 下一課表 is reserved and absent. Fixed sentences and Stage 4 data must not drift. S02 is 從小就很會跳舞. S04 is an orderly drill with no real fire. No image text or numbers. Production package only; Release owns shared production JSON/planner/ledger integration and main merge.",
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已",
+    "近",
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名",
+    "第",
+    "念",
+    "號",
+    "數",
+    "報",
+    "頁",
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙",
+    "選",
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算",
+    "弱",
+    "越",
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "果",
+    "如",
+    "結",
+    "合",
+    "教",
+    "室",
+    "班",
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員",
+    "自",
+    "己",
+    "主",
+    "由",
+    "意",
+    "願",
+    "互",
+    "助",
+    "補",
+    "修",
+    "習",
+    "練",
+    "運",
+    "賽",
+    "機",
+    "操",
+    "歌",
+    "唱",
+    "舞",
+    "台",
+    "候",
+    "演"
+  ],
+  "sentences": [
+    {
+      "id": "L453-S01",
+      "text": "演出前，我在舞台後方等候。",
+      "spokenText": "演出前我在舞台後方等候",
+      "focusChar": "演",
+      "displayLines": [
+        "演出前，",
+        "我在舞台",
+        "後方等候。"
+      ],
+      "imageNotes": "從舞台後方的準備區觀看，主角女孩站在布幕後等候上台，老師在近旁照看；透過布幕開口可見前方舞台。女孩確實位於舞台後方，不是台中央、觀眾席或單純站在舞台旁邊；不需誇張緊張表情。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children’s picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific L058 person. Match the refined preferred style/proportions and recurring cast anchors from L115, L118, L119, L128, L154, L162, and L163. No visible text, letters, numbers, logos, captions, labels, or watermarks. Backstage preparation area before a performance. The recurring preschool protagonist girl with short dark bob and pink hair clip waits calmly behind a heavy stage curtain while the recurring teacher, visually distinct from the mother, watches nearby. Through a narrow curtain opening, the lit front stage is clearly visible in the distance. The girl is unmistakably behind the stage, not center stage, in the audience, or merely beside the platform. Natural calm anticipation, no exaggerated fear. Square 1:1 composition.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L453/images/L453-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L453/audio/L453-S01.m4a",
+        "durationMs": 4063,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1620,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1800,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1980,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2340,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2620,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2980,
+            "endMs": 3280
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3280,
+            "endMs": 3640
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3640,
+            "endMs": 3840
+          }
+        ]
+      }
+    },
+    {
+      "id": "L453-S02",
+      "text": "這位演員從小就很會跳舞。",
+      "spokenText": "這位演員從小就很會跳舞",
+      "focusChar": "演",
+      "displayLines": [
+        "這位演員從小",
+        "就很會跳舞。"
+      ],
+      "imageNotes": "一位 generic adult 演員拿著自己的童年照片，照片中同一人在幼年熟練跳舞；成年人物與童年照片保留一致的髮色、臉型特徵，明確表示同一人的過去。主角女孩可以在旁看照片。演員不是固定爸爸、媽媽、小月或小光；照片不放日期、姓名或說明文字。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children’s picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific L058 person. Match the refined preferred style/proportions and recurring cast anchors from L115, L118, L119, L128, L154, L162, and L163. No visible text, letters, numbers, logos, captions, labels, or watermarks. A distinct generic adult performer, not the recurring mother, father, teacher, Xiaoyue, or Xiaoguang, holds a childhood photograph of themself. The adult and the dancing child in the photo share unmistakable hair color, face shape, and a small distinctive hair feature so they clearly represent the same person at different ages. The child in the photo dances skillfully. The recurring protagonist girl may look at the photo nearby. The photograph contains only the childhood scene, with no date, name, caption, or readable writing. Square 1:1 composition.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L453/images/L453-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L453/audio/L453-S02.m4a",
+        "durationMs": 3390,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 780
+          },
+          {
+            "charIndex": 3,
+            "startMs": 780,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1100,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1500,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1840,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2160,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2380,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2620,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2940,
+            "endMs": 3160
+          }
+        ]
+      }
+    },
+    {
+      "id": "L453-S03",
+      "text": "爸爸上台演唱我愛聽的歌。",
+      "spokenText": "爸爸上台演唱我愛聽的歌",
+      "focusChar": "演",
+      "displayLines": [
+        "爸爸上台演唱",
+        "我愛聽的歌。"
+      ],
+      "imageNotes": "主角爸爸在社區或親子活動的小舞台上拿麥克風唱歌，主角女孩坐在台下專心聽、神情開心；爸爸是固定主角爸爸，不是陌生歌手。畫面不需要可讀歌詞或歌曲名稱。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children’s picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific L058 person. Match the refined preferred style/proportions and recurring cast anchors from L115, L118, L119, L128, L154, L162, and L163. No visible text, letters, numbers, logos, captions, labels, or watermarks. At a warm community family event, the recurring protagonist father from the approved family anchors stands on a small stage singing into a handheld microphone. The recurring preschool protagonist girl sits below the stage, watching and listening with a happy attentive expression. Make the father clearly the established family father, not a generic singer; keep him visually distinct from other adults. No readable lyrics, song title, banners, or signage. Square 1:1 composition.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L453/images/L453-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L453/audio/L453-S03.m4a",
+        "durationMs": 3436,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 210
+          },
+          {
+            "charIndex": 1,
+            "startMs": 210,
+            "endMs": 420
+          },
+          {
+            "charIndex": 2,
+            "startMs": 420,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1600,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1920,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2320,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2580,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2800,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2960,
+            "endMs": 3180
+          }
+        ]
+      }
+    },
+    {
+      "id": "L453-S04",
+      "text": "全班演練起火時怎麼走出去。",
+      "spokenText": "全班演練起火時怎麼走出去",
+      "focusChar": "走",
+      "displayLines": [
+        "全班演練",
+        "起火時怎麼",
+        "走出去。"
+      ],
+      "imageNotes": "學校進行消防疏散演練，老師帶主角女孩與多名 generic classmates 有秩序地沿教室出口往室外走，讓人看出是全班練習路線，不是只有兩個孩子。沒有真的起火，不畫火焰、濃煙、驚慌逃跑或受傷；不依賴可讀標語交代情境。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children’s picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific L058 person. Match the refined preferred style/proportions and recurring cast anchors from L115, L118, L119, L128, L154, L162, and L163. No visible text, letters, numbers, logos, captions, labels, or watermarks. A school fire-evacuation practice with no real emergency. The recurring teacher, distinct from the mother, calmly leads the recurring protagonist girl and a visibly full class of many varied generic preschool classmates in an orderly line from the classroom doorway toward the safe outdoor school area. The route and group movement make it clearly a whole-class practice. No flames, smoke, panic, running, injury, emergency damage, or readable signs. Keep recurring and generic children visually distinct. Square 1:1 composition.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L453/images/L453-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L453/audio/L453-S04.m4a",
+        "durationMs": 3785,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1820,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2100,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2400,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2620,
+            "endMs": 2840
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2840,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3080,
+            "endMs": 3290
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3290,
+            "endMs": 3500
+          }
+        ]
+      }
+    },
+    {
+      "id": "L453-S05",
+      "text": "我們在候車室裡看書。",
+      "spokenText": "我們在候車室裡看書",
+      "focusChar": "候",
+      "displayLines": [
+        "我們在候車室",
+        "裡看書。"
+      ],
+      "imageNotes": "車站候車室內，主角女孩與主角哥哥坐在等候座椅上看書，媽媽在旁陪同；旅行袋、其他等候乘客及窗外停靠的車輛交代車站情境。人物在室內，不畫成車廂內或路邊公車亭；書頁內容不必看清。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children’s picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific L058 person. Match the refined preferred style/proportions and recurring cast anchors from L115, L118, L119, L128, L154, L162, and L163. No visible text, letters, numbers, logos, captions, labels, or watermarks. Inside a real station waiting room, the recurring preschool protagonist girl and her recurring older brother sit together on indoor waiting seats and look at picture books while the recurring mother accompanies them nearby. A travel bag, a few varied waiting passengers, and a parked train or coach visible through the large window establish the station. They are clearly indoors in a waiting room, not inside a vehicle or at a roadside bus shelter. Preserve the approved protagonist family identities; keep book pages unreadable. Square 1:1 composition.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L453/images/L453-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L453/audio/L453-S05.m4a",
+        "durationMs": 4142,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 140
+          },
+          {
+            "charIndex": 1,
+            "startMs": 140,
+            "endMs": 280
+          },
+          {
+            "charIndex": 2,
+            "startMs": 280,
+            "endMs": 720
+          },
+          {
+            "charIndex": 3,
+            "startMs": 720,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1120,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1400,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1680,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1920,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2340,
+            "endMs": 2560
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L453-G01",
+      "type": "find-character",
+      "sentenceId": "L453-S01",
+      "targetChar": "演",
+      "targetCharIndex": 0,
+      "prompt": "請幫小兔子找出演，點一下句子中的演。"
+    },
+    {
+      "id": "L453-G02",
+      "type": "teach-character",
+      "sentenceId": "L453-S02",
+      "targetChar": "演",
+      "targetCharIndex": 2,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "這位",
+        "suffixText": "員從小就很會跳舞",
+        "prefixSrc": "/assets/lessons/L453/audio/L453-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L453/audio/L453-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L453/audio/L453-G02-prefix.m4a",
+          "durationMs": 859,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 380
+            },
+            {
+              "charIndex": 1,
+              "startMs": 380,
+              "endMs": 640
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L453/audio/L453-G02-suffix.m4a",
+          "durationMs": 2856,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 400
+            },
+            {
+              "charIndex": 1,
+              "startMs": 490,
+              "endMs": 960
+            },
+            {
+              "charIndex": 2,
+              "startMs": 960,
+              "endMs": 1340
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1340,
+              "endMs": 1740
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1740,
+              "endMs": 1960
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1960,
+              "endMs": 2180
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2180,
+              "endMs": 2460
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2460,
+              "endMs": 2660
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L453-G03",
+      "type": "missing-character",
+      "sentenceId": "L453-S03",
+      "targetChar": "演",
+      "targetCharIndex": 4,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        {
+          "id": "L453-G03-O1",
+          "text": "唱",
+          "correct": false
+        },
+        {
+          "id": "L453-G03-O2",
+          "text": "演",
+          "correct": true
+        },
+        {
+          "id": "L453-G03-O3",
+          "text": "跳",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L453-G04",
+      "type": "partial-order",
+      "sentenceId": "L453-S04",
+      "targetChar": "走",
+      "targetCharIndex": 9,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        9,
+        10,
+        11
+      ],
+      "options": [
+        {
+          "id": "L453-G04-O1",
+          "text": "去",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L453-G04-O2",
+          "text": "走",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L453-G04-O3",
+          "text": "出",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L453-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L453-S05",
+      "targetChar": "候",
+      "targetCharIndex": 3,
+      "prompt": "先按朋友的頭聽，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "L453-G05-O1",
+          "text": "我們在候車室外看書。",
+          "spokenText": "我們在候車室外看書",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L453/audio/L453-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L453/audio/L453-G05-wrong-one.m4a",
+            "durationMs": 2670,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 180
+              },
+              {
+                "charIndex": 1,
+                "startMs": 180,
+                "endMs": 360
+              },
+              {
+                "charIndex": 2,
+                "startMs": 360,
+                "endMs": 660
+              },
+              {
+                "charIndex": 3,
+                "startMs": 660,
+                "endMs": 960
+              },
+              {
+                "charIndex": 4,
+                "startMs": 960,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1240,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1480,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1680,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2180,
+                "endMs": 2420
+              }
+            ]
+          }
+        },
+        {
+          "id": "L453-G05-O2",
+          "text": "我們在候車室裡看書。",
+          "spokenText": "我們在候車室裡看書",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L453/audio/L453-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L453/audio/L453-S05.m4a",
+            "durationMs": 4142,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 140
+              },
+              {
+                "charIndex": 1,
+                "startMs": 140,
+                "endMs": 280
+              },
+              {
+                "charIndex": 2,
+                "startMs": 280,
+                "endMs": 720
+              },
+              {
+                "charIndex": 3,
+                "startMs": 720,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1400,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1680,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1920,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2340,
+                "endMs": 2560
+              }
+            ]
+          }
+        },
+        {
+          "id": "L453-G05-O3",
+          "text": "我們在候車室裡買書。",
+          "spokenText": "我們在候車室裡買書",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L453/audio/L453-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L453/audio/L453-G05-wrong-two.m4a",
+            "durationMs": 3645,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 310
+              },
+              {
+                "charIndex": 1,
+                "startMs": 310,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3100,
+                "endMs": 3360
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionQA": {
+    "imageChecks": [
+      {
+        "sentenceId": "L453-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Backstage preparation area is explicit: fixed protagonist waits behind the curtain with the distinct teacher, while the front stage is visible only through the opening.",
+        "castEvidence": "Recurring girl matches bob/pink-clip/pink-cardigan identity; short-curled-hair teacher with glasses and lavender cardigan is distinct from mother.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L453-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Generic adult performer holds a childhood dance photo that preserves auburn hair and facial traits, clearly showing the same person from childhood; protagonist observes.",
+        "castEvidence": "Adult and child-in-photo are one generic performer identity and do not replace or age-change the fixed cast.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L453-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Recurring father sings into a microphone on a small family/community stage while the recurring girl listens happily below.",
+        "castEvidence": "Father blue shirt/khaki trousers and recurring girl match family anchors; mother is incidental audience.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L453-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Distinct teacher leads more than eight classmates in an orderly classroom-to-courtyard evacuation drill; no fire, smoke, injury, or panic.",
+        "castEvidence": "Recurring protagonist remains identifiable among generic classmates; teacher is distinct from mother.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+      },
+      {
+        "sentenceId": "L453-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Recurring girl and older brother read picture books on indoor station seating while mother accompanies them; travel bag, passengers, and train outside establish the setting.",
+        "castEvidence": "Girl, older brother, and mother match family anchors; rejected first draft text-like marks were removed.",
+        "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
+      }
+    ],
+    "browserQA": {
+      "environment": "Chrome 390x844; real LessonPanel imported by isolated local harness with approved L453 draft and only handoff provisional vocabulary; no production progress or cloud data written.",
+      "playback": "All 10 final M4A files emitted play and ended. Initial autoplay denial was resolved by an explicit user-gesture click.",
+      "G01": "S01 target 演 at Han index 0 selected; 下一題 appeared.",
+      "G02": "S02 target 演 at Han index 2 displayed with ㄧㄢˇ; replay completed the exact short prefix 這位 and stopped at target. Dedicated suffix 員從小就很會跳舞 completed in the ten-file playback run.",
+      "G03": "Cards 跳/演/唱 were distinct; choosing 演 filled S03 index 4 and exposed 下一題.",
+      "G04": "Single-Han cards 走→出→去 completed S04 indexes 9/10/11 and exposed 下一題.",
+      "G05": "All three shuffled animal options played to ended and mapped to wrong-one, wrong-two, and correct S05. Choosing the correct S05 option exposed 領取獎勵; reward callback then displayed 下一課 and 回首頁休息.",
+      "limitations": [
+        "Sustained press-to-record and recorded-voice replay could not be operated reliably with the available browser tool; microphone recording is not certified.",
+        "Direct human listening and physical-phone highlight smoothness are not claimed; pronunciation evidence uses actual final audio supplied to an acoustic AI model."
+      ],
+      "disposition": "Production SOP browser-tooling fallback for recording; all other Stage 4 interactions, playback, assets, and technical gates complete."
+    },
+    "evidence": "curriculum-workflow/generated/L453-qa-evidence.json",
+    "alignmentEvidence": "curriculum-workflow/generated/L453-alignment-evidence.json"
+  }
+}
