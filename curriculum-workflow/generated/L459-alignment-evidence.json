@@ -1,0 +1,114 @@
+{
+  "unit": "L459",
+  "provider": "whisper-1 through assets:align:ai",
+  "normalization": [
+    "个→個",
+    "实→實",
+    "现→現",
+    "妈→媽",
+    "吓→嚇",
+    "Simplified/transitional transcript forms normalized only after exact acoustic verification"
+  ],
+  "manualTimingAdjustments": [],
+  "processing": "Standard whole-sentence and dedicated-fragment generation followed by repo audio processing and AI alignment; no speech cutting, splicing, or speed alteration. S04 used a full-sentence phonetic control draft to enforce the teacher-required Taiwan readings 突 tú and 一跳 yí tiào; the final acoustic sequence exactly matches approved spokenText.",
+  "transcripts": [
+    {
+      "id": "L459-S01",
+      "text": "三個盒子，其中一個是空的。"
+    },
+    {
+      "id": "L459-S02",
+      "text": "水中那個怪物，其實是木頭。"
+    },
+    {
+      "id": "L459-S03",
+      "text": "我坐在爸媽中間看表演。"
+    },
+    {
+      "id": "L459-S04",
+      "text": "果實突然掉下來，把我嚇一跳。"
+    },
+    {
+      "id": "L459-S05",
+      "text": "夜空中突然出現流星。"
+    },
+    {
+      "id": "L459-G02-prefix",
+      "text": "我坐在爸媽"
+    },
+    {
+      "id": "L459-G02-suffix",
+      "text": "間看表演"
+    },
+    {
+      "id": "L459-G05-wrong-one",
+      "text": "水中那個怪物，其實是小狗。"
+    },
+    {
+      "id": "L459-G05-wrong-two",
+      "text": "水中那個怪物，其實是小船。"
+    }
+  ],
+  "automaticTimingFallbacks": [
+    {
+      "record": "L459-S04",
+      "charIndex": 9,
+      "before": {
+        "charIndex": 9,
+        "startMs": 3180,
+        "endMs": 3181
+      },
+      "result": {
+        "charIndex": 9,
+        "startMs": 3121,
+        "endMs": 3241
+      },
+      "method": "Automatic 120ms minimum-width expansion around AI midpoint; adjacent boundaries move only when overlap would occur."
+    },
+    {
+      "record": "L459-G02-prefix",
+      "charIndex": 1,
+      "before": {
+        "charIndex": 1,
+        "startMs": 1000,
+        "endMs": 1020
+      },
+      "result": {
+        "charIndex": 1,
+        "startMs": 950,
+        "endMs": 1070
+      },
+      "method": "Automatic 120ms minimum-width expansion around AI midpoint; adjacent boundaries move only when overlap would occur."
+    },
+    {
+      "record": "L459-G02-prefix",
+      "charIndex": 3,
+      "before": {
+        "charIndex": 3,
+        "startMs": 2100,
+        "endMs": 2140
+      },
+      "result": {
+        "charIndex": 3,
+        "startMs": 2060,
+        "endMs": 2180
+      },
+      "method": "Automatic 120ms minimum-width expansion around AI midpoint; adjacent boundaries move only when overlap would occur."
+    },
+    {
+      "record": "L459-G02-prefix",
+      "charIndex": 4,
+      "before": {
+        "charIndex": 4,
+        "startMs": 2340,
+        "endMs": 2341
+      },
+      "result": {
+        "charIndex": 4,
+        "startMs": 2281,
+        "endMs": 2401
+      },
+      "method": "Automatic 120ms minimum-width expansion around AI midpoint; adjacent boundaries move only when overlap would occur."
+    }
+  ]
+}
