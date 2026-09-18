@@ -3458,7 +3458,7 @@ Teacher-approved records below are authoritative for this package. Production st
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing, style/cast and fixed-ref Chrome Browser QA playback checks",
-    "result": "PASS: complete package retained; teacher-requested S04/S05 repairs regenerated and verified on pushed fixed-ref preview",
+    "result": "PASS: complete package retained; all five final images teacher-approved after S04/S05 repair, and pushed fixed-ref preview passed",
     "browserQa": {
       "status": "pass",
       "assetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
@@ -3470,7 +3470,7 @@ Teacher-approved records below are authoritative for this package. Production st
         "L452-S05 replacement image",
         "complete L452 asset manifest"
       ],
-      "limitation": "This verifies the pushed fixed-ref page and asset rendering; it does not claim a new teacher/manual approval."
+      "limitation": "Browser QA verified pushed rendering and did not itself constitute teacher approval; teacher image approval was subsequently received and recorded separately."
     },
     "preRepairBrowserQa": {
       "status": "pass",
@@ -3502,9 +3502,18 @@ Teacher-approved records below are authoritative for this package. Production st
             "resolution": "Regenerated as a visibly separate coordinated jacket, dance skirt, ballet shoes and tights set."
           }
         ],
-        "status": "resolved-and-fixed-ref-preview-pass"
+        "status": "resolved-fixed-ref-preview-pass-teacher-image-approved"
       }
-    ]
+    ],
+    "teacherImageReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "50f49d863a3671b0aea680cfc3fcd93d87a6fccd",
+      "repairedImageAssetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
+      "scope": "All five L452 final images, including repaired L452-S04 and L452-S05",
+      "statement": "452圖片我看了，圖片審核通過。"
+    }
   }
 }
 ```
@@ -3528,5 +3537,16 @@ Teacher-approved records below are authoritative for this package. Production st
 - Reviewed ref: `6062820c3ae9e53e570d7c8cbffeb5101726b862`; needs repair: 2.
 - L452-S04 image: regenerated so the father's right hand, forearm and phone remain fully separate from the protagonist's unobstructed head. Local style/cast/anatomy check: PASS.
 - L452-S05 image: regenerated as a clearly separate coordinated jacket, dance skirt, ballet shoes and tights set. Protagonist remains fully dressed. Local style/cast/semantic check: PASS.
-- Fixed-ref browser verification: PASS at repair asset commit `d11aeb2581e9661b6765f81253b1ad862b64aec7`; the page loaded 5 sentence cards and 6 other audio items, including the replacement S04 and S05 image elements. This does not claim a new teacher/manual approval.
+- Fixed-ref browser verification: PASS at repair asset commit `d11aeb2581e9661b6765f81253b1ad862b64aec7`; the page loaded 5 sentence cards and 6 other audio items, including the replacement S04 and S05 image elements. This browser check did not itself claim teacher approval; teacher image approval was subsequently received on 2026-09-18.
 - Repair preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=d11aeb2581e9661b6765f81253b1ad862b64aec7
+
+
+### Teacher image approval
+
+- Status: PASS.
+- Date: 2026-09-18.
+- Reviewed package ref: `50f49d863a3671b0aea680cfc3fcd93d87a6fccd`.
+- Repaired image asset commit: `d11aeb2581e9661b6765f81253b1ad862b64aec7`.
+- Scope: all five L452 final images, including repaired L452-S04 and L452-S05.
+- Teacher statement: 452圖片我看了，圖片審核通過。
+- This approval is image-only; no new teacher audio approval is inferred.

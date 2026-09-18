@@ -1,7 +1,7 @@
 {
   "unit": "L452",
   "method": "Opened final exported WebPs and compared with style/cast anchors; S04 and S05 additionally checked against teacher repair notes",
-  "result": "PASS",
+  "result": "PASS; teacher image review approved all five final images",
   "rejectedDrafts": [
     {
       "reviewedRef": "6062820c3ae9e53e570d7c8cbffeb5101726b862",
@@ -52,5 +52,14 @@
       "semantic": "PASS",
       "notes": "REPAIRED PASS: Fixed mother and fully dressed protagonist retain identity. The undersized coordinated dance set is visibly multi-piece: separate lavender jacket, separate tutu skirt, ballet shoes and tights."
     }
-  ]
+  ],
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "50f49d863a3671b0aea680cfc3fcd93d87a6fccd",
+    "repairedImageAssetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
+    "scope": "All five L452 final images, including repaired L452-S04 and L452-S05",
+    "statement": "452圖片我看了，圖片審核通過。"
+  }
 }

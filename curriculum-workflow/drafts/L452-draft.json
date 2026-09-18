@@ -1070,7 +1070,7 @@
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing, style/cast and fixed-ref Chrome Browser QA playback checks",
-    "result": "PASS: complete package retained; teacher-requested S04/S05 repairs regenerated and verified on pushed fixed-ref preview",
+    "result": "PASS: complete package retained; all five final images teacher-approved after S04/S05 repair, and pushed fixed-ref preview passed",
     "browserQa": {
       "status": "pass",
       "assetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
@@ -1082,7 +1082,7 @@
         "L452-S05 replacement image",
         "complete L452 asset manifest"
       ],
-      "limitation": "This verifies the pushed fixed-ref page and asset rendering; it does not claim a new teacher/manual approval."
+      "limitation": "Browser QA verified pushed rendering and did not itself constitute teacher approval; teacher image approval was subsequently received and recorded separately."
     },
     "preRepairBrowserQa": {
       "status": "pass",
@@ -1114,8 +1114,17 @@
             "resolution": "Regenerated as a visibly separate coordinated jacket, dance skirt, ballet shoes and tights set."
           }
         ],
-        "status": "resolved-and-fixed-ref-preview-pass"
+        "status": "resolved-fixed-ref-preview-pass-teacher-image-approved"
       }
-    ]
+    ],
+    "teacherImageReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "50f49d863a3671b0aea680cfc3fcd93d87a6fccd",
+      "repairedImageAssetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
+      "scope": "All five L452 final images, including repaired L452-S04 and L452-S05",
+      "statement": "452圖片我看了，圖片審核通過。"
+    }
   }
 }
