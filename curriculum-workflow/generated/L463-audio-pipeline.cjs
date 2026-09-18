@@ -24,7 +24,7 @@ globalThis.fetch = async (...args) => {
   if (String(args[0]).includes('/audio/speech')) {
     const body = JSON.parse(args[1].body);
     body.instructions = 'Read only the exact input text once in warm natural Taiwan Mandarin for young children. No explanations or added words. 期 is ㄑㄧˊ in 星期、到期、日期; 日 is ㄖˋ; 文 is ㄨㄣˊ; 午 is ㄨˇ; 中 is ㄓㄨㄥ; 其 is ㄑㄧˊ. In 借的書明天到期別忘了還, 還 means return and must be pronounced ㄏㄨㄢˊ. Use relaxed pacing, clear consonants, correct Taiwan tones, and complete first and final syllables. Never add erhua, music, singing, or sound effects.';
-    if (body.input === '星期日下午文具店沒開') { body.voice = 'marin'; body.input = '星期，日下午文具店沒開。'; body.instructions = '只念輸入句子一次，使用溫暖自然、清楚的臺灣華語。第一個詞「星期」必須完整讀成 ㄒㄧㄥ ㄑㄧˊ；「期」是字典式、幅度清楚的第二聲，由低處明顯升高，和「奇」完全同音，絕不能平讀成第一聲「欺」。在「期」完整上揚收音後才開始「日」，只留很短的自然詞界，不要長停頓；「日下午文具店沒開」必須連續流暢。日讀 ㄖˋ，下午讀 ㄒㄧㄚˋ ㄨˇ。不得把星期拆錯、改字、解釋或加字。'; }
+    if (body.input === '星期日下午文具店沒開') { body.voice = 'marin'; body.input = '星期，日下午文具店沒開。'; body.instructions = '只念輸入句子一次。使用自然、清楚的臺灣華語。先完整念「星期」ㄒㄧㄥ ㄑㄧˊ，期和奇同音，讓第二聲自然上揚；接著立即念「日下午文具店沒開」，詞界只作極短停連，不要誇張或拖長。不得改字、加字或解釋。'; }
     if (body.input === '日文課改到明天下午') { body.voice = 'cedar'; body.instructions = '只念「日文課改到明天下午」一次，使用溫暖自然、流暢的臺灣華語。整句一氣呵成，不插入停頓。開頭「日文課改到」五字必須連續自然地念，尤其第一字「日」後與「課」後都不可停頓、拉長或重新起句。句首日與句尾午完整，不解釋、不加字。'; }
     if (body.input === '報名表上要寫名字和日期') { body.voice = 'cedar'; body.instructions = '只念「報名表上要寫名字和日期」一次，使用溫暖自然、清楚的臺灣華語。最後「日期」讀 ㄖˋ ㄑㄧˊ：日是第四聲。最後一字「期」必須做清楚、幅度明顯的第二聲上揚，音高由較低處升到較高處，絕不能平讀成第一聲「欺」ㄑㄧ，也不要套用句尾下降語調。完整收尾，不解釋、不加字。'; }
     if (body.input === '期') body.instructions = '請用溫暖自然的臺灣華語，只念「期」這一個字一次。期讀 ㄑㄧˊ，第二聲，和「星期」的期相同。聲音短而完整，音高自然上揚，正常音量，不念注音、不拼音、不加例詞或解釋。';

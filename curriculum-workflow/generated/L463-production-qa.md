@@ -39,11 +39,12 @@
 
 - Teacher reported three audio defects at `4fefcda2545b2456c814ba59cf36ffc42c414166`: S01 期 sounded like first-tone 欺, S02 paused unnaturally after the first character, and S05 日期 ended as 日欺 instead of 日奇.
 - S01, S02 and S05 were independently regenerated as complete sentences. No image or other lesson audio was changed.
-- S01 first repair was rejected by the teacher at `eadce58637b06aecee2e9ba01bc5e76a2710708b`: the uploaded file was confirmed present, but 期 still sounded like first-tone 欺. The second repair uses a different voice and prosodic treatment; the target reaches a low point near 170 Hz and then rises to about 191 Hz before 日 begins immediately, providing a materially stronger second-tone contour without a long pause.
+- S01 first repair was rejected by the teacher at `eadce58637b06aecee2e9ba01bc5e76a2710708b`: the uploaded file was confirmed present, but 期 still sounded like first-tone 欺. Five independent candidates were generated; the teacher selected Candidate C as standard and correct. The exact selected MP3 was processed into the final S01 M4A without regenerating it.
 - S02: alignment is continuous across 日 0–220 ms, 文 220–520 ms, 課 520–820 ms, 改 820–1140 ms and 到 1140–1400 ms; no pause remains after 日 or 課.
 - S05: 日期 is explicitly ㄖˋ ㄑㄧˊ; final 期 rises approximately 100→127 Hz through the voiced target interval.
 - AI transcription matches all three approved Han sequences. Timings and package-local validation are regenerated. Teacher re-review is requested on the new immutable repair ref.
 - Actual phone-width `LessonPanel` Stage 3 playback emitted `playing` then `ended` for repaired S01, S02 and S05.
 - Repair asset commit: `87237ed7881e07d98cd1f2f512066ae4c0b5c621`.
 - Pushed-ref package intake at `origin/codex/l463-complete-package`: PASS; package status remains `dependency-blocked-asset-complete`.
-- S02 and S05 passed the teacher's second review and remain byte-identical to `eadce58637b06aecee2e9ba01bc5e76a2710708b`; only S01 is included in the second repair.
+- Final selected S01 timings: 星 0–440 ms、期 440–740 ms、日 begins immediately at 740 ms. S02 and S05 passed the teacher's second review and remain byte-identical to `eadce58637b06aecee2e9ba01bc5e76a2710708b`.
+- Teacher manual audio QA: PASS for the selected Candidate C; package finalization and pushed-ref intake follow this selection.

@@ -1,7 +1,7 @@
 {
   "unit": "L463",
   "sourceReviewRef": "4fefcda2545b2456c814ba59cf36ffc42c414166",
-  "repairStatus": "second-s01-repair-implemented-awaiting-teacher-re-review",
+  "repairStatus": "teacher-approved-candidate-c-finalized",
   "assets": {
     "L463-S01": {
       "beforeSha256": "5c3008c55628324ffe0ed6dd249bf5e22140282bc69456f73fae63c15915a2ef",
@@ -23,10 +23,10 @@
   },
   "timingEvidence": {
     "L463-S02-opening": "日 0-220ms; 文 220-520ms; 課 520-820ms; 改 820-1140ms; 到 1140-1400ms. No inserted gap after 日 or 課.",
-    "L463-S01-期": "Second repair target interval 500-760ms; after onset, voiced contour reaches about 170Hz then rises to about 191Hz before 日 begins immediately at 760ms.",
+    "L463-S01-期": "Teacher-selected Candidate C: 期 440-740ms; 日 begins immediately at 740ms.",
     "L463-S05-期": "Final target voiced contour rises from about 100Hz to 127Hz (approximately 2620-2860ms); sentence-final falling intonation is excluded from the target timing."
   },
-  "scopeCheck": "Second repair changes only L463-S01 M4A, its transcript/timings, reproducibility instruction, and package QA metadata. S02 and S05 remain byte-identical to eadce586.",
+  "scopeCheck": "Finalization changes only L463-S01 M4A, its transcript/timings, reproducibility instruction, and package QA metadata. S02 and S05 remain byte-identical to eadce586.",
   "secondReview": {
     "reviewedRef": "eadce58637b06aecee2e9ba01bc5e76a2710708b",
     "teacherResult": {
@@ -36,10 +36,13 @@
     },
     "secondRepair": {
       "asset": "L463-S01.m4a",
-      "sha256": "1c9dde1cedd3076263bb06045bf3f1b75e07284656c86b8d5f6822e14c9765a8",
+      "sha256": "dc39c99336771cddab0728094767dcfcc7dc5b5ac99af57f4b6b2e88f7d95847",
       "asr": "星期日下午文具店沒開",
-      "timing": "星 0-500ms; 期 500-760ms; 日 begins immediately at 760ms.",
-      "pitch": "期 reaches a low point near 170Hz then rises to about 191Hz before 日; materially stronger rise than the rejected first repair."
-    }
+      "timing": "星 0-440ms; 期 440-740ms; 日 begins immediately at 740ms.",
+      "provenance": "Processed directly from teacher-selected Candidate C MP3; no regeneration after selection."
+    },
+    "selectedCandidate": "C-word-boundary-marin",
+    "teacherSelection": "Candidate C is standard and correct.",
+    "selectedCandidateMp3Sha256": "b7f1c5b7f5113855c13a4a591f4c7b7686ae111726d76cc9c24909602d68afcf"
   }
 }
