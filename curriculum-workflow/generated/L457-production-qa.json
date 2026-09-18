@@ -1,0 +1,190 @@
+{
+  "unit": "L457",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "5622c827569df36e09c1767d61f114b35973bbea",
+  "latestMainChecked": "5622c827569df36e09c1767d61f114b35973bbea",
+  "checks": {
+    "allowedCharacters": "PASS (453)",
+    "coverage": {
+      "實": 3,
+      "突": 2,
+      "現": 2,
+      "表": 2,
+      "演": 1,
+      "候": 1
+    },
+    "sentenceTimingCounts": [
+      {
+        "id": "L457-S01",
+        "han": 9,
+        "timings": 9
+      },
+      {
+        "id": "L457-S02",
+        "han": 12,
+        "timings": 12
+      },
+      {
+        "id": "L457-S03",
+        "han": 12,
+        "timings": 12
+      },
+      {
+        "id": "L457-S04",
+        "han": 11,
+        "timings": 11
+      },
+      {
+        "id": "L457-S05",
+        "han": 11,
+        "timings": 11
+      }
+    ],
+    "stage4Order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "stage4AudioMetadata": "PASS",
+    "imageStyleCast": "PASS",
+    "audioDecode": "PASS all 10; package-local validate-production and strict format audit PASS",
+    "browserQA": "Browser QA fallback: current remote control surface has no reliable computer-audio return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run; teacher subjective review remains post-merge by default."
+  },
+  "pronunciation": {
+    "unit": "L457",
+    "model": "gpt-audio",
+    "scope": "AI auditory review, not human acceptance",
+    "results": [
+      {
+        "name": "char-u5be6",
+        "expected": "實 exactly once, ㄕˊ second tone",
+        "result": "{\n  \"heardText\": \"實\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"聽到的發音是「實」，聲母為ㄕ，韻母為ㄓ，第二聲吻合，音調準確。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "L457-S01",
+        "expected": "當演員的心願實現了; 實現 ㄕˊ ㄒㄧㄢˋ",
+        "result": "{\n  \"heardText\": \"當演員的心願實現了\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字詞的發音和語調正確，特別是『實現』的發音為 ㄕˊ ㄒㄧㄢˋ，符合目標要求。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "L457-S02",
+        "expected": "我突然發現果實表面有小洞; 突然 ㄊㄨˊ ㄖㄢˊ; 果實 ㄍㄨㄛˇ ㄕˊ",
+        "result": "{\n  \"heardText\": \"我突然發現果實表面有小洞\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"實際聽到的內容與目標句子完全一致。針對標註的關鍵詞和注音：'突然' 清楚地發音為 ㄊㄨˊ ㄖㄢˊ 且音調正確；'果實' 發音為 ㄍㄨㄛˇ ㄕˊ，也正確無誤。整句的語音流暢、音節清晰。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "L457-S03",
+        "expected": "等候時爸爸做出好笑的表情",
+        "result": "{\n  \"heardText\": \"等候時爸爸做出好笑的表情\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有的音節和聲調都清楚且準確地對應到預期的句子。 '等'（ㄉㄥˇ）、'候'（ㄏㄡˋ）、'時'（ㄕˊ）、'爸'（ㄅㄚˋ）、'爸'（ㄅㄚˋ）、'做'（ㄗㄨㄛˋ）、'出'（ㄔㄨ）、'好'（ㄏㄠˇ）、'笑'（ㄒㄧㄠˋ）、'的'（ㄉㄜ˙）、'表'（ㄅㄧㄠˇ）、'情'（ㄑㄧㄥˊ）都發音準確，聲調無誤。\",\n  \"finalSyllableAudible\": \"情\"\n}"
+      },
+      {
+        "name": "L457-S04",
+        "expected": "這座木橋很結實放心走吧; 結實 MUST be ㄐㄧㄝ ˙ㄕ meaning sturdy, not ㄐㄧㄝˊ ㄕˊ",
+        "result": "{\n  \"heardText\": \"這座木橋很結實放心走吧\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"說話者的發音與預期相符。特別注意『結實』：發音為ㄐㄧㄝ ˙ㄕ（第二聲和輕聲），正確表達“堅固”的意思。整句語速清楚，聲調、音節均準確。\",\n  \"finalSyllableAudible\": \"吧 (ㄅㄚ ˙)\"\n}"
+      },
+      {
+        "name": "L457-S05",
+        "expected": "睡到半夜突然聽見小狗叫; 突然 ㄊㄨˊ ㄖㄢˊ",
+        "result": "{\n  \"heardText\": \"睡到半夜突然聽見小狗叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節和聲調都正確吻合目標句子。特别檢查了'突然'的發音，聽到的是ㄊㄨˊ ㄖㄢˊ，聲調皆符合要求。\",\n  \"finalSyllableAudible\": \"叫\"\n}"
+      },
+      {
+        "name": "L457-G02-prefix",
+        "expected": "當演員的心願; final 願 audible",
+        "result": "{\n  \"heardText\": \"當演員的心願\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有字音和原句一致，聲調準確，特別是最後的「願」字清晰可聽。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "L457-G02-suffix",
+        "expected": "現了 exactly two syllables ㄒㄧㄢˋ ˙ㄌㄜ, no 實",
+        "result": "{\n  \"heardText\": \"現了\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"音檔中清楚聽到兩個音節：ㄒㄧㄢˋ（第四聲）和 ˙ㄌㄜ（輕聲），符合預期的『現了』，無『實』字夾雜，發音準確。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "L457-G05-wrong-one",
+        "expected": "睡到半夜突然聽見小鳥叫",
+        "result": "{\n  \"heardText\": \"睡到半夜突然聽見小鳥叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節和聲調都清晰吻合：睡(ㄕㄨㄟˋ)、到(ㄉㄠˋ)、半(ㄅㄢˋ)、夜(ㄧㄝˋ)、突(ㄊㄨˊ)、然(ㄖㄢˊ)、聽(ㄊㄧㄥ)、見(ㄐㄧㄢˋ)、小(ㄒㄧㄠˇ)、鳥(ㄋㄧㄠˇ)、叫(ㄐㄧㄠˋ)，發音準確，沒有明顯錯誤或異常。\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "L457-G05-wrong-two",
+        "expected": "睡到半夜突然聽見爸爸叫",
+        "result": "{\n  \"heardText\": \"睡到半夜突然聽見爸爸叫\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節發音清楚，語調準確，完全符合預期的句子「睡到半夜突然聽見爸爸叫」。每個音節的聲調正確，包括：「睡」(ㄕㄨㄟˋ)、「到」(ㄉㄠˋ)、「半」(ㄅㄢˋ)、「夜」(ㄧㄝˋ)、「突」(ㄊㄨˊ)、「然」(ㄖㄢˊ)、「聽」(ㄊㄧㄥ)、「見」(ㄐㄧㄢˋ)、「爸」(ㄅㄚˋ)、「爸」(ㄅㄚˋ)、「叫」(ㄐㄧㄠˋ)。整句清楚自然。\",\n  \"finalSyllableAudible\": \"叫\"\n}"
+      }
+    ]
+  },
+  "folderBytes": 1134104,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L457/images/L457-S01.webp",
+      "bytes": 124022,
+      "sha256": "7156d46ace2d0f9add3133fb08376df2d698746e3c892a1d6525c72a971f1511"
+    },
+    {
+      "path": "public/assets/lessons/L457/images/L457-S02.webp",
+      "bytes": 111384,
+      "sha256": "7bdf76bf0698ce6350da4214a64b0dab9f635349c0062da95ac7adb77d97c4cc"
+    },
+    {
+      "path": "public/assets/lessons/L457/images/L457-S03.webp",
+      "bytes": 105820,
+      "sha256": "c85ec22ba4176713db058da746bc8e0c94b14bd5a615d64b976b76e7ea14dcae"
+    },
+    {
+      "path": "public/assets/lessons/L457/images/L457-S04.webp",
+      "bytes": 224424,
+      "sha256": "b8333c22c368fa61f78c4432121511098cf968f2d22c3349c1934b02cf564f20"
+    },
+    {
+      "path": "public/assets/lessons/L457/images/L457-S05.webp",
+      "bytes": 110910,
+      "sha256": "631e7c232438c1a4c931767bc5981848397e01a1ad9b47a47a49d53e088f7d3c"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/char-u5be6.m4a",
+      "bytes": 14511,
+      "sha256": "948c9e7b1e7a32730d4faada0d6c80ca68f35f9519022c3cec51e7ac8b04e405"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-G02-prefix.m4a",
+      "bytes": 25489,
+      "sha256": "4e08cec9fcfd68503638d37eb26bbe406e92245d332e481a50ee10c68965ed5c"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-G02-suffix.m4a",
+      "bytes": 21982,
+      "sha256": "cb31b1aba498253eef2d5d428caf6969b5b9482da630bc94a26673b81420e01a"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-G05-wrong-one.m4a",
+      "bytes": 60548,
+      "sha256": "4f8cab6851246592cadf67fea530dbc0f6dfbe28584228c5f7f2e8b0a9a7087d"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-G05-wrong-two.m4a",
+      "bytes": 55588,
+      "sha256": "ce70e88b528c8c6b7388dbd19956bbf9645b584f9a3fa1d9d98cba0b53f369c0"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-S01.m4a",
+      "bytes": 39186,
+      "sha256": "166c079ad43f2420400d738710c19395d508192630ddb4f4c63208c91e9cac11"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-S02.m4a",
+      "bytes": 60591,
+      "sha256": "286dcee3e22def2adfa2dd2cb3d8be437bb8e3d3c1cb556f48449d01d5cb3186"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-S03.m4a",
+      "bytes": 60266,
+      "sha256": "c4a1bd657d5f6e2ff8b01e224ad2df1ff0d800b92852bc8540c0f73adc9124ec"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-S04.m4a",
+      "bytes": 53022,
+      "sha256": "d2fa11a1e40d2f5d87521717591e4115b045591e484bf98924c1cf9f6e3a3f62"
+    },
+    {
+      "path": "public/assets/lessons/L457/audio/L457-S05.m4a",
+      "bytes": 66361,
+      "sha256": "985c5d23ee72084e86eb062dbd06761728a01feb61ed08c44fc0bf70865eaa15"
+    }
+  ]
+}

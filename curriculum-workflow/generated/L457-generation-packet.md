@@ -2378,3 +2378,15 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+
+## Final Production record
+
+- Package status: dependency-blocked-asset-complete
+- Base/latest main checked: 5622c827569df36e09c1767d61f114b35973bbea (formal production through L443; L452-L456 remain declared direct dependencies)
+- Assets: 5 final 1024-square WebP images and 10 final M4A files, including standalone 實, G02 fragments and complete G05 distractors
+- Timing: five sentences, both G02 fragments and both G05 distractors have exact-transcript per-Han timing metadata
+- Visual QA: final contact sheet style/cast/scene/no-text checks PASS; rejected S04 draft not shipped
+- Audio QA: Whisper exact transcript and targeted gpt-audio pronunciation checks PASS; teacher human listening remains post-merge
+- Browser QA fallback: no reliable computer-audio return or physical-phone microphone channel; continuous human listening, live highlight synchronization and G02 recording/replay are not claimed
+- Release owns production JSON, planner, ledger, ordered integration and deployment
