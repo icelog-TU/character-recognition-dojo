@@ -9,7 +9,7 @@
   },
   "repair": "Both complete audio units regenerated with OpenAI gpt-4o-mini-tts shimmer, explicit natural Taiwan Mandarin and 星期日 ㄒㄧㄥ ㄑㄧˊ ㄖˋ guardrail; no cutting or splicing.",
   "candidateReview": "alloy, shimmer and sage complete-unit candidates technically passed; shimmer selected for both final files to keep voice consistent.",
-  "technicalScope": "gpt-audio-1.5 final processed M4A review; renewed teacher listening still required.",
+  "technicalScope": "gpt-audio-1.5 final processed M4A review plus teacher listening acceptance of the exact repaired files.",
   "results": [
     {
       "file": "L465-S01.m4a",
@@ -43,5 +43,17 @@
       "defects": [],
       "confidence": 0.95
     }
-  ]
+  ],
+  "teacherReview": {
+    "ref": "e25121ca94a8b8f6296e9d6dfbe980299369d20d",
+    "result": "PASS",
+    "scope": [
+      "L465-S01 audio",
+      "L465-G02-prefix audio"
+    ],
+    "limitations": [
+      "live highlight synchronization not reviewed",
+      "G02 phone recording/replay not reviewed"
+    ]
+  }
 }

@@ -34,8 +34,8 @@ Lesson-local `validate:production` PASS. Lesson-local strict asset format audit 
 
 ## Teacher audio repair after ref 1656891f23e9ebe0858b553e94f89cca31a1d9b3
 
-Teacher review found Mainland-leaning delivery and 期 sounding like 七 in `L465-S01.m4a` and `L465-G02-prefix.m4a`. Both were regenerated as complete audio units with OpenAI `gpt-4o-mini-tts` / `shimmer`, explicit natural Taiwan Mandarin, and `星期日 ㄒㄧㄥ ㄑㄧˊ ㄖˋ`. No cutting or splicing was used. Final processed M4As were re-aligned. Independent `gpt-audio-1.5` reports 期 as rising second tone like 奇, 日 and overall accent as Taiwan-natural, exact wording, and no defects. Renewed teacher listening is pending on the repaired immutable commit.
+Teacher review found Mainland-leaning delivery and 期 sounding like 七 in `L465-S01.m4a` and `L465-G02-prefix.m4a`. Both were regenerated as complete audio units with OpenAI `gpt-4o-mini-tts` / `shimmer`, explicit natural Taiwan Mandarin, and `星期日 ㄒㄧㄥ ㄑㄧˊ ㄖˋ`. No cutting or splicing was used. Final processed M4As were re-aligned. Independent `gpt-audio-1.5` reports 期 as rising second tone like 奇, 日 and overall accent as Taiwan-natural, exact wording, and no defects. Teacher accepted both repaired audio files at ref e25121ca94a8b8f6296e9d6dfbe980299369d20d. This acceptance is scoped to S01 and G02 prefix audio; live highlight synchronization and G02 phone recording/replay remain unverified.
 
 ## Repaired pushed intake evidence
 
-Repaired asset commit `907fc8c3a7d45e624137ad23a95f90a9eb42d5a6` passed `npm run curriculum:package-intake -- --unit L465 --ref origin/codex/l465-complete-package --strict`: 5 images, 10 audio files, canonical Stage 4, zero warnings. Renewed teacher listening is pending for repaired S01 and G02 prefix.
+Repaired asset commit `907fc8c3a7d45e624137ad23a95f90a9eb42d5a6` passed `npm run curriculum:package-intake -- --unit L465 --ref origin/codex/l465-complete-package --strict`: 5 images, 10 audio files, canonical Stage 4, zero warnings. Teacher audio review PASS at e25121ca94a8b8f6296e9d6dfbe980299369d20d for repaired S01 and G02 prefix.
