@@ -17,7 +17,7 @@
       "sentenceId": "L459-S02",
       "styleLock": "PASS",
       "cast": "PASS",
-      "scene": "Father points from a broad safe bank to a single floating driftwood shape; grain, bark, cut end and branch forks make ordinary wood explicit; no real monster.",
+      "scene": "Father points from a broad safe bank to a large natural root mass whose arched crown, snout-like root, branch stubs and eye-like knot create a clear monster-head silhouette through mist and reflection; grain, cracked bark, circular cross-section and splintered roots still make ordinary untouched wood explicit.",
       "castEvidence": "Recurring father blue overshirt/khaki trousers and recurring girl match family anchors.",
       "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and L154/L162/L163 family anchors."
     },
@@ -235,7 +235,17 @@
     },
     "processing": "Whole sentences and fragments generated independently, then processed with repo audio tooling. G02 fragments received gain-only normalization. S04 was regenerated as a complete sentence with phonetic control characters solely to enforce teacher-required Taiwan surface readings tu2 and yi2; final acoustic syllables exactly match the approved spokenText. No speech cutting, splicing, muting, or speed alteration."
   },
-  "mediaBytes": 1439322,
+  "mediaBytes": 1444462,
+  "repairHistory": [
+    {
+      "date": "2026-09-18",
+      "sourceCommit": "112f8ad1fd4078963ea49cf84c1f144b5813379e",
+      "item": "L459-S02:image",
+      "teacherFinding": "The original floating log did not resemble a monster strongly enough to support the sentence.",
+      "action": "Replaced the plain log with a fresh natural driftwood-root composition whose silhouette reads as a monster head through its crown, snout-like root, branch stubs, wood knot, mist and reflection; retained visible grain, bark, cross-section and broken roots so it remains clearly wood rather than a carving or real creature.",
+      "result": "PASS"
+    }
+  ],
   "releaseDependencies": {
     "orderedLessonsThrough": "L458",
     "reviewMilestones": [

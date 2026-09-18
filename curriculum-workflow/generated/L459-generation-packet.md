@@ -9,7 +9,7 @@ Base origin/main: 80431be0; formal L001-L446, latest 音, 450 unique learned Han
 Allowed-character array is fully expanded in request: 457 distinct Han. It contains formal L001-L446, provisional 演表現突實其, and new 中. 中午/中獎 are absent and this lesson teaches only 中 ㄓㄨㄥ. Coverage: 中4, 其2, 實2, 突2, 現1, 表1; all minima met. 演 is an additional dependency used in 表演. Han counts 11/11/10/12/9; displayLines join exactly and each line has at most 6 visible characters.
 
 - L459-S01: 三個盒子，其中一個是空的。 Spoken: 三個盒子其中一個是空的. Lines: 三個盒子， / 其中一個 / 是空的。 Focus: 中. Image notes: 桌上恰好三個打開的盒子，從斜上方看得清內部；其中兩個放著積木，另一個完全空著。主角女孩指向空盒，盒子之間有清楚間隔。不能多畫盒子，空盒裡也不能有紙、包裝物或看似物件的裝飾；不加數字標籤。
-- L459-S02: 水中那個怪物，其實是木頭。 Spoken: 水中那個怪物其實是木頭. Lines: 水中 / 那個怪物， / 其實是木頭。 Focus: 中. Image notes: 主角女孩和爸爸站在安全岸邊，望向水中一段外形像怪物頭部的漂浮木頭；輪廓遠看容易誤認，但近看能清楚辨識木紋、斷面與枝杈。爸爸指著木頭向女孩說明；沒有真正的怪物，不畫木頭變身、發光眼睛或恐怖水景。
+- L459-S02: 水中那個怪物，其實是木頭。 Spoken: 水中那個怪物其實是木頭. Lines: 水中 / 那個怪物， / 其實是木頭。 Focus: 中. Image notes: 主角女孩和爸爸站在安全岸邊，望向水中一段天然盤根漂流木；半浸在水中的拱形輪廓、鼻吻般樹根、角耳般枝杈和眼睛般木節，配合水霧與倒影，遠看明顯像怪物頭部，近看則能由木紋、樹皮、斷面與裂枝確認只是木頭。爸爸指著木頭向女孩說明；不做成人工雕刻或真正怪物，不畫真眼睛、牙齒、發光或恐怖水景。
 - L459-S03: 我坐在爸媽中間看表演。 Spoken: 我坐在爸媽中間看表演. Lines: 我坐在爸媽 / 中間看表演。 Focus: 中. Image notes: 觀眾席上，固定主角爸爸、主角女孩、主角媽媽坐在連續三個座位，女孩明確位於爸媽之間；三人面向前方舞台觀看表演。可從側後方構圖，同時看清座位關係及前方活動；不要讓其他人插在三人中間，不用小月替代主角女孩。
 - L459-S04: 果實突然掉下來，把我嚇一跳。 Spoken: 果實突然掉下來把我嚇一跳. Lines: 果實突然 / 掉下來， / 把我嚇一跳。 Focus: 嚇. Image notes: 果園裡，一顆果實剛從低矮果樹落到主角女孩身旁地面，女孩驚訝地稍微退一步；樹上仍有同類果實，讓掉落來源明確。媽媽在近旁，不砸中女孩、不受傷、不畫巨大椰子或高空重物。
 - L459-S05: 夜空中突然出現流星。 Spoken: 夜空中突然出現流星. Lines: 夜空中突然 / 出現流星。 Focus: 中. Image notes: 安全的戶外觀星空間，主角女孩與家人抬頭看夜空，一道清楚的流星帶著短光尾劃過；流星不同於背景靜止星點。保留足夠環境光看清人物，不畫隕石撞地、火災、爆炸或危險懸崖。已取代原本的影子句，不能沿用影子配圖。
@@ -31,12 +31,14 @@ Five square 1024px WebP, ten mono 44100Hz AAC M4A and nine complete AI timing re
 ## Per-image style-lock and cast
 
 - L459-S01: style-lock PASS; cast PASS. Exactly three separated open boxes are visible from above; two contain blocks and the third is completely empty; protagonist points at the empty box. Recurring protagonist keeps fixed bob, pink clip, pink cardigan and stable preschool proportions.
-- L459-S02: style-lock PASS; cast PASS. Father points from a broad safe bank to a single floating driftwood shape; grain, bark, cut end and branch forks make ordinary wood explicit; no real monster. Recurring father blue overshirt/khaki trousers and recurring girl match family anchors.
+- L459-S02: style-lock PASS; cast PASS. Father points from a broad safe bank to a large natural root mass whose arched crown, snout-like root, branch stubs and eye-like knot create a clear monster-head silhouette through mist and reflection; grain, cracked bark, circular cross-section and splintered roots still make ordinary untouched wood explicit. Recurring father blue overshirt/khaki trousers and recurring girl match family anchors.
 - L459-S03: style-lock PASS; cast PASS. Father, protagonist girl and mother occupy exactly three adjacent seats with the girl clearly centered between her parents; all watch the stage. All three fixed family identities remain stable; girl is not Xiaoyue.
 - L459-S04: style-lock PASS; cast PASS. One ordinary apple has just landed beside the girl with motion cues; matching apples remain on the low tree; mother is nearby and nobody is struck. Recurring mother and girl match family anchors.
 - L459-S05: style-lock PASS; cast PASS. One bright short-tailed meteor crosses a starry sky above a safe illuminated garden lawn while the recurring family looks up; no impact or danger. Recurring mother, father and girl match family anchors.
 
-All final WebP were compared side by side with the L058 style-only anchors, refined L115/L118/L119/L128 examples and L154/L162/L163 family anchors. No readable text, numbers, logos or exceptions. All first exported candidates passed semantic, style-lock and cast checks; no rejected draft is committed. Exact final prompts and imageNotes are in the draft.
+All final WebP were compared side by side with the L058 style-only anchors, refined L115/L118/L119/L128 examples and L154/L162/L163 family anchors. No readable text, numbers, logos or exceptions. The repaired S02 replacement and the other final exports pass semantic, style-lock and cast checks; no rejected draft is committed. Exact final prompts and imageNotes are in the draft.
+
+Teacher repair checkpoint (2026-09-18): the plain-log L459-S02 image at source commit `112f8ad1fd4078963ea49cf84c1f144b5813379e` was superseded because the wood did not plausibly resemble a monster. The replacement uses a natural monster-head silhouette, mist and reflection while retaining decisive wood evidence and the approved cast/style.
 
 ## Audio evidence and browser QA
 
