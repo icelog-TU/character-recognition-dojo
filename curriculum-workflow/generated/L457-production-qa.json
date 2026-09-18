@@ -80,7 +80,7 @@
       {
         "name": "L457-S04",
         "expected": "這座木橋很結實放心走吧; 結實 MUST be ㄐㄧㄝ ˙ㄕ meaning sturdy, not ㄐㄧㄝˊ ㄕˊ",
-        "result": "Let's examine the details from the audio and provide the evaluation in the required format.\n\nHere is the compact JSON result:\n\n{\n  \"heardText\": \"這座木橋很結實放心走吧\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The phrase was pronounced clearly. '結實' was pronounced as ㄐㄧㄝ ˙ㄕ, with the light tone on the second syllable. '放心' was pronounced correctly with ㄈㄤˋ in fourth tone and ㄒㄧㄣ in first tone. The tones and phonetics matched the expected pronunciation. Each final syllable, including the neutral tone in '結實' and the falling tone in '放心,' was audible distinctly.\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"這座木橋很結實 放心走吧\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The pronunciation of 木橋 includes a full, rounded ㄇㄨˋ vowel and clear falling fourth tone before ㄑㄧㄠˊ. The phrase 放心 was correctly pronounced as ㄈㄤˋ ㄒㄧㄣ, not resembling first-tone 芳. The word 結實 was pronounced with ㄐㄧㄝ and the neutral ˙ㄕ, matching the intended sound pattern.\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-S05",
@@ -95,7 +95,7 @@
       {
         "name": "L457-G02-suffix",
         "expected": "現了 exactly two syllables ㄒㄧㄢˋ ˙ㄌㄜ, no 實",
-        "result": "{\n  \"heardText\": \"ㄒㄧㄢˋ ˙ㄌㄜ\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The first syllable is clearly ㄒㄧㄢˋ, with the correct final and phonetic tone. Any orthographic variation (現, 限, 線) is not distinguishable by audio alone, so this is acceptable. The second syllable has the audible ㄌ onset and neutral tone, and there is no extra syllable or 實 sound detected.\",\n  \"finalSyllableAudible\": true\n}"
+        "result": "{\n  \"heardText\": \"現了\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The first syllable is pronounced as ㄒㄧㄢˋ, which matches the target without distinction between homophones. The second syllable clearly has an audible ㄌ onset and a neutral tone, no additional syllables were detected.\",\n  \"finalSyllableAudible\": true\n}"
       },
       {
         "name": "L457-G05-wrong-one",
@@ -109,7 +109,7 @@
       }
     ]
   },
-  "folderBytes": 1123729,
+  "folderBytes": 1133183,
   "assets": [
     {
       "path": "public/assets/lessons/L457/images/L457-S01.webp",
@@ -178,8 +178,8 @@
     },
     {
       "path": "public/assets/lessons/L457/audio/L457-S04.m4a",
-      "bytes": 53603,
-      "sha256": "b61d127997e397ffea415226b5346f8a853b2747da960256eca377feb695a0e1"
+      "bytes": 63057,
+      "sha256": "0238902b24737209a35a54729bcd0efa2e698bd8ff0c0cb058bf232f2c6ea557"
     },
     {
       "path": "public/assets/lessons/L457/audio/L457-S05.m4a",
@@ -187,17 +187,11 @@
       "sha256": "985c5d23ee72084e86eb062dbd06761728a01feb61ed08c44fc0bf70865eaa15"
     }
   ],
-  "assetCommit": "e22f8478f978409b87f9b91b988d73c9103cbae0",
-  "repairReview": {
-    "sourceRef": "7d59861cf9ae23b54117af59ee2a0c7caa20ae4a",
-    "items": [
-      "L457-S02 image: expose white apple flesh",
-      "L457-S04 audio: 放心 ㄈㄤˋ ㄒㄧㄣ"
-    ],
-    "result": "repaired; strict intake PASS; renewed teacher review pending"
-  },
-  "intake": {
-    "command": "npm run curriculum:package-intake -- --unit L457 --ref e22f8478f978409b87f9b91b988d73c9103cbae0 --strict",
-    "result": "PASS"
+  "secondRepair": {
+    "sourceRef": "6383c53441e13c94ef1d9b8c58244643215fa30f",
+    "teacherImageResult": "S02 image OK",
+    "audioFinding": "S04 木橋 sounded clipped as mu橋",
+    "repair": "Full S04 sentence regenerated; final targeted gpt-audio PASS for 木橋 ㄇㄨˋ ㄑㄧㄠˊ, 結實 ㄐㄧㄝ ˙ㄕ, 放心 ㄈㄤˋ ㄒㄧㄣ",
+    "teacherAudioReview": "pending on new commit"
   }
 }

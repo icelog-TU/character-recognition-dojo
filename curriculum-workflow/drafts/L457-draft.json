@@ -747,62 +747,62 @@
       "imageSrc": "/assets/lessons/L457/images/L457-S04.webp",
       "audio": {
         "src": "/assets/lessons/L457/audio/L457-S04.m4a",
-        "durationMs": 4703,
+        "durationMs": 5739,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 280
+            "endMs": 360
           },
           {
             "charIndex": 1,
-            "startMs": 280,
-            "endMs": 620
+            "startMs": 360,
+            "endMs": 680
           },
           {
             "charIndex": 2,
-            "startMs": 620,
-            "endMs": 900
+            "startMs": 680,
+            "endMs": 1060
           },
           {
             "charIndex": 3,
-            "startMs": 900,
-            "endMs": 1140
+            "startMs": 1060,
+            "endMs": 1300
           },
           {
             "charIndex": 4,
-            "startMs": 1140,
-            "endMs": 1720
+            "startMs": 1300,
+            "endMs": 2280
           },
           {
             "charIndex": 5,
-            "startMs": 1720,
-            "endMs": 1920
+            "startMs": 2280,
+            "endMs": 2600
           },
           {
             "charIndex": 6,
-            "startMs": 1920,
-            "endMs": 2140
+            "startMs": 2600,
+            "endMs": 2880
           },
           {
             "charIndex": 7,
-            "startMs": 3020,
-            "endMs": 3250
+            "startMs": 3980,
+            "endMs": 4070
           },
           {
             "charIndex": 8,
-            "startMs": 3250,
-            "endMs": 3480
+            "startMs": 4070,
+            "endMs": 4160
           },
           {
             "charIndex": 9,
-            "startMs": 3480,
-            "endMs": 3710
+            "startMs": 4160,
+            "endMs": 4410
           },
           {
             "charIndex": 10,
-            "startMs": 3710,
-            "endMs": 3940
+            "startMs": 4410,
+            "endMs": 4660
           }
         ]
       }
@@ -868,17 +868,17 @@
           {
             "charIndex": 8,
             "startMs": 3580,
-            "endMs": 4140
+            "endMs": 4160
           },
           {
             "charIndex": 9,
-            "startMs": 4140,
-            "endMs": 4420
+            "startMs": 4160,
+            "endMs": 4400
           },
           {
             "charIndex": 10,
-            "startMs": 4420,
-            "endMs": 4720
+            "startMs": 4400,
+            "endMs": 4740
           }
         ]
       }
@@ -1149,17 +1149,17 @@
               {
                 "charIndex": 8,
                 "startMs": 3580,
-                "endMs": 4140
+                "endMs": 4160
               },
               {
                 "charIndex": 9,
-                "startMs": 4140,
-                "endMs": 4420
+                "startMs": 4160,
+                "endMs": 4400
               },
               {
                 "charIndex": 10,
-                "startMs": 4420,
-                "endMs": 4720
+                "startMs": 4400,
+                "endMs": 4740
               }
             ]
           }
@@ -1414,10 +1414,10 @@
   "latestMainChecked": "5622c827569df36e09c1767d61f114b35973bbea",
   "productionQA": {
     "imageStyle": "Final 1024-square WebPs viewed as one contact sheet against L058 style and refined/family anchors: style-lock PASS, scene semantics PASS, no readable text. S04 first version was rejected for father outfit/cast drift and replaced before export. Teacher repair 2026-09-18: S02 black artificial-looking hole replaced with a small irregular opening showing creamy white apple flesh.",
-    "audioPipeline": "OpenAI gpt-4o-mini-tts coral; repository assets:audio mono AAC 44.1kHz. Standalone 實 generated independently. G02 fragments generated independently; G05 distractors generated as complete whole sentences. No syllable splicing. Teacher repair 2026-09-18: S04 was regenerated as a complete sentence to clarify 放心 ㄈㄤˋ ㄒㄧㄣ. Final M4A aligned with whisper-1.",
+    "audioPipeline": "OpenAI gpt-4o-mini-tts coral; repository assets:audio mono AAC 44.1kHz. Standalone 實 generated independently. G02 fragments generated independently; G05 distractors generated as complete whole sentences. No syllable splicing. Teacher repair 2026-09-18: S04 was regenerated as a complete sentence to clarify 放心 ㄈㄤˋ ㄒㄧㄣ. Final M4A aligned with whisper-1. Second teacher repair: S04 was again regenerated as a complete sentence to make 木橋 explicitly ㄇㄨˋ ㄑㄧㄠˊ with a complete rounded ㄨ and fourth tone.",
     "timingReview": "Five sentences, G02 prefix/suffix and both G05 wrong-choice tracks have ordered per-Han timing metadata within final duration. Exact final transcript comparison PASS. G02 現了 Whisper orthography 限了 is a phonetic homophone; independent gpt-audio confirms actual ㄒㄧㄢˋ ˙ㄌㄜ. S04 timing was regenerated from the repaired final M4A. This is technical timing evidence, not human audiovisual synchronization QA.",
-    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips: 實 ㄕˊ standalone, 實現/果實 ㄕˊ, S04 結實 ㄐㄧㄝ ˙ㄕ and repaired 放心 ㄈㄤˋ ㄒㄧㄣ, 突然 ㄊㄨˊ ㄖㄢˊ, G02 現了 ㄒㄧㄢˋ ˙ㄌㄜ, and complete G05 sentences. This is not human acceptance.",
+    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips. Latest S04 final M4A specifically passes 木橋 ㄇㄨˋ ㄑㄧㄠˊ, 結實 ㄐㄧㄝ ˙ㄕ and 放心 ㄈㄤˋ ㄒㄧㄣ. Other locked readings remain PASS. This is not renewed human audio acceptance.",
     "browserQA": "Browser QA fallback: current remote control surface has no reliable computer-audio return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run; teacher subjective review remains post-merge by default.",
-    "manualPlayback": "Teacher review at 7d59861cf9ae23b54117af59ee2a0c7caa20ae4a requested repairs to S02 image and S04 audio. Those assets were replaced; renewed teacher approval is pending on the new commit."
+    "manualPlayback": "Teacher confirmed the repaired S02 image OK at ref 6383c53441e13c94ef1d9b8c58244643215fa30f and requested another S04 audio repair because 木橋 sounded clipped. S04 was replaced and technically revalidated; renewed teacher audio approval is pending on the new commit."
   }
 }

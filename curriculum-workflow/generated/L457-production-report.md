@@ -48,3 +48,7 @@ Review ref 7d59861cf9ae23b54117af59ee2a0c7caa20ae4a reported two defects. S02's 
 ## Repaired pushed intake evidence
 
 Repaired asset commit: 22f8478f978409b87f9b91b988d73c9103cbae0. Strict package intake passed with 5 images and 10 audio files. Renewed teacher review is pending on this immutable ref.
+
+## Second S04 audio repair
+
+At review ref 6383c53441e13c94ef1d9b8c58244643215fa30f, the teacher confirmed the S02 image is OK and reported that S04 木橋 sounded clipped as mu橋. Three complete-sentence candidates were generated; all passed targeted AI review, and candidate 1 was selected. The final processed M4A independently passes 木橋 ㄇㄨˋ ㄑㄧㄠˊ with a complete rounded ㄨ and falling fourth tone, plus 結實 ㄐㄧㄝ ˙ㄕ and 放心 ㄈㄤˋ ㄒㄧㄣ. Final transcript and timings were regenerated. Renewed teacher audio review is pending on the new commit.
