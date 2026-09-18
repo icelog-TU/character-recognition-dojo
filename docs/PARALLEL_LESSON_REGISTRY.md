@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L471 | 題 | claimed | Production F / parallel-f | `codex/l471-complete-package` | L466:絕; L467:活; L468:該; L469:應; L470:答; R057/R058 after L465 | 絕、活、該、應、答 | `curriculum-workflow/lesson-requests/L471.json`; `curriculum-workflow/generated/L471-generation-packet.md`; `curriculum-workflow/drafts/L471-draft.json` | `public/assets/lessons/L471/`; `curriculum-workflow/audio-inbox/L471/` | Teacher-approved Production handoff received 2026-09-18. Vocabulary ceiling locked to formal L001-L465 plus five provisional dependency characters and 題, 475 unique Han. |
+| L471 | 題 | request-ready | Production F / parallel-f | `codex/l471-complete-package` | L466:絕; L467:活; L468:該; L469:應; L470:答; R057/R058 after L465 | 絕、活、該、應、答 | `curriculum-workflow/lesson-requests/L471.json`; `curriculum-workflow/generated/L471-generation-packet.md`; `curriculum-workflow/drafts/L471-draft.json` | `public/assets/lessons/L471/`; `curriculum-workflow/audio-inbox/L471/` | Request, packet and approved five-sentence draft created from teacher handoff. Vocabulary ceiling locked to formal L001-L465 plus five provisional dependency characters and 題, 475 unique Han; allowed sweep, coverage and Stage 4 indexes PASS. |
 
 ## Status Values
 
