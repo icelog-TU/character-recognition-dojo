@@ -44,3 +44,5 @@
 - S05: 日期 is explicitly ㄖˋ ㄑㄧˊ; final 期 rises approximately 100→127 Hz through the voiced target interval.
 - AI transcription matches all three approved Han sequences. Timings and package-local validation are regenerated. Teacher re-review is requested on the new immutable repair ref.
 - Actual phone-width `LessonPanel` Stage 3 playback emitted `playing` then `ended` for repaired S01, S02 and S05.
+- Repair asset commit: `87237ed7881e07d98cd1f2f512066ae4c0b5c621`.
+- Pushed-ref package intake at `origin/codex/l463-complete-package`: PASS; package status remains `dependency-blocked-asset-complete`.
