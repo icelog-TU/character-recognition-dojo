@@ -9,7 +9,8 @@
     "L456-S02.m4a",
     "L456-S05.m4a",
     "S01/S02/S05 charTimings",
-    "G02 suffix 出 boundary"
+    "G02 suffix 出 boundary",
+    "L456-S04.m4a follow-up repair and charTimings"
   ],
   "images": [
     {
@@ -147,16 +148,16 @@
     },
     {
       "file": "L456-S04.m4a",
-      "bytes": 39158,
-      "sha256": "a8877cc44542eabf36f59e4400d12caeb1038db2e94c2ceaadf4298b9457c43b",
-      "durationMs": 3140,
+      "bytes": 39194,
+      "sha256": "47250aaa9b97cca4d0172192fabaf4494dae8f86253062199d0b636cffa2e76a",
+      "durationMs": 3100,
       "codec": "aac",
       "sampleRate": 44100,
       "channels": 1,
-      "meanVolumeDb": -17.9,
-      "maxVolumeDb": -3,
+      "meanVolumeDb": -18,
+      "maxVolumeDb": -2.1,
       "decode": "PASS",
-      "status": "teacher-assigned whole-sentence repair; exact transcript matched; teacher listening pending"
+      "status": "teacher-assigned follow-up whole-sentence repair; 爸爸 is ㄅㄚˋ ˙ㄅㄚ and 演 is present in independent acoustic review; teacher listening pending"
     },
     {
       "file": "L456-S05.m4a",
@@ -185,7 +186,7 @@
       "status": "rescued; final AI acoustic review hears tone 2 rising"
     }
   ],
-  "totalAssetBytes": 1413685,
+  "totalAssetBytes": 1413721,
   "timingIssues": [],
   "timingQA": {
     "automated": "All nine alignment records are ordered, non-overlapping and within duration; final validator result recorded in handoff.",
@@ -199,7 +200,8 @@
     "method": "Final processed M4A decoded to PCM and submitted as input_audio to gpt-audio-1.5; AI acoustic evidence, not teacher subjective approval.",
     "result": "All four repaired files report 突 as tone 2 with a rising contour; complete final syllables and no omissions, repetitions or clipping.",
     "evidence": "L456-rescue-final-listening.json",
-    "ttsRendering": "圖 / 圖然 used only as homophonic pronunciation rendering for Taiwan ㄊㄨˊ; learner-facing text and metadata remain 突; whole utterances generated independently with no splicing."
+    "ttsRendering": "圖 / 圖然 used only as homophonic pronunciation rendering for Taiwan ㄊㄨˊ; learner-facing text and metadata remain 突; whole utterances generated independently with no splicing.",
+    "s04FollowUp": "Final processed L456-S04 independently transcribed as 爸爸演怪物，我演勇者。 First two syllables were assessed as b+a tone 4 followed by b+a neutral, naturally connected, with no drift or clipping; evidence: L456-S04-repair-listening.json."
   },
   "browserQA": "PASS on 2026-09-18: all ten M4A files loaded over localhost and played to ended in Codex in-app browser.",
   "sharedFiles": "No production curriculum, scripts, planner, or ledger changes.",

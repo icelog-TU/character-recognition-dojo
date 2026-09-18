@@ -29,9 +29,15 @@
       "id": "L456-S05",
       "intendedText": "走到半路突然下起大雨",
       "phoneticTtsRendering": "走到半路圖然下起大雨"
+    },
+    {
+      "id": "L456-S04",
+      "intendedText": "爸爸演怪物我演勇者",
+      "phoneticTtsRendering": "爸吧演怪物我演勇者"
     }
   ],
   "reason": "Use a homophonic TTS pronunciation rendering to produce Taiwan ㄊㄨˊ while preserving all learner-facing approved text and metadata.",
   "candidateEvidence": "L456-rescue-phonetic-candidates.json",
-  "finalEvidence": "L456-rescue-final-listening.json"
+  "finalEvidence": "L456-rescue-final-listening.json",
+  "s04FollowUpReason": "Use 爸吧 only as a whole-sentence TTS pronunciation rendering to obtain natural ㄅㄚˋ ˙ㄅㄚ; learner-facing 爸爸 remains unchanged. No syllable cutting or splicing."
 }

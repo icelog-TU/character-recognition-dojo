@@ -1,0 +1,34 @@
+{
+  "unit": "L456",
+  "asset": "L456-S04.m4a",
+  "intendedText": "爸爸演怪物，我演勇者。",
+  "phoneticTtsRendering": "爸吧演怪物我演勇者",
+  "method": "Final processed M4A decoded to PCM and submitted as input_audio to gpt-audio-1.5 without supplying the intended transcript; AI acoustic evidence, not teacher approval.",
+  "result": {
+    "transcription": "爸爸演怪物，我演勇者。",
+    "firstTwoSyllables": {
+      "syllable1": {
+        "initial": "b",
+        "final": "a",
+        "tone": 4,
+        "drift": false,
+        "clip": false,
+        "separation": false,
+        "change": false
+      },
+      "syllable2": {
+        "initial": "b",
+        "final": "a",
+        "tone": "neutral",
+        "drift": false,
+        "clip": false,
+        "separation": false,
+        "change": false
+      },
+      "naturalConnectedPronunciation": true
+    },
+    "aroundWoYanYongZhe": "怪物，我演勇者",
+    "yanPresent": true
+  },
+  "teacherListening": "pending"
+}
