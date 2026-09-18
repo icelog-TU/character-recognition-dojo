@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L459 | 中 | claimed | Production A (Remote) | codex/l459-complete-package | L453演; L454表; L455現; L456突; L457實; L458其; ordered L447-L458; R055/R056 after L450 | 演表現突實其 | curriculum-workflow/lesson-requests/L459.json; curriculum-workflow/generated/L459-generation-packet.md; curriculum-workflow/drafts/L459-draft.json | public/assets/lessons/L459/ | Formal Production handoff accepted. Base 80431be0: production L001-L446, latest 音, 450 learned Han. Allowed457. Package production proceeds in parallel; Release owns ordered integration and review milestone gates. |
 
 ## Status Values
 
