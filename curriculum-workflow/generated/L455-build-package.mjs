@@ -1,8 +1,7 @@
 import fs from 'node:fs';
-import { execFileSync } from 'node:child_process';
 
 const source = JSON.parse(fs.readFileSync('src/curriculum/sample-lessons.json', 'utf8'));
-const sourceMainCommit = execFileSync('git', ['rev-parse', 'origin/main'], { encoding: 'utf8' }).trim();
+const sourceMainCommit = '5622c827569df36e09c1767d61f114b35973bbea';
 const formal = [...new Set(source.lessons.flatMap((lesson) => lesson.newChars ?? []))];
 const provisionalLearnedChars = ['舞', '台', '候', '演', '表'];
 const allowedChars = [...new Set([...formal, ...provisionalLearnedChars, '現'])];
@@ -18,7 +17,7 @@ const sentences = [
   sentence('L455-S02', '表演的時候，我忘了舞步。', '表演的時候我忘了舞步', ['表演的時候，', '我忘了舞步。'], '舞', '學校舞台上，主角女孩與少量 generic classmates 正在跳舞。其他孩子做一致的簡單舞步，主角女孩停住、看向同伴，表情稍微困惑，雙手與腳步顯示她忘記下一個舞步。不是跌倒、受傷或被嘲笑，不加文字、數字或問號符號。'),
   sentence('L455-S03', '我發現葉子後面有一條小蟲。', '我發現葉子後面有一條小蟲', ['我發現葉子', '後面有一條', '小蟲。'], '現', '明亮花園中，主角女孩用指尖輕輕翻起一片仍長在植物上的大葉子，葉片背面清楚露出一條友善的小毛毛蟲。葉片背面、毛毛蟲與女孩好奇注視的視線形成畫面重點。女孩不撕葉、不抓蟲，毛毛蟲不可畫在葉片正面。'),
   sentence('L455-S04', '小時候怕水，現在會游泳了。', '小時候怕水現在會游泳了', ['小時候怕水，', '現在會', '游泳了。'], '現', '主畫面呈現現在的主角女孩在泳池安全淺水區游泳，表情安心，旁邊有外貌不同於固定家人的 generic 成人教練近距離照看。小型無字回憶泡泡呈現同一女孩更年幼時坐在池邊，因怕水而靠著固定媽媽。過去與現在的女孩保留相同臉型、短深棕髮與粉紅髮夾，不設定確切年齡，不畫成兩個不同孩子，不畫溺水或無人看顧。'),
-  sentence('L455-S05', '山洞裡出現了怪物。', '山洞裡出現了怪物', ['山洞裡', '出現了怪物。'], '怪', '溫暖奇幻繪本情境，distinct generic young adventurer 站在明亮可見的山洞口，看見一隻友善、有驚奇感但不恐怖的怪物從洞內走向洞口。怪物完整身體清楚可見，洞內有柔和反射光，不只剩眼睛或模糊影子。勇者不攻擊，怪物不傷人，不血腥；不是主角家門口的人影，也不是星星出現。'),
+  sentence('L455-S05', '山洞裡出現了怪物。', '山洞裡出現了怪物', ['山洞裡', '出現了怪物。'], '怪', '明確呈現掌上遊戲畫面：近景遊戲機螢幕中，一隻友善、有驚奇感但不恐怖的怪物從明亮可見的山洞內走向洞口，完整身體清楚可見；洞口可有一名背對觀眾的 generic 盔甲遊戲角色。畫面不出現主角小女孩或任何現實人物，機身僅可見無身份的操作手部。怪物不傷人，角色不攻擊，不血腥；遊戲介面只用無字圖示，不出現文字、數字、品牌或標誌。'),
 ];
 const games = [
   { id: 'L455-G01', type: 'find-character', sentenceId: 'L455-S01', targetChar: '現', targetCharIndex: 0 },

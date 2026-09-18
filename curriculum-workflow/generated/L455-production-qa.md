@@ -12,7 +12,7 @@
 - S02 PASS — the cast-locked protagonist pauses in mild confusion while distinct generic classmates continue one synchronized dance step; there is no fall, injury or ridicule.
 - S03 PASS — the cast-locked protagonist gently lifts a leaf that remains attached to the plant and clearly discovers a caterpillar on its underside.
 - S04 PASS — the present-day protagonist swims safely with an adult instructor nearby, while a small memory bubble shows the same girl younger and afraid of water beside her mother.
-- S05 PASS — a fully visible, friendly fantasy monster emerges from a warmly lit cave toward a non-attacking generic adventurer; the scene is surprising but not frightening or violent.
+- S05 PASS after teacher repair — the fantasy scene is unmistakably contained in a handheld game screen; a fully visible friendly monster emerges from a warmly lit cave toward a generic armored game avatar, and the protagonist girl does not appear.
 - Overall L058 style lock PASS; recurring-cast lock PASS; all five files are square 1024 px WebP, each below 400 KiB, with no readable text, numbers, labels, brands or watermark.
 
 ## Audio and timing QA
@@ -38,3 +38,8 @@
 ## Release dependency state
 
 L450-L454 must enter main in playable order before L455 can be integrated. R055/R056 are the milestone after L450, cover L421-L450, and are excluded from this package. These dependencies do not affect asset completeness.
+
+## Teacher asset review repair
+
+- Review ref `f7f1ab72bf6dff126ec93e4376a2ad967ed5a663` marked only `L455-S05:image` for repair: present the fictional monster as a game image and remove the protagonist girl.
+- S05 was regenerated as a close handheld-console view. The game screen contains the cave, friendly monster and generic armored avatar; no protagonist girl appears. The other four images and all audio files were left unchanged.
