@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L460 | 午 | ready-blocked-by-dependency | Production B | codex/l460-complete-package | L455, L456, L457, L458, L459 | 現、突、實、其、中 | `curriculum-workflow/lesson-requests/L460.json`; `curriculum-workflow/generated/L460-generation-packet.md`; `curriculum-workflow/drafts/L460-draft.json` | `public/assets/lessons/L460/` | Asset-complete package: 5 WebP, 10 M4A, timings, image QA, strict asset audit and immutable browser playback PASS. Awaiting L447-L459 and R055/R056 release dependencies; Production must not merge main. |
+| L460 | 午 | ready-blocked-by-dependency | Production B | codex/l460-complete-package | L455, L456, L457, L458, L459 | 現、突、實、其、中 | `curriculum-workflow/lesson-requests/L460.json`; `curriculum-workflow/generated/L460-generation-packet.md`; `curriculum-workflow/drafts/L460-draft.json` | `public/assets/lessons/L460/` | Asset-complete package: 5 WebP, 10 M4A, timings, image QA, strict asset audit and immutable browser playback PASS; teacher S04 torn-page feedback repaired and revalidated. Awaiting L447-L459 and R055/R056 release dependencies; Production must not merge main. |
 
 ## Status Values
 
