@@ -1522,7 +1522,7 @@
     "audioPipeline": "Repo OpenAI gpt-4o-mini-tts coral, speed 0.9; all files processed to mono AAC 44100 Hz. G05 wrong choices are separate complete-sentence recordings with no splicing. G02 suffix was independently generated from 睡，想出去玩 with the required semantic pause and without 午.",
     "timingReview": "Whisper word alignment recorded for all five sentences and four referenced Stage 4 fragments/options. Every expected Han sequence matched after simplified/traditional and the 小悅/小月 homophone normalization.",
     "pronunciation": "Full-sentence transcripts matched 午休、中午、書中 and 突然 contexts. Standalone 午 was regenerated after ambiguous isolated Whisper recognition; gpt-4o-transcribe with Taiwan vocabulary context returned 午. G02 suffix transcript preserved an audible pause after 睡.",
-    "browserQA": "Pre-merge asset QA is prepared for immutable pushed-commit Browser QA and playback of all sentence, character, teach-fragment and G05 option audio elements.",
+    "browserQA": "Immutable media commit 3e502e5c7cc505f93557e33f3420d4fac9508548 loaded 5 sentence image/audio cards and 6 additional formal audio entries with repair count 0. All 11 audio elements were started from the beginning and reached ended=true with currentTime=duration and media error=null. Console showed two Chrome extension message-channel closure entries unrelated to page assets; no media failure occurred.",
     "assetAudit": "PASS: local package audit found 5 WebP, 10 M4A, complete timings and 1,326,920 total asset bytes. Strict whole-repo asset audit checked 500 units, 2,459 image references and 4,861 audio references with 0 warnings."
   },
   "sentences": [
