@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L468 | 該 | repair-in-progress | Production C / parallel-c | codex/l468-complete-package | L466、L467; R057/R058 before Release | 絕、活 | curriculum-workflow/lesson-requests/L468.json; curriculum-workflow/generated/L468-generation-packet.md; curriculum-workflow/drafts/L468-draft.json | public/assets/lessons/L468/ | Teacher review on ref `556b72dc` requested S01 不該 ㄅㄨˋ ㄍㄞ and S05 星期日 ㄒㄧㄥ ㄑㄧˊ ㄖˋ audio repairs. Both full sentences regenerated, realigned and AI-listening PASS; pushed-ref intake and teacher re-review pending. Five images and all other assets unchanged. Release remains blocked by R057/R058 and L466/L467. |
+| L468 | 該 | ready-blocked-by-dependency | Production C / parallel-c | codex/l468-complete-package | L466、L467; R057/R058 before Release | 絕、活 | curriculum-workflow/lesson-requests/L468.json; curriculum-workflow/generated/L468-generation-packet.md; curriculum-workflow/drafts/L468-draft.json | public/assets/lessons/L468/ | Teacher review on ref `556b72dc` requested S01 不該 ㄅㄨˋ ㄍㄞ and S05 星期日 ㄒㄧㄥ ㄑㄧˊ ㄖˋ audio repairs. Both full sentences regenerated, realigned and AI-listening PASS; pushed-ref package-intake PASS, teacher re-review pending. Five images and all other assets unchanged. Release remains blocked by R057/R058 and L466/L467. |
 
 ## Status Values
 

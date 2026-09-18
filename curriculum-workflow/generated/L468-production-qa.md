@@ -23,4 +23,4 @@
 ## Interaction and intake
 
 - Phone-width LessonPanel QA at 390x844: Stage 1 standalone character playback PASS; Stage 2 showed the exact six cards and accepted all three target taps; Stage 3 played all five final sentence assets to completion and reached PASS; Stage 4 G01 target selection PASS. G02 rendered the sentence-initial target, independently generated suffix playback and hold-to-record UI correctly. The automated browser session has no physical microphone input, so microphone capture/replay remains teacher-device QA; G03-G05 payloads, indexes, card order and referenced audio were verified mechanically and by the package validator.
-- Pending pushed-ref intake after teacher-requested S01/S05 audio repair.
+- `npm run curriculum:package-intake -- --unit L468 --ref origin/codex/l468-complete-package`: PASS after teacher-requested S01/S05 audio repair (dependency-blocked-asset-complete; 5 images; 9 audio files; all five canonical Stage 4 game types).
