@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L457 | 實 | claimed | Production E | codex/l457-complete-package | L452, L453, L454, L455, L456 | 候 演 表 現 突 | curriculum-workflow/lesson-requests/L457.json; curriculum-workflow/generated/L457-generation-packet.md; curriculum-workflow/drafts/L457-draft.json | public/assets/lessons/L457/; curriculum-workflow/audio-inbox/L457/ | Formal teacher handoff received. Allowed ceiling: origin/main L001-L443 plus 候演表現突 and 實. Production package only; Release owns ordered integration. |
+| L457 | 實 | request-ready | Production E | codex/l457-complete-package | L452, L453, L454, L455, L456 | 候 演 表 現 突 | curriculum-workflow/lesson-requests/L457.json; curriculum-workflow/generated/L457-generation-packet.md; curriculum-workflow/drafts/L457-draft.json | public/assets/lessons/L457/; curriculum-workflow/audio-inbox/L457/ | Formal teacher handoff received. Allowed ceiling: origin/main L001-L443 plus 候演表現突 and 實. Production package only; Release owns ordered integration. |
 
 ## Status Values
 
@@ -110,3 +110,4 @@ npm run curriculum:audit-state
 ```
 
 If another thread changed the registry, rebase first and preserve both threads' rows. Do not delete another active row unless that lesson is already merged or the user explicitly cancels it.
+
