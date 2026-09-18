@@ -3456,3 +3456,11 @@ Teacher-approved records below are authoritative for this package. Production st
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L447&ref=571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec
 
 - Teacher manual image/audio review: PASS on `82945397a186deb1ab056e6304529aaa05a560da` (2026-09-17); all 5 images and all 10 audio files approved.
+
+## Package Rescue volume correction
+
+- Source package: `1134e379d10c7e51cec2329dc90bdaa9f6e094d3`.
+- `char-u62cd.m4a` received a volume-only `+4 dB` gain. Mean volume changed from `-30.5 dB` to `-26.5 dB`; peak changed from `-12.0 dB` to `-8.1 dB`.
+- The complete teacher-approved standalone recording was retained. There was no regeneration, trimming, cutting, splicing, timing change, or text change.
+- Decoded PCM before/after comparison used the same 58,368 samples and produced correlation `0.9997229984`, confirming the same recording and timing with only amplitude adjustment and AAC re-encoding.
+- Final SHA-256: `c36827bb44a708fe2ebcfde4f86d96da199ea5a8f4b7d5511b9c4f4c87f0f26c`.

@@ -1075,6 +1075,32 @@
       "reviewedAt": "2026-09-17",
       "scope": "All 5 final lesson images and all 10 final lesson audio files",
       "teacherStatement": "447人工审核图档音档都OK。"
+    },
+    "packageRescue": {
+      "sourcePackageSha": "1134e379d10c7e51cec2329dc90bdaa9f6e094d3",
+      "file": "public/assets/lessons/L447/audio/char-u62cd.m4a",
+      "method": "Volume-only 4 dB gain from the teacher-approved source M4A; full standalone recording retained; no trimming, cutting, splicing, timing change, or regeneration.",
+      "before": {
+        "sha256": "71bb20d9354385993c3e2336d2eb0a97dace1258b6a26875a83b58a76a298592",
+        "durationMs": 1320,
+        "meanVolumeDb": -30.5,
+        "maxVolumeDb": -12
+      },
+      "after": {
+        "sha256": "c36827bb44a708fe2ebcfde4f86d96da199ea5a8f4b7d5511b9c4f4c87f0f26c",
+        "durationMs": 1323,
+        "meanVolumeDb": -26.5,
+        "maxVolumeDb": -8.1,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1
+      },
+      "pcmComparison": {
+        "samples": 58368,
+        "correlation": 0.9997229984269036,
+        "linearGain": 1.5797211258573767
+      },
+      "contentReview": "Original teacher approval remains the pronunciation/content reference. The rescue changes amplitude only; decoded waveform comparison confirms the same recording and timing."
     }
   }
 }
