@@ -1,0 +1,66 @@
+{
+  "unit": "R057",
+  "tool": "Built-in imagegen",
+  "dimensions": "1024x1024",
+  "references": [
+    "public/assets/lessons/L058/images/L058-S01.webp",
+    "public/assets/lessons/L058/images/L058-S02.webp",
+    "public/assets/lessons/L058/images/L058-S03.webp",
+    "public/assets/reference/lesson-cast/xiaoyue.webp",
+    "recurring family anchors L154/L162/L163"
+  ],
+  "result": "PASS",
+  "images": [
+    {
+      "sentenceId": "R057-S01",
+      "path": "public/assets/reviews/R057/images/R057-S01.webp",
+      "bytes": 161202,
+      "sha256": "d54639b1dbe259b5375eff1ed9c9f5b1782380c78d7892c32c5e564b77a845f9",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Fixed father demonstrates assembly of pre-cut wood pieces; protagonist safely aligns a small box; no dangerous child tool use."
+    },
+    {
+      "sentenceId": "R057-S02",
+      "path": "public/assets/reviews/R057/images/R057-S02.webp",
+      "bytes": 173012,
+      "sha256": "93fdb96b406ad13ebcb6aea3a2381530ffe49efbff653e8246ba72b116ab246c",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Generic adult coach, protagonist and fixed older brother each dribble a basketball on a safe court; no match or shooting action."
+    },
+    {
+      "sentenceId": "R057-S03",
+      "path": "public/assets/reviews/R057/images/R057-S03.webp",
+      "bytes": 243750,
+      "sha256": "c447954ad36485efc7575df903d0eec611de42c833f2f48a639b921c8b046372",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Generic adult workers use compact paving equipment on a visibly damaged track section behind barriers; no children in the work zone."
+    },
+    {
+      "sentenceId": "R057-S04",
+      "path": "public/assets/reviews/R057/images/R057-S04.webp",
+      "bytes": 161656,
+      "sha256": "ebf59ab55197e9f2ef6b0cc831df539ec629683701d0af1e8da9876d7c24a478",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Xiaoyue retains long wavy chestnut hair, moon clip, lavender cardigan and teal skirt while singing; protagonist alone dances to the music."
+    },
+    {
+      "sentenceId": "R057-S05",
+      "path": "public/assets/reviews/R057/images/R057-S05.webp",
+      "bytes": 160032,
+      "sha256": "84129b7f091aa3083e27b9726e7fe73706d0b4bf4f3b371bf95b5b2df3232fde",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Generic performers bow on the raised stage after the show while the audience below visibly applauds."
+    }
+  ],
+  "rejectedAttempts": []
+}

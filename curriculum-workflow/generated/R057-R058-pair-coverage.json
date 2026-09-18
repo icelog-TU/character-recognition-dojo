@@ -1,0 +1,131 @@
+{
+  "pairUnits": [
+    "R057",
+    "R058"
+  ],
+  "afterLessonOrder": 465,
+  "targetLessonRange": {
+    "startOrder": 436,
+    "endOrder": 465
+  },
+  "sourceMainCommit": "c130f105",
+  "allowedCount": 469,
+  "requiredCoverageChars": [
+    "補",
+    "修",
+    "習",
+    "練",
+    "運",
+    "賽",
+    "機",
+    "操",
+    "器",
+    "樂",
+    "音",
+    "拍",
+    "歌",
+    "唱",
+    "舞",
+    "台",
+    "候",
+    "演",
+    "表",
+    "現",
+    "突",
+    "實",
+    "其",
+    "中",
+    "午",
+    "文",
+    "日",
+    "期",
+    "待",
+    "招"
+  ],
+  "counts": {
+    "補": 1,
+    "修": 1,
+    "習": 2,
+    "練": 2,
+    "運": 1,
+    "賽": 1,
+    "機": 1,
+    "操": 1,
+    "器": 1,
+    "樂": 1,
+    "音": 1,
+    "拍": 1,
+    "歌": 1,
+    "唱": 1,
+    "舞": 1,
+    "台": 1,
+    "候": 1,
+    "演": 1,
+    "表": 1,
+    "現": 1,
+    "突": 1,
+    "實": 1,
+    "其": 1,
+    "中": 1,
+    "午": 1,
+    "文": 1,
+    "日": 2,
+    "期": 1,
+    "待": 1,
+    "招": 1
+  },
+  "coverage": "30/30 PASS",
+  "lengthAudit": [
+    {
+      "id": "R057-S01",
+      "hanCount": 8,
+      "result": "8 Han PASS (≤12)"
+    },
+    {
+      "id": "R057-S02",
+      "hanCount": 9,
+      "result": "9 Han PASS (≤12)"
+    },
+    {
+      "id": "R057-S03",
+      "hanCount": 11,
+      "result": "11 Han PASS (≤12)"
+    },
+    {
+      "id": "R057-S04",
+      "hanCount": 11,
+      "result": "11 Han PASS (≤12)"
+    },
+    {
+      "id": "R057-S05",
+      "hanCount": 11,
+      "result": "11 Han PASS (≤12)"
+    },
+    {
+      "id": "R058-S01",
+      "hanCount": 10,
+      "result": "10 Han PASS (≤12)"
+    },
+    {
+      "id": "R058-S02",
+      "hanCount": 12,
+      "result": "12 Han PASS (≤12)"
+    },
+    {
+      "id": "R058-S03",
+      "hanCount": 11,
+      "result": "11 Han PASS (≤12)"
+    },
+    {
+      "id": "R058-S04",
+      "hanCount": 11,
+      "result": "11 Han PASS (≤12)"
+    },
+    {
+      "id": "R058-S05",
+      "hanCount": 11,
+      "result": "11 Han PASS (≤12)"
+    }
+  ],
+  "teacherNotes": "Updated handoff fully supersedes the prior version. R058-S02 is the middle-school/elementary-school mistaken-identity scene; all earlier archery package content is absent."
+}

@@ -1,0 +1,96 @@
+{
+  "unit": "R057",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "c130f105",
+  "allowedChars": {
+    "expected": 469,
+    "actual": 469,
+    "result": "PASS"
+  },
+  "pairCoverage": "30/30 PASS",
+  "sentences": [
+    {
+      "id": "R057-S01",
+      "hanCount": 8,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 8,
+      "durationMs": 2418,
+      "tailMs": 278
+    },
+    {
+      "id": "R057-S02",
+      "hanCount": 9,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 9,
+      "durationMs": 3012,
+      "tailMs": 272
+    },
+    {
+      "id": "R057-S03",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 4687,
+      "tailMs": 227
+    },
+    {
+      "id": "R057-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 4880,
+      "tailMs": 220
+    },
+    {
+      "id": "R057-S05",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3652,
+      "tailMs": 212
+    }
+  ],
+  "stage4": {
+    "order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "result": "PASS"
+  },
+  "audio": {
+    "filesExpected": 9,
+    "filesActual": 9,
+    "result": "PASS; exact-Han final-file ASR and timing audit; teacher review pending"
+  },
+  "images": {
+    "filesExpected": 5,
+    "filesActual": 5,
+    "result": "PASS; style/cast/semantic audit; teacher review pending"
+  },
+  "browserQa": {
+    "status": "pending fixed-ref pushed preview"
+  },
+  "releaseBlockers": [
+    "Contiguous numbered lessons L462-L465",
+    "Paired playable order L465 -> R057 -> R058 -> L466"
+  ],
+  "sharedReleaseFiles": "Untouched; Release-owned"
+}

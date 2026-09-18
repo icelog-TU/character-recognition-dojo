@@ -2373,3 +2373,17 @@
   "sentences": []
 }
 ```
+
+
+## Production completion record
+
+- Package status: `dependency-blocked-asset-complete`.
+- Assets: 5 final 1024×1024 WebP images and 9 independent OpenAI M4A files.
+- Allowed vocabulary: 469 locked characters; sentence and Stage 4 sweep PASS.
+- Pair coverage: 30/30 required characters PASS.
+- Stage 4 order, Han-only indexes, option mapping and one-use-per-sentence checks: PASS.
+- Image style/cast/semantic comparison: PASS; teacher review pending.
+- Audio final-file exact-Han ASR and charTimings: PASS; no human listening claim; teacher review pending.
+- Browser QA: pending immutable pushed-ref preview.
+- Release blockers: contiguous lessons L462-L465, then paired order L465 → R057 → R058 → L466.
+- Superseded R058-S02 audit: authoritative 中學生／小學生 mistaken-identity sentence, image, audio, timings and G02 are present; every prior archery sentence, image, audio, timing and G02 item is absent.

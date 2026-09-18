@@ -1,0 +1,97 @@
+{
+  "unit": "R058",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "c130f105",
+  "allowedChars": {
+    "expected": 469,
+    "actual": 469,
+    "result": "PASS"
+  },
+  "pairCoverage": "30/30 PASS",
+  "sentences": [
+    {
+      "id": "R058-S01",
+      "hanCount": 10,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 4,
+      "timingCount": 10,
+      "durationMs": 4179,
+      "tailMs": 279
+    },
+    {
+      "id": "R058-S02",
+      "hanCount": 12,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 4,
+      "timingCount": 12,
+      "durationMs": 4429,
+      "tailMs": 269
+    },
+    {
+      "id": "R058-S03",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3770,
+      "tailMs": 250
+    },
+    {
+      "id": "R058-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3618,
+      "tailMs": 238
+    },
+    {
+      "id": "R058-S05",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3735,
+      "tailMs": 275
+    }
+  ],
+  "stage4": {
+    "order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "result": "PASS"
+  },
+  "audio": {
+    "filesExpected": 9,
+    "filesActual": 9,
+    "result": "PASS; exact-Han final-file ASR and timing audit; teacher review pending"
+  },
+  "images": {
+    "filesExpected": 5,
+    "filesActual": 5,
+    "result": "PASS; style/cast/semantic audit; teacher review pending"
+  },
+  "browserQa": {
+    "status": "pending fixed-ref pushed preview"
+  },
+  "releaseBlockers": [
+    "Contiguous numbered lessons L462-L465",
+    "Paired playable order L465 -> R057 -> R058 -> L466"
+  ],
+  "sharedReleaseFiles": "Untouched; Release-owned",
+  "supersededContent": "R058-S02 authoritative middle-school/elementary-school mistaken-identity package is present. Every prior archery sentence, image, audio, timing and G02 asset/data is absent."
+}
