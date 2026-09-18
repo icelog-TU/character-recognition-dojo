@@ -1094,8 +1094,8 @@
     }
   ],
   "productionQa": {
-    "method": "Final local asset, transcript, timing and per-image style/cast checks; pushed fixed-ref Browser QA pending",
-    "result": "LOCAL PASS; browser QA pending initial package push",
+    "method": "Final local asset, transcript, timing, per-image style/cast and fixed-ref Chrome Browser QA",
+    "result": "PASS: 5 images, 10 M4As, complete sentence/G02 timings, transcript QA, and 11/11 review-page playback controls",
     "audio": {
       "status": "PASS",
       "note": "Nine sentence/game files matched exact normalized Han unprompted. Isolated 其 returned homophone 起 unprompted and passed contextual glyph/pronunciation check as 其 ㄑㄧˊ; no manual listening claimed."
@@ -1105,7 +1105,17 @@
       "note": "Five final WebPs passed style/cast/semantic review; first S04 draft rejected for graphic punctuation and extra father, regenerated before commit."
     },
     "browserQa": {
-      "status": "pending-pre-merge-preview"
+      "status": "pass",
+      "assetCommit": "9d028dda268af231a9f0508a219df4b80cdbea9a",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=9d028dda268af231a9f0508a219df4b80cdbea9a",
+      "browser": "Chrome",
+      "summary": "PASS: fixed-ref page loaded 5 sentence cards and 6 other audio items; all 11 playback controls entered playing state and returned after completion.",
+      "scope": [
+        "L458-S01 through L458-S05",
+        "char-u5176",
+        "L458-G02 prefix and suffix",
+        "L458-G05 correct and two wrong options"
+      ]
     }
   }
 }

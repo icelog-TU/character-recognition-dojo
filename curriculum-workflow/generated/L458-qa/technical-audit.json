@@ -94,7 +94,17 @@
     "result": "PASS"
   },
   "browserQa": {
-    "status": "pending-pre-merge-preview"
+    "status": "pass",
+    "assetCommit": "9d028dda268af231a9f0508a219df4b80cdbea9a",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=9d028dda268af231a9f0508a219df4b80cdbea9a",
+    "browser": "Chrome",
+    "summary": "PASS: fixed-ref page loaded 5 sentence cards and 6 other audio items; all 11 playback controls entered playing state and returned after completion.",
+    "scope": [
+      "L458-S01 through L458-S05",
+      "char-u5176",
+      "L458-G02 prefix and suffix",
+      "L458-G05 correct and two wrong options"
+    ]
   },
   "releaseBlockers": [
     "R055/R056 after L450 before L451",
