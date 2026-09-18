@@ -50,7 +50,7 @@
     "stage4AudioMetadata": "PASS",
     "imageStyleCast": "PASS",
     "audioDecode": "PASS all 10; package-local validate-production and strict format audit PASS",
-    "browserQA": "Browser QA fallback: current remote control surface has no reliable computer-audio return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run; teacher subjective review remains post-merge by default."
+    "browserQA": "Browser QA fallback: current remote control surface has no reliable computer-audio return or physical-phone microphone channel. Teacher manually accepted the repaired S04 audio at ref fff405c18fac57bfd63afdb1390efa0b232d7aaa. Syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run."
   },
   "pronunciation": {
     "unit": "L457",
@@ -192,7 +192,7 @@
     "teacherImageResult": "S02 image OK",
     "audioFinding": "S04 木橋 sounded clipped as mu橋",
     "repair": "Full S04 sentence regenerated; final targeted gpt-audio PASS for 木橋 ㄇㄨˋ ㄑㄧㄠˊ, 結實 ㄐㄧㄝ ˙ㄕ, 放心 ㄈㄤˋ ㄒㄧㄣ",
-    "teacherAudioReview": "pending on new commit"
+    "teacherAudioReview": "PASS at fff405c18fac57bfd63afdb1390efa0b232d7aaa; scoped to repaired S04 audio"
   },
   "assetCommit": "7989c873782a84a8b78b9e2cd480189022317005",
   "intake": {

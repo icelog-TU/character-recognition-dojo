@@ -2387,7 +2387,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Assets: 5 final 1024-square WebP images and 10 final M4A files, including standalone 實, G02 fragments and complete G05 distractors
 - Timing: five sentences, both G02 fragments and both G05 distractors have exact-transcript per-Han timing metadata
 - Visual QA: final contact sheet style/cast/scene/no-text checks PASS; rejected S04 draft not shipped
-- Audio QA: Whisper exact transcript and targeted gpt-audio pronunciation checks PASS; teacher human listening remains post-merge
-- Browser QA fallback: no reliable computer-audio return or physical-phone microphone channel; continuous human listening, live highlight synchronization and G02 recording/replay are not claimed
+- Audio QA: Whisper exact transcript and targeted gpt-audio pronunciation checks PASS; teacher accepted the repaired S04 audio at ref fff405c18fac57bfd63afdb1390efa0b232d7aaa
+- Browser QA fallback: no reliable computer-audio return or physical-phone microphone channel; live highlight synchronization and G02 recording/replay are not claimed
 - Immutable asset commit: 7989c873782a84a8b78b9e2cd480189022317005; second S04 audio repair pushed and strict intake PASS
 - Release owns production JSON, planner, ledger, ordered integration and deployment

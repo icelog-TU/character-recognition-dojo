@@ -51,8 +51,8 @@ Repaired asset commit: 22f8478f978409b87f9b91b988d73c9103cbae0. Strict package 
 
 ## Second S04 audio repair
 
-At review ref 6383c53441e13c94ef1d9b8c58244643215fa30f, the teacher confirmed the S02 image is OK and reported that S04 木橋 sounded clipped as mu橋. Three complete-sentence candidates were generated; all passed targeted AI review, and candidate 1 was selected. The final processed M4A independently passes 木橋 ㄇㄨˋ ㄑㄧㄠˊ with a complete rounded ㄨ and falling fourth tone, plus 結實 ㄐㄧㄝ ˙ㄕ and 放心 ㄈㄤˋ ㄒㄧㄣ. Final transcript and timings were regenerated. Renewed teacher audio review is pending on the new commit.
+At review ref 6383c53441e13c94ef1d9b8c58244643215fa30f, the teacher confirmed the S02 image is OK and reported that S04 木橋 sounded clipped as mu橋. Three complete-sentence candidates were generated; all passed targeted AI review, and candidate 1 was selected. The final processed M4A independently passes 木橋 ㄇㄨˋ ㄑㄧㄠˊ with a complete rounded ㄨ and falling fourth tone, plus 結實 ㄐㄧㄝ ˙ㄕ and 放心 ㄈㄤˋ ㄒㄧㄣ. Final transcript and timings were regenerated. The teacher accepted the repaired S04 audio at ref fff405c18fac57bfd63afdb1390efa0b232d7aaa. This acceptance is scoped to S04 audio; live highlight synchronization and G02 phone recording/replay remain unverified.
 
 ## Second repair pushed intake evidence
 
-Second S04 repair asset commit: 7989c873782a84a8b78b9e2cd480189022317005. Strict package intake passed with 5 images and 10 audio files. Renewed teacher audio review is pending on this immutable ref.
+Second S04 repair asset commit: 7989c873782a84a8b78b9e2cd480189022317005. Strict package intake passed with 5 images and 10 audio files. Teacher audio review PASS at fff405c18fac57bfd63afdb1390efa0b232d7aaa for the repaired S04 audio.
