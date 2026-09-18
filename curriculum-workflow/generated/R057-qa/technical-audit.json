@@ -78,12 +78,12 @@
   "audio": {
     "filesExpected": 9,
     "filesActual": 9,
-    "result": "REPAIRED PASS: R057-S04 regenerated; final transcript/timing and ㄊㄧㄠˋ ㄨˇ phonetic check PASS; teacher repaired-audio review pending"
+    "result": "REPAIRED PASS; teacher audio review PASS, including R057-S04 跳舞"
   },
   "images": {
     "filesExpected": 5,
     "filesActual": 5,
-    "result": "REPAIRED PASS: R057-S04 equal-height repair complete; teacher repaired-image review pending"
+    "result": "REPAIRED PASS; teacher image review PASS, including R057-S04"
   },
   "browserQa": {
     "status": "PASS",
@@ -109,11 +109,27 @@
         "R057-S04:audio"
       ],
       "resolution": "Image regenerated with equal-height classmates; full sentence audio regenerated with verified ㄊㄧㄠˋ ㄨˇ and final timings.",
-      "status": "resolved; fixed-ref Browser QA PASS; teacher repaired-asset review pending"
+      "status": "resolved; fixed-ref Browser QA PASS; teacher repaired-image/audio review PASS"
     }
   ],
   "preRepairBrowserQa": {
     "status": "pending repaired-ref preview",
     "previousAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747"
+  },
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+    "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+    "statement": "复习五十七课也审核通过。"
+  },
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+    "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+    "statement": "复习五十七课也审核通过。"
   }
 }

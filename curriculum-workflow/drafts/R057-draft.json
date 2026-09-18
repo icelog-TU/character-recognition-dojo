@@ -1073,7 +1073,7 @@
     "audioTranscriptTiming": "PASS",
     "browserQa": "PASS: 5 sentence cards + 5 other-audio cards; all 10 playback controls completed",
     "browserQaAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747",
-    "teacherReview": "pending",
+    "teacherReview": "PASS: teacher approved all R057 images and audio, including repaired R057-S04",
     "manualListeningClaimed": false,
     "repairHistory": [
       {
@@ -1084,11 +1084,27 @@
           "跳舞聽成造舞"
         ],
         "resolution": "Regenerated image with equal-height same-age classmates and regenerated full sentence audio with explicit ㄊㄧㄠˋ ㄨˇ pronunciation; final ASR, phonetic and timing checks PASS.",
-        "teacherReview": "pending repaired asset review; fixed-ref Browser QA PASS"
+        "teacherReview": "PASS: teacher approved repaired R057-S04 image and audio"
       }
     ],
     "browserQaRepair": "PASS: repaired fixed ref loaded replacement image and completed R057-S04 playback",
-    "browserQaRepairAssetCommit": "565ab4d1bf1cd9a35770aac4059a9c662d900efe"
+    "browserQaRepairAssetCommit": "565ab4d1bf1cd9a35770aac4059a9c662d900efe",
+    "teacherImageReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+      "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+      "statement": "复习五十七课也审核通过。"
+    },
+    "teacherAudioReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "source": "teacher handoff message",
+      "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+      "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+      "statement": "复习五十七课也审核通过。"
+    }
   },
   "releaseSequence": "L465 → R057 → R058 → L466",
   "dependencyResolution": "Final fetch verified origin/main acd71a5b integrates L462-L465."

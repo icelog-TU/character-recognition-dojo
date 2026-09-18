@@ -2398,3 +2398,12 @@
 - Final sentence charTimings regenerated from the repaired M4A.
 - Fixed-ref Browser QA: PASS at `565ab4d1bf1cd9a35770aac4059a9c662d900efe`; replacement image rendered, R057-S04 playback started and ended, and the page reported zero repair flags. Teacher review of the repaired image/audio remains pending.
 - Repaired pre-merge preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R057&ref=565ab4d1bf1cd9a35770aac4059a9c662d900efe
+
+
+## Teacher asset approval
+
+- Reviewed package ref: `b18acab1ed934ebe99ebe1c85875dae46ae76776`.
+- Date: 2026-09-18.
+- Scope: all five R057 images and all nine R057 audio files, including repaired R057-S04 image and sentence audio.
+- Result: PASS.
+- Teacher statement: 「复习五十七课也审核通过。」

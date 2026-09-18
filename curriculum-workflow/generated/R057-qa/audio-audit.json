@@ -411,7 +411,16 @@
       "file": "R057-S04.m4a",
       "issue": "Teacher heard 跳舞 as 造舞.",
       "resolution": "Full sentence regenerated; Whisper reads 跳舞 and independent audio phonetic check reports ㄊㄧㄠˋ ㄨˇ.",
-      "manualListeningClaimed": false
+      "manualListeningClaimed": false,
+      "teacherReview": "PASS: teacher approved repaired R057-S04 audio"
     }
-  ]
+  ],
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+    "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+    "statement": "复习五十七课也审核通过。"
+  }
 }
