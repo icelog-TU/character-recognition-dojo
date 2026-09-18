@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L455 | 現 | ready-blocked-by-dependency | Production C / parallel-c | codex/l455-complete-package | L450-L454; R055/R056 after L450 | 舞、台、候、演、表 | curriculum-workflow/lesson-requests/L455.json; curriculum-workflow/generated/L455-generation-packet.md; curriculum-workflow/drafts/L455-draft.json | public/assets/lessons/L455/ | Asset complete: five images, ten audio files, final timings and browser QA PASS. Source main 5622c827; locked 453 allowed chars. Earlier ordinary lessons and the R055/R056 milestone block Release only. |
+| L455 | 現 | ready-blocked-by-dependency | Production C / parallel-c | codex/l455-complete-package @ 26185a2d | L450-L454; R055/R056 after L450 | 舞、台、候、演、表 | curriculum-workflow/lesson-requests/L455.json; curriculum-workflow/generated/L455-generation-packet.md; curriculum-workflow/drafts/L455-draft.json | public/assets/lessons/L455/ | Asset complete: five images, ten audio files, final timings and browser QA PASS. Source main 5622c827; locked 453 allowed chars. Earlier ordinary lessons and the R055/R056 milestone block Release only. |
 
 ## Status Values
 
