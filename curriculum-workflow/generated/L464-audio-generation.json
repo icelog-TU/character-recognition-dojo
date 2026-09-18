@@ -1,0 +1,27 @@
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "speed": 0.9,
+  "inputPolicy": "Exact approved spokenText, independent full utterances; no phonetic glyph replacement or extraction",
+  "S01FinalInstructions": "Speak the exact Mandarin input naturally and warmly. Follow this full phonetic reading in Taiwan Mandarin: wo3 hen3 qi2 dai4 xing1 qi2 ri4 de5 bi3 sai4. BOTH qi2 syllables MUST rise clearly from low to high, as in 棋. This is a Taiwan pronunciation exercise. No extra words, only one full sentence. Do not use mainland qi1.",
+  "rawLocation": "curriculum-workflow/audio-inbox/L464/ (ignored local files)",
+  "processing": "Standard assets:audio, mono AAC 44100Hz 96k; verified trailing near-silence shortened to retain 150ms beyond final -45dB decay; no syllable cuts/splicing.",
+  "repairs": [
+    {
+      "reviewedRef": "09fab9289cfba4525b67818d7f8de88180b41056",
+      "teacherFinding": "G05 O2 寫信 sounded 寫心",
+      "asset": "L464-G05-wrong-one.m4a",
+      "action": "Independently regenerated entire exact approved spokenText; no slicing/splicing or text changes",
+      "generation": {
+        "input": "日本朋友用日文寫信給我",
+        "instructions": "Speak this exact Taiwan Mandarin sentence naturally and clearly once. Mandatory phonetic reading: ri4 ben3 peng2 you3 yong4 ri4 wen2 xie3 xin4 gei3 wo3. In 寫信, 信 is xin4 ㄒㄧㄣˋ with an unmistakable falling fourth tone, NOT 心 xin1. Keep the final n audible; do not add syllables or commentary.",
+        "model": "gpt-4o-mini-tts",
+        "voice": "coral",
+        "speed": 0.9
+      },
+      "validation": "Final M4A exact Whisper transcript, independent audio-model xie3 xin4, decode/format/volume/timings PASS",
+      "humanReview": "Replacement not yet teacher-reviewed; previous QA remains scoped to original ref",
+      "sha256": "8a9927988f24c234efd3be7d0e6c3a24d5a81a24b8e2e4283058019112f6f016"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "unit": "L465",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "c130f105f1808588cb22f237519234527643b8fe",
+  "checks": {
+    "allowedChars": "PASS 469 unique Han",
+    "coverage": "PASS 招4 待2 期2 日3 文1 午1",
+    "displayLines": "PASS join exact and <=6 visible characters per line",
+    "stage4": "PASS canonical order, five distinct sentences, all indexes/options mechanically checked",
+    "images": "PASS 5 square 1024 WebP, each <=250KB",
+    "audio": "PASS 10 mono AAC 44100Hz M4A",
+    "alignment": "PASS 5 sentence, 2 G02 fragment and 2 G05 wrong-option timing tracks",
+    "technicalAuditory": "PASS all 10 final M4A with gpt-audio-1.5",
+    "browserQA": "Not certified: no reliable computer-audio return or physical-phone microphone channel; live highlight synchronization and G02 phone recording/replay remain unverified."
+  },
+  "g05MeanVolumeDb": [
+    -19.1,
+    -18,
+    -18.3
+  ],
+  "g05SpreadDb": 1.1000000000000014,
+  "files": [
+    {
+      "path": "public/assets/lessons/L465/images/L465-S01.webp",
+      "bytes": 134430,
+      "sha256": "102bfa249bc9a2c98100e3c9e8a4f820e220eb55ea71ea4888fb35b42de6531c",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "webp",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "format": {}
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/images/L465-S02.webp",
+      "bytes": 147608,
+      "sha256": "2c1793027be5e7c3d99f1235fedcfacea57cbc5baac75efbec5a94606f5b9a71",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "webp",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "format": {}
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/images/L465-S03.webp",
+      "bytes": 115284,
+      "sha256": "6863eed600fa6fcbc7fe1db1175947ae1e084ef02b5e3e6cedc8b0916da145e5",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "webp",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "format": {}
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/images/L465-S04.webp",
+      "bytes": 151268,
+      "sha256": "6824e9c26faa4e3f40cf842d1c1f8e8cd45f68c9d0daacdeb147c1174a15c798",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "webp",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "format": {}
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/images/L465-S05.webp",
+      "bytes": 142652,
+      "sha256": "32e258465c5c267a786ec11aeadd218840432ff43e041abe192b62f66e0e4ec2",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "webp",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "format": {}
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-G02-prefix.m4a",
+      "bytes": 41611,
+      "sha256": "4c1037ed73cdd58e723cd48ffbce87002b1f2efcf70de95c02738a43355cd4f7",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.421995"
+        }
+      },
+      "volume": {
+        "meanDb": -18.1,
+        "maxDb": -3.6
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-G02-suffix.m4a",
+      "bytes": 18588,
+      "sha256": "737a072c3df7af930a7507dfeb451ab3dc7f3201199b66f2f06a1cf8898046ec",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "1.695011"
+        }
+      },
+      "volume": {
+        "meanDb": -19.1,
+        "maxDb": -2
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-G05-wrong-one.m4a",
+      "bytes": 40054,
+      "sha256": "22f0ae621d802dbb7eba66c50ed68627f05d42500121e8b5ce7acd3ae805ddc0",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.261995"
+        }
+      },
+      "volume": {
+        "meanDb": -18,
+        "maxDb": -3.3
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-G05-wrong-two.m4a",
+      "bytes": 37904,
+      "sha256": "a61156e14b1059128dd5123f1213a40b7cb3bc83867f0228ab928f643222a45e",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.149002"
+        }
+      },
+      "volume": {
+        "meanDb": -18.3,
+        "maxDb": -2
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-S01.m4a",
+      "bytes": 53944,
+      "sha256": "f87b1e7fd7546167947f8028fc6be8cdc9e7328db4fba5a8b9b4655b9059f326",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.533991"
+        }
+      },
+      "volume": {
+        "meanDb": -18.6,
+        "maxDb": -2.9
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-S02.m4a",
+      "bytes": 40614,
+      "sha256": "10e47089ec6d546774c0c0dff01693b59f34b7c41bf78d76c4aaf49634049fed",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.607007"
+        }
+      },
+      "volume": {
+        "meanDb": -18.9,
+        "maxDb": -2
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-S03.m4a",
+      "bytes": 41676,
+      "sha256": "fc094aabc1e9b2bc8437b04584e30dfc3bff225034ec9446aa04bab0f0061df0",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "4.147007"
+        }
+      },
+      "volume": {
+        "meanDb": -19.1,
+        "maxDb": -2
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-S04.m4a",
+      "bytes": 46130,
+      "sha256": "1956bf429b360501647b656a26a18087bb8eec26ea5467ed91ea0ecc8b3e057b",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.829002"
+        }
+      },
+      "volume": {
+        "meanDb": -18.3,
+        "maxDb": -2
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/L465-S05.m4a",
+      "bytes": 35427,
+      "sha256": "ce2158eaecbfc8d3ba129745881aa12855b4acd00ee7fc226b874a5957c72bb5",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "2.925011"
+        }
+      },
+      "volume": {
+        "meanDb": -19.1,
+        "maxDb": -4
+      }
+    },
+    {
+      "path": "public/assets/lessons/L465/audio/char-u62db.m4a",
+      "bytes": 16600,
+      "sha256": "eb6b06a3fb1f2f5ba5d7300f863d043a1deca7ee72b02d0bf52df0d183908e10",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "1.160998"
+        }
+      },
+      "volume": {
+        "meanDb": -19,
+        "maxDb": -2.5
+      }
+    }
+  ],
+  "repair": {
+    "sourceRef": "1656891f23e9ebe0858b553e94f89cca31a1d9b3",
+    "assets": [
+      "L465-S01.m4a",
+      "L465-G02-prefix.m4a"
+    ],
+    "method": "complete-unit OpenAI TTS regeneration with shimmer; no cutting or splicing",
+    "technicalResult": "PASS: 期 second tone like 奇, Taiwan-natural 日 and overall accent",
+    "teacherReview": "PASS at e25121ca94a8b8f6296e9d6dfbe980299369d20d for repaired L465-S01 and L465-G02-prefix audio",
+    "assetCommit": "907fc8c3a7d45e624137ad23a95f90a9eb42d5a6",
+    "pushedStrictIntake": "PASS"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "unit": "L462",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "80431be0",
+  "lockedVocabularyRef": "80431be0",
+  "allowedChars": {
+    "expected": 456,
+    "actual": 456,
+    "result": "PASS"
+  },
+  "coverage": {
+    "日": 4,
+    "文": 3,
+    "午": 2,
+    "中": 2,
+    "其": 1,
+    "實": 1
+  },
+  "sentences": [
+    {
+      "id": "L462-S01",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3383,
+      "tailMs": 63
+    },
+    {
+      "id": "L462-S02",
+      "hanCount": 9,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "timingCount": 9,
+      "durationMs": 3395,
+      "tailMs": 155
+    },
+    {
+      "id": "L462-S03",
+      "hanCount": 9,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 9,
+      "durationMs": 3394,
+      "tailMs": 314
+    },
+    {
+      "id": "L462-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3655,
+      "tailMs": 15
+    },
+    {
+      "id": "L462-S05",
+      "hanCount": 12,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 12,
+      "durationMs": 3250,
+      "tailMs": 90
+    }
+  ],
+  "stage4": {
+    "order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "result": "PASS",
+    "details": "All five sentences used once; zero-based target and missing indexes, G03 cards, G04 card mapping, G02 fragments and G05 options match teacher handoff."
+  },
+  "audio": {
+    "filesExpected": 10,
+    "filesActual": 10,
+    "result": "PASS — exact transcripts, audio thresholds, fixed-ref playback QA, and teacher review of regenerated 日 all pass",
+    "specialPronunciation": "日 generated as ㄖˋ; 假日 and G02 爸爸假 generated with explicit ㄐㄧㄚˋ instructions."
+  },
+  "images": {
+    "filesExpected": 5,
+    "filesActual": 5,
+    "result": "PASS — per-image style/cast/semantic inspection and teacher image review PASS"
+  },
+  "releaseBlockers": [
+    "R055/R056 after L450 before L451",
+    "Contiguous numbered predecessors L447-L461"
+  ],
+  "sharedReleaseFiles": "Untouched; Release-owned",
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "039067bba77b7cf0b5b71d1b7a6f01017df2ee20",
+    "statement": "462圖檔音檔審核通過",
+    "scope": "All five final L462 sentence images"
+  },
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher review message",
+    "reviewedPackageRef": "364c665cd0842a7e9de36d9882ba445bec71827d",
+    "statement": "音档没有问题，日的发音标准。",
+    "scope": "Regenerated standalone 日 character audio at the L462 Package Rescue ref",
+    "priorPackageApprovalRef": "039067bba77b7cf0b5b71d1b7a6f01017df2ee20",
+    "unchangedAssetsStatus": "The prior teacher approval remains authoritative for the nine unchanged audio files."
+  },
+  "browserQa": {
+    "status": "pass",
+    "assetCommit": "7940d951ae19f3bc2467116f2329f6b43c2c1cfd",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L462&ref=7940d951ae19f3bc2467116f2329f6b43c2c1cfd",
+    "browser": "Chrome",
+    "summary": "PASS: fixed-ref page loaded 5 sentence cards and 6 other audio items; all 11/11 playback controls entered playing state and returned after completion.",
+    "scope": [
+      "L462-S01 through L462-S05",
+      "char-u65e5",
+      "L462-G02 prefix and suffix",
+      "L462-G05 correct and two wrong options"
+    ],
+    "limitation": "Browser playback QA verifies loading and playback completion. Exact Han transcription passed separately; no teacher/manual pronunciation approval is claimed."
+  },
+  "packageRescue": {
+    "sourcePackageSha": "0ff790d7861b6ad45b65cc263667a40cdee06a1f",
+    "sourceBranch": "origin/codex/l462-complete-package",
+    "file": "public/assets/lessons/L462/audio/char-u65e5.m4a",
+    "issue": "Standalone character audio was 448 ms, below the required 700-3500 ms range.",
+    "method": "Regenerated from the exact standalone input 日 with OpenAI TTS using the draft pronunciation ㄖˋ, then processed through npm run assets:audio -- --lesson L462. No sentence audio was used or cut.",
+    "before": {
+      "sha256": "0fd2a64cb3d6116220a1fe8c233bcdd7e243df36f51f06ff5981d52651d8765b",
+      "durationMs": 448,
+      "meanVolumeDb": -15.2,
+      "maxVolumeDb": -5.1
+    },
+    "after": {
+      "sha256": "39b5d496920d9724ad1eafb65d67254e4e7ef47cf3c1dc31ffc5f03c2f5d2c5e",
+      "durationMs": 1560,
+      "meanVolumeDb": -27.4,
+      "maxVolumeDb": -11.3,
+      "codec": "AAC",
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "transcriptModel": "gpt-4o-transcribe",
+      "transcript": "日",
+      "transcriptResult": "PASS"
+    },
+    "unchanged": "Five approved sentences, five images, nine other audio files, sentence/G02 timings, Stage 4 mapping, and all learner-facing text are unchanged.",
+    "teacherReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "reviewedPackageRef": "364c665cd0842a7e9de36d9882ba445bec71827d",
+      "statement": "音档没有问题，日的发音标准。"
+    }
+  }
+}

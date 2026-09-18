@@ -1,0 +1,128 @@
+{
+  "unit": "L462",
+  "method": "OpenAI Whisper word-timestamp transcription of final processed M4A",
+  "results": [
+    {
+      "id": "L462-S01",
+      "expected": "生日那天我收到一盒文具",
+      "transcript": "生日那天我收到一盒文具",
+      "result": "PASS",
+      "durationMs": 3383
+    },
+    {
+      "id": "L462-S02",
+      "expected": "媽媽會中文也會日文",
+      "transcript": "媽媽會中文也會日文",
+      "result": "PASS",
+      "durationMs": 3395
+    },
+    {
+      "id": "L462-S03",
+      "expected": "爸爸假日常睡到中午",
+      "transcript": "爸爸假日常睡到中午",
+      "result": "PASS",
+      "durationMs": 3394
+    },
+    {
+      "id": "L462-S04",
+      "expected": "我其實下午就寫完功課了",
+      "transcript": "我其實下午就寫完功課了",
+      "result": "PASS",
+      "durationMs": 3655
+    },
+    {
+      "id": "L462-S05",
+      "expected": "天還沒亮我們就出門看日出",
+      "transcript": "天還沒亮我們就出門看日出",
+      "result": "PASS",
+      "durationMs": 3250
+    },
+    {
+      "id": "L462-G02-prefix",
+      "expected": "爸爸假",
+      "transcript": "爸爸假",
+      "result": "PASS",
+      "durationMs": 801
+    },
+    {
+      "id": "L462-G02-suffix",
+      "expected": "常睡到中午",
+      "transcript": "常睡到中午",
+      "result": "PASS",
+      "durationMs": 2266
+    },
+    {
+      "id": "char-u65e5",
+      "expected": "日",
+      "transcript": "日",
+      "result": "PASS",
+      "durationMs": 1560,
+      "meanVolumeDb": -27.4,
+      "maxVolumeDb": -11.3,
+      "sha256": "39b5d496920d9724ad1eafb65d67254e4e7ef47cf3c1dc31ffc5f03c2f5d2c5e",
+      "transcriptModel": "gpt-4o-transcribe"
+    },
+    {
+      "id": "L462-G05-wrong-one",
+      "expected": "我其實上午就寫完功課了",
+      "transcript": "我其實上午就寫完功課了",
+      "result": "PASS",
+      "durationMs": 3557
+    },
+    {
+      "id": "L462-G05-wrong-two",
+      "expected": "我其實下午就交完功課了",
+      "transcript": "我其實下午就交完功課了",
+      "result": "PASS",
+      "durationMs": 3011
+    }
+  ],
+  "pronunciationNotes": [
+    "Standalone 日 was generated explicitly as ㄖˋ.",
+    "L462-S03 假日 and L462-G02 prefix 爸爸假 were generated with explicit ㄐㄧㄚˋ instructions; transcript verifies glyph sequence but teacher listening remains the final tonal check."
+  ],
+  "manualListeningClaimed": true,
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher review message",
+    "reviewedPackageRef": "364c665cd0842a7e9de36d9882ba445bec71827d",
+    "statement": "音档没有问题，日的发音标准。",
+    "scope": "Regenerated standalone 日 character audio at the L462 Package Rescue ref",
+    "priorPackageApprovalRef": "039067bba77b7cf0b5b71d1b7a6f01017df2ee20",
+    "unchangedAssetsStatus": "The prior teacher approval remains authoritative for the nine unchanged audio files."
+  },
+  "manualListeningSource": "Teacher approved the regenerated standalone 日 at the Package Rescue ref; the prior approval remains recorded for the nine unchanged audio files.",
+  "packageRescue": {
+    "sourcePackageSha": "0ff790d7861b6ad45b65cc263667a40cdee06a1f",
+    "sourceBranch": "origin/codex/l462-complete-package",
+    "file": "public/assets/lessons/L462/audio/char-u65e5.m4a",
+    "issue": "Standalone character audio was 448 ms, below the required 700-3500 ms range.",
+    "method": "Regenerated from the exact standalone input 日 with OpenAI TTS using the draft pronunciation ㄖˋ, then processed through npm run assets:audio -- --lesson L462. No sentence audio was used or cut.",
+    "before": {
+      "sha256": "0fd2a64cb3d6116220a1fe8c233bcdd7e243df36f51f06ff5981d52651d8765b",
+      "durationMs": 448,
+      "meanVolumeDb": -15.2,
+      "maxVolumeDb": -5.1
+    },
+    "after": {
+      "sha256": "39b5d496920d9724ad1eafb65d67254e4e7ef47cf3c1dc31ffc5f03c2f5d2c5e",
+      "durationMs": 1560,
+      "meanVolumeDb": -27.4,
+      "maxVolumeDb": -11.3,
+      "codec": "AAC",
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "transcriptModel": "gpt-4o-transcribe",
+      "transcript": "日",
+      "transcriptResult": "PASS"
+    },
+    "unchanged": "Five approved sentences, five images, nine other audio files, sentence/G02 timings, Stage 4 mapping, and all learner-facing text are unchanged.",
+    "teacherReview": {
+      "status": "pass",
+      "reviewedAt": "2026-09-18",
+      "reviewedPackageRef": "364c665cd0842a7e9de36d9882ba445bec71827d",
+      "statement": "音档没有问题，日的发音标准。"
+    }
+  }
+}

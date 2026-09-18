@@ -1,0 +1,59 @@
+{
+  "unit": "L465",
+  "sourceReview": {
+    "ref": "1656891f23e9ebe0858b553e94f89cca31a1d9b3",
+    "findings": [
+      "L465-S01 sounded Mainland-accented and 期 sounded like 七",
+      "L465-G02-prefix sounded Mainland-accented and 期 sounded like 七"
+    ]
+  },
+  "repair": "Both complete audio units regenerated with OpenAI gpt-4o-mini-tts shimmer, explicit natural Taiwan Mandarin and 星期日 ㄒㄧㄥ ㄑㄧˊ ㄖˋ guardrail; no cutting or splicing.",
+  "candidateReview": "alloy, shimmer and sage complete-unit candidates technically passed; shimmer selected for both final files to keep voice consistent.",
+  "technicalScope": "gpt-audio-1.5 final processed M4A review plus teacher listening acceptance of the exact repaired files.",
+  "results": [
+    {
+      "file": "L465-S01.m4a",
+      "sha256": "f87b1e7fd7546167947f8028fc6be8cdc9e7328db4fba5a8b9b4655b9059f326",
+      "expected": "星期日下午我在家招待朋友",
+      "transcriptTraditional": "星期日下午我在家招待朋友",
+      "matchesExpected": true,
+      "qiTone": "2",
+      "qiContour": "rising",
+      "qiSoundsLike": "奇",
+      "riStyle": "Taiwan-natural",
+      "overallAccent": "Taiwan-natural",
+      "afternoonCorrect": true,
+      "finalComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    },
+    {
+      "file": "L465-G02-prefix.m4a",
+      "sha256": "4c1037ed73cdd58e723cd48ffbce87002b1f2efcf70de95c02738a43355cd4f7",
+      "expected": "星期日下午我在家",
+      "transcriptTraditional": "星期日下午我在家",
+      "matchesExpected": true,
+      "qiTone": "2",
+      "qiContour": "rising",
+      "qiSoundsLike": "奇",
+      "riStyle": "Taiwan-natural",
+      "overallAccent": "Taiwan-natural",
+      "afternoonCorrect": true,
+      "finalComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    }
+  ],
+  "teacherReview": {
+    "ref": "e25121ca94a8b8f6296e9d6dfbe980299369d20d",
+    "result": "PASS",
+    "scope": [
+      "L465-S01 audio",
+      "L465-G02-prefix audio"
+    ],
+    "limitations": [
+      "live highlight synchronization not reviewed",
+      "G02 phone recording/replay not reviewed"
+    ]
+  }
+}

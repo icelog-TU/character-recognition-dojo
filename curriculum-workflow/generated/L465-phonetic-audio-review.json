@@ -1,0 +1,127 @@
+{
+  "unit": "L465",
+  "model": "gpt-audio-1.5",
+  "scope": "final processed M4A technical auditory review; not teacher human acceptance",
+  "results": [
+    {
+      "file": "char-u62db.m4a",
+      "expected": "招",
+      "critical": "Listen for one complete Mandarin syllable 招 ㄓㄠ zhao1, first tone.",
+      "transcriptTraditional": "招",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The syllable was clearly articulated in first tone.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.98
+    },
+    {
+      "file": "L465-S01.m4a",
+      "expected": "星期日下午我在家招待朋友",
+      "critical": "Check 期 ㄑㄧˊ qi2, 日 ㄖˋ ri4, 下午 ㄒㄧㄚˋ ㄨˇ (not 上午), 招 ㄓㄠ, 待 ㄉㄞˋ.",
+      "transcriptTraditional": "星期日下午我在家招待朋友",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All critical words pronounced correctly with appropriate tones",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    },
+    {
+      "file": "L465-S02.m4a",
+      "expected": "公車來了快招手",
+      "critical": "Check 招 ㄓㄠ and complete final 手.",
+      "transcriptTraditional": "公車來了 快招手",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "Pronunciation of 招 as ㄓㄠ was clear and final 手 was fully articulated.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    },
+    {
+      "file": "L465-S03.m4a",
+      "expected": "這期日文班還在招生",
+      "critical": "Check 期 ㄑㄧˊ, 日 ㄖˋ, 還 ㄏㄞˊ hai2, 招 ㄓㄠ.",
+      "transcriptTraditional": "這期日文班還在招生",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All critical syllables 期 ㄑㄧˊ, 日 ㄖˋ, 還 ㄏㄞˊ, 招 ㄓㄠ are pronounced correctly with appropriate tones.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    },
+    {
+      "file": "L465-S04.m4a",
+      "expected": "我們在山上等待日出",
+      "critical": "Check 待 ㄉㄞˋ and 日 ㄖˋ.",
+      "transcriptTraditional": "我們在山上等待日出",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The pronunciation of 待 ㄉㄞˋ and 日 ㄖˋ was clear and accurate.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L465-S05.m4a",
+      "expected": "這招太強我打不過",
+      "critical": "Check 這招 is exactly ㄓㄜˋ ㄓㄠ, not 社交 and not 這一招.",
+      "transcriptTraditional": "這招太強我打不過",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All words are as expected and tones seem correct, no unnatural pauses detected.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L465-G02-prefix.m4a",
+      "expected": "星期日下午我在家",
+      "critical": "Check 期 ㄑㄧˊ, 日 ㄖˋ, 下午 ㄒㄧㄚˋ ㄨˇ (not 上午), complete final 家.",
+      "transcriptTraditional": "星期日下午我在家",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All critical words pronounced correctly with appropriate tones. No unnatural pauses or noticeable accent differences.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    },
+    {
+      "file": "L465-G02-suffix.m4a",
+      "expected": "待朋友",
+      "critical": "Check initial 待 is ㄉㄞˋ and all three syllables are complete.",
+      "transcriptTraditional": "待朋友",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    },
+    {
+      "file": "L465-G05-wrong-one.m4a",
+      "expected": "這招太強他打不過",
+      "critical": "Check exactly eight Han syllables, 這招 ㄓㄜˋ ㄓㄠ, no added 一, and 他 ㄊㄚ.",
+      "transcriptTraditional": "這招太強他打不過",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All eight syllables present, correct tones, no added words, and '他' pronounced correctly.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    },
+    {
+      "file": "L465-G05-wrong-two.m4a",
+      "expected": "這招太強我打得過",
+      "critical": "Check exactly eight Han syllables, 這招 ㄓㄜˋ ㄓㄠ, no added 一, and 得 is a natural neutral particle.",
+      "transcriptTraditional": "這招太強我打得過",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All eight syllables present with no added '一' and the '得' sounded neutral as required.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    }
+  ]
+}

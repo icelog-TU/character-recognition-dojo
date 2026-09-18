@@ -1,0 +1,25 @@
+{
+  "unit": "L464",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "char-u5f85",
+      "sha256": "0861b176574c75416cb1b7d9c4afa06ba1e90a3eb4dff273228081183c2b8c7b",
+      "model": "gpt-audio-1.5",
+      "review": "{\n  \"transcript\": [\"dài\"],\n  \"heardPronunciation\": [\"dai4\"],\n  \"uncertainty\": 0.0\n}"
+    },
+    {
+      "id": "L464-S01",
+      "sha256": "c88b2776487fa12400cb4a690853308d8196e327b0f96d78cca2a212bc33b8c4",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":[\"wo3\",\"hen3\",\"qi2\",\"dai4\",\"xing1\",\"qi2\",\"ri4\",\"de5\",\"bi3\",\"sai4\"],\"heardPronunciation\":\"wo3 hen3 qi2 dai4 xing1 qi2 ri4 de5 bi3 sai4\",\"uncertainty\":\"none\"}"
+    },
+    {
+      "id": "L464-S02",
+      "sha256": "be26d6b1ad94774109933e970809547cbdfafed2e4ba460ac2c4215526b0cb72",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"圣诞节快到了 我好期待\", \"heardPronunciation\": \"sheng4 dan4 jie2 kuai4 dao4 le5 wo3 hao3 qi2 dai4\", \"uncertainty\": 0.1}"
+    }
+  ]
+}

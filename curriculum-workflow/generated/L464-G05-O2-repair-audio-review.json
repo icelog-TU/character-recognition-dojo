@@ -1,0 +1,13 @@
+{
+  "unit": "L464",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "L464-G05-wrong-one",
+      "sha256": "8a9927988f24c234efd3be7d0e6c3a24d5a81a24b8e2e4283058019112f6f016",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"日本朋友用日文写信给我\",\"heardPronunciation\":\"ri4 ben3 peng2 you5 yong4 ri4 wen2 xie3 xin4 gei3 wo3\",\"uncertainty\":\"low\"}"
+    }
+  ]
+}

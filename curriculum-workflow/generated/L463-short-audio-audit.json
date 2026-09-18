@@ -1,0 +1,143 @@
+[
+  {
+    "file": "public/assets/lessons/L463/audio/char-u671f.m4a",
+    "sha256": "a4bae306585e620b3da029a9e448ce4319c72c16ac6ffc607747f8fd8008fd64",
+    "model": "gpt-4o-transcribe",
+    "prompt": "這是臺灣華語單一漢字音。課程候選字是「期」，請只轉寫實際聽到的漢字。",
+    "trials": [
+      {
+        "text": "期",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 15
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "期",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 15
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "期",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 51,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 15
+          },
+          "output_tokens": 3
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L463/audio/L463-G02-prefix.m4a",
+    "sha256": "51102f2e0d960a937ddc0797ad0bf93293f9a27fe15d5918c9dfbffefb13662c",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "借的书明天到。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 32,
+          "input_tokens": 23,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 23
+          },
+          "output_tokens": 9
+        }
+      },
+      {
+        "text": "借的书明天到。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 32,
+          "input_tokens": 23,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 23
+          },
+          "output_tokens": 9
+        }
+      },
+      {
+        "text": "借的书明天到。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 32,
+          "input_tokens": 23,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 23
+          },
+          "output_tokens": 9
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L463/audio/L463-G02-suffix.m4a",
+    "sha256": "12efb68bea451cf3b5661afc270128e7e9be3d29da1eea6d6526fe9f984cb90b",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "別忘了還。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 28,
+          "input_tokens": 21,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 21
+          },
+          "output_tokens": 7
+        }
+      },
+      {
+        "text": "別忘了還",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 27,
+          "input_tokens": 21,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 21
+          },
+          "output_tokens": 6
+        }
+      },
+      {
+        "text": "别忘了还",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 27,
+          "input_tokens": 21,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 21
+          },
+          "output_tokens": 6
+        }
+      }
+    ]
+  }
+]
