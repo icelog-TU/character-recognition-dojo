@@ -8,7 +8,7 @@ Base origin/main: 5622c827569df36e09c1767d61f114b35973bbea; formal L001-L443, la
 
 Allowed-character array is fully expanded in the request: 453 distinct Han. It contains the formal L001-L443 union, only provisional 歌唱舞台候, and new 演. Reserved next character 表 is absent. Coverage: 演4, 候2, 台2, 舞2, 唱1, 歌1; all minima met. Han counts 11/11/11/12/9; displayLines join exactly and every line has at most 6 visible characters.
 
-- L453-S01: 演出前，我在舞台後方等候。 Spoken: 演出前我在舞台後方等候. Lines: 演出前， / 我在舞台 / 後方等候。 Focus: 演. Image notes: 從舞台後方的準備區觀看，主角女孩站在布幕後等候上台，老師在近旁照看；透過布幕開口可見前方舞台。女孩確實位於舞台後方，不是台中央、觀眾席或單純站在舞台旁邊；不需誇張緊張表情。
+- L453-S01: 演出前，我在舞台後方等候。 Spoken: 演出前我在舞台後方等候. Lines: 演出前， / 我在舞台 / 後方等候。 Focus: 演. Image notes: 從舞台後方的準備區觀看，主角女孩穿著與台上舞者呼應的黃白兒童舞蹈表演服，站在布幕後等候上台，老師在近旁照看；透過布幕開口可見前方舞台。女孩確實位於舞台後方，不是台中央、觀眾席或單純站在舞台旁邊；保留固定短黑髮、粉紅髮夾與幼兒比例，不需誇張緊張表情。
 - L453-S02: 這位演員從小就很會跳舞。 Spoken: 這位演員從小就很會跳舞. Lines: 這位演員從小 / 就很會跳舞。 Focus: 演. Image notes: 一位 generic adult 演員拿著自己的童年照片，照片中同一人在幼年熟練跳舞；成年人物與童年照片保留一致的髮色、臉型特徵，明確表示同一人的過去。主角女孩可以在旁看照片。演員不是固定爸爸、媽媽、小月或小光；照片不放日期、姓名或說明文字。
 - L453-S03: 爸爸上台演唱我愛聽的歌。 Spoken: 爸爸上台演唱我愛聽的歌. Lines: 爸爸上台演唱 / 我愛聽的歌。 Focus: 演. Image notes: 主角爸爸在社區或親子活動的小舞台上拿麥克風唱歌，主角女孩坐在台下專心聽、神情開心；爸爸是固定主角爸爸，不是陌生歌手。畫面不需要可讀歌詞或歌曲名稱。
 - L453-S04: 全班演練起火時怎麼走出去。 Spoken: 全班演練起火時怎麼走出去. Lines: 全班演練 / 起火時怎麼 / 走出去。 Focus: 走. Image notes: 學校進行消防疏散演練，老師帶主角女孩與多名 generic classmates 有秩序地沿教室出口往室外走，讓人看出是全班練習路線，不是只有兩個孩子。沒有真的起火，不畫火焰、濃煙、驚慌逃跑或受傷；不依賴可讀標語交代情境。
@@ -30,13 +30,13 @@ Five square 1024px WebP, ten mono 44100Hz AAC M4A, and nine complete AI timing r
 
 ## Per-image style-lock and cast
 
-- L453-S01: style-lock PASS; cast PASS. Backstage preparation area is explicit: fixed protagonist waits behind the curtain with the distinct teacher, while the front stage is visible only through the opening. Recurring girl matches bob/pink-clip/pink-cardigan identity; short-curled-hair teacher with glasses and lavender cardigan is distinct from mother.
+- L453-S01: style-lock PASS; cast PASS. Backstage preparation area is explicit; fixed protagonist wears a yellow-and-white child dance costume coordinated with the visible onstage dancers and waits behind the curtain to perform next. Her fixed dark bob, pink hair clip, face and preschool proportions remain stable; the short-curled-hair teacher with glasses and lavender cardigan remains distinct from mother.
 - L453-S02: style-lock PASS; cast PASS. Generic adult performer holds a childhood dance photo that preserves auburn hair and facial traits, clearly showing the same person from childhood; protagonist observes. Adult and child-in-photo are one generic performer identity and do not replace or age-change the fixed cast.
 - L453-S03: style-lock PASS; cast PASS. Recurring father sings into a microphone on a small family/community stage while the recurring girl listens happily below. Father blue shirt/khaki trousers and recurring girl match family anchors; mother is incidental audience.
 - L453-S04: style-lock PASS; cast PASS. Distinct teacher leads more than eight classmates in an orderly classroom-to-courtyard evacuation drill; no fire, smoke, injury, or panic. Recurring protagonist remains identifiable among generic classmates; teacher is distinct from mother.
 - L453-S05: style-lock PASS; cast PASS. Recurring girl and older brother read picture books on indoor station seating while mother accompanies them; travel bag, passengers, and train outside establish the setting. Girl, older brother, and mother match family anchors; rejected first draft text-like marks were removed.
 
-All final WebP were compared side by side with L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and relevant L154/L162/L163 family anchors. S01's first candidate was rejected because the teacher resembled the recurring mother; the final teacher is distinct. S05's first candidate was rejected for text-like background marks; the final image removes them. Rejected drafts are not committed. Exact final prompts and imageNotes are in the draft.
+All final WebP were compared side by side with L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and relevant L154/L162/L163 family anchors. S01's first candidate was rejected because the teacher resembled the recurring mother. The teacher-review version at c3ebb364 was then superseded because the waiting protagonist still wore ordinary clothes; the repaired final preserves the accepted composition and identities while adding a coordinated child dance costume. S05's first candidate was rejected for text-like background marks; the final image removes them. Rejected drafts are not committed. Exact final prompts and imageNotes are in the draft.
 
 ## Audio evidence and browser QA
 
@@ -57,3 +57,7 @@ https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review
 ## Upload checkpoint
 
 The immutable pushed commit URL and strict package-intake result are reported in the final handoff.
+
+## Teacher repair checkpoint
+
+L453-S01 image repaired after review of c3ebb3645db478ff264ac9eb1a35ea1a3367e74f: the protagonist now clearly wears a yellow-and-white child dance performance costume while waiting backstage. Style-lock PASS; cast PASS; backstage semantics PASS; no readable text. The prior ordinary-clothes image is superseded.

@@ -9,8 +9,8 @@
       "sentenceId": "L453-S01",
       "styleLock": "PASS",
       "cast": "PASS",
-      "scene": "Backstage preparation area is explicit: fixed protagonist waits behind the curtain with the distinct teacher, while the front stage is visible only through the opening.",
-      "castEvidence": "Recurring girl matches bob/pink-clip/pink-cardigan identity; short-curled-hair teacher with glasses and lavender cardigan is distinct from mother.",
+      "scene": "Backstage preparation area is explicit: fixed protagonist wears a yellow-and-white child dance costume coordinated with the dancers visible through the curtain and waits to perform next while the distinct teacher watches nearby.",
+      "castEvidence": "Recurring girl keeps the fixed dark bob, pink hair clip, soft-cheeked preschool proportions, and identity; short-curled-hair teacher with glasses and lavender cardigan remains distinct from mother.",
       "comparison": "Final exported WebP viewed side by side against the L058 style-only anchors, refined L115/L118/L119/L128 examples, and relevant L154/L162/L163 family anchors."
     },
     {
@@ -236,7 +236,7 @@
     },
     "processing": "Standard generated whole-sentence/fragment audio; tail-only AAC frame-copy silence shortening and prefix gain normalization; no speech cuts, speed changes, or splicing."
   },
-  "mediaBytes": 1223016,
+  "mediaBytes": 1196866,
   "releaseDependencies": {
     "orderedLessonsThrough": "L452",
     "reviewMilestones": [
@@ -250,5 +250,14 @@
     "validateProduction": "PASS on isolated L453 fixture",
     "assetAuditStrict": "PASS on isolated L453 fixture; zero warnings",
     "fullVerify": "Skipped: dependency-blocked, shared production state left for Release."
-  }
+  },
+  "repairHistory": [
+    {
+      "scope": "L453-S01:image",
+      "sourceCommit": "c3ebb3645db478ff264ac9eb1a35ea1a3367e74f",
+      "teacherFinding": "女主角在舞台後方等候演出，應穿著表演服裝。",
+      "action": "Replaced S01 with a fresh final image preserving the approved backstage composition, teacher identity, protagonist identity, and style while dressing the protagonist in a coordinated yellow-and-white child dance costume.",
+      "result": "PASS; prior ordinary-clothes image superseded and not present at the repaired branch tip."
+    }
+  ]
 }
