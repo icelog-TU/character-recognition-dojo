@@ -1066,37 +1066,37 @@
         },
         "suffixAudio": {
           "src": "/assets/lessons/L467/audio/L467-G02-suffix.m4a",
-          "durationMs": 2740,
+          "durationMs": 1764,
           "charTimings": [
             {
               "charIndex": 0,
               "startMs": 0,
-              "endMs": 780
+              "endMs": 260
             },
             {
               "charIndex": 1,
-              "startMs": 1120,
-              "endMs": 1400
+              "startMs": 260,
+              "endMs": 600
             },
             {
               "charIndex": 2,
-              "startMs": 1400,
-              "endMs": 1640
+              "startMs": 600,
+              "endMs": 880
             },
             {
               "charIndex": 3,
-              "startMs": 1640,
-              "endMs": 1980
+              "startMs": 880,
+              "endMs": 1120
             },
             {
               "charIndex": 4,
-              "startMs": 1980,
-              "endMs": 2300
+              "startMs": 1120,
+              "endMs": 1380
             },
             {
               "charIndex": 5,
-              "startMs": 2300,
-              "endMs": 2500
+              "startMs": 1380,
+              "endMs": 1540
             }
           ]
         }
@@ -1388,37 +1388,37 @@
     },
     "L467-G02-suffix": {
       "src": "/assets/lessons/L467/audio/L467-G02-suffix.m4a",
-      "durationMs": 2740,
+      "durationMs": 1764,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 780
+          "endMs": 260
         },
         {
           "charIndex": 1,
-          "startMs": 1120,
-          "endMs": 1400
+          "startMs": 260,
+          "endMs": 600
         },
         {
           "charIndex": 2,
-          "startMs": 1400,
-          "endMs": 1640
+          "startMs": 600,
+          "endMs": 880
         },
         {
           "charIndex": 3,
-          "startMs": 1640,
-          "endMs": 1980
+          "startMs": 880,
+          "endMs": 1120
         },
         {
           "charIndex": 4,
-          "startMs": 1980,
-          "endMs": 2300
+          "startMs": 1120,
+          "endMs": 1380
         },
         {
           "charIndex": 5,
-          "startMs": 2300,
-          "endMs": 2500
+          "startMs": 1380,
+          "endMs": 1540
         }
       ],
       "spokenText": "著快放回水裡"
@@ -1543,7 +1543,7 @@
     "audioPipeline": "Repo OpenAI gpt-4o-mini-tts with the coral voice and repo audio processing. Ten final mono AAC 44100 Hz M4A files are present. G05 wrong choices are separately generated complete sentences with no splicing. G02 prefix and suffix are independently generated fragments; suffix begins with 著 and excludes 活.",
     "timingReview": "Whisper word alignment recorded for all five sentences, both G02 fragments and both G05 wrong choices. Every timed track has one ordered timing per Han character and no terminal tail over 300 ms after final trimming.",
     "pronunciation": "Full-sentence ASR matched all five approved Han sequences after Traditional/Simplified normalization, including S05 小魚還活著快放回水裡. Both G05 wrong options matched exact approved Han sequences. Standalone 活 was independently regenerated and transcribed as 活. The short G02 prefix transcribed as pronunciation-equivalent 小愚孩 for 小魚還 (ㄒㄧㄠˇ ㄩˊ ㄏㄞˊ); suffix was generated with explicit neutral-tone 著 continuation instructions and transcribed its first syllable orthographically as 折 before exact 快放回水裡.",
-    "browserQA": "PASS on immutable repair commit 6b8dfa25a1665c4d1af794def2f6e8c5acaf647e: lesson-asset-review loaded 5 sentence cards and 6 other audio entries. Replacement L467-S03.m4a (5.293991 s) and L467-G02-suffix.m4a (2.740 s) both loaded from the repair commit URL, reached readyState 4, played from the start through ended=true, and reported no media error.",
+    "browserQA": "Previous repair ref browser QA is superseded for G02 suffix. The S03 audio is teacher-approved. The new short-這 workaround suffix will receive pushed-ref playback QA after commit.",
     "assetAudit": "PASS after audio repair: lesson-local package audit (5 WebP, 10 mono AAC M4A, 1,396,409 total bytes), npm run validate:production, and pushed-ref package intake.",
     "audioRepair": {
       "source": "teacher asset review",
@@ -1554,15 +1554,16 @@
           "id": "L467-S03:audio",
           "reportedAs": "L467-S03:image",
           "issue": "兩個「期」聽成中國大陸口音的一聲，需為臺灣國語 ㄑㄧˊ。",
-          "resolution": "Regenerated the complete sentence with both 期 explicitly produced as rising second tone; candidate selection included exact ASR and acoustic F0 comparison."
+          "resolution": "Regenerated the complete sentence with both 期 explicitly produced as rising second tone; candidate selection included exact ASR and acoustic F0 comparison.",
+          "teacherResult": "PASS: teacher confirmed both 星期日 and 期待 pronunciations are fully correct on ref 316fe30a4a256e6489cff2936c892721f94298ff."
         },
         {
           "id": "L467-G02-suffix:audio",
           "issue": "開頭的輕聲「著」太短，且近似「這」。",
-          "resolution": "Regenerated the independent suffix with a clear approximately 0.74-second neutral-tone 著, followed by a distinct pause before 快放回水裡."
+          "resolution": "Replaced the failed lengthened-著 approach with the teacher-described workaround: generate 這快放回水裡, then shorten and weaken only the opening 這 from the same independently generated suffix take so its contextual listening effect is neutral 著. The following 快放回水裡 remains from the same take."
         }
       ],
-      "status": "resolved-fixed-ref-browser-playback-pass-pending-teacher-review",
+      "status": "S03-teacher-approved; G02-short-zhe-workaround-pending-teacher-review",
       "repairedRef": "6b8dfa25a1665c4d1af794def2f6e8c5acaf647e"
     }
   },
