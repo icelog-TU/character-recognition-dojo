@@ -3507,8 +3507,12 @@ AI 必須把這份課程序列視為鎖定邊界。
       "note": "S02 regenerated after teacher style-drift finding; final replacement passed side-by-side L058/L115/L154 style and cast comparison."
     },
     "browserQa": {
-      "status": "pending-repair-preview",
-      "note": "Replacement L458-S02 WebP requires pushed fixed-ref preview verification."
+      "status": "pass",
+      "assetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+      "browser": "Chrome",
+      "summary": "PASS: pushed repair ref loaded the complete L458 manifest and rendered the replacement L458-S02 image element.",
+      "limitation": "Rendering check only; teacher re-review remains pending."
     },
     "repairHistory": [
       {
@@ -3517,7 +3521,7 @@ AI 必須把這份課程序列視為鎖定邊界。
         "item": "L458-S02:image",
         "issue": "畫風跑掉，偏寫實且與課程水彩風格不一致",
         "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers.",
-        "status": "resolved-locally-pending-fixed-ref-preview"
+        "status": "resolved-and-fixed-ref-preview-pass"
       }
     ],
     "preRepairBrowserQa": {
@@ -3554,4 +3558,5 @@ AI 必須把這份課程序列視為鎖定邊界。
 
 - Reviewed ref: `bcbc52d3ea8e10309fe8673233ecd550ce2be36d`.
 - L458-S02 image: teacher found style drift. Regenerated with visible pencil contours, layered watercolor washes, stable recurring protagonist proportions, and no extra adults. Side-by-side L058/L115/L154 style/cast check: PASS.
-- Pushed fixed-ref verification: pending repair asset push.
+- Pushed fixed-ref verification: PASS at repair asset commit `546917d6cf60c71a8e4fc8164dac48bc88bbd8f9`; complete L458 manifest loaded and replacement S02 image element rendered. Teacher re-review remains pending.
+- Repair preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=546917d6cf60c71a8e4fc8164dac48bc88bbd8f9

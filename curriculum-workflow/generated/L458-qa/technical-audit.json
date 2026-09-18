@@ -91,11 +91,15 @@
   "images": {
     "filesExpected": 5,
     "filesActual": 5,
-    "result": "REPAIRED PASS; S02 pushed preview pending"
+    "result": "REPAIRED PASS; S02 pushed fixed-ref preview PASS"
   },
   "browserQa": {
-    "status": "pending-repair-preview",
-    "note": "Replacement L458-S02 WebP requires pushed fixed-ref preview verification."
+    "status": "pass",
+    "assetCommit": "546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L458&ref=546917d6cf60c71a8e4fc8164dac48bc88bbd8f9",
+    "browser": "Chrome",
+    "summary": "PASS: pushed repair ref loaded the complete L458 manifest and rendered the replacement L458-S02 image element.",
+    "limitation": "Rendering check only; teacher re-review remains pending."
   },
   "releaseBlockers": [
     "R055/R056 after L450 before L451",
@@ -109,7 +113,7 @@
       "item": "L458-S02:image",
       "issue": "畫風跑掉，偏寫實且與課程水彩風格不一致",
       "resolution": "Regenerated with a hard style reset to visible pencil outlines and layered watercolor washes; removed both extra adults and retained only the recurring protagonist with lifelike faux flowers.",
-      "status": "resolved-locally-pending-fixed-ref-preview"
+      "status": "resolved-and-fixed-ref-preview-pass"
     }
   ],
   "preRepairBrowserQa": {
