@@ -40,3 +40,9 @@ All final WebP were compared with the approved style/cast composite. No readable
 ## Release dependencies and ownership
 
 Vocabulary dependencies are L462日, L463期, L464待 and L465招. Release must preserve L465 → R057 → R058 → L466. These dependencies block main integration only. Production A does not merge main; Release owns current-main revalidation, shared production JSON/planner/ledger updates, full verify and deploy.
+
+## Pre-merge asset QA
+
+Automated final-media playback/acoustic QA: PASS for all ten M4A files; every file decodes and the final processed audio was supplied as actual audio input for syllable verification. Teacher manual image/audio QA remains pending at the immutable package review:
+
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L466&ref=eec4b24661b0616303c58be39fc35726fdff5192
