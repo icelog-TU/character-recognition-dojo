@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L469 | 應 / 普通五句課 | claimed | Production D | codex/l469-complete-package | L466, L467, L468; R057/R058 release milestone | 絕、活、該 | pending | pending | Formal handoff accepted; base acd71a5b, L465/R056; allowed 473; 應該 ying1 / 回應 ying4. |
 
 ## Status Values
 
