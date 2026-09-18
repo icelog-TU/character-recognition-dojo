@@ -2471,3 +2471,234 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## Final teacher-approved Production records
+
+The following records are the authoritative teacher-approved L465 content used by Production. They supersede the empty scaffold example above.
+
+```json
+{
+  "packageStatus": "dependency-blocked-asset-complete",
+  "dependsOnLessons": [
+    "L462",
+    "L463",
+    "L464"
+  ],
+  "provisionalLearnedChars": [
+    "日",
+    "期",
+    "待"
+  ],
+  "allowedCharsCount": 469,
+  "sentences": [
+    {
+      "id": "L465-S01",
+      "text": "星期日下午，我在家招待朋友。",
+      "spokenText": "星期日下午我在家招待朋友",
+      "displayLines": [
+        "星期日下午，",
+        "我在家",
+        "招待朋友。"
+      ],
+      "focusChar": "招",
+      "imageNotes": "白天下午，主角女孩在自己家客廳招待固定同學小月與小光，主動端出水果或點心，邀請朋友坐下。主角媽媽可在背景照看，但招待的主動者必須是女孩，不改成媽媽招待成年朋友。小月、小光依各自固定 reference，不畫成 generic classmates。星期日由句子交代。",
+      "imagePrompt": "Square 1:1 rich warm pencil-and-gouache-watercolor modern children picture-book illustration closely matching the full L058 STYLE ONLY and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: warm natural light, detailed but clean Taiwan environment, stable preschool age and natural body proportions, expressive soft faces, bright warm palette, phone-readable composition with safe margins. Recurring family anchors L154-S01, L162-S04, L163-S02: protagonist girl has short dark bob, pink hair clip, pink cardigan, cream blouse, navy skirt and pink shoes; mother has a distinct adult silhouette, chin-length dark bob, cream blouse and blue jeans; father has short dark hair and a blue button shirt; older brother is clearly older than the protagonist girl. Do not copy any person identity from L058. No readable text, letters, numbers, logos, watermarks or speech bubbles. White daytime afternoon in the recurring protagonist family living room. The recurring protagonist girl is clearly the active host: she smiles while carrying a plate of fruit or simple snacks toward her two seated recurring classmates and invites them to sit. Xiaoyue must match public/assets/reference/lesson-cast/xiaoyue.webp: preschool girl with long softly curly dark chestnut hair, crescent-moon hair clip, lavender cardigan, cream shirt, teal pleated skirt, white socks and violet shoes. Xiaoguang must match public/assets/reference/lesson-cast/xiaoguang.webp: preschool boy with round glasses, tidy short black side-parted hair, white short-sleeve shirt, navy knit vest, khaki shorts, white socks and brown shoes. The mother may watch warmly in the background, but the girl is visibly serving the friends. Three children are the clear focus; no adult guests, no calendar text.",
+      "approved": true
+    },
+    {
+      "id": "L465-S02",
+      "text": "公車來了，快招手。",
+      "spokenText": "公車來了快招手",
+      "displayLines": [
+        "公車來了，",
+        "快招手。"
+      ],
+      "focusChar": "招",
+      "imageNotes": "主角媽媽與主角女孩站在安全的公車候車處，媽媽提醒女孩，女孩朝正在靠近的公車抬手示意搭車。女孩留在人行道上，沒有跨入車道；公車尚未停妥，不畫成已經開門上車。車牌、路線牌不需可讀內容。",
+      "imagePrompt": "Square 1:1 rich warm pencil-and-gouache-watercolor modern children picture-book illustration closely matching the full L058 STYLE ONLY and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: warm natural light, detailed but clean Taiwan environment, stable preschool age and natural body proportions, expressive soft faces, bright warm palette, phone-readable composition with safe margins. Recurring family anchors L154-S01, L162-S04, L163-S02: protagonist girl has short dark bob, pink hair clip, pink cardigan, cream blouse, navy skirt and pink shoes; mother has a distinct adult silhouette, chin-length dark bob, cream blouse and blue jeans; father has short dark hair and a blue button shirt; older brother is clearly older than the protagonist girl. Do not copy any person identity from L058. No readable text, letters, numbers, logos, watermarks or speech bubbles. At a safe Taiwan city bus stop in daylight, the recurring mother and protagonist girl stand together on the sidewalk behind the curb. The mother gently alerts her; the girl raises one arm clearly to signal an approaching city bus. The bus is still approaching with doors closed. Keep the girl fully on the sidewalk and away from traffic. Route display and license plate are blank abstract shapes with no readable content.",
+      "approved": true
+    },
+    {
+      "id": "L465-S03",
+      "text": "這期日文班還在招生。",
+      "spokenText": "這期日文班還在招生",
+      "displayLines": [
+        "這期日文班",
+        "還在招生。"
+      ],
+      "focusChar": "招",
+      "imageNotes": "語言教室的報名接待處，generic 工作人員向主角媽媽與主角女孩介紹課程，桌上有報名表，後方可見教室與座位。場景是仍可報名，不是正在上課或發考卷。日文班與這期由句子交代，不要求招牌、表單出現可讀日文或中文，也不以人物外貌表示語言。",
+      "imagePrompt": "Square 1:1 rich warm pencil-and-gouache-watercolor modern children picture-book illustration closely matching the full L058 STYLE ONLY and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: warm natural light, detailed but clean Taiwan environment, stable preschool age and natural body proportions, expressive soft faces, bright warm palette, phone-readable composition with safe margins. Recurring family anchors L154-S01, L162-S04, L163-S02: protagonist girl has short dark bob, pink hair clip, pink cardigan, cream blouse, navy skirt and pink shoes; mother has a distinct adult silhouette, chin-length dark bob, cream blouse and blue jeans; father has short dark hair and a blue button shirt; older brother is clearly older than the protagonist girl. Do not copy any person identity from L058. No readable text, letters, numbers, logos, watermarks or speech bubbles. At a language-school registration reception desk, a distinct generic adult staff member warmly explains an available course to the recurring mother and protagonist girl. A blank registration form and pen lie on the desk; an orderly classroom with empty seats is visible behind them. The scene clearly shows enrollment is still open, not a class session or exam. Do not use flags, stereotyped appearance or readable Japanese/Chinese to indicate the language. All signs and paper contents must be blank and unreadable.",
+      "approved": true
+    },
+    {
+      "id": "L465-S04",
+      "text": "我們在山上等待日出。",
+      "spokenText": "我們在山上等待日出",
+      "displayLines": [
+        "我們在山上",
+        "等待日出。"
+      ],
+      "focusChar": "待",
+      "imageNotes": "主角一家四口在山上寬闊、安全的觀景平台等待日出，穿著適合清晨的外套，望向遠方山稜。天空已微亮，但太陽圓盤尚未升出地平線，不能畫成明亮白天或夕陽。爸爸、媽媽、主角女孩與哥哥身份清楚，不在懸崖邊緣等待。",
+      "imagePrompt": "Square 1:1 rich warm pencil-and-gouache-watercolor modern children picture-book illustration closely matching the full L058 STYLE ONLY and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: warm natural light, detailed but clean Taiwan environment, stable preschool age and natural body proportions, expressive soft faces, bright warm palette, phone-readable composition with safe margins. Recurring family anchors L154-S01, L162-S04, L163-S02: protagonist girl has short dark bob, pink hair clip, pink cardigan, cream blouse, navy skirt and pink shoes; mother has a distinct adult silhouette, chin-length dark bob, cream blouse and blue jeans; father has short dark hair and a blue button shirt; older brother is clearly older than the protagonist girl. Do not copy any person identity from L058. No readable text, letters, numbers, logos, watermarks or speech bubbles. Before sunrise at a broad, safe mountain viewing platform with a sturdy railing, the recurring family of four—father, mother, protagonist girl and clearly older brother—wear light dawn jackets and look toward distant mountain ridges. The sky is beginning to brighten in cool early-dawn colors, but the sun disk has not risen above the horizon. Everyone stands well back from danger; no cliff-edge pose, no sunset and no bright daytime.",
+      "approved": true
+    },
+    {
+      "id": "L465-S05",
+      "text": "這招太強，我打不過。",
+      "spokenText": "這招太強我打不過",
+      "displayLines": [
+        "這招太強，",
+        "我打不過。"
+      ],
+      "focusChar": "招",
+      "imageNotes": "主角女孩在家拿著遊戲控制器看電視，遊戲中的卡通怪物使出強大的非血腥攻擊，例如大範圍能量波，女孩操控的勇者被逼退。女孩露出受挫但不驚恐的表情，表達暫時打不過。怪物只存在於遊戲畫面，不畫成真實威脅；不用文字、傷害數字或血腥效果表達招數。",
+      "imagePrompt": "Square 1:1 rich warm pencil-and-gouache-watercolor modern children picture-book illustration closely matching the full L058 STYLE ONLY and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 examples: warm natural light, detailed but clean Taiwan environment, stable preschool age and natural body proportions, expressive soft faces, bright warm palette, phone-readable composition with safe margins. Recurring family anchors L154-S01, L162-S04, L163-S02: protagonist girl has short dark bob, pink hair clip, pink cardigan, cream blouse, navy skirt and pink shoes; mother has a distinct adult silhouette, chin-length dark bob, cream blouse and blue jeans; father has short dark hair and a blue button shirt; older brother is clearly older than the protagonist girl. Do not copy any person identity from L058. No readable text, letters, numbers, logos, watermarks or speech bubbles. In the recurring family living room, the protagonist girl sits safely holding a game controller and looks at the television with a mildly frustrated but not frightened expression. Only inside the TV screen, a playful cartoon monster releases a large colorful nonviolent energy wave that pushes back the girl-controlled cartoon hero. The monster is clearly fictional and contained inside the game screen. No blood, injury, horror, readable UI, damage numbers, words or letters.",
+      "approved": true
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L465-G01",
+      "type": "find-character",
+      "sentenceId": "L465-S02",
+      "targetChar": "招",
+      "targetCharIndex": 5,
+      "prompt": "找出句子裡的「招」。"
+    },
+    {
+      "id": "L465-G02",
+      "type": "teach-character",
+      "sentenceId": "L465-S01",
+      "targetChar": "招",
+      "targetCharIndex": 8,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "星期日下午我在家",
+        "suffixText": "待朋友",
+        "prefixSrc": "/assets/lessons/L465/audio/L465-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L465/audio/L465-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L465-G03",
+      "type": "missing-character",
+      "sentenceId": "L465-S03",
+      "targetChar": "招",
+      "targetCharIndex": 7,
+      "missingIndexes": [
+        7
+      ],
+      "prompt": "找回不見的字。",
+      "options": [
+        {
+          "id": "L465-G03-O1",
+          "text": "學",
+          "correct": false
+        },
+        {
+          "id": "L465-G03-O2",
+          "text": "招",
+          "correct": true
+        },
+        {
+          "id": "L465-G03-O3",
+          "text": "先",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L465-G04",
+      "type": "partial-order",
+      "sentenceId": "L465-S04",
+      "targetChar": "待",
+      "targetCharIndex": 6,
+      "missingIndexes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prompt": "照順序把字卡放回去。",
+      "options": [
+        {
+          "id": "L465-G04-O1",
+          "text": "日",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L465-G04-O2",
+          "text": "等",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L465-G04-O3",
+          "text": "出",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "L465-G04-O4",
+          "text": "待",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L465-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L465-S05",
+      "targetChar": "招",
+      "targetCharIndex": 1,
+      "prompt": "先聽每位朋友念，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "L465-G05-O1",
+          "text": "這招太強，我打不過。",
+          "spokenText": "這招太強我打不過",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L465/audio/L465-S05.m4a"
+        },
+        {
+          "id": "L465-G05-O2",
+          "text": "這招太強，他打不過。",
+          "spokenText": "這招太強他打不過",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L465/audio/L465-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L465-G05-O3",
+          "text": "這招太強，我打得過。",
+          "spokenText": "這招太強我打得過",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L465/audio/L465-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "招": 4,
+    "待": 2,
+    "期": 2,
+    "日": 3,
+    "文": 1,
+    "午": 1
+  }
+}
+```
+
+## Final Production record
+
+- Package status: dependency-blocked-asset-complete
+- Base main: c130f105f1808588cb22f237519234527643b8fe; formal production through L461 文; dependencies L462-L464 remain Release blockers
+- Assets: 5 final square 1024 WebP images and 10 final mono AAC 44.1kHz M4A files
+- Timing: five sentence tracks, two G02 fragment tracks and both G05 wrong-option tracks complete
+- Image QA: per-image style-lock/cast/semantics/no-readable-text PASS; no rejected drafts
+- Audio QA: exact-text alignment PASS and independent gpt-audio-1.5 pronunciation PASS on all final files
+- Browser fallback: live highlight synchronization and G02 phone recording/replay are not claimed
+- Release owns production JSON, planner, ledger, R057/R058 sequencing, integration and deployment

@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L465 | 招 | request-ready | Production E | codex/l465-complete-package @ 52a8603c | L462, L463, L464 | 日 期 待 | curriculum-workflow/lesson-requests/L465.json; curriculum-workflow/generated/L465-generation-packet.md; curriculum-workflow/drafts/L465-draft.json | curriculum-workflow/audio-inbox/L465/; public/assets/lessons/L465/ | Teacher-approved request captured; 469-character ceiling, sentences, coverage and Stage 4 indexes mechanically checked. Production package only; dependencies block Release integration, not package work. |
+| L465 | 招 | ready-blocked-by-dependency | Production E | codex/l465-complete-package | L462, L463, L464 | 日 期 待 | curriculum-workflow/lesson-requests/L465.json; curriculum-workflow/generated/L465-generation-packet.md; curriculum-workflow/drafts/L465-draft.json | curriculum-workflow/audio-inbox/L465/; public/assets/lessons/L465/ | Complete package: 5 WebP, 10 M4A, final sentence/G02/G05 timings, technical auditory review and production report recorded. Lesson-local validate:production and strict format audit PASS. Allowed ceiling: origin/main L001-L461 plus 日期待 and 招 (469 unique Han). Browser audio return and physical-phone microphone were unavailable, so live highlight synchronization and G02 phone recording/replay remain unverified. Production package only; Release owns ordered integration and R057/R058 sequencing. |
 
 ## Status Values
 
