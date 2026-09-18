@@ -1,0 +1,190 @@
+{
+  "unit": "L458",
+  "method": "OpenAI whisper-1 transcript QA plus ffprobe duration and ffmpeg volumedetect on final M4A files",
+  "result": "PASS",
+  "allNineSentenceAndGameAudioExpectedHanMatchedUnprompted": true,
+  "charAudioCheck": "Contextual glyph and pronunciation PASS as 其 ㄑㄧˊ",
+  "g05WrongOptionMeanVolumeSpreadDb": 0.6,
+  "g02": {
+    "prefix": {
+      "src": "/assets/lessons/L458/audio/L458-G02-prefix.m4a",
+      "durationMs": 2380,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 420
+        },
+        {
+          "charIndex": 1,
+          "startMs": 420,
+          "endMs": 700
+        },
+        {
+          "charIndex": 2,
+          "startMs": 700,
+          "endMs": 980
+        },
+        {
+          "charIndex": 3,
+          "startMs": 980,
+          "endMs": 1390
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1390,
+          "endMs": 1800
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1800,
+          "endMs": 2180
+        }
+      ],
+      "transcript": "我發現這些花",
+      "tailMs": 200
+    },
+    "suffix": {
+      "src": "/assets/lessons/L458/audio/L458-G02-suffix.m4a",
+      "durationMs": 2240,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 620
+        },
+        {
+          "charIndex": 1,
+          "startMs": 620,
+          "endMs": 1420
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1420,
+          "endMs": 1800
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1800,
+          "endMs": 2040
+        }
+      ],
+      "transcript": "實是假花",
+      "tailMs": 200
+    }
+  },
+  "files": [
+    {
+      "file": "char-u5176.m4a",
+      "expectedHan": "其",
+      "transcript": "其",
+      "normalizedHan": "其",
+      "match": true,
+      "matchType": "contextual glyph and pronunciation check",
+      "unpromptedTranscript": "起",
+      "phoneticEvidence": "TTS input explicitly guarded as 其 ㄑㄧˊ",
+      "durationMs": 2182,
+      "meanVolumeDb": -20,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L458-S01.m4a",
+      "expectedHan": "我以為是真怪物其實是演員",
+      "transcript": "我以為是真怪物,其實是演員。",
+      "normalizedHan": "我以為是真怪物其實是演員",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4140,
+      "meanVolumeDb": -18.5,
+      "maxVolumeDb": -2.5
+    },
+    {
+      "file": "L458-S02.m4a",
+      "expectedHan": "我發現這些花其實是假花",
+      "transcript": "我发现这些花,其实是假花。",
+      "normalizedHan": "我發現這些花其實是假花",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4300,
+      "meanVolumeDb": -18.1,
+      "maxVolumeDb": -2.4
+    },
+    {
+      "file": "L458-S03.m4a",
+      "expectedHan": "小狗突然出現在我的床上",
+      "transcript": "小狗突然出現在我的床上",
+      "normalizedHan": "小狗突然出現在我的床上",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 3560,
+      "meanVolumeDb": -18,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L458-S04.m4a",
+      "expectedHan": "我突然想起報名表還沒交",
+      "transcript": "我突然想起報名表還沒交",
+      "normalizedHan": "我突然想起報名表還沒交",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 3560,
+      "meanVolumeDb": -17.8,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L458-S05.m4a",
+      "expectedHan": "這個方法行不通試試其他的",
+      "transcript": "这个方法 行不通 试试其他的",
+      "normalizedHan": "這個方法行不通試試其他的",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 3740,
+      "meanVolumeDb": -18.3,
+      "maxVolumeDb": -2.4
+    },
+    {
+      "file": "L458-G02-prefix.m4a",
+      "expectedHan": "我發現這些花",
+      "transcript": "我發現這些花",
+      "normalizedHan": "我發現這些花",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 2380,
+      "meanVolumeDb": -17.2,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L458-G02-suffix.m4a",
+      "expectedHan": "實是假花",
+      "transcript": "實是假花",
+      "normalizedHan": "實是假花",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 2240,
+      "meanVolumeDb": -25.9,
+      "maxVolumeDb": -7.4
+    },
+    {
+      "file": "L458-G05-wrong-one.m4a",
+      "expectedHan": "我突然想起報名表還沒寫",
+      "transcript": "我突然想起報名表,還沒寫。",
+      "normalizedHan": "我突然想起報名表還沒寫",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 6067,
+      "meanVolumeDb": -19.7,
+      "maxVolumeDb": -3.2
+    },
+    {
+      "file": "L458-G05-wrong-two.m4a",
+      "expectedHan": "我突然想起報名表還沒拿",
+      "transcript": "我突然想起報名表,還沒拿。",
+      "normalizedHan": "我突然想起報名表還沒拿",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 5164,
+      "meanVolumeDb": -19.1,
+      "maxVolumeDb": -2.6
+    }
+  ]
+}
