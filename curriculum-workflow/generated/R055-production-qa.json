@@ -173,5 +173,15 @@
       "bytes": 55389,
       "sha256": "40f748dd9b8c5e6afba4f41b30764ae4b791fccaf1479a1973724e983037b655"
     }
-  ]
+  ],
+  "teacherManualReview": {
+    "result": "PASS",
+    "reviewedRef": "cb0ac7ab82d1d6f346926ea2f3f552f932592e1f",
+    "scope": [
+      "images",
+      "audio"
+    ],
+    "recordedAt": "2026-09-18",
+    "limitations": "Does not certify live highlight synchronization or G02 phone recording/replay."
+  }
 }

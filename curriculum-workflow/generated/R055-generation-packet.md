@@ -2268,6 +2268,6 @@
 - Assets: 5 final 1024-square WebP images and 9 unique final M4A audio files
 - Timing: five sentence tracks, both G02 fragments and both G05 distractors have exact-transcript per-Han timing metadata
 - Visual QA: final exported images opened as one contact sheet; style-lock, cast identity, scene semantics and no-readable-text checks PASS
-- Audio QA: exact Whisper transcripts PASS; targeted gpt-audio pronunciation checks PASS; teacher human listening remains post-merge
+- Audio QA: exact Whisper transcripts PASS; targeted gpt-audio pronunciation checks PASS; teacher manually passed final image and audio files at cb0ac7ab82d1d6f346926ea2f3f552f932592e1f
 - Browser QA fallback: no reliable computer-audio return or physical-phone microphone channel; continuous human listening, live highlight synchronization and G02 recording/replay are not claimed
 - Release order remains L450 → R055 → R056 → L451; Production did not edit production JSON, planner or ledger

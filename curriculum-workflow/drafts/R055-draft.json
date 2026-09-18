@@ -1207,6 +1207,16 @@
     "timingReview": "Every sentence, G02 fragment and G05 wrong-choice audio has ordered per-Han timing metadata within final duration. Exact final transcript comparison PASS. This is technical timing evidence, not human audiovisual synchronization QA.",
     "pronunciation": "All nine unique final clips transcript-match exact approved Han. G02 suffix was regenerated as a complete fragment after the first take merged 是當 into 適當; final take clearly begins 是 ㄕˋ. AI gpt-audio checks PASS for all nine clips, including 班長 ㄓㄤˇ, 補 ㄅㄨˇ and final 教 ㄐㄧㄠ. This is not human acceptance.",
     "browserQA": "Browser QA fallback: current remote control has no reliable computer-audio return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run; teacher subjective review remains post-merge by default.",
-    "manualPlayback": "Not claimed. Teacher manual playback is post-merge by default."
+    "manualPlayback": "Teacher manually reviewed and passed all final image and audio files at cb0ac7ab82d1d6f346926ea2f3f552f932592e1f. Scope: image files and audio files. Live per-character highlight synchronization and G02 phone recording/replay were outside this approval.",
+    "teacherManualReview": {
+      "result": "PASS",
+      "reviewedRef": "cb0ac7ab82d1d6f346926ea2f3f552f932592e1f",
+      "scope": [
+        "images",
+        "audio"
+      ],
+      "recordedAt": "2026-09-18",
+      "limitations": "Does not certify live highlight synchronization or G02 phone recording/replay."
+    }
   }
 }

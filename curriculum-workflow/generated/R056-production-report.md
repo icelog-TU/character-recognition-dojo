@@ -23,3 +23,7 @@ Base main was `a5779c4bae03fa363689cc7ee4d6555b7dadeafb` at formal L438. Latest 
 ## Pushed intake evidence
 
 Immutable asset commit: `a5bd70e3`. `curriculum:package-intake --strict` against `origin/codex/r055-r056-complete-package` passed with 5 images, 9 audio files, canonical five-game order, complete G02 timing metadata, and no warning.
+
+## Teacher manual acceptance
+
+Teacher manually reviewed and passed the final image and audio files for R056 at immutable ref `cb0ac7ab82d1d6f346926ea2f3f552f932592e1f` on 2026-09-18. This approval covers image and audio assets. Live per-character highlight synchronization and G02 phone recording/replay were not included.
