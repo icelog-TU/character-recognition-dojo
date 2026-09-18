@@ -1,0 +1,9 @@
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "speed": 0.9,
+  "inputPolicy": "Exact approved spokenText, independent full utterances; no phonetic glyph replacement or extraction",
+  "S01FinalInstructions": "Speak the exact Mandarin input naturally and warmly. Follow this full phonetic reading in Taiwan Mandarin: wo3 hen3 qi2 dai4 xing1 qi2 ri4 de5 bi3 sai4. BOTH qi2 syllables MUST rise clearly from low to high, as in 棋. This is a Taiwan pronunciation exercise. No extra words, only one full sentence. Do not use mainland qi1.",
+  "rawLocation": "curriculum-workflow/audio-inbox/L464/ (ignored local files)",
+  "processing": "Standard assets:audio, mono AAC 44100Hz 96k; verified trailing near-silence shortened to retain 150ms beyond final -45dB decay; no syllable cuts/splicing."
+}

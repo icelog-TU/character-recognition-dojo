@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L464 | 待 | claimed | Production D | `codex/l464-complete-package` | L459:中; L460:午; L461:文 (merged); L462:日; L463:期 (pending) | 日、期 (handoff: 中、午、文、日、期) | `curriculum-workflow/lesson-requests/L464.json`; `curriculum-workflow/generated/L464-generation-packet.md`; `curriculum-workflow/drafts/L464-draft.json` | `public/assets/lessons/L464/`; `curriculum-workflow/audio-inbox/L464/` | Latest base c130f105 L461/R056; handoff approved text unchanged. 待 dai4, 期 qi2. |
+| L464 | 待 | dependency-blocked-asset-complete | Production D | `codex/l464-complete-package`; claim `1910b4d2` | L459:中; L460:午; L461:文 (merged); L462:日; L463:期 (pending) | 日、期 (handoff: 中、午、文、日、期) | `curriculum-workflow/lesson-requests/L464.json`; `curriculum-workflow/generated/L464-generation-packet.md`; `curriculum-workflow/drafts/L464-draft.json` | `public/assets/lessons/L464/`; `curriculum-workflow/audio-inbox/L464/` | 5 WebP, 10 M4A, 9 alignments; style/cast PASS. Latest base L461/R056; only L462/L463 pending. G02 hold recording/replay untested, SOP tooling fallback documented. |
 
 ## Status Values
 
