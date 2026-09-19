@@ -2537,3 +2537,9 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Correction: removed the tiny backward curl, secondary crease and doubled white sliver; the raised flap now terminates in one clean corner with one continuous outer edge.
 - Scope: S04 image only; all text, audio, timings, Stage 4 data and final object-only metadata remain unchanged.
 - Immutable-ref targeted image QA: pending repair commit.
+
+## S04 teacher review
+
+- PASS on 2026-09-19.
+- Reviewed ref: `72c830313700dad12131b7c1be8c6966d03b7468`.
+- Teacher confirmed the final object-only paper structure and upper-right corner are correct.
