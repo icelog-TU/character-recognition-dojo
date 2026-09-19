@@ -1919,7 +1919,7 @@
     "timingReview": "OpenAI whisper-1 word timestamps with exact text context produced complete main-sentence, G02-prefix and G05 distractor tracks. Independent listening verified the two-syllable G02 suffix after short-audio ASR hallucination; its two syllables were manually bounded. S05 final 我／招／手 span was redistributed after independent listening because Whisper assigned only 20ms to 招. All final spans are ordered, nonoverlapping, within duration and at least 80ms. S01 and S04 timings were regenerated from the repaired final M4As.",
     "pronunciation": "Independent gpt-audio-1.5 technical listening PASS on all 10 final processed M4As. After teacher review at c6a4ebce, repaired S01 and S04 specifically pass 答應 as Taiwan-realized 搭應: first-tone ㄉㄚ, not second-tone 達; both are Taiwan-natural and exact. Other contexts retain 回答、問答、答對 ㄉㄚˊ, 應 ㄧㄥˋ and 絕活 ㄐㄩㄝˊ ㄏㄨㄛˊ.",
     "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-    "packageIntake": "Pending pushed-branch strict intake after S01/S04 pronunciation repair.",
+    "packageIntake": "PASS on pushed origin/codex/l470-complete-package at 7f118a318c624a5599f5cc3b8ed23706cbe9cd91 after S01/S04 Taiwan pronunciation repair: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
     "manualPlayback": "Teacher review at c6a4ebceffe8f67fb2131ff73dab9645bb917b59 requested Taiwan-realized 搭應 pronunciation for S01 and S04. Both complete audio units were replaced; renewed teacher listening remains pending."
   }
 }
