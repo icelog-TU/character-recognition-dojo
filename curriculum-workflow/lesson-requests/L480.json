@@ -2141,67 +2141,67 @@
           "audio": {
             "spokenText": "無人機飛不動是下雨的緣故",
             "src": "/assets/lessons/L480/audio/L480-G05-wrong-one.m4a",
-            "durationMs": 4641,
+            "durationMs": 5028,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 300
+                "endMs": 260
               },
               {
                 "charIndex": 1,
-                "startMs": 300,
-                "endMs": 660
+                "startMs": 260,
+                "endMs": 640
               },
               {
                 "charIndex": 2,
-                "startMs": 660,
-                "endMs": 900
+                "startMs": 640,
+                "endMs": 880
               },
               {
                 "charIndex": 3,
-                "startMs": 900,
-                "endMs": 1540
+                "startMs": 880,
+                "endMs": 1500
               },
               {
                 "charIndex": 4,
-                "startMs": 1540,
-                "endMs": 1820
+                "startMs": 1500,
+                "endMs": 1760
               },
               {
                 "charIndex": 5,
-                "startMs": 1820,
-                "endMs": 2000
+                "startMs": 1760,
+                "endMs": 1960
               },
               {
                 "charIndex": 6,
-                "startMs": 2580,
-                "endMs": 2860
+                "startMs": 2440,
+                "endMs": 2720
               },
               {
                 "charIndex": 7,
-                "startMs": 2860,
-                "endMs": 3300
+                "startMs": 2720,
+                "endMs": 3140
               },
               {
                 "charIndex": 8,
-                "startMs": 3300,
-                "endMs": 3460
+                "startMs": 3140,
+                "endMs": 3260
               },
               {
                 "charIndex": 9,
-                "startMs": 3460,
-                "endMs": 3940
+                "startMs": 3260,
+                "endMs": 3760
               },
               {
                 "charIndex": 10,
-                "startMs": 3940,
-                "endMs": 3960
+                "startMs": 3760,
+                "endMs": 3780
               },
               {
                 "charIndex": 11,
-                "startMs": 3960,
-                "endMs": 4100
+                "startMs": 3780,
+                "endMs": 3920
               }
             ]
           }
@@ -2293,9 +2293,9 @@
   },
   "productionQA": {
     "imageStyle": "S01 style-lock PASS, cast PASS: recurring father and protagonist girl in a natural two-way park conversation with distinct generic adults. S02 style-lock PASS, cast PASS: protagonist, Xiaoyue and Xiaoguang remain visually distinct and match the provided cast anchors; the wordless thought bubble shows the teacher smiling at the harmless puppy-picture sticker. S03 style-lock PASS, cast PASS: protagonist independently selects a wordless fantasy picture book in a warm home reading area. S04 style-lock PASS, cast PASS: protagonist and father inspect a complete grounded drone and battery with no crash, smoke or readable display. S05 style-lock PASS, cast PASS: protagonist and father are both visibly mid-step while chatting on a safe park path. All five final 1024x1024 WebPs were inspected together against L058/refined style examples; no readable text or numbers.",
-    "audioPipeline": "OpenAI gpt-4o-mini-tts with cedar Taiwan Mandarin delivery produced 10 final mono AAC M4As: standalone 趣, five complete sentence files, independently generated G02 prefix/suffix, and two complete G05 wrong choices. No sentence or option audio was spliced. G05 mean-volume spread is 0.8 dB and passes the 3 dB gate.",
+    "audioPipeline": "OpenAI gpt-4o-mini-tts with cedar Taiwan Mandarin delivery produced 10 final mono AAC M4As: standalone 趣, five complete sentence files, independently generated G02 prefix/suffix, and two complete G05 wrong choices. No sentence or option audio was spliced. After the targeted G05 wrong-one tone repair, G05 mean-volume spread is 0.9 dB and passes the 3 dB gate.",
     "timingReview": "AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. G02 prefix ends with complete 有 and contains no 趣; suffix is exact 的書看 with audible neutral-tone 的 and no leading 趣.",
-    "pronunciation": "Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, and no omissions/clipping/substitutions or awkward pauses. Confirmed 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ, 且 ㄑㄧㄝˇ, and G02 suffix 的 as neutral tone. This is AI listening, not teacher manual auditory approval.",
+    "pronunciation": "Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, and no omissions/clipping/substitutions or awkward pauses. Confirmed 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ, 且 ㄑㄧㄝˇ, G02 suffix 的 as neutral tone, and teacher-requested G05 wrong-one 飛不動 with 不 held as a clear falling fourth tone ㄅㄨˋ rather than second tone. This is AI listening; teacher re-review of the repaired file is pending.",
     "browserQA": "390x844 LessonPanel QA PASS for Stage 1 character playback, the six-card Stage 2 set with exactly three 趣 targets, all five Stage 3 sentence/image playbacks, and Stage 4 G01/G02 presentation. S04 renders as the approved four clear lines without overflow or isolated punctuation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by canonical index, option-order, audio-reference and package validation checks.",
     "packageIntake": "PASS on pushed origin/codex/l480-complete-package: 5 images, 10 audio files, all five canonical Stage 4 types, and no blocking package-status defects.",
     "manualPlayback": "Teacher subjective asset review is post-merge by default; no manual PASS claimed."

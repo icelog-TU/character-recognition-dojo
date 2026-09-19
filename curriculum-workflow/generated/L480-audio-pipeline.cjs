@@ -32,6 +32,7 @@ globalThis.fetch = async (...args) => {
       body.instructions = '只念輸入的三個字一次，使用自然清楚的臺灣華語。第一字「的」讀輕聲 ˙ㄉㄜ，接著念「書看」。句首與句尾完整，不加任何開場、來源、說明或其他文字。';
     }
     if (body.input.startsWith('無人機飛不動是')) body.instructions = '只念輸入的完整句子一次，使用自然、清楚、流暢的臺灣華語。無人機讀 ㄨˊ ㄖㄣˊ ㄐㄧ；緣故讀 ㄩㄢˊ ㄍㄨˋ。完整念出句尾，不用中國大陸普通話播音腔，不改字、不加字、不解釋。';
+    if (body.input === '無人機飛不動，是下雨的緣故。') body.instructions = '只念「無人機飛不動，是下雨的緣故」一次，使用自然清楚的臺灣華語。老師指定「飛不動」的「不」必須保留第四聲 ㄅㄨˋ，清楚下降，絕對不要變調成第二聲 ㄅㄨˊ；動讀 ㄉㄨㄥˋ，緣故讀 ㄩㄢˊ ㄍㄨˋ。完整念出句首句尾，不改字、不加字、不解釋。';
     args[1] = { ...args[1], body: JSON.stringify(body) };
   }
   if (String(args[0]).includes('/audio/transcriptions')) {
@@ -44,7 +45,7 @@ globalThis.fetch = async (...args) => {
   const raw = await response.json();
   fs.mkdirSync('curriculum-workflow/generated/L480-transcripts', { recursive: true });
   write(`curriculum-workflow/generated/L480-transcripts/${args[1].body.get('file').name}.json`, `${JSON.stringify(raw, null, 2)}\n`);
-  const equivalents = { 这: '這', 题: '題', 应: '應', 该: '該', 个: '個', 难: '難', 帮: '幫', 翻: '翻', 着: '著', 还: '還', 过: '過', 说: '說', 让: '讓', 无: '無', 缘: '緣', 聊: '聊', 趣: '趣', 书: '書', 飞: '飛', 动: '動', 电: '電', 风: '風' };
+  const equivalents = { 这: '這', 题: '題', 应: '應', 该: '該', 个: '個', 难: '難', 帮: '幫', 翻: '翻', 着: '著', 还: '還', 过: '過', 说: '說', 让: '讓', 无: '無', 缘: '緣', 聊: '聊', 趣: '趣', 书: '書', 飞: '飛', 动: '動', 电: '電', 风: '風', 机: '機' };
   const normalize = (value) => typeof value === 'string'
     ? [...value].map((char) => equivalents[char] ?? char).join('')
     : Array.isArray(value) ? value.map(normalize)

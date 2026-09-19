@@ -17,9 +17,9 @@
 
 ## Audio and timing
 
-- OpenAI gpt-4o-mini-tts with cedar Taiwan Mandarin delivery produced 10 final mono AAC M4As: standalone 趣, five complete sentence files, independently generated G02 prefix/suffix, and two complete G05 wrong choices. No sentence or option audio was spliced. G05 mean-volume spread is 0.8 dB and passes the 3 dB gate.
+- OpenAI gpt-4o-mini-tts with cedar Taiwan Mandarin delivery produced 10 final mono AAC M4As: standalone 趣, five complete sentence files, independently generated G02 prefix/suffix, and two complete G05 wrong choices. No sentence or option audio was spliced. After the targeted G05 wrong-one tone repair, G05 mean-volume spread is 0.9 dB and passes the 3 dB gate.
 - AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. G02 prefix ends with complete 有 and contains no 趣; suffix is exact 的書看 with audible neutral-tone 的 and no leading 趣.
-- Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, and no omissions/clipping/substitutions or awkward pauses. Confirmed 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ, 且 ㄑㄧㄝˇ, and G02 suffix 的 as neutral tone. This is AI listening, not teacher manual auditory approval.
+- Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, and no omissions/clipping/substitutions or awkward pauses. Confirmed 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ, 且 ㄑㄧㄝˇ, G02 suffix 的 as neutral tone, and teacher-requested G05 wrong-one 飛不動 with 不 held as a clear falling fourth tone ㄅㄨˋ rather than second tone. This is AI listening; teacher re-review of the repaired file is pending.
 
 ## Interaction and intake
 

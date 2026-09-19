@@ -1,5 +1,13 @@
 [
   {
+    "file": "char-u8da3.m4a",
+    "sha256": "a1be060a238f96ee5c1211fc546e292f63ea37b67761068f69d6f784ab8252f0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Transcribe the single Taiwan Mandarin Chinese syllable in this recording and identify its zhuyin and tone. Check whether it is exactly 趣 ㄑㄩˋ with a complete falling fourth tone, spoken once, with no added word, clipping, or awkward silence. Return concise JSON. Do not identify or describe the speaker.",
+    "result": "{\"syllable\": \"趣\", \"zhuyin\": \"ㄑㄩˋ\", \"tone\": 4, \"match\": true}"
+  },
+  {
     "file": "L480-G02-prefix.m4a",
     "sha256": "72367c86b61f3f7267109b4d52b5cc2355520b4c432fe6c26e45f2db409a7743",
     "model": "gpt-audio-1.5",
@@ -17,11 +25,11 @@
   },
   {
     "file": "L480-G05-wrong-one.m4a",
-    "sha256": "918450f0add8f50896b4d82435af5fe5586e17c7b8ddf6dbd0747ab165fe9529",
+    "sha256": "a3c7737d2362875ed71fc48bc2ad05cb5307773ae36bd3908058a4bea36a19a4",
     "model": "gpt-audio-1.5",
     "method": "AI listening, not human QA",
-    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
-    "result": "{\"transcript\": \"無人機飛不動是下雨的緣故\", \"issues\": {\"omissions\": null, \"clips\": null, \"repeats\": null, \"substitutions\": null}, \"awkward_pauses\": null, \"pronunciation_notes\": \"緣 ㄩㄢˊ is pronounced clearly. Delivery sounds like natural Taiwan Mandarin, not Mainland broadcast Mandarin.\"}"
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Return concise JSON with the exact Traditional Chinese transcript and explicitly identify the actual tone heard on 不 in 飛不動. The teacher requires 不 to be a clear falling fourth tone ㄅㄨˋ, not a rising second tone ㄅㄨˊ. Also report omissions, clipping, substitutions, awkward pauses, and whether the delivery remains natural Taiwan Mandarin. Do not infer from spelling; judge the audio.",
+    "result": "{\"transcript\": \"無人機飛不動是下雨的緣故\", \"tone_on_不\": \"falling fourth tone ㄅㄨˋ\", \"issues\": {\"omissions\": false, \"clipping\": false, \"substitutions\": false, \"awkward_pauses\": false}, \"natural_delivery\": true}"
   },
   {
     "file": "L480-G05-wrong-two.m4a",
@@ -70,13 +78,5 @@
     "method": "AI listening, not human QA",
     "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
     "result": "{\"transcript\": \"我跟爸爸一邊走一邊聊天\", \"anomalies\": null, \"pauses\": null, \"pronunciation_notes\": \"發音自然，符合台灣普通話口音，'聊' ㄌㄧㄠˊ 清晰。整句語調平穩。聲音聽來不像大陸播音腔。\", \"delivery_style\": \"Natural Taiwan Mandarin\"}"
-  },
-  {
-    "file": "char-u8da3.m4a",
-    "sha256": "a1be060a238f96ee5c1211fc546e292f63ea37b67761068f69d6f784ab8252f0",
-    "model": "gpt-audio-1.5",
-    "method": "AI listening, not human QA",
-    "prompt": "Transcribe the single Taiwan Mandarin Chinese syllable in this recording and identify its zhuyin and tone. Check whether it is exactly 趣 ㄑㄩˋ with a complete falling fourth tone, spoken once, with no added word, clipping, or awkward silence. Return concise JSON. Do not identify or describe the speaker.",
-    "result": "{\"syllable\": \"趣\", \"zhuyin\": \"ㄑㄩˋ\", \"tone\": 4, \"match\": true}"
   }
 ]
