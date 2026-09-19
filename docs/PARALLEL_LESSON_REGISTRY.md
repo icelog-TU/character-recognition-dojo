@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L474 | 而 | claimed | Production C / parallel-c | codex/l474-complete-package | L468-L473; R057/R058 before Release | 該、應、答、題、案、反 | curriculum-workflow/lesson-requests/L474.json; curriculum-workflow/generated/L474-generation-packet.md; curriculum-workflow/drafts/L474-draft.json | public/assets/lessons/L474/ | Teacher-approved Production handoff received. Source origin/main 29406e21, formal L001-L465「招」with 469 learned chars; locked allowed set is formal union + 該、應、答、題、案、反、而 = 476. Production package in progress; dependencies block Release only. |
 
 ## Status Values
 
@@ -109,3 +110,4 @@ npm run curriculum:audit-state
 ```
 
 If another thread changed the registry, rebase first and preserve both threads' rows. Do not delete another active row unless that lesson is already merged or the user explicitly cancels it.
+
