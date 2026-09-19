@@ -520,7 +520,7 @@
     "R057",
     "R058"
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "requiredRounds": 5,
   "sentenceGames": [
     {
@@ -541,7 +541,63 @@
       "teachAudio": {
         "prefixText": "我跟小月的答案正好相",
         "suffixText": "",
-        "prefixSrc": "/assets/lessons/L473/audio/L473-G02-prefix.m4a"
+        "prefixSrc": "/assets/lessons/L473/audio/L473-G02-prefix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L473/audio/L473-G02-prefix.m4a",
+          "durationMs": 3576,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 400
+            },
+            {
+              "charIndex": 1,
+              "startMs": 400,
+              "endMs": 740
+            },
+            {
+              "charIndex": 2,
+              "startMs": 740,
+              "endMs": 1080
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1080,
+              "endMs": 1240
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1240,
+              "endMs": 1500
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1500,
+              "endMs": 1800
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1800,
+              "endMs": 2280
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2280,
+              "endMs": 2760
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2760,
+              "endMs": 3120
+            },
+            {
+              "charIndex": 9,
+              "startMs": 3120,
+              "endMs": 3340
+            }
+          ]
+        }
       }
     },
     {
@@ -625,25 +681,376 @@
           "text": "老師問問題，不該亂回答。",
           "spokenText": "老師問問題不該亂回答",
           "correct": true,
-          "audioSrc": "/assets/lessons/L473/audio/L473-S05.m4a"
+          "audioSrc": "/assets/lessons/L473/audio/L473-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L473/audio/L473-S05.m4a",
+            "durationMs": 3483,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 250
+              },
+              {
+                "charIndex": 1,
+                "startMs": 250,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1050
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1050,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1300,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2640,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3000,
+                "endMs": 3220
+              }
+            ]
+          }
         },
         {
           "id": "wrong-one",
           "text": "老師問問題，不該亂說話。",
           "spokenText": "老師問問題不該亂說話",
           "correct": false,
-          "audioSrc": "/assets/lessons/L473/audio/L473-G05-wrong-one.m4a"
+          "audioSrc": "/assets/lessons/L473/audio/L473-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L473/audio/L473-G05-wrong-one.m4a",
+            "durationMs": 3924,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1370
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1370,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1640,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2540,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2800,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3160,
+                "endMs": 3520
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3520,
+                "endMs": 3700
+              }
+            ]
+          }
         },
         {
           "id": "wrong-two",
           "text": "老師問問題，不該亂點頭。",
           "spokenText": "老師問問題不該亂點頭",
           "correct": false,
-          "audioSrc": "/assets/lessons/L473/audio/L473-G05-wrong-two.m4a"
+          "audioSrc": "/assets/lessons/L473/audio/L473-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L473/audio/L473-G05-wrong-two.m4a",
+            "durationMs": 3854,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 290
+              },
+              {
+                "charIndex": 1,
+                "startMs": 290,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3340,
+                "endMs": 3640
+              }
+            ]
+          }
         }
       ]
     }
   ],
+  "optionAudioVerification": {
+    "correct": "uses L473-S05.m4a",
+    "wrong-one": "whole-sentence L473-G05-wrong-one.m4a",
+    "wrong-two": "whole-sentence L473-G05-wrong-two.m4a"
+  },
+  "stage4AudioAlignment": {
+    "L473-G02-prefix": {
+      "src": "/assets/lessons/L473/audio/L473-G02-prefix.m4a",
+      "durationMs": 3576,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 400
+        },
+        {
+          "charIndex": 1,
+          "startMs": 400,
+          "endMs": 740
+        },
+        {
+          "charIndex": 2,
+          "startMs": 740,
+          "endMs": 1080
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1080,
+          "endMs": 1240
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1240,
+          "endMs": 1500
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1500,
+          "endMs": 1800
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1800,
+          "endMs": 2280
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2280,
+          "endMs": 2760
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2760,
+          "endMs": 3120
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3120,
+          "endMs": 3340
+        }
+      ]
+    },
+    "L473-G05-wrong-one": {
+      "src": "/assets/lessons/L473/audio/L473-G05-wrong-one.m4a",
+      "durationMs": 3924,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 340
+        },
+        {
+          "charIndex": 1,
+          "startMs": 340,
+          "endMs": 680
+        },
+        {
+          "charIndex": 2,
+          "startMs": 680,
+          "endMs": 1100
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1100,
+          "endMs": 1370
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1370,
+          "endMs": 1640
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1640,
+          "endMs": 2540
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2540,
+          "endMs": 2800
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2800,
+          "endMs": 3160
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3160,
+          "endMs": 3520
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3520,
+          "endMs": 3700
+        }
+      ]
+    },
+    "L473-G05-wrong-two": {
+      "src": "/assets/lessons/L473/audio/L473-G05-wrong-two.m4a",
+      "durationMs": 3854,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 290
+        },
+        {
+          "charIndex": 1,
+          "startMs": 290,
+          "endMs": 580
+        },
+        {
+          "charIndex": 2,
+          "startMs": 580,
+          "endMs": 1020
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1020,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1300,
+          "endMs": 1580
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1740,
+          "endMs": 2480
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2480,
+          "endMs": 2740
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2740,
+          "endMs": 3040
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3040,
+          "endMs": 3340
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3340,
+          "endMs": 3640
+        }
+      ]
+    }
+  },
+  "productionQA": {
+    "imageStyle": "All five final 1024×1024 WebP files passed side-by-side L058/refined-style and recurring-cast review. S01 keeps mother, protagonist and fixed Xiaoyue with opposite hamburger reactions; motion-mark draft was discarded. S02 clearly shows the familiar cardigan inside-out while both people remain fully dressed. S03 shows father flipping the sheet to its printed back. S04 shows mother speaking while the reading girl does not look up. S05 shows a generic boy blurting without looking and with no raised hand; the raised-hand draft was discarded. No readable text or digits.",
+    "audioPipeline": "Nine independent lesson audio files are present: standalone 反, five complete sentence recordings, one exact G02 prefix with no suffix file, and two complete G05 wrong options. All are mono AAC 44100 Hz M4A. No audio was cut from another lesson or assembled from separate spoken clips.",
+    "pronunciation": "Independent ASR matched every complete sentence, G02 prefix and both wrong options after Traditional/Simplified normalization. Isolated 反 returned the same-pronunciation 返. Acoustic checks support S01/G02 相 as high first-tone contours with ordinary phrase declination, S02 重 as rising ㄔㄨㄥˊ, S04 應 as falling ㄧㄥˋ, and standalone 反 as low-rising third tone. G02 prefix ends with complete 相 and contains no 反.",
+    "timingReview": "Every timed track has one ordered timing per Han character, 80–900 ms spans and no terminal tail over 300 ms. Narrow ASR boundaries for S03 答, S05 不 and wrong-one 不 were expanded into adjacent pause/word intervals without altering audio.",
+    "browserQA": "Pushed-commit asset-review load and playback smoke test will be recorded after the asset commit.",
+    "validation": "PASS: lesson-local audit (5 WebP, 9 mono AAC M4A, 1,244,513 total bytes), npm run validate:production, and npm run assets:audit -- --strict (521 units, 2,564 image references, 5,069 audio references, 0 warnings)."
+  },
   "originHint": "origin/main 29406e21; formal L465 招; dependency-blocked lesson-local Production package.",
   "sentences": [
     {
@@ -662,6 +1069,73 @@
       "zhuyinOverrides": {
         "5": "ㄉㄚˊ",
         "9": "ㄒㄧㄤ"
+      },
+      "imageSrc": "/assets/lessons/L473/images/L473-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L473/audio/L473-S01.m4a",
+        "durationMs": 3877,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1080,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1620,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1980,
+            "endMs": 2420
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2420,
+            "endMs": 2880
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2880,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3220,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3460,
+            "endMs": 3640
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
       }
     },
     {
@@ -679,6 +1153,73 @@
       "approved": true,
       "zhuyinOverrides": {
         "9": "ㄔㄨㄥˊ"
+      },
+      "imageSrc": "/assets/lessons/L473/images/L473-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L473/audio/L473-S02.m4a",
+        "durationMs": 3947,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1240,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2260,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2620,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2920,
+            "endMs": 3200
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3200,
+            "endMs": 3500
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3500,
+            "endMs": 3720
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
       }
     },
     {
@@ -695,6 +1236,63 @@
       "approved": true,
       "zhuyinOverrides": {
         "3": "ㄉㄚˊ"
+      },
+      "imageSrc": "/assets/lessons/L473/images/L473-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L473/audio/L473-S03.m4a",
+        "durationMs": 2600,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1100,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1320,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1580,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1900,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2160,
+            "endMs": 2360
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
       }
     },
     {
@@ -712,6 +1310,73 @@
       "approved": true,
       "zhuyinOverrides": {
         "10": "ㄧㄥˋ"
+      },
+      "imageSrc": "/assets/lessons/L473/images/L473-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L473/audio/L473-S04.m4a",
+        "durationMs": 4249,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1410
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1410,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1680,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2160,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2440,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3180,
+            "endMs": 3540
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3540,
+            "endMs": 3820
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3820,
+            "endMs": 4020
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
       }
     },
     {
@@ -728,11 +1393,70 @@
       "approved": true,
       "zhuyinOverrides": {
         "9": "ㄉㄚˊ"
+      },
+      "imageSrc": "/assets/lessons/L473/images/L473-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L473/audio/L473-S05.m4a",
+        "durationMs": 3483,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 250
+          },
+          {
+            "charIndex": 1,
+            "startMs": 250,
+            "endMs": 500
+          },
+          {
+            "charIndex": 2,
+            "startMs": 500,
+            "endMs": 800
+          },
+          {
+            "charIndex": 3,
+            "startMs": 800,
+            "endMs": 1050
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1050,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1300,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2140,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2400,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2640,
+            "endMs": 3000
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3000,
+            "endMs": 3220
+          }
+        ]
+      },
+      "imageQA": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantic": "PASS"
       }
     }
   ],
-  "latestMainChecked": "29406e21",
-  "productionQA": {
-    "status": "request-ready; assets pending"
-  }
+  "latestMainChecked": "29406e21"
 }
