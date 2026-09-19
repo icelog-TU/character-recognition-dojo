@@ -940,9 +940,9 @@
         });
 
         (unit.sentenceGames || []).forEach((game) => {
+          const sourceSentence = sentenceFor(unit, game.sentenceId);
           if (game.teachAudio) {
-            const sentence = sentenceFor(unit, game.sentenceId);
-            const chars = hanChars(sentence?.spokenText || sentence?.text || "");
+            const chars = hanChars(sourceSentence?.spokenText || sourceSentence?.text || "");
             const targetIndex = Number.isInteger(game.targetCharIndex) ? game.targetCharIndex : chars.indexOf(game.targetChar);
             addExtraAudio(extraAudio, {
               key: `${game.id}-prefix`,
@@ -967,6 +967,7 @@
               label: `${game.id} ${option.id}`,
               text: option.text || option.spokenText || "",
               spokenText: option.spokenText || "",
+              zhuyinOverrides: sourceSentence?.zhuyinOverrides || {},
               src: option.audioSrc,
             });
           });
@@ -1238,7 +1239,7 @@
                   ${flagged ? '<span class="bad">需要修</span>' : ""}
                 </div>
                 <div>${html(audio.text || "")}</div>
-                ${audio.text ? `<div class="zhuyin-preview" aria-label="注音預覽">${renderZhuyinText(audio.text)}</div>` : ""}
+                ${audio.text ? `<div class="zhuyin-preview" aria-label="注音預覽">${renderZhuyinText(audio.text, audio.zhuyinOverrides)}</div>` : ""}
                 ${audio.spokenText ? `<div class="muted">spokenText: ${html(audio.spokenText)}</div>` : ""}
                 <audio controls preload="metadata" src="${html(audio.url)}"></audio>
                 <div class="mono muted">${html(audio.src)}</div>
