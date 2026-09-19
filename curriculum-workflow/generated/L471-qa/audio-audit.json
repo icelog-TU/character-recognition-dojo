@@ -1,7 +1,7 @@
 {
   "unit": "L471",
   "engine": "OpenAI gpt-4o-mini-tts + whisper-1",
-  "result": "REPAIRED PASS",
+  "result": "REPAIRED PASS — TEACHER APPROVED",
   "manualListeningClaimed": false,
   "pronunciationGuardrails": [
     "題 ㄊㄧˊ",
@@ -484,6 +484,15 @@
     ],
     "finalTranscode": "Silence trim, loudness normalization and AAC encoding only; no splicing and no pitch/time modification.",
     "manualListeningClaimed": false,
-    "teacherReReview": "pending"
+    "teacherReReview": "PASS"
+  },
+  "teacherAudioReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-09-19",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "5d4ed2bec49ec288138c6f40053972d46bf9df2f",
+    "repairedAssetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "scope": "All final L471 audio, including repaired S01 回答 and both G05 答應 wrong-option files",
+    "statement": "471 图档跟音讯都审核通过了。"
   }
 }

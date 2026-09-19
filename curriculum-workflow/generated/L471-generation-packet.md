@@ -2765,3 +2765,14 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Repaired-ref strict intake: PASS.
 - Repaired-ref Chrome Browser QA: PASS at asset commit `46e2424c17c1b84f8310accc06bb18655ca1b119`; all five images loaded and 11/11 playback controls reached ended state without media errors.
 - Repair preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=46e2424c17c1b84f8310accc06bb18655ca1b119
+
+
+### Teacher final asset approval
+
+- Status: PASS.
+- Date: 2026-09-19.
+- Reviewed package ref: `5d4ed2bec49ec288138c6f40053972d46bf9df2f`.
+- Repaired asset commit: `46e2424c17c1b84f8310accc06bb18655ca1b119`.
+- Image scope: all five final L471 images, including repaired S03 and S05.
+- Audio scope: all final L471 audio, including repaired S01 and both G05 wrong-option files.
+- Teacher statement: 471 图档跟音讯都审核通过了。

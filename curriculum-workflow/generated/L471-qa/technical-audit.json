@@ -1,6 +1,6 @@
 {
   "unit": "L471",
-  "result": "REPAIRED PASS",
+  "result": "REPAIRED PASS — TEACHER APPROVED",
   "packageStatus": "dependency-blocked-asset-complete",
   "productionBase": {
     "ref": "acd71a5bd25e927c209ed749506aea1d3cc643a0",
@@ -174,31 +174,49 @@
       "item": "L471-S01:audio",
       "issue": "回答的回被老師聽成會",
       "resolution": "Regenerated full sentence; selected S01-c after phonetic model identified 回答 as ㄏㄨㄟˊ ㄉㄚˊ; rebuilt S01 timing alignment.",
-      "status": "repaired-awaiting-teacher-re-review"
+      "status": "resolved-teacher-approved"
     },
     {
       "item": "L471-S03:image",
       "issue": "Open-book left/right page geometry and page sizes were inconsistent",
       "resolution": "Regenerated with equal-width symmetric pages, centered binding, bird scene confined to left page and puppy/fish panels confined to right page.",
-      "status": "repaired-awaiting-teacher-re-review"
+      "status": "resolved-teacher-approved"
     },
     {
       "item": "L471-S05:image",
       "issue": "Watering can intersected the plant table; teacher requested a thought bubble showing daily watering",
       "resolution": "Regenerated with the watering can fully separated on open floor and a mother-linked thought bubble showing the same girl watering a healthy plant.",
-      "status": "repaired-awaiting-teacher-re-review"
+      "status": "resolved-teacher-approved"
     },
     {
       "item": "L471-G05-O2:audio",
       "issue": "答應 required the audible 搭應 reading",
       "resolution": "Regenerated full wrong-one sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
-      "status": "repaired-awaiting-teacher-re-review"
+      "status": "resolved-teacher-approved"
     },
     {
       "item": "L471-G05-O3:audio",
       "issue": "答應 required the audible 搭應 reading",
       "resolution": "Regenerated full wrong-two sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
-      "status": "repaired-awaiting-teacher-re-review"
+      "status": "resolved-teacher-approved"
     }
-  ]
+  ],
+  "teacherImageReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-09-19",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "5d4ed2bec49ec288138c6f40053972d46bf9df2f",
+    "repairedAssetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "scope": "All five final L471 images, including repaired S03 symmetric book spread and repaired S05 watering-can geometry plus thought bubble",
+    "statement": "471 图档跟音讯都审核通过了。"
+  },
+  "teacherAudioReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-09-19",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "5d4ed2bec49ec288138c6f40053972d46bf9df2f",
+    "repairedAssetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "scope": "All final L471 audio, including repaired S01 回答 and both G05 答應 wrong-option files",
+    "statement": "471 图档跟音讯都审核通过了。"
+  }
 }

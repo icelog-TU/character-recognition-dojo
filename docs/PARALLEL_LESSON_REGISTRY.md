@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L471 | 題 | ready-blocked-by-dependency | Production F / parallel-f | `codex/l471-complete-package` | L466:絕; L467:活; L468:該; L469:應; L470:答; R057/R058 after L465 | 絕、活、該、應、答 | `curriculum-workflow/lesson-requests/L471.json`; `curriculum-workflow/generated/L471-generation-packet.md`; `curriculum-workflow/drafts/L471-draft.json` | `public/assets/lessons/L471/`; `curriculum-workflow/audio-inbox/L471/` | Complete package. Teacher repair round from `ca8f0054`: S01 回答 audio, S03 symmetric book pages, S05 watering-can geometry plus thought bubble, and both G05 答應 audios replaced; transcript/timing/style/cast/phonetic audits PASS. Repaired-ref teacher re-review pending. Release blocked only by R057/R058 and L466-L470. |
+| L471 | 題 | ready-blocked-by-dependency | Production F / parallel-f | `codex/l471-complete-package` | L466:絕; L467:活; L468:該; L469:應; L470:答; R057/R058 after L465 | 絕、活、該、應、答 | `curriculum-workflow/lesson-requests/L471.json`; `curriculum-workflow/generated/L471-generation-packet.md`; `curriculum-workflow/drafts/L471-draft.json` | `public/assets/lessons/L471/`; `curriculum-workflow/audio-inbox/L471/` | Complete package. Teacher repair round from `ca8f0054` resolved; repaired images and audio at package ref `5d4ed2be` teacher-approved on 2026-09-19. Strict intake, transcript, timing, style/cast, phonetic and Browser QA PASS. Release blocked only by R057/R058 and L466-L470. |
 
 ## Status Values
 
