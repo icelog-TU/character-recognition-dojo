@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L480 | 趣 | claimed | Production C / parallel-c | codex/l480-complete-package | L474-L479; R057/R058 before Release | 而、且、故、緣、無、聊 | curriculum-workflow/lesson-requests/L480.json; curriculum-workflow/generated/L480-generation-packet.md; curriculum-workflow/drafts/L480-draft.json | public/assets/lessons/L480/ | Formal teacher-approved handoff claimed from origin/main 7d2827d5. Locked allowed set: formal 469 + provisional 而、且、故、緣、無、聊 + current 趣 = 476 unique Han. Release dependencies do not block parallel Production package work. |
 
 ## Status Values
 
