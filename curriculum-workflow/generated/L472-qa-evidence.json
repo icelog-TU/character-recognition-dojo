@@ -1,0 +1,233 @@
+{
+  "unit": "L472",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "29406e21ead23463b62b06812997e6a871ffcef1",
+  "productionBoundary": "L001-L465 招; 469 unique learned Han",
+  "allowedCharCount": 475,
+  "imageChecks": [
+    {
+      "sentenceId": "L472-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Girl points to her workbook with a puzzled expression while father looks at the same place; no blocks, counters, calculator, checking aids, readable answer or numbers.",
+      "castEvidence": "Recurring protagonist girl and father match the fixed family identities.",
+      "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+    },
+    {
+      "sentenceId": "L472-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Father presents a cropped animal-detail card; the girl retracts her hand and reconsiders a visibly nonmatching full-animal card without the correct animal being revealed.",
+      "castEvidence": "Recurring protagonist girl and father match the fixed family identities.",
+      "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+    },
+    {
+      "sentenceId": "L472-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "During independent work, the girl glances at a generic neighbor’s separate paper while the teacher points back to the girl’s own paper.",
+      "castEvidence": "Teacher has low bun, round glasses, muted teal collared blouse, navy classroom vest and lanyard, visibly distinct from the protagonist mother; girl remains the recurring protagonist.",
+      "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+    },
+    {
+      "sentenceId": "L472-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Mother and girl make a dog mask while other distinct parent-child pairs make bird and fish crafts, so the shared animal theme is visible without signage.",
+      "castEvidence": "Recurring mother and girl match family anchors; generic adults and children are distinct.",
+      "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+    },
+    {
+      "sentenceId": "L472-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Girl compares a dog drawing on a separate plan sheet with a completely blank cloth schoolbag; pencil does not touch the bag and the plan remains unfinished.",
+      "castEvidence": "Recurring mother and girl match the fixed family identities.",
+      "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+    }
+  ],
+  "browserQA": {
+    "phoneLayout": "All approved displayLines retained exactly; every visible line is at most six characters. Static schema and package checks cover all five canonical Stage 4 games.",
+    "playback": "All nine final AAC tracks decode successfully; interactive pre-merge asset QA is provided by the immutable asset-review URL after push.",
+    "limitations": [
+      "Physical microphone capture and human listening are not claimed; final processed media was supplied to an acoustic AI model and Whisper for pronunciation/transcript verification."
+    ]
+  },
+  "audio": {
+    "metrics": [
+      {
+        "name": "char-u6848.m4a",
+        "duration": 0.9,
+        "max": -6.1,
+        "mean": -23.1,
+        "trailingSilenceStart": 0.332381,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "a557c8e4375c011e67bfe233b1d071bf2d4f56212e5f64955210ff6f8c637dff"
+      },
+      {
+        "name": "L472-G02-prefix.m4a",
+        "duration": 3.321995,
+        "max": -2,
+        "mean": -18.3,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "613fefd2c3da7a99cfce0135e5623dd4ae54a68799b74cd77646fe9baa79bdc7"
+      },
+      {
+        "name": "L472-G05-wrong-one.m4a",
+        "duration": 3.383991,
+        "max": -2.3,
+        "mean": -18,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "ce0e647ea453a62e790fc2d6efa1eebfcaa36b91d63233f4e8b1ed4adad86264"
+      },
+      {
+        "name": "L472-G05-wrong-two.m4a",
+        "duration": 2.786009,
+        "max": -3.7,
+        "mean": -18.9,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "e948ae73b4ea284ddc0e30d58940e1a77d7c1ffc60fb8bdb4c1cfcbf09dd52af"
+      },
+      {
+        "name": "L472-S01.m4a",
+        "duration": 3.237007,
+        "max": -2,
+        "mean": -17.8,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "b7adc9dbea2946d85c2025eac49b87824269b33354d609b74a0d011ea74cf95e"
+      },
+      {
+        "name": "L472-S02.m4a",
+        "duration": 2.497007,
+        "max": -5.5,
+        "mean": -17.9,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "b21cf418bcba6e60c40fdf293a9c44c16bf9f4bda11b16ccc0b0bc6ede0c2859"
+      },
+      {
+        "name": "L472-S03.m4a",
+        "duration": 2.810998,
+        "max": -6.6,
+        "mean": -19.5,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "beec82fb7c21f882f2e76b162186305c4fb9f78b5ab4f0fbd1696c94aef47b1a"
+      },
+      {
+        "name": "L472-S04.m4a",
+        "duration": 2.74,
+        "max": -2.9,
+        "mean": -18.9,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "9d77edfaf186144f9c2fb7b1073e1ed877d09cb2328314d0c157f0b3c1c52555"
+      },
+      {
+        "name": "L472-S05.m4a",
+        "duration": 3.719002,
+        "max": -2.3,
+        "mean": -19.1,
+        "trailingSilenceStart": null,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "53fe9482b43f493415462e73228c1721c08d21647bbe59639d214afbdb721e03"
+      }
+    ],
+    "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; Whisper exact-Han transcript checks also ran on the same final M4A.",
+    "hearing": [
+      {
+        "name": "char-u6848",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"案\",\"syllables\":[\"an4\"],\"uncertain\":\"\"}"
+      },
+      {
+        "name": "L472-S01",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"這個答案很怪，應該有問題。\",\"syllables\":[\"zhe4\",\"ge4\",\"da2\",\"an4\",\"hen3\",\"guai4\",\"ying1\",\"gai1\",\"you3\",\"wen4\",\"ti2\"],\"uncertainNotes\":\"\"}"
+      },
+      {
+        "name": "L472-S02",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"答錯了應該再想一想\", \"syllables\": [\"da2\", \"cuo4\", \"le\", \"ying1\", \"gai1\", \"zai4\", \"xiang3\", \"yi4\", \"xiang3\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L472-S03",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"你不該看別人的答案。\", \"syllables\": [\"ni3\", \"bu4\", \"gai1\", \"kan4\", \"bie2\", \"ren2\", \"de5\", \"da2\", \"an4\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L472-S04",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"這次活動的主題是動物\", \"syllables\": [\"zhe4\", \"ci4\", \"huo2\", \"dong4\", \"de5\", \"zhu3\", \"ti2\", \"shi4\", \"dong4\", \"wu4\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L472-S05",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"我想在書包上畫小狗圖案。\", \"syllables\": [\"wo3\", \"xiang3\", \"zai4\", \"shu1\", \"bao1\", \"shang4\", \"hua4\", \"xiao3\", \"gou3\", \"tu2\", \"an4\"], \"uncertainNotes\": \"\"}"
+      },
+      {
+        "name": "L472-G02-prefix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"我想在書包上畫小狗圖\", \"syllables\": [\"wo3\", \"xiang3\", \"zai4\", \"shu1\", \"bao1\", \"shang4\", \"hua4\", \"xiao3\", \"gou3\", \"tu2\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L472-G05-wrong-one",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"這次活動的主題是水果\", \"syllables\": [\"zhe4\", \"ci4\", \"huo2\", \"dong4\", \"de5\", \"zhu3\", \"ti2\", \"shi4\", \"shui3\", \"guo3\"], \"uncertainNotes\": \"\"}"
+      },
+      {
+        "name": "L472-G05-wrong-two",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"這次活動的主題是運動\",\"syllables\":[\"zhe4\",\"ci4\",\"huo2\",\"dong4\",\"de5\",\"zhu3\",\"ti2\",\"shi4\",\"yun4\",\"dong4\"],\"uncertain\":\"\"}"
+      }
+    ],
+    "pronunciationChecks": {
+      "案": "standalone an4 and in 答案/圖案",
+      "答": "da2 in S01/S02/S03",
+      "應": "ying1 in 應該",
+      "題": "ti2 in all three G05 options",
+      "S02": "complete full-sentence audio transcribes exactly 答錯了應該再想一想",
+      "G02": "prefix ends at 圖 and does not restore 案",
+      "G05": "wrong-one ends 水果; wrong-two ends 運動"
+    },
+    "processing": "Every sentence and Stage 4 wrong option is an independently generated complete utterance. Final media is silence-trimmed and level-normalized; no final sentence or G05 option is assembled from word or syllable clips."
+  },
+  "mediaBytes": 818113,
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L471",
+    "reviewMilestones": [
+      "R057",
+      "R058"
+    ],
+    "milestoneAfterLesson": 465
+  },
+  "validation": {
+    "startupToolsAiAudit": "PASS",
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L472 fixture",
+    "assetAuditStrict": "PASS with 0 warnings on isolated L472 fixture",
+    "fullVerify": "Skipped: dependency-blocked; shared production integration belongs to Release."
+  }
+}
