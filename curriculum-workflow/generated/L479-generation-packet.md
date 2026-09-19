@@ -2498,7 +2498,7 @@ The following records are the authoritative teacher-approved L479 content used b
 
 ```json
 {
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "dependsOnLessons": [
     "L474",
     "L475",
@@ -2728,3 +2728,12 @@ The following records are the authoritative teacher-approved L479 content used b
   }
 }
 ```
+
+## Production asset record
+
+- Package status: `dependency-blocked-asset-complete`
+- Images: five 1024×1024 WebP assets; S02, S04 and S05 were regenerated after the teacher identified style drift.
+- Audio: ten independent AAC mono 44.1 kHz M4A assets.
+- Timings: nine timed tracks; all spans are 80–900 ms and each track has a 250 ms tail.
+- Evidence: `L479-image-provenance.json`, `L479-listening-evidence.json`, `L479-short-audio-audit.json`, `L479-timing-audit.json`, and `L479-asset-audit.json`.
+- Browser QA: pending pushed immutable commit.

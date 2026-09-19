@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L479 | 聊 | request-ready | Production B | `codex/l479-complete-package` | L474, L475, L476, L477, L478 | 而、且、故、緣、無 | `curriculum-workflow/lesson-requests/L479.json`; `curriculum-workflow/generated/L479-generation-packet.md`; `curriculum-workflow/drafts/L479-draft.json` | `public/assets/lessons/L479/` | Teacher-approved complete-package handoff received; dependency-blocked production work in progress. |
+| L479 | 聊 | ready-blocked-by-dependency | Production B | `codex/l479-complete-package` | L474, L475, L476, L477, L478 | 而、且、故、緣、無 | `curriculum-workflow/lesson-requests/L479.json`; `curriculum-workflow/generated/L479-generation-packet.md`; `curriculum-workflow/drafts/L479-draft.json` | `public/assets/lessons/L479/` | Complete lesson-local package; awaiting L474-L478 and R057/R058 before release. |
 
 ## Status Values
 
