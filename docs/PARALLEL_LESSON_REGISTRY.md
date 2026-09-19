@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L476 | 故 | claimed | Production E | codex/l476-complete-package | L470, L471, L472, L473, L474, L475 | 答 題 案 反 而 且 | curriculum-workflow/lesson-requests/L476.json; curriculum-workflow/generated/L476-generation-packet.md; curriculum-workflow/drafts/L476-draft.json | curriculum-workflow/audio-inbox/L476/; public/assets/lessons/L476/ | Teacher-approved handoff received. Allowed ceiling: origin/main L001-L465 (469 unique Han) plus provisional 答題案反而且 and new 故 = 476 unique Han. New full package; dependencies and R057/R058 block Release integration only. |
+| L476 | 故 | request-ready | Production E | codex/l476-complete-package @ 9d220406 | L470, L471, L472, L473, L474, L475 | 答 題 案 反 而 且 | curriculum-workflow/lesson-requests/L476.json; curriculum-workflow/generated/L476-generation-packet.md; curriculum-workflow/drafts/L476-draft.json | curriculum-workflow/audio-inbox/L476/; public/assets/lessons/L476/ | Teacher-approved request captured; 476-character ceiling, pronunciation overrides, coverage, sentence breaks and Stage 4 indexes mechanically checked. New full package; dependencies and R057/R058 block Release integration only. |
 
 ## Status Values
 
