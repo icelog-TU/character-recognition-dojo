@@ -2521,3 +2521,12 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Pattern remains sparse, meaningless geometric shapes only on the raised reverse face.
 - Scope: S04 image only; text, audio, timings and Stage 4 data unchanged.
 - Immutable-ref targeted image QA: PASS at `e68df4dfc5dfaca92761f1cade5f6e15495e3929`; markup-guided S04 loaded at 1024×1024 with no image error.
+
+## S04 final object-only visual override
+
+- Teacher supplied `Fuse-the-fleece-1.webp` as the exact fold/composition reference.
+- Final composition: no people or hands; one sheet only on a warm wooden table.
+- Reversed surfaces: large flat main area completely blank; only the lifted triangular reverse face carries sparse meaningless pastel geometric shapes.
+- Request and draft imageNotes/imagePrompt updated to this final direction.
+- Scope: S04 image and its visual metadata only; sentence, audio, timings and Stage 4 data unchanged.
+- Immutable-ref targeted image QA: pending repair commit.

@@ -762,8 +762,8 @@
         "把紙翻過來。"
       ],
       "focusChar": "反",
-      "imageNotes": "家中桌邊，主角女孩原本看一張紙的空白面，主角媽媽提醒；女孩正把紙翻過來，露出另一面的彩色小狗圖案。用同一張紙的翻動呈現正反面，不是兩張紙。老師已放棄「在反面邊緣畫圖案」的手工情境，本定稿沒有邊緣，不得加回。",
-      "imagePrompt": "Square 1:1 polished modern children's picture-book illustration matching the full approved L058 STYLE ONLY set and refined L115/L118/L119/L128 examples: warm natural light, fine pencil-and-watercolor linework, softly layered gouache texture, detailed but clean Taiwan environment, stable preschool proportions, gentle expressive faces, bright warm palette, phone-readable composition and safe margins. Use recurring family identity anchors L154-S01, L162-S04 and L163-S02 whenever protagonist family appears. Protagonist girl: preschool age, short dark bob, small pink hairclip, pink cardigan, cream blouse, navy skirt and pink shoes. Fixed father: short dark hair, blue overshirt and cream shirt. Fixed mother: chin-length dark hair, cream cardigan and practical blue clothing. Named cast must follow their dedicated reference images. Do not copy any L058 person. No readable text, letters, numbers, labels, logos, watermarks, captions or speech bubbles. At a home table, the recurring protagonist girl is physically flipping one single sheet of paper after her fixed mother points and reminds her. The near side starts blank while the turning motion reveals a colorful puppy picture on the reverse side. Make it unmistakably one flexible sheet with a visible curling flip, not two sheets. Do not add border crafts, edge decorations, readable text or symbols.",
+      "imageNotes": "純物件近景，不出現人物、手或身體。暖色木桌上只有一張長方形紙，大部分平放的正面完全空白；右側近角依老師提供的實物參考平順掀起，形成同一張紙連續彎折的三角形反面。只有翻起的三角形反面帶少量無意義的柔和幾何色塊，大片平面不帶圖案。紙張厚度、折線、邊角及陰影須一致，不得出現第二張紙、額外夾層或人物。",
+      "imagePrompt": "Square 1:1 polished modern children’s picture-book illustration with warm natural light, fine pencil-and-watercolor linework, softly layered gouache texture and a clean phone-readable silhouette. Object-only close-up: no people, no hands, no arms, no characters, no faces, no animals. On a warm wooden tabletop, show one rectangular sheet lying mostly flat while its near-right corner is smoothly lifted and folded back as one curved triangular flap, following the teacher-provided physical reference. The large flat main area is completely blank warm white. Only the lifted triangular reverse face has a sparse abstract pattern of pastel dots, circles, triangles and soft blocks, correctly foreshortened. Make the flat sheet and flap visibly one continuous piece with consistent paper thickness, one clean diagonal turning edge and no extra layer. No readable text, letters, numbers, grid, labels, logos, watermark, caption or speech bubble.",
       "approved": true,
       "imageSrc": "/assets/lessons/L477/images/L477-S04.webp",
       "audio": {
@@ -1081,12 +1081,8 @@
     "allowedCharacterCount": 475,
     "manualListeningClaimed": false,
     "browserQa": {
-      "status": "PASS",
-      "scope": "targeted teacher-markup L477-S04 repair",
-      "assetCommit": "e68df4dfc5dfaca92761f1cade5f6e15495e3929",
-      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L477&ref=e68df4dfc5dfaca92761f1cade5f6e15495e3929",
-      "browser": "Codex in-app Chromium",
-      "summary": "PASS: immutable repair commit loaded the markup-guided L477-S04 at 1024x1024 with no image error. Other assets are unchanged from prior QA."
+      "status": "PENDING",
+      "summary": "Teacher-approved S04 object-only composition with reversed blank/pattern surfaces; immutable-ref image QA pending."
     }
   }
 }
