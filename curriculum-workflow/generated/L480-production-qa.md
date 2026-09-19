@@ -24,4 +24,4 @@
 ## Interaction and intake
 
 - 390x844 LessonPanel QA PASS for Stage 1 character playback, the six-card Stage 2 set with exactly three 趣 targets, all five Stage 3 sentence/image playbacks, and Stage 4 G01/G02 presentation. S04 renders as the approved four clear lines without overflow or isolated punctuation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by canonical index, option-order, audio-reference and package validation checks.
-- Pending pushed-ref intake.
+- PASS on pushed origin/codex/l480-complete-package: 5 images, 10 audio files, all five canonical Stage 4 types, and no blocking package-status defects.

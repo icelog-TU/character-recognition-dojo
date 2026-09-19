@@ -17,4 +17,3 @@ for(const file of fs.readdirSync(folder).filter(f=>f.endsWith('.m4a')&&(!only||f
 }
 const finalRows=only&&fs.existsSync(out)?[...JSON.parse(fs.readFileSync(out,'utf8')).filter(row=>row.file!==only),...rows].sort((a,b)=>a.file.localeCompare(b.file)):rows;
 fs.writeFileSync(out,JSON.stringify(finalRows,null,2)+'\n');
-
