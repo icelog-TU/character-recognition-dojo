@@ -1738,6 +1738,30 @@
       "scope": "All five L479 images and all ten unique L479 audio assets.",
       "teacherConfirmation": "好，基本上圖片跟音檔都沒有問題。",
       "recordType": "Metadata-only approval record; no media, timings, lesson text, or Stage 4 data changed after the reviewed commit."
+    },
+    "packageRescue": {
+      "sourceBranch": "origin/codex/l479-complete-package",
+      "sourcePackageSha": "36bd9e5bf6e269ed3b6ab4be066e07a3f8c53a0e",
+      "issue": "L479-S05.webp measured 273,926 bytes (267.5 KiB), above the 250 KiB strict target",
+      "resolution": "Re-encoded the approved 1024x1024 sRGB WebP at quality 79 with WebP method 6 and metadata stripped; composition and semantic content are unchanged",
+      "before": {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 273926,
+        "sha256": "7c3fcf6fab59f89b2c01977a7ce04ec671e358a1d9f53b42f354955343ad6545"
+      },
+      "after": {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 243828,
+        "sha256": "e1a85352229a67a73e39545c8c4dc4e0aa31adcf6cdf879de149f27cc78d9ba1"
+      },
+      "comparison": {
+        "psnrDb": 37.8224,
+        "normalizedDistortion": 0.0118535,
+        "visualInspection": "PASS at original resolution; no visible composition, cast, text, crop, color-space, or semantic change"
+      },
+      "unchanged": "Five approved sentences, image prompts, all audio, charTimings, Stage 4 data, packageStatus, and dependency blockers"
     }
   }
 }

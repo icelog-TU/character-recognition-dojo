@@ -2736,6 +2736,14 @@ The following records are the authoritative teacher-approved L479 content used b
 - Audio: ten independent AAC mono 44.1 kHz M4A assets.
 - Timings: nine timed tracks; all spans are 80–900 ms and each track has a 250 ms tail.
 - Evidence: `L479-image-provenance.json`, `L479-listening-evidence.json`, `L479-short-audio-audit.json`, `L479-timing-audit.json`, and `L479-asset-audit.json`.
+
+## Package Rescue: S05 WebP size
+
+- Source package: `origin/codex/l479-complete-package` at `36bd9e5bf6e269ed3b6ab4be066e07a3f8c53a0e`.
+- Blocker: `L479-S05.webp` measured 273,926 bytes (267.5 KiB), above the 250 KiB strict target.
+- Repair: re-encoded the approved image at WebP quality 79 with method 6 and stripped metadata. Dimensions remain 1024×1024, color space remains sRGB, and composition and semantic content are unchanged.
+- Result: 243,828 bytes (238.1 KiB), PSNR 37.8224 dB. Original-resolution visual comparison PASS with no visible crop, cast, text, composition or semantic change.
+- Scope unchanged: five approved sentences, image prompts, all audio, charTimings, Stage 4 data, package status and dependency blockers.
 - Browser QA: PASS on immutable asset commit a3ea5862982783069a1c279a2ba0cf69f6cc2caa: asset-review loaded 5 sentence cards and 6 other-audio entries; all five images completed at natural 1024×1024; all 11 rendered audio controls reached readyState 4 with no media error. The G02 suffix control played through to currentTime 2.53/2.53 seconds.
 
 ## Teacher manual pre-merge asset QA
