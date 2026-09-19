@@ -1,41 +1,25 @@
 {
   "unit": "L476",
-  "sourceReviewRef": "3ae5ee3c1d6d4f71dfc2836731dbd2ec16dc7931",
+  "sourceReviewRef": "55b1eb9d3add0c563b6c670d18c329cc8e110b65",
   "scope": [
-    "L476-S04 image",
-    "L476-S05 audio",
-    "L476-G05-correct shared S05 audio"
+    "L476-S04 image only"
   ],
   "image": {
     "file": "public/assets/lessons/L476/images/L476-S04.webp",
     "result": "PASS",
     "format": "WebP",
     "dimensions": "1024x1024",
-    "bytes": 136874,
-    "semantic": "Clear active page-turn arc; floral front and blank reverse belong to one continuous sheet; recurring cast/style preserved; no readable text."
+    "bytes": 128018,
+    "semantic": "PASS: exactly two separate matching sheets; left sheet shows the complete floral front, while the lifted right sheet shows a blank white reverse with a narrow curled floral edge.",
+    "cast": "PASS recurring protagonist",
+    "styleLock": "PASS",
+    "readableText": "none"
   },
   "audio": {
-    "file": "public/assets/lessons/L476/audio/L476-S05.m4a",
-    "sharedBy": "L476-G05-correct",
-    "result": "PASS",
-    "format": "AAC mono 44.1kHz M4A",
-    "durationMs": 4000,
-    "transcript": "這個問題我還沒想到答案",
-    "toneAudit": {
-      "問": "fourth; sounds like 問, not 溫",
-      "題": "second",
-      "還": "second",
-      "答": "second"
-    },
-    "accent": "Taiwan Mandarin",
-    "defects": [],
-    "confidence": 0.99,
-    "wholeSentenceRegeneration": true,
-    "spliced": false
+    "status": "Teacher accepted after prior repair; unchanged in this repair."
   },
   "timing": {
-    "scope": "L476-S05 only; G05 correct reuses it",
-    "result": "PASS"
+    "status": "Unchanged"
   },
-  "humanRecheck": "pending"
+  "humanRecheck": "S04 image pending; S05/G05-correct audio accepted."
 }

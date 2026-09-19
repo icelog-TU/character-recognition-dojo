@@ -57,16 +57,17 @@
     {
       "id": "L476-S04",
       "path": "public/assets/lessons/L476/images/L476-S04.webp",
-      "sha256": "62c7fcae0576ef3f67bdfa02965c373b98dc51857e9b2697e2d11a65fb7d4683",
+      "sha256": "d9c4e847e3b648da5522868a769ee3e499802bb9a197fb782b3b8b31941c67a3",
       "dimensions": "1024x1024",
       "styleLock": "PASS",
       "cast": "PASS recurring protagonist",
-      "semantic": "PASS: one continuous floral sheet is visibly being turned; patterned front remains flat and the lifted white reverse follows a clear curled page arc.",
+      "semantic": "PASS: exactly two separate matching sheets; left sheet shows the complete floral front, while the lifted right sheet shows a blank white reverse with a narrow curled floral edge.",
       "readableText": "none",
       "rejectedDrafts": [
-        "Original package S04 at review ref 3ae5ee3c1d6d4f71dfc2836731dbd2ec16dc7931: teacher rejected unclear page-turn geometry."
+        "Original package S04 at review ref 3ae5ee3c1d6d4f71dfc2836731dbd2ec16dc7931: teacher rejected unclear page-turn geometry.",
+        "First repair at 55b1eb9d3add0c563b6c670d18c329cc8e110b65: teacher rejected the one-sheet page-turn composition as still visually strange."
       ],
-      "repairReference": "Teacher-provided page-turn geometry reference used as visual guidance only; not committed."
+      "repairReference": "Teacher-directed two-sheet comparison: one flat patterned front and one lifted matching blank reverse."
     },
     {
       "id": "L476-S05",
