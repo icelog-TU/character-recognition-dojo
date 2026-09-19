@@ -23,4 +23,4 @@
 ## Interaction and intake
 
 - 390x844 LessonPanel QA PASS for Stage 1 character playback, the six-card Stage 2 set with exactly three 而 targets, all five Stage 3 sentence/image playbacks, Stage 4 G01, and the G02 prefix/target/suffix presentation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by canonical index, option-order, audio-reference and package validation checks.
-- Pending pushed-ref intake.
+- Package intake PASS on pushed origin/codex/l474-complete-package: 5 images, 10 audio files, all five canonical Stage 4 types, and no blocking package-status defects.

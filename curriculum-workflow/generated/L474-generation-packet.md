@@ -2230,7 +2230,7 @@
     "timingReview": "AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. G02 transcription uses full-sentence context prompt to disambiguate the homophone 反/返 without transcript normalization; the audio is independently heard as final 反 ㄈㄢˇ and contains no 而.",
     "pronunciation": "Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, no omissions/clipping/substitutions or awkward pauses. Confirmed 而 ㄦˊ, 答案 ㄉㄚˊ, 應該 ㄧㄥ ㄍㄞ, 睡不著 ㄓㄠˊ, 而已 ㄧˇ, G02 prefix-final 反 ㄈㄢˇ with no 而, and suffix-final 了 audible neutral tone. This is AI listening, not teacher manual auditory approval.",
     "browserQA": "390x844 LessonPanel QA PASS for Stage 1 character playback, the six-card Stage 2 set with exactly three 而 targets, all five Stage 3 sentence/image playbacks, Stage 4 G01, and the G02 prefix/target/suffix presentation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by canonical index, option-order, audio-reference and package validation checks.",
-    "packageIntake": "Pending pushed-ref intake.",
+    "packageIntake": "PASS on pushed origin/codex/l474-complete-package; 5 images, 10 audio files, all five canonical Stage 4 types, and no blocking package-status defects.",
     "manualPlayback": "Teacher subjective asset review is post-merge by default; no manual PASS claimed."
   }
 }
@@ -2243,4 +2243,4 @@
 - AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. G02 transcription uses full-sentence context prompt to disambiguate the homophone 反/返 without transcript normalization; the audio is independently heard as final 反 ㄈㄢˇ and contains no 而.
 - Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, no omissions/clipping/substitutions or awkward pauses. Confirmed 而 ㄦˊ, 答案 ㄉㄚˊ, 應該 ㄧㄥ ㄍㄞ, 睡不著 ㄓㄠˊ, 而已 ㄧˇ, G02 prefix-final 反 ㄈㄢˇ with no 而, and suffix-final 了 audible neutral tone. This is AI listening, not teacher manual auditory approval.
 - 390x844 LessonPanel QA PASS for Stage 1 character playback, the six-card Stage 2 set with exactly three 而 targets, all five Stage 3 sentence/image playbacks, Stage 4 G01, and the G02 prefix/target/suffix presentation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by canonical index, option-order, audio-reference and package validation checks.
-- Pending pushed-ref intake.
+- Package intake PASS on pushed origin/codex/l474-complete-package: 5 images, 10 audio files, all five canonical Stage 4 types, and no blocking package-status defects.
