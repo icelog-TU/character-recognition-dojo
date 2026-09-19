@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L478 | 無 | claimed | Production A / parallel-a | codex/l478-complete-package | L473-L477; R057/R058 after L465 | 反、而、且、故、緣 | pending | pending | Formal Editor handoff received. Base origin/main 33ba62a6; formal L001-L465 招 with 469 unique learned Han. L477 remains owned by Production F. Dependencies block Release only. |
 
 ## Status Values
 
