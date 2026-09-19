@@ -2530,3 +2530,10 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Request and draft imageNotes/imagePrompt updated to this final direction.
 - Scope: S04 image and its visual metadata only; sentence, audio, timings and Stage 4 data unchanged.
 - Immutable-ref targeted image QA: pending repair commit.
+
+## S04 upper-right corner correction
+
+- Teacher approved the object-only composition and identified one remaining defect at the lifted flap’s upper-right tip.
+- Correction: removed the tiny backward curl, secondary crease and doubled white sliver; the raised flap now terminates in one clean corner with one continuous outer edge.
+- Scope: S04 image only; all text, audio, timings, Stage 4 data and final object-only metadata remain unchanged.
+- Immutable-ref targeted image QA: pending repair commit.
