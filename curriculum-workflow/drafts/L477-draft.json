@@ -1081,8 +1081,12 @@
     "allowedCharacterCount": 475,
     "manualListeningClaimed": false,
     "browserQa": {
-      "status": "PENDING",
-      "summary": "S04 upper-right corner structure corrected; immutable-ref image QA pending."
+      "status": "PASS",
+      "scope": "targeted L477-S04 upper-right corner correction",
+      "assetCommit": "c1b5009f59820ec37636868b3ef2ca48c8faf645",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L477&ref=c1b5009f59820ec37636868b3ef2ca48c8faf645",
+      "browser": "Codex in-app Chromium",
+      "summary": "PASS: immutable repair commit loaded corrected L477-S04 at 1024x1024 with no image error. Other assets are unchanged."
     }
   }
 }

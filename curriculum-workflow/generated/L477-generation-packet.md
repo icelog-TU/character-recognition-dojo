@@ -2529,7 +2529,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Reversed surfaces: large flat main area completely blank; only the lifted triangular reverse face carries sparse meaningless pastel geometric shapes.
 - Request and draft imageNotes/imagePrompt updated to this final direction.
 - Scope: S04 image and its visual metadata only; sentence, audio, timings and Stage 4 data unchanged.
-- Immutable-ref targeted image QA: pending repair commit.
+- Immutable-ref targeted image QA: PASS at `c1b5009f59820ec37636868b3ef2ca48c8faf645`; corrected S04 loaded at 1024×1024 with no image error.
 
 ## S04 upper-right corner correction
 
