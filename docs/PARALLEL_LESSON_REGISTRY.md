@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L476 | 故 | ready-blocked-by-dependency | Production E | codex/l476-complete-package @ 67a3b8c9 | L470, L471, L472, L473, L474, L475 | 答 題 案 反 而 且 | curriculum-workflow/lesson-requests/L476.json; curriculum-workflow/generated/L476-generation-packet.md; curriculum-workflow/drafts/L476-draft.json; curriculum-workflow/generated/L476-production-report.md | public/assets/lessons/L476/ | Second S04 repair uses two separate matching sheets: flat patterned front plus lifted blank reverse with a curled floral edge. S05/G05-correct audio accepted by teacher and unchanged. Pushed strict intake PASS at 67a3b8c9. Renewed S04 visual acceptance pending. Dependencies L470-L475 and R057/R058 block Release integration only. |
+| L476 | 故 | ready-blocked-by-dependency | Production E | codex/l476-complete-package @ 102225fa | L470, L471, L472, L473, L474, L475 | 答 題 案 反 而 且 | curriculum-workflow/lesson-requests/L476.json; curriculum-workflow/generated/L476-generation-packet.md; curriculum-workflow/drafts/L476-draft.json; curriculum-workflow/generated/L476-production-report.md | public/assets/lessons/L476/ | Third S04 repair: left sheet stays flat and floral; held right sheet is completely plain white with no patterned edge or underside. S05/G05-correct audio accepted by teacher and unchanged. Pushed strict intake PASS at 102225fa. Renewed S04 visual acceptance pending. Dependencies L470-L475 and R057/R058 block Release integration only. |
 
 ## Status Values
 
