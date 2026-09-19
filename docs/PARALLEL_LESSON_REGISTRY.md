@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L478 | 無 | request-ready | Production A / parallel-a | codex/l478-complete-package | L473-L477; R057/R058 after L465 | 反、而、且、故、緣 | curriculum-workflow/lesson-requests/L478.json; curriculum-workflow/generated/L478-generation-packet.md; curriculum-workflow/drafts/L478-draft.json | public/assets/lessons/L478/ (pending) | Request/draft lock 475 allowed Han and teacher-approved sentences/games against origin/main 33ba62a6. L477 remains owned by Production F. Dependencies block Release only. |
+| L478 | 無 | ready-blocked-by-dependency | Production A / parallel-a | codex/l478-complete-package | L473-L477; R057/R058 after L465 | 反、而、且、故、緣 | curriculum-workflow/lesson-requests/L478.json; curriculum-workflow/generated/L478-generation-packet.md; curriculum-workflow/drafts/L478-draft.json | public/assets/lessons/L478/ | dependency-blocked-asset-complete; 5 WebP, 10 M4A, 9 timing records; lesson-local package and acoustic checks prepared. L477 remains owned by Production F. Release dependencies block integration. |
 
 ## Status Values
 

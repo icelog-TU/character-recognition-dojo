@@ -1,0 +1,250 @@
+{
+  "unit": "L478",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "33ba62a69df2de88e8aaa49a2dd45c4347c540f7",
+  "productionBoundary": "L001-L465 招; 469 unique learned Han",
+  "allowedCharCount": 475,
+  "imageChecks": [
+    {
+      "sentenceId": "L478-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Low-angle living room clearly shows the unreachable ball under the cabinet, the dog reaching and barking, father actively retrieving it, and the girl realizing the cause.",
+      "castEvidence": "Recurring father and protagonist girl match the fixed family identities; father helps and does not scold.",
+      "comparison": "Final exported WebP checked against the full L058 style anchor and refined course reference; role identity and phone-readable action pass."
+    },
+    {
+      "sentenceId": "L478-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Father and girl remain under the roofed trail shelter while heavy rain, puddled uphill steps and obscured mountain make the stopped hike explicit; no boat or hazard scene.",
+      "castEvidence": "Recurring father and protagonist girl match the fixed family identities.",
+      "comparison": "Final exported WebP checked against the full L058 style anchor and refined course reference; role identity and phone-readable action pass."
+    },
+    {
+      "sentenceId": "L478-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Camera drone flies at a safe distance toward waving mother and girl while father monitors a controller without an unsafe unattended-flight implication.",
+      "castEvidence": "Recurring mother, father and protagonist girl remain distinct and match the fixed family identities.",
+      "comparison": "Final exported WebP checked against the full L058 style anchor and refined course reference; role identity and phone-readable action pass."
+    },
+    {
+      "sentenceId": "L478-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "A separate sunny mountain scene shows a long winding trail, uneven stones and exposed roots as the girl carefully follows father; no rain or cliff danger.",
+      "castEvidence": "Recurring father and protagonist girl match the fixed family identities.",
+      "comparison": "Final exported WebP checked against the full L058 style anchor and refined course reference; role identity and phone-readable action pass."
+    },
+    {
+      "sentenceId": "L478-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "On a safe sidewalk father turns and points back toward the visible train platform while the girl turns to follow, clearly showing reversal after the wrong route without arrows or signs.",
+      "castEvidence": "Recurring father and protagonist girl match the fixed family identities.",
+      "comparison": "Final exported WebP checked against the full L058 style anchor and refined course reference; role identity and phone-readable action pass."
+    }
+  ],
+  "browserQA": {
+    "phoneLayout": "S04 retains its approved two-line layout; the other sentences retain approved functional three-line layouts; every visible line is at most six characters.",
+    "playback": "All ten final AAC tracks decode successfully; immutable pre-merge package preview will be supplied after push.",
+    "limitations": [
+      "Physical microphone capture and human listening are not claimed; final processed media was supplied to acoustic AI and Whisper transcript verification."
+    ]
+  },
+  "audio": {
+    "metrics": [
+      {
+        "name": "char-u7121.m4a",
+        "duration": 0.798005,
+        "max": -7.1,
+        "mean": -16.8,
+        "trailingSilenceStart": 0.618322,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "80943a2a85f0296d6aff1d5b51449499e1383f4be217ce90c653547cf1ecf1b6"
+      },
+      {
+        "name": "L478-G02-prefix.m4a",
+        "duration": 2.278005,
+        "max": -3,
+        "mean": -18.4,
+        "trailingSilenceStart": 2.11048,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "13e7ee09f6b37ba87ec9cb49700037a1a5d3350b4fb14f3d78db6c6501dea068"
+      },
+      {
+        "name": "L478-G02-suffix.m4a",
+        "duration": 2.531995,
+        "max": -3,
+        "mean": -19.6,
+        "trailingSilenceStart": 2.35268,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "75ee88c81a953002a92c410a93fd08c733854311451904303ab610c653774de9"
+      },
+      {
+        "name": "L478-G05-wrong-one.m4a",
+        "duration": 3.316009,
+        "max": -2.7,
+        "mean": -18.7,
+        "trailingSilenceStart": 3.13603,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "b0c542f1ea749158a8ed09888049cd7b11c452496a31ee503c7ed117cf15af44"
+      },
+      {
+        "name": "L478-G05-wrong-two.m4a",
+        "duration": 3.793991,
+        "max": -2,
+        "mean": -18.6,
+        "trailingSilenceStart": 3.61429,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "d55c8a69415b85c1e77f9422c527d07cee8a7aee775521e8074585aab7e00780"
+      },
+      {
+        "name": "L478-S01.m4a",
+        "duration": 4.469002,
+        "max": -2,
+        "mean": -17.5,
+        "trailingSilenceStart": 4.28959,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "594f4ae31e215c2b52d815b70bfb8604745e6ff13c7f9b1b6604e9bdc146d21a"
+      },
+      {
+        "name": "L478-S02.m4a",
+        "duration": 3.528005,
+        "max": -2.1,
+        "mean": -18,
+        "trailingSilenceStart": 3.34873,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "4cee29792b8534be9c3b7edac349b523a762a2e426e364bf627f2fa0a06b3054"
+      },
+      {
+        "name": "L478-S03.m4a",
+        "duration": 5.886009,
+        "max": -1.9,
+        "mean": -19.1,
+        "trailingSilenceStart": 5.70612,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "dd157af3e6ac79e28ce2c8837b4b08f38517ad708a27ad9d13cf0ff025f3ad73"
+      },
+      {
+        "name": "L478-S04.m4a",
+        "duration": 4.199002,
+        "max": -2.1,
+        "mean": -18,
+        "trailingSilenceStart": 4.01959,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "a237d452e41713a315cf2a736e0958aaf9d38e7c321fced07241a9cc2a3fd7ab"
+      },
+      {
+        "name": "L478-S05.m4a",
+        "duration": 3.589002,
+        "max": -4.6,
+        "mean": -18.3,
+        "trailingSilenceStart": 3.40939,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "4ac3ea3c647152df3c04ee46fa4e60e67abc2cb7603760388e77e75629295455"
+      }
+    ],
+    "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; Whisper exact-Han transcript checks ran on the same final M4A.",
+    "hearing": [
+      {
+        "name": "char-u7121",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"無\", \"syllables\": [\"wu2\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L478-S01",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"小狗不會無緣無故一直叫\", \"syllables\": [\"xiao3\", \"gou3\", \"bu2\", \"hui4\", \"wu2\", \"yuan2\", \"wu2\", \"gu4\", \"yi4\", \"zhi2\", \"jiao4\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L478-S02",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"因為大雨的緣故，無法上山\", \"syllables\": [\"yin1\", \"wei4\", \"da4\", \"yu3\", \"de5\", \"yuan2\", \"gu4\", \"wu2\", \"fa3\", \"shang4\", \"shan1\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L478-S03",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"無人機會自己飛，而且會拍照\",\"syllables\":[\"wu2\",\"ren2\",\"ji1\",\"hui4\",\"zi4\",\"ji3\",\"fei1\",\"er2\",\"qie3\",\"hui4\",\"pai1\",\"zhao4\"],\"uncertain\":\"\"}"
+      },
+      {
+        "name": "L478-S04",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"山路很長而且不好走\", \"syllables\": [\"shan1\", \"lu4\", \"hen3\", \"chang2\", \"er2\", \"qie3\", \"bu4\", \"hao3\", \"zou3\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L478-S05",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"走錯路了，要往反方向走。\", \"syllables\": [\"zou3\", \"cuo4\", \"lu4\", \"le5\", \"yao4\", \"wang3\", \"fan3\", \"fang1\", \"xiang4\", \"zou3\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L478-G02-prefix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"因為大雨的緣故\", \"syllables\": [\"yin1\", \"wei4\", \"da4\", \"yu3\", \"de5\", \"yuan2\", \"gu4\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L478-G02-suffix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"法上山\", \"syllables\": [\"fa3\", \"shang4\", \"shan1\"], \"uncertain\": \"\"}"
+      },
+      {
+        "name": "L478-G05-wrong-one",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\": \"山路很長而且不好跑\", \"syllables\": [\"shan1\", \"lu4\", \"hen3\", \"chang2\", \"er2\", \"qie3\", \"bu4\", \"hao3\", \"pao3\"], \"uncertain\": []}"
+      },
+      {
+        "name": "L478-G05-wrong-two",
+        "model": "gpt-audio-1.5",
+        "result": "{\"transcriptTraditional\":\"山路很長而且不好爬\",\"syllables\":[\"shan1\",\"lu4\",\"hen3\",\"chang2\",\"er2\",\"qie3\",\"bu4\",\"hao3\",\"pa2\"],\"uncertain\":\"\"}"
+      }
+    ],
+    "pronunciationChecks": {
+      "無": "wu2 in standalone, 無緣無故, 無法 and 無人機",
+      "因為": "yin1 wei4",
+      "緣故": "yuan2 gu4",
+      "而且": "er2 qie3",
+      "長": "chang2",
+      "G02": "prefix ends at 故; suffix is fa3 shang4 shan1 and does not restore 無",
+      "G05": "correct ends 走 zou3; wrong options end 跑 pao3 and 爬 pa2"
+    },
+    "processing": "All sentences, G02 fragments and G05 wrong options were generated independently from their exact full texts and processed through the repository assets:audio workflow. Long trailing source silence was removed after standard processing without cutting speech; timings were regenerated from the resulting final M4A files."
+  },
+  "mediaBytes": 1292716,
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L477",
+    "reviewMilestones": [
+      "R057",
+      "R058"
+    ],
+    "milestoneAfterLesson": 465
+  },
+  "validation": {
+    "startupToolsAiAudit": "PASS",
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L478 fixture",
+    "assetAuditStrict": "not run; full-library audit is not required for a lesson-local package under SOP 33ba62a6",
+    "fullVerify": "Skipped: dependency-blocked, shared production integration belongs to Release.",
+    "scopedAssetChecks": "PASS: 5 images are 1024x1024 WebP under 250 KiB; 10 referenced AAC M4A files decode; G05 mean-volume spread <=3 dB; 9 timing records pass"
+  }
+}
