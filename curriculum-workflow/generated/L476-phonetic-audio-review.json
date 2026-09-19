@@ -70,10 +70,11 @@
       "transcriptTraditional": "這個問題我還沒想到答案",
       "matchesExpected": true,
       "pronunciationResult": "PASS",
-      "criticalObservations": "All critical words were produced with correct tones and pronunciation.",
+      "criticalObservations": "Repaired final M4A: 問 is a clear falling fourth tone and sounds like 問, not 溫; 題/還/答 are second tone; Taiwan Mandarin.",
       "finalSyllableComplete": true,
       "defects": [],
-      "confidence": 0.97
+      "confidence": 0.99,
+      "reviewRef": "teacher repair requested at 3ae5ee3c1d6d4f71dfc2836731dbd2ec16dc7931; independently rechecked after regeneration"
     },
     {
       "file": "L476-G02-prefix.m4a",

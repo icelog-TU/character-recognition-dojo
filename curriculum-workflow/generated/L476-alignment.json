@@ -243,62 +243,62 @@
     },
     "L476-S05": {
       "src": "/assets/lessons/L476/audio/L476-S05.m4a",
-      "durationMs": 3611,
+      "durationMs": 4000,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 150
+          "endMs": 190
         },
         {
           "charIndex": 1,
-          "startMs": 150,
-          "endMs": 300
+          "startMs": 190,
+          "endMs": 380
         },
         {
           "charIndex": 2,
-          "startMs": 300,
-          "endMs": 570
+          "startMs": 380,
+          "endMs": 690
         },
         {
           "charIndex": 3,
-          "startMs": 570,
-          "endMs": 840
+          "startMs": 690,
+          "endMs": 1000
         },
         {
           "charIndex": 4,
-          "startMs": 840,
-          "endMs": 1700
+          "startMs": 1600,
+          "endMs": 1740
         },
         {
           "charIndex": 5,
-          "startMs": 1700,
+          "startMs": 1740,
           "endMs": 1960
         },
         {
           "charIndex": 6,
           "startMs": 1960,
-          "endMs": 2240
+          "endMs": 2180
         },
         {
           "charIndex": 7,
-          "startMs": 2240,
-          "endMs": 2500
+          "startMs": 2180,
+          "endMs": 2420
         },
         {
           "charIndex": 8,
-          "startMs": 2500,
-          "endMs": 2840
+          "startMs": 2420,
+          "endMs": 2700
         },
         {
           "charIndex": 9,
-          "startMs": 2840,
-          "endMs": 3060
+          "startMs": 2700,
+          "endMs": 2920
         },
         {
           "charIndex": 10,
-          "startMs": 3060,
-          "endMs": 3240
+          "startMs": 2920,
+          "endMs": 3100
         }
       ]
     }
@@ -489,5 +489,5 @@
       ]
     }
   },
-  "repairNote": "S04 and G05 wrong-one alignments regenerated after complete-unit pronunciation/exact-wording repairs."
+  "repairNote": "L476-S05 sentence timing regenerated after complete-unit pronunciation repair; G05 correct reuses the same repaired file and timing."
 }

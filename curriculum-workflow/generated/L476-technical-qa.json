@@ -23,11 +23,11 @@
     "actualUnique": 476,
     "result": "PASS"
   },
-  "images": "PASS",
-  "audio": "PASS after S04/G05 wrong-one complete-unit regeneration",
-  "pronunciation": "PASS",
-  "timings": "PASS",
+  "images": "PASS; S04 targeted page-turn repair complete",
+  "audio": "PASS; S05 targeted complete-unit pronunciation repair, shared by G05 correct",
+  "pronunciation": "PASS; 問題 independently heard as ㄨㄣˋ ㄊㄧˊ, not 溫題",
+  "timings": "PASS; S05 regenerated only",
   "stage4": "PASS",
   "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-  "packageIntake": "PASS on pushed origin/codex/l476-complete-package at d25524ba1c180dc16cd9695455c0eba2044ee25c with --strict: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects."
+  "packageIntake": "pending pushed repaired ref"
 }

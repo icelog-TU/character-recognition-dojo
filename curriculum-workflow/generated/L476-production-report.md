@@ -33,3 +33,7 @@ Release owns production JSON, planner, ledger, review-pair sequencing, integrati
 ## Pushed package intake evidence
 
 Asset package commit `d25524ba1c180dc16cd9695455c0eba2044ee25c` passed `npm run curriculum:package-intake -- --unit L476 --ref origin/codex/l476-complete-package --strict`: status `dependency-blocked-asset-complete`, 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.
+
+## Targeted teacher repair (2026-09-19)
+
+Teacher review at `3ae5ee3c1d6d4f71dfc2836731dbd2ec16dc7931` requested two underlying asset changes. S04 was regenerated so one continuous floral sheet has an unmistakable curled page-turn arc: the flat front is patterned and the lifted reverse is blank. S05 was regenerated as a complete sentence; G05 correct reuses the same file. Independent final-M4A review heard exact `這個問題我還沒想到答案`, Taiwan Mandarin, with 問 as falling fourth tone (問, not 溫), 題/還/答 as second tone, and no defects. Only S05 timing was regenerated. Renewed teacher visual/listening acceptance is pending.
