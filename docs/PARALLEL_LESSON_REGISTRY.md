@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R059 | review module; pair R059/R060 | claimed | Production D | codex/r059-r060-complete-package | Release milestone L480; R057/R058; L466, L467, L468, L469, L470, L471, L472, L473, L474, L475, L476, L477, L478, L479, L480 | none needed by module text; pair ceiling includes L466-L480 provisional | curriculum-workflow/review-requests/R059.json; curriculum-workflow/generated/R059-generation-packet.md; curriculum-workflow/drafts/R059-draft.json | public/assets/reviews/R059/ | Teacher-approved pair; coverage L451-L480 checked across ten sentences; claim from 7d2827d5; not release-ready. |
+| R060 | review module; pair R059/R060 | claimed | Production D | codex/r059-r060-complete-package | Release milestone L480; R057/R058; L466, L467, L468, L469, L470, L471, L472, L473, L474, L475, L476, L477, L478, L479, L480 | 絕、活、該、應、答、題、案、反、而、且、故、緣、無、聊、趣 | curriculum-workflow/review-requests/R060.json; curriculum-workflow/generated/R060-generation-packet.md; curriculum-workflow/drafts/R060-draft.json | public/assets/reviews/R060/ | Teacher-approved pair; coverage L451-L480 checked across ten sentences; claim from 7d2827d5; not release-ready. |
 
 ## Status Values
 
