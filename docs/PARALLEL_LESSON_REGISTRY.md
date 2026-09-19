@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L473 | 反 | claimed | Production B | codex/l473-complete-package | L468, L469, L470, L471, L472 | 該、應、答、題、案 | `curriculum-workflow/lesson-requests/L473.json`; `curriculum-workflow/generated/L473-generation-packet.md`; `curriculum-workflow/drafts/L473-draft.json` | `public/assets/lessons/L473/` | Formal Production handoff received. Building complete lesson-local package; awaiting L468-L472 and R057/R058 release dependencies. Production must not merge main. |
+| L473 | 反 | request-ready | Production B | codex/l473-complete-package | L468, L469, L470, L471, L472 | 該、應、答、題、案 | `curriculum-workflow/lesson-requests/L473.json`; `curriculum-workflow/generated/L473-generation-packet.md`; `curriculum-workflow/drafts/L473-draft.json` | `public/assets/lessons/L473/` | Formal Production handoff received. Building complete lesson-local package; awaiting L468-L472 and R057/R058 release dependencies. Production must not merge main. |
 
 ## Status Values
 
@@ -110,3 +110,4 @@ npm run curriculum:audit-state
 ```
 
 If another thread changed the registry, rebase first and preserve both threads' rows. Do not delete another active row unless that lesson is already merged or the user explicitly cancels it.
+
