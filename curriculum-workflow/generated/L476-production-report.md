@@ -29,3 +29,7 @@ The first S04 audio was rejected because `空白` used first-tone ㄎㄨㄥ and 
 This is a new full lesson package, so lesson-local request/package audit, lesson-local production validation, strict asset-format audit and pushed-branch package intake are required. Full `npm run verify` is not applicable because the dependency-blocked package intentionally leaves shared production JSON, planner and ledger to Release. Browser playback QA was not certified because this control surface has no reliable computer-audio return or physical-phone microphone channel; live highlight synchronization and G02 phone recording/replay remain unverified. Teacher human image/audio review remains pending.
 
 Release owns production JSON, planner, ledger, review-pair sequencing, integration and deployment.
+
+## Pushed package intake evidence
+
+Asset package commit `d25524ba1c180dc16cd9695455c0eba2044ee25c` passed `npm run curriculum:package-intake -- --unit L476 --ref origin/codex/l476-complete-package --strict`: status `dependency-blocked-asset-complete`, 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.

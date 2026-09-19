@@ -2475,7 +2475,7 @@
     "timingReview": "OpenAI whisper-1 word timestamps with exact text context produced complete timing tracks for five sentences, both G02 fragments and both G05 wrong options. All final spans are ordered, nonoverlapping, within duration and at least 80ms.",
     "pronunciation": "Independent gpt-audio-1.5 technical listening PASS on all 10 final processed M4As, including 故 ㄍㄨˋ, S03 重 ㄓㄨㄥˋ, S04 空白 ㄎㄨㄥˋ ㄅㄞˊ, S05 還 ㄏㄞˊ and 答案 ㄉㄚˊ ㄢˋ, exact G02 boundaries and exact eleven-Han G05 options.",
     "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-    "packageIntake": "Pending pushed-branch intake.",
+    "packageIntake": "PASS on pushed origin/codex/l476-complete-package at d25524ba1c180dc16cd9695455c0eba2044ee25c with --strict: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
     "manualPlayback": "Teacher human image/audio review is pending. Independent technical image, transcript, pronunciation, timing and format checks pass."
   }
 }

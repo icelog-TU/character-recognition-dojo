@@ -2499,3 +2499,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Audio QA: exact-text alignment and independent gpt-audio-1.5 pronunciation PASS on all final files after complete-unit S04 and G05 wrong-one repairs
 - Browser QA fallback: live highlight synchronization and G02 phone recording/replay are not claimed because the current control surface lacks reliable computer-audio return and a physical-phone microphone channel
 - Release owns production JSON, planner, ledger, review-pair sequencing, integration and deployment
+
+## Pushed package intake evidence
+
+Asset package commit `d25524ba1c180dc16cd9695455c0eba2044ee25c` passed `npm run curriculum:package-intake -- --unit L476 --ref origin/codex/l476-complete-package --strict`: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.
