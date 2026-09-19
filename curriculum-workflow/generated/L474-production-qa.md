@@ -19,6 +19,7 @@
 - OpenAI gpt-4o-mini-tts with cedar Taiwan Mandarin delivery produced 10 final mono AAC M4As: standalone 而, five complete sentence files, independently generated G02 prefix/suffix, and two complete G05 wrong choices. No sentence or option audio was spliced. G05 option files were post-generation loudness normalized together and pass the 3 dB spread gate.
 - AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. Teacher-requested G02 prefix repair inserts a measured 334 ms pause after 想幫忙 before final 反; exact transcript remains 想幫忙反, final 反 is complete ㄈㄢˇ, and no 而 is present.
 - Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, no omissions/clipping/substitutions or awkward pauses. Confirmed 而 ㄦˊ, 答案 ㄉㄚˊ, 應該 ㄧㄥ ㄍㄞ, 睡不著 ㄓㄠˊ, 而已 ㄧˇ, G02 prefix-final 反 ㄈㄢˇ with no 而, and suffix-final 了 audible neutral tone. This is AI listening, not teacher manual auditory approval.
+- Teacher manual pre-merge audio QA PASS at reviewed ref 610157d8cc5388b62946768b62972c4113c98f34; teacher approved the repaired L474 audio package, including the G02 prefix pause.
 
 ## Interaction and intake
 

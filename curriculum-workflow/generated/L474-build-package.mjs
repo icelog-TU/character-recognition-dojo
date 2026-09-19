@@ -56,7 +56,7 @@ const productionQA = {
   pronunciation: 'Required: 而 ㄦˊ; 答案 ㄉㄚˊ; 應該 ㄧㄥ ㄍㄞ; 睡不著 ㄓㄠˊ; 而已 ㄧˇ; G02 prefix final 反 ㄈㄢˇ and suffix-final 了 neutral tone.',
   browserQA: '390x844 LessonPanel QA PASS for Stage 1-3, Stage 4 G01 and G02 presentation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by package validation.',
   packageIntake: 'PASS on pushed origin/codex/l474-complete-package; 5 images, 10 audio files, all five canonical Stage 4 types, no blocking defects.',
-  manualPlayback: 'Teacher subjective asset review is post-merge by default; no manual PASS claimed.',
+  manualPlayback: 'Teacher manual pre-merge audio QA PASS at reviewed ref 610157d8cc5388b62946768b62972c4113c98f34; teacher approved the repaired L474 audio package, including the G02 prefix pause.',
 };
 
 const request = {
