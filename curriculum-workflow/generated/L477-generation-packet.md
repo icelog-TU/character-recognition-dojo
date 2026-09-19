@@ -2543,3 +2543,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - PASS on 2026-09-19.
 - Reviewed ref: `72c830313700dad12131b7c1be8c6966d03b7468`.
 - Teacher confirmed the final object-only paper structure and upper-right corner are correct.
+
+## Package Rescue: standalone character duration
+
+- Source package: `origin/codex/l477-complete-package` at `651bb42199c762081b6941a89de27946af5ca660`.
+- Blocker: `char-u7de3.m4a` measured 699 ms, below the 700 ms standalone-character minimum.
+- Repair: re-exported the complete same recording as mono 44.1 kHz AAC at 96 kbps. No speech regeneration, trimming, cutting, splicing or timing edits were made.
+- Result: 720 ms; mean volume remains -15.9 dB and max volume remains -0.5 dB. Both decodes contain 31,744 PCM samples with correlation 0.9999566444540371.
+- Scope unchanged: five approved sentences, images, sentence/game audio, charTimings, Stage 4 data and dependency blockers.

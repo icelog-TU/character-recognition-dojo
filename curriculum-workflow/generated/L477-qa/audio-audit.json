@@ -438,7 +438,34 @@
       "expectedHan": "緣",
       "actualHan": "緣",
       "contentMatch": true,
-      "durationMs": 699
+      "durationMs": 720,
+      "meanVolumeDb": -15.9,
+      "maxVolumeDb": -0.5,
+      "sha256": "fbedf62f621f42bf01a6289a0726d7f21f15981bf3224fd30120ee464a07bb5b",
+      "rescueMethod": "Re-exported the complete same recording as mono 44.1 kHz AAC at 96 kbps; no speech regeneration, trimming, cutting, splicing, or timing edits",
+      "decodedPcmCorrelationToSource": 0.9999566444540371
     }
-  ]
+  ],
+  "packageRescue": {
+    "sourceBranch": "origin/codex/l477-complete-package",
+    "sourcePackageSha": "651bb42199c762081b6941a89de27946af5ca660",
+    "issue": "char-u7de3.m4a measured 699 ms, below the 700 ms standalone-character minimum",
+    "resolution": "Re-exported the complete same recording as mono 44.1 kHz AAC at 96 kbps; no speech regeneration, trimming, cutting, splicing, or timing edits",
+    "before": {
+      "durationMs": 699,
+      "sha256": "cbe4143c770782a3b676d5811f7197bd0e9fbfbcd8873891d32495ae4be17a54",
+      "meanVolumeDb": -15.9,
+      "maxVolumeDb": -0.5
+    },
+    "after": {
+      "durationMs": 720,
+      "sha256": "fbedf62f621f42bf01a6289a0726d7f21f15981bf3224fd30120ee464a07bb5b",
+      "meanVolumeDb": -15.9,
+      "maxVolumeDb": -0.5
+    },
+    "decodedPcmSamplesBefore": 31744,
+    "decodedPcmSamplesAfter": 31744,
+    "decodedPcmCorrelation": 0.9999566444540371,
+    "unchanged": "Five approved sentences, images, sentence/game audio, charTimings, Stage 4 data, and dependency blockers"
+  }
 }
