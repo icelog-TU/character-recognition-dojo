@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L472 | 案 | claimed | Production A / parallel-a | codex/l472-complete-package | L467-L471; R057/R058 after L465 | 活、該、應、答、題 | curriculum-workflow/lesson-requests/L472.json; curriculum-workflow/generated/L472-generation-packet.md; curriculum-workflow/drafts/L472-draft.json | public/assets/lessons/L472/ (pending) | Editor handoff accepted at origin/main 29406e21. Production may proceed in parallel; dependencies block Release only. L471 remains owned by Production F. |
 
 ## Status Values
 
