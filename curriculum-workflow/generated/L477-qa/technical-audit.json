@@ -157,11 +157,7 @@
   ],
   "sharedReleaseFilesTouched": false,
   "browserQa": {
-    "status": "PASS",
-    "scope": "targeted L477-S04 image repair",
-    "assetCommit": "3f377469b5a1b9f3ee843c1212c38446585c87bc",
-    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L477&ref=3f377469b5a1b9f3ee843c1212c38446585c87bc",
-    "browser": "Codex in-app Chromium",
-    "summary": "PASS: immutable repair commit loaded L477-S04 successfully at 1024x1024 with no image error. Other four images and all audio are unchanged from the full immutable-ref QA at 92d6a9997a3c6f5f98f12f2122602a1ade743e98."
+    "status": "PENDING",
+    "summary": "Second S04 targeted repair: reference-matched fold direction and abstract geometric reverse-side pattern; immutable-ref image QA pending."
   }
 }

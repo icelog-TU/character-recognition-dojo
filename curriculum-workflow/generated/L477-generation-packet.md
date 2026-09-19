@@ -2505,3 +2505,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Repair: rebuilt S04 from three teacher-provided physical references as one continuous folded sheet with a shared hinge, consistent edges/perspective, blank face and puppy reverse face.
 - Scope: S04 image only; sentence, audio, timings and Stage 4 data unchanged.
 - Immutable-ref targeted image QA: PASS at `3f377469b5a1b9f3ee843c1212c38446585c87bc`; repaired S04 loaded at 1024×1024 with no image error.
+
+## S04 second targeted repair
+
+- Teacher follow-up source: `7996146903b028e9472416c51336e02b6a89ed44`.
+- Correction: removed the puppy completely; used sparse meaningless circles, triangles, semicircles and color blocks only on the raised reverse face.
+- Fold direction: left panel flat, right panel raised along one straight shared center crease, matching the three teacher-supplied physical references.
+- Scope: S04 image only; all text, audio, timings and Stage 4 data unchanged.
+- Immutable-ref targeted image QA: pending repair commit.
