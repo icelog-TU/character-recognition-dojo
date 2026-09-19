@@ -9,11 +9,11 @@
   },
   {
     "file": "L474-G02-prefix.m4a",
-    "sha256": "20463c60f2da29d00c3cac5bddbfa299cf7fa8aa14eb15e9c0c650c2b51082af",
+    "sha256": "c636715cb5a36a225f3fea04126beba64dc8371e75513d92733e75a57be66a85",
     "model": "gpt-audio-1.5",
     "method": "AI listening, not human QA",
     "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
-    "result": "{\"transcript\": \"想幫忙反\", \"notes\": {\"final_fan_complete\": true, \"no_er_following\": true}, \"delivery_nature\": \"Natural Taiwan Mandarin\", \"omissions\": null, \"awkward_pauses\": null, \"pronunciation_notes\": {}}"
+    "result": "{\"transcript\": \"想幫忙反\", \"omissions\": null, \"clipped\": false, \"repeated_syllables\": null, \"substituted_syllables\": null, \"awkward_pauses\": false, \"pronunciation_notes\": {\"final_反_complete\": true, \"no_而_following\": true}, \"delivery_style\": \"natural Taiwan Mandarin\"}"
   },
   {
     "file": "L474-G02-suffix.m4a",

@@ -1903,27 +1903,27 @@
         "prefixAudio": {
           "spokenText": "想幫忙反",
           "src": "/assets/lessons/L474/audio/L474-G02-prefix.m4a",
-          "durationMs": 1737,
+          "durationMs": 2910,
           "charTimings": [
             {
               "charIndex": 0,
               "startMs": 0,
-              "endMs": 360
+              "endMs": 420
             },
             {
               "charIndex": 1,
-              "startMs": 360,
-              "endMs": 580
+              "startMs": 420,
+              "endMs": 640
             },
             {
               "charIndex": 2,
-              "startMs": 580,
-              "endMs": 880
+              "startMs": 640,
+              "endMs": 960
             },
             {
               "charIndex": 3,
-              "startMs": 880,
-              "endMs": 1060
+              "startMs": 960,
+              "endMs": 1760
             }
           ]
         },
@@ -2227,7 +2227,7 @@
   "productionQA": {
     "imageStyle": "S01 style-lock PASS, cast PASS: recurring girl and father at a home study desk, difficult problem shown by expression; notebook has abstract unreadable marks only. S02 style-lock PASS, cast PASS: recurring girl and father with exactly four picture cards (bird, butterfly, dog, fish), and girl clearly selects both valid flying animals. S03 style-lock PASS, cast PASS: recurring girl remains recognizable in pajamas, safely awake in bed with one night-light and no distraction. S04 style-lock PASS, cast PASS: recurring girl and mother, unbreakable cup and visible spill clearly show helping backfired without injury. S05 style-lock PASS, cast PASS: recurring girl and mother; bread remains almost whole with exactly one small bite. All five final 1024x1024 WebPs were opened together in a contact sheet; no readable text or numbers.",
     "audioPipeline": "OpenAI gpt-4o-mini-tts with cedar Taiwan Mandarin delivery produced 10 final mono AAC M4As: standalone 而, five complete sentence files, independently generated G02 prefix/suffix, and two complete G05 wrong choices. No sentence or option audio was spliced. G05 option files were post-generation loudness normalized together and pass the 3 dB spread gate.",
-    "timingReview": "AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. G02 transcription uses full-sentence context prompt to disambiguate the homophone 反/返 without transcript normalization; the audio is independently heard as final 反 ㄈㄢˇ and contains no 而.",
+    "timingReview": "AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. Teacher-requested G02 prefix repair inserts a measured 334 ms pause after 想幫忙 before final 反; exact transcript remains 想幫忙反, final 反 is complete ㄈㄢˇ, and no 而 is present.",
     "pronunciation": "Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, no omissions/clipping/substitutions or awkward pauses. Confirmed 而 ㄦˊ, 答案 ㄉㄚˊ, 應該 ㄧㄥ ㄍㄞ, 睡不著 ㄓㄠˊ, 而已 ㄧˇ, G02 prefix-final 反 ㄈㄢˇ with no 而, and suffix-final 了 audible neutral tone. This is AI listening, not teacher manual auditory approval.",
     "browserQA": "390x844 LessonPanel QA PASS for Stage 1 character playback, the six-card Stage 2 set with exactly three 而 targets, all five Stage 3 sentence/image playbacks, Stage 4 G01, and the G02 prefix/target/suffix presentation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by canonical index, option-order, audio-reference and package validation checks.",
     "packageIntake": "PASS on pushed origin/codex/l474-complete-package; 5 images, 10 audio files, all five canonical Stage 4 types, and no blocking package-status defects.",
@@ -2240,7 +2240,7 @@
 
 - S01 style-lock PASS, cast PASS: recurring girl and father at a home study desk, difficult problem shown by expression; notebook has abstract unreadable marks only. S02 style-lock PASS, cast PASS: recurring girl and father with exactly four picture cards (bird, butterfly, dog, fish), and girl clearly selects both valid flying animals. S03 style-lock PASS, cast PASS: recurring girl remains recognizable in pajamas, safely awake in bed with one night-light and no distraction. S04 style-lock PASS, cast PASS: recurring girl and mother, unbreakable cup and visible spill clearly show helping backfired without injury. S05 style-lock PASS, cast PASS: recurring girl and mother; bread remains almost whole with exactly one small bite. All five final 1024x1024 WebPs were opened together in a contact sheet; no readable text or numbers.
 - OpenAI gpt-4o-mini-tts with cedar Taiwan Mandarin delivery produced 10 final mono AAC M4As: standalone 而, five complete sentence files, independently generated G02 prefix/suffix, and two complete G05 wrong choices. No sentence or option audio was spliced. G05 option files were post-generation loudness normalized together and pass the 3 dB spread gate.
-- AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. G02 transcription uses full-sentence context prompt to disambiguate the homophone 反/返 without transcript normalization; the audio is independently heard as final 反 ㄈㄢˇ and contains no 而.
+- AI alignment PASS for five sentences, G02 prefix/suffix and both G05 wrong choices. Counts exactly match Han-only sequences; spans are ordered and nonoverlapping. Teacher-requested G02 prefix repair inserts a measured 334 ms pause after 想幫忙 before final 反; exact transcript remains 想幫忙反, final 反 is complete ㄈㄢˇ, and no 而 is present.
 - Independent gpt-audio-1.5 listening against final SHA256 hashes reports exact approved transcripts, natural Taiwan Mandarin, no omissions/clipping/substitutions or awkward pauses. Confirmed 而 ㄦˊ, 答案 ㄉㄚˊ, 應該 ㄧㄥ ㄍㄞ, 睡不著 ㄓㄠˊ, 而已 ㄧˇ, G02 prefix-final 反 ㄈㄢˇ with no 而, and suffix-final 了 audible neutral tone. This is AI listening, not teacher manual auditory approval.
 - 390x844 LessonPanel QA PASS for Stage 1 character playback, the six-card Stage 2 set with exactly three 而 targets, all five Stage 3 sentence/image playbacks, Stage 4 G01, and the G02 prefix/target/suffix presentation. Physical microphone hold/record/replay was not automated; G03-G05 are covered by canonical index, option-order, audio-reference and package validation checks.
 - Package intake PASS on pushed origin/codex/l474-complete-package: 5 images, 10 audio files, all five canonical Stage 4 types, and no blocking package-status defects.
