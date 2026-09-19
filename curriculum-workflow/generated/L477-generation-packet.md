@@ -2512,4 +2512,4 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Correction: removed the puppy completely; used sparse meaningless circles, triangles, semicircles and color blocks only on the raised reverse face.
 - Fold direction: left panel flat, right panel raised along one straight shared center crease, matching the three teacher-supplied physical references.
 - Scope: S04 image only; all text, audio, timings and Stage 4 data unchanged.
-- Immutable-ref targeted image QA: pending repair commit.
+- Immutable-ref targeted image QA: PASS at `ed3a0fd1671325f41cd3e9a78e16c2ea907273c5`; new S04 loaded at 1024×1024 with no image error.

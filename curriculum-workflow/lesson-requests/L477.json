@@ -1718,8 +1718,12 @@
     "status": "PASS",
     "manualListeningClaimed": false,
     "browserQa": {
-      "status": "PENDING",
-      "summary": "Second S04 targeted repair: reference-matched fold direction and abstract geometric reverse-side pattern; immutable-ref image QA pending."
+      "status": "PASS",
+      "scope": "targeted L477-S04 geometric/fold-direction repair",
+      "assetCommit": "ed3a0fd1671325f41cd3e9a78e16c2ea907273c5",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L477&ref=ed3a0fd1671325f41cd3e9a78e16c2ea907273c5",
+      "browser": "Codex in-app Chromium",
+      "summary": "PASS: immutable repair commit loaded the new L477-S04 at 1024x1024 with no image error. Other assets are unchanged from prior QA."
     }
   }
 }
