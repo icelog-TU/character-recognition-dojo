@@ -157,7 +157,17 @@
   ],
   "sharedReleaseFilesTouched": false,
   "browserQa": {
-    "status": "pending repaired asset push"
+    "status": "PASS",
+    "assetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "browser": "Chrome",
+    "summary": "PASS: repaired immutable commit loaded 5 sentence cards and 6 other audio items; all five 1024x1024 images loaded, including replaced S03/S05; all 11 playback controls reached ended state without media error, including replaced S01 and both G05 wrong options.",
+    "scope": [
+      "replaced L471-S03 and L471-S05 images",
+      "replaced L471-S01 audio",
+      "replaced L471-G05 wrong-one and wrong-two audio",
+      "full 5-image and 11-control regression playback"
+    ]
   },
   "repairHistory": [
     {

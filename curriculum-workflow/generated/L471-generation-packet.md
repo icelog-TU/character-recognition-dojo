@@ -2762,4 +2762,6 @@ AI 必須把這份課程序列視為鎖定邊界。
 - L471-S05 image: regenerated with watering can fully separated from the table and a teacher-requested thought bubble showing the same girl watering a healthy plant.
 - L471-G05 wrong-one and wrong-two: regenerated as complete sentences; phonetic QA identifies 答應 as ㄉㄚ ㄧㄥˋ in both.
 - Exact-Han transcript and affected timing QA: PASS. Manual teacher listening/image re-review remains pending.
-- Repaired-ref strict intake and Browser QA: pending first repair push.
+- Repaired-ref strict intake: PASS.
+- Repaired-ref Chrome Browser QA: PASS at asset commit `46e2424c17c1b84f8310accc06bb18655ca1b119`; all five images loaded and 11/11 playback controls reached ended state without media errors.
+- Repair preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=46e2424c17c1b84f8310accc06bb18655ca1b119
