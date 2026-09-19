@@ -1,0 +1,82 @@
+[
+  {
+    "file": "L480-G02-prefix.m4a",
+    "sha256": "72367c86b61f3f7267109b4d52b5cc2355520b4c432fe6c26e45f2db409a7743",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"無聊時我會找有\", \"issues\": {\"omitted\": [], \"clipped\": [], \"repeated\": [], \"substituted\": []}, \"pauses\": \"no awkward pauses detected\", \"pronunciation_notes\": {\"有\": \"final 有 sounds complete\", \"趣\": \"趣 not present\", \"緣\": \"緣 not present\", \"聊\": \"聊 in 無聊 sounds natural\", \"而\": \"而 not present\", \"且\": \"且 not present\"}, \"delivery_nature\": \"delivery sounds like natural Taiwan Mandarin, not Mainland broadcast Mandarin\"}"
+  },
+  {
+    "file": "L480-G02-suffix.m4a",
+    "sha256": "4cdd9a8ee1bd07625c1d99ce55116df288c2e7c3c420ecf8e358214a4c90c977",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\":\"的書看\",\"omissions\":null,\"clipped\":null,\"repetitions\":null,\"substitutions\":null,\"awkward_pauses\":null,\"pronunciation_notes\":\"的 is audible in neutral tone (˙ㄉㄜ), initial ㄕ of 書 is clear, no 趣 before 的.\",\"delivery_naturalness\":\"Natural Taiwan Mandarin\"}"
+  },
+  {
+    "file": "L480-G05-wrong-one.m4a",
+    "sha256": "918450f0add8f50896b4d82435af5fe5586e17c7b8ddf6dbd0747ab165fe9529",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"無人機飛不動是下雨的緣故\", \"issues\": {\"omissions\": null, \"clips\": null, \"repeats\": null, \"substitutions\": null}, \"awkward_pauses\": null, \"pronunciation_notes\": \"緣 ㄩㄢˊ is pronounced clearly. Delivery sounds like natural Taiwan Mandarin, not Mainland broadcast Mandarin.\"}"
+  },
+  {
+    "file": "L480-G05-wrong-two.m4a",
+    "sha256": "9e5d38ca9282f6578e46d9e78623887b195aff1827dfdbbac9f2cf9f0afaaff3",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"無人機飛不動，是風大的緣故。\", \"notes\": {\"omissions\": null, \"clipped_syllables\": null, \"repeated_syllables\": null, \"substituted_syllables\": null, \"awkward_pauses\": null, \"pronunciation\": {\"緣\": \"ㄩㄢˊ pronounced clearly\", \"other_words\": \"all sounded natural\", \"overall_annunciation\": \"natural Taiwan Mandarin\"}}}"
+  },
+  {
+    "file": "L480-S01.m4a",
+    "sha256": "30995b28f815a631b1021c9677d815ff8a9d4bd0892a3f360ccd92852320e3c5",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\":\"爸爸說話風趣，而且人緣好\",\"notes\":{\"syllable_issues\":[],\"awkward_pauses\":\"None detected\",\"pronunciation\":\"\\\"趣\\\" pronounced ㄑㄩˋ clearly, \\\"而\\\" pronounced ㄦˊ naturally, no issues\",\"delivery\":\"Sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin\"}}"
+  },
+  {
+    "file": "L480-S02.m4a",
+    "sha256": "dddb2a44e75b09903e9ba0761ef6c07e725c0ea68a0826e87141731d5f49714f",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"我們來聊聊學校的趣事\", \"notes\": {\"pronunciation\": {\"趣\": \"ㄑㄩˋ sounds correct\", \"聊\": \"ㄌㄧㄠˊ sounds natural\"}, \"style\": \"The delivery sounds like natural Taiwan Mandarin, not Mainland broadcast Mandarin.\", \"issues\": \"No omitted, clipped, repeated, or substituted syllables detected. No awkward pauses. Confident about transcript.\"}}"
+  },
+  {
+    "file": "L480-S03.m4a",
+    "sha256": "ec1bcbf9b1812affbb68a9ef23c51de998ba21f404d7730a733c6639c43a1bed",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"無聊時我會找有趣的書看\", \"notes\": {\"repeated_syllables\": null, \"omitted_syllables\": null, \"substituted_syllables\": null, \"awkward_pauses\": null, \"pronunciation\": {\"有\": \"complete\", \"趣\": \"ㄑㄩˋ clear\", \"的\": \"˙ㄉㄜ neutral tone, audible\"}},\"style\": \"The delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin.\"}"
+  },
+  {
+    "file": "L480-S04.m4a",
+    "sha256": "0a5e3cc674cb0451b6bd7fb48abbe02a5fdf15d2ccb44873dd7e68cb5c72df71",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"無人機飛不動是沒電的緣故\", \"issues\": [], \"pronunciation_notes\": {\"緣\": \"pronounced ㄩㄢˊ, natural Taiwan Mandarin tone\"}, \"delivery_natural\": true}"
+  },
+  {
+    "file": "L480-S05.m4a",
+    "sha256": "9d6ab9d7fe436a6092eedc46736df719efbb1598c7e59854473938d68e0af131",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. Check 趣 ㄑㄩˋ, 緣 ㄩㄢˊ, 聊 ㄌㄧㄠˊ, 而 ㄦˊ and 且 ㄑㄧㄝˇ whenever present. For the G02 prefix 無聊時我會找有, verify final 有 is complete and no 趣 follows. For suffix 的書看, verify initial 的 is audible neutral tone ˙ㄉㄜ and not ㄉㄧˋ, with no 趣 before it. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"我跟爸爸一邊走一邊聊天\", \"anomalies\": null, \"pauses\": null, \"pronunciation_notes\": \"發音自然，符合台灣普通話口音，'聊' ㄌㄧㄠˊ 清晰。整句語調平穩。聲音聽來不像大陸播音腔。\", \"delivery_style\": \"Natural Taiwan Mandarin\"}"
+  },
+  {
+    "file": "char-u8da3.m4a",
+    "sha256": "a1be060a238f96ee5c1211fc546e292f63ea37b67761068f69d6f784ab8252f0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Transcribe the single Taiwan Mandarin Chinese syllable in this recording and identify its zhuyin and tone. Check whether it is exactly 趣 ㄑㄩˋ with a complete falling fourth tone, spoken once, with no added word, clipping, or awkward silence. Return concise JSON. Do not identify or describe the speaker.",
+    "result": "{\"syllable\": \"趣\", \"zhuyin\": \"ㄑㄩˋ\", \"tone\": 4, \"match\": true}"
+  }
+]
