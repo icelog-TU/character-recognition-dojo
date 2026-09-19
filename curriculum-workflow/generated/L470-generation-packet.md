@@ -2512,3 +2512,5 @@ Asset package commit `e66f3136b1602b0798f7248a6fab1f848a4a57a0` passed `npm run 
 S01 and S04 were regenerated as complete audio units so `答應` is realized like `搭應`, with first-tone ㄉㄚ rather than second-tone `達`. The S04 image was retained because its review note concerns pronunciation. Final processed audio was re-aligned and independently heard as first-tone `搭`, Taiwan-natural and exact. Renewed teacher listening remains pending.
 
 Repaired asset commit `7f118a318c624a5599f5cc3b8ed23706cbe9cd91` passed pushed-branch strict intake with 5 images, 10 audio files and canonical Stage 4.
+
+Teacher manually reviewed the audio at ref `fedb9fe92a418585109624e798fb45dc963ecb6a` and confirmed that all L470 audio has no remaining issue, including the repaired S01 and S04 `答應` pronunciation. This acceptance does not certify image review or live highlight/phone recording behavior.

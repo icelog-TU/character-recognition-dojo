@@ -1920,6 +1920,6 @@
     "pronunciation": "Independent gpt-audio-1.5 technical listening PASS on all 10 final processed M4As. After teacher review at c6a4ebce, repaired S01 and S04 specifically pass 答應 as Taiwan-realized 搭應: first-tone ㄉㄚ, not second-tone 達; both are Taiwan-natural and exact. Other contexts retain 回答、問答、答對 ㄉㄚˊ, 應 ㄧㄥˋ and 絕活 ㄐㄩㄝˊ ㄏㄨㄛˊ.",
     "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
     "packageIntake": "PASS on pushed origin/codex/l470-complete-package at 7f118a318c624a5599f5cc3b8ed23706cbe9cd91 after S01/S04 Taiwan pronunciation repair: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
-    "manualPlayback": "Teacher review at c6a4ebceffe8f67fb2131ff73dab9645bb917b59 requested Taiwan-realized 搭應 pronunciation for S01 and S04. Both complete audio units were replaced; renewed teacher listening remains pending."
+    "manualPlayback": "Teacher manually reviewed all L470 audio at ref fedb9fe92a418585109624e798fb45dc963ecb6a and confirmed no remaining issue, including repaired S01/S04 答應 pronunciation. Image review and live highlight/G02 phone recording-replay are outside this acceptance."
   }
 }
