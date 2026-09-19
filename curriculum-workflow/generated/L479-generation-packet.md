@@ -2736,4 +2736,4 @@ The following records are the authoritative teacher-approved L479 content used b
 - Audio: ten independent AAC mono 44.1 kHz M4A assets.
 - Timings: nine timed tracks; all spans are 80–900 ms and each track has a 250 ms tail.
 - Evidence: `L479-image-provenance.json`, `L479-listening-evidence.json`, `L479-short-audio-audit.json`, `L479-timing-audit.json`, and `L479-asset-audit.json`.
-- Browser QA: pending pushed immutable commit.
+- Browser QA: PASS on immutable asset commit a3ea5862982783069a1c279a2ba0cf69f6cc2caa: asset-review loaded 5 sentence cards and 6 other-audio entries; all five images completed at natural 1024×1024; all 11 rendered audio controls reached readyState 4 with no media error. The G02 suffix control played through to currentTime 2.53/2.53 seconds.
