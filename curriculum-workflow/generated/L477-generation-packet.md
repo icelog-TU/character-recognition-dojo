@@ -2487,3 +2487,14 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## Production F completion record
+
+- Package status: `dependency-blocked-asset-complete`
+- Image assets: 5/5 WebP, 1024×1024; style/cast/semantic audit PASS.
+- Audio assets: 10/10 M4A; standalone char, five sentence files, G02 prefix/suffix, and two G05 wrong options generated independently.
+- Transcript audit: exact Han match PASS for all ten files; no manual-listening claim.
+- Timing audit: complete charTimings PASS for five sentences and G02 prefix/suffix.
+- Vocabulary/coverage/Stage 4 indexes and mappings: PASS.
+- Browser QA: pending immutable asset commit.
+- Release blockers: R057, R058, L472, L473, L474, L475, L476. These block main integration only.
