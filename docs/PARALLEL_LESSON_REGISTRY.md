@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L475 | 且 / 普通五句課 | dependency-blocked-asset-complete | Production D | codex/l475-complete-package; claim a2088f3b; assets 67d07ae0 | L470, L471, L472, L473, L474; R057/R058 | 答、題、案、反、而 | curriculum-workflow/lesson-requests/L475.json; generated/L475-generation-packet.md; drafts/L475-draft.json | public/assets/lessons/L475/; 5 WebP, 10 M4A, 9 alignments; ignored audio-inbox/L475/ | Style/cast PASS; allowed 475; G04 initial ordering PASS; G02 recording/replay tooling fallback documented; pending Release dependencies. |
+| L475 | 且 / 普通五句課 | dependency-blocked-asset-complete | Production D | codex/l475-complete-package; claim a2088f3b; assets 67d07ae0; intake 6547503a | L470, L471, L472, L473, L474; R057/R058 | 答、題、案、反、而 | curriculum-workflow/lesson-requests/L475.json; generated/L475-generation-packet.md; drafts/L475-draft.json | public/assets/lessons/L475/; 5 WebP, 10 M4A, 9 alignments; ignored audio-inbox/L475/ | Strict pushed-ref intake PASS (0 warnings); style/cast PASS; allowed 475; G04 initial ordering PASS; G02 recording/replay tooling fallback documented; pending Release dependencies. |
 
 ## Status Values
 

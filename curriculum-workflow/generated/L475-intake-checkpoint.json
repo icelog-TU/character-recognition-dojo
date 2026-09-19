@@ -1,0 +1,16 @@
+{
+  "unit": "L475",
+  "testedRef": "origin/codex/l475-complete-package",
+  "testedCommit": "6547503ad83d0f800d5435fa3ec6ae40083615e7",
+  "command": "npm run curriculum:package-intake -- --unit L475 --ref origin/codex/l475-complete-package --strict",
+  "result": "PASS",
+  "warnings": 0,
+  "assetCounts": {
+    "images": 5,
+    "audio": 10,
+    "alignmentRecords": 9
+  },
+  "packageStatus": "dependency-blocked-asset-complete",
+  "reviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L475&ref=6547503ad83d0f800d5435fa3ec6ae40083615e7",
+  "scope": "Pre-merge package preview, not main review queue"
+}
