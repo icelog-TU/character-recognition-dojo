@@ -1,0 +1,61 @@
+{
+  "unit": "R059",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "R059-S01",
+      "sha256": "b1fa6b5c56975e092d2d4acae9e858dc2f0a45eaf44686da2fc12045daaff0e8",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"我在後台等候上場表演\",\"heardPronunciation\":\"ㄨㄛˇ ㄗㄞˋ ㄏㄡˋ ㄊㄞˊ ㄉㄥˇ ㄏㄡˋ ㄕㄤˋ ㄔㄤˇ ㄅㄧㄠˇ ㄧㄢˇ\",\"uncertainty\":\"none\"}"
+    },
+    {
+      "id": "R059-S02",
+      "sha256": "849d9b59b652745ae0dae3802f248b5802efd57f90a0442e3c93d81db834f308",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"星期日中午，我在家招待朋友。\",\"heardPronunciation\":\"ㄒㄧㄥ ㄑㄧˊ ㄖˋ ㄓōㄥ ㄨˇ 、 ㄨǒ ㄗài ㄐㄧㄚ ㄓㄠ ㄉài ㄆㄥˊ ㄧㄡˇ\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "R059-S03",
+      "sha256": "b36c3b4e01e1ef59cdc73719bfad1fcdbc5730c35921ff9b55418168c27b801e",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"公車突然停下，大家往前倒\", \"heardPronunciation\": \"ㄍㄨㄥ(1) ㄔㄜ(1) ㄊㄨ(2) ㄖㄢ(2) ㄊㄧㄥ(2/0) ㄒㄧㄚ(4) ， ㄉㄚ(4) ㄐㄧㄚ(1) ㄨㄤ(3) ㄑㄧㄢ(2) ㄉㄠ(3)\", \"uncertainty\": \"Confirmed all words clearly, minor uncertainty on tone of 停 (possibly neutral).\"}"
+    },
+    {
+      "id": "R059-S04",
+      "sha256": "c1e854c134ca21230c01523aed0d6d4cd5b3c130d557205cec009e402859cd32",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"台上的怪物其實是演員\",\"heardPronunciation\":\"ㄊㄞˊ ㄕㄤˋ ㄉㄜ˙ ㄍㄨㄞˋ ㄨˋ ㄑㄧˊ ˊ ㄕˊ ˋ ㄕˋ ˋ ㄧㄢˇ ㄩㄢˊ\",\"uncertainty\":\"no omissions or repetitions detected\"}"
+    },
+    {
+      "id": "R059-S05",
+      "sha256": "293017fab6ca7bfdebd49c3adc44b7b12bc1beba0a798851919a25800cdec333",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"作文写完了才发现名字没写\",\"heardPronunciation\":\"ㄗㄨㄛˋ ㄨㄣˊ ㄒㄧㄝˇ ㄨㄢˊ ㄌㄜ˙ ㄘㄞˊ ㄈㄚ ㄒㄧㄢˋ ㄇㄧㄥˊ ㄗˋ ㄇㄟˊ ㄒㄧㄝˇ\",\"uncertainty\":0.1}"
+    },
+    {
+      "id": "R059-G02-prefix",
+      "sha256": "93fac73ff1550fa114a9a31a59c0c861bb68a897fe89ada16d331749f770c1e1",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"台上的怪物起\", \"heardPronunciation\": \"ㄊㄞˊ ㄕㄤˋ ㄉㄜ˙ ㄍㄨㄞˋ ㄨˋ ㄑㄧˇ\", \"uncertainty\": \"None\"}"
+    },
+    {
+      "id": "R059-G02-suffix",
+      "sha256": "44f6410a8e1ecbb58cebe32e58169b24a69c2a343b20277d74e8a7e81ea415e8",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"是演员\", \"heardPronunciation\": \"ㄕˋ ㄧㄢˇ ㄖㄣˊ\", \"uncertainty\": \"low\"}"
+    },
+    {
+      "id": "R059-G05-wrong-one",
+      "sha256": "e56afcf1d0d8b972b3aebefa3912c7ee97eabab34a4bb9ce0737d7bf8979d281",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"作文寫完了，才發現日期沒寫\",\"heardPronunciation\":\"ㄗㄨㄛˋ ㄨㄣˊ ㄒㄧㄝˇ ㄨㄢˊ ㄌㄜ˙ ， ㄘㄞˊ ㄈㄚ ㄒㄧㄢˋ ㄖˋ ㄑㄧˊ ㄇㄟˊ ㄒㄧㄝˇ\",\"uncertainty\":\"no omissions or repetitions detected\"}"
+    },
+    {
+      "id": "R059-G05-wrong-two",
+      "sha256": "9fe4ba3382700272538b2def872637bde084c7684856f94e9ad1d7e8428605e9",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"作業寫完了才發現名字寫錯\", \"heardPronunciation\": \"ㄗㄨㄛˋ ㄧㄝˋ ㄒㄧㄝˇ ㄨㄢˊ ㄌㄜ˙ ㄘㄞˊ ㄈㄚ ㄒㄧㄢˋ ㄇㄧㄥˊ ㄗ˙ ㄒㄧㄝˇ ㄘㄨㄛˋ\", \"uncertainty\": 0.1}"
+    }
+  ]
+}
