@@ -1,0 +1,67 @@
+{
+  "unit": "L475",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "char-u4e14",
+      "sha256": "d316db83f8fdc096d7c9c95b221ad3d8ee56313d5a92689ec7e44b51cf249592",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"qiě\",\"heardPronunciation\":\"qie3\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L475-S01",
+      "sha256": "605315d62a3f03a414b02a219013a45f9a830ba491072c40544f45a8d5edf7a9",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"反面不但有答案，而且有说明\",\"heardPronunciation\":\"fan3 mian4 bu2 dan4 you3 da2 an4 er2 qie3 you3 shuo1 ming2\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L475-S02",
+      "sha256": "a0e9cf5fa526c7b6ef8df844581061602f635e274a62113bb10cc6bf2a78efbf",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"开了窗,房间反而更热了\", \"heardPronunciation\": \"kai1 le5 chuang1, fang2 jian1 fan3 er2 geng4 re4 le5\", \"uncertainty\": \"low\"}"
+    },
+    {
+      "id": "L475-S03",
+      "sha256": "36f66b46e419c596500e366dca195de576f55d015b501691d567faaee681fa02",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"小月不但会唱歌而且会跳舞\", \"heardPronunciation\": \"xiao3 yue4 bu2 dan4 hui4 chang4 ge1 er2 qie3 hui4 tiao4 wu3\", \"uncertainty\": 0.12}"
+    },
+    {
+      "id": "L475-S04",
+      "sha256": "5473fbf86ef0f9e81e0b7f4c3caf5b2d60f4cccfb359323ae8ed0df4656a8738",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"這題的答案跟我想的相反\",\"heardPronunciation\":\"zhe4 ti2 de5 da2 an4 gen1 wo3 xiang3 de5 xiang1 fan3\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L475-S05",
+      "sha256": "75dba921e5fadc007d3f76b07907af3b91c5ffec5157eba2066f370c9aa65dd3",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"这家店水果很好吃 而且不贵\",\"heardPronunciation\":\"zhe4 jia1 dian4 shui3 guo3 hen3 hao3 chi1 er2 qie3 bu2 gui4\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L475-G02-prefix",
+      "sha256": "bce8507cbc81178c2a9d9c6793264019b49c81af0f833e32d020b6d2684c109c",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"反面不但有答案而\", \"heardPronunciation\": \"fan3 mian4 bu2 dan4 you3 da2 an4 er2\", \"uncertainty\": \"low\"}"
+    },
+    {
+      "id": "L475-G02-suffix",
+      "sha256": "039c9568a81287b1ed59cb139116a27a581cd86a3724fcbfc56fef7366bf410e",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"有说明\",\"heardPronunciation\":\"you3 shuo1 ming2\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L475-G05-wrong-one",
+      "sha256": "da800236ab1810e4f851f4e333dd21b2ac3a0de54cac8f429723b85d9be78dff",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"这题的答案跟我想的相同\",\"heardPronunciation\":\"zhe4 ti2 de5 da2 an4 gen1 wo3 xiang3 de5 xiang1 tong2\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "L475-G05-wrong-two",
+      "sha256": "bcc64b2e83db5c14ebe082dfcd59f00c8c1fb587de4de4626342e491ca4f04fb",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"這題的答案跟你想的相反\", \"heardPronunciation\": \"zhe4 ti2 de5 da2 an4 gen1 ni3 xiang3 de5 xiang1 fan3\", \"uncertainty\": 0.1}"
+    }
+  ]
+}

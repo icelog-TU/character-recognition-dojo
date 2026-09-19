@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L475 | 且 / 普通五句課 | claimed | Production D | codex/l475-complete-package | L470, L471, L472, L473, L474; R057/R058 | 答、題、案、反、而 | curriculum-workflow/lesson-requests/L475.json; generated/L475-generation-packet.md; drafts/L475-draft.json | public/assets/lessons/L475/; audio-inbox/L475/ | Base 29406e21 L465/R056; allowed 475; S04 verified lignum vitae sinking wood. |
+| L475 | 且 / 普通五句課 | assets | Production D | codex/l475-complete-package | L470, L471, L472, L473, L474; R057/R058 | 答、題、案、反、而 | curriculum-workflow/lesson-requests/L475.json; generated/L475-generation-packet.md; drafts/L475-draft.json | public/assets/lessons/L475/; audio-inbox/L475/ | Base 29406e21 L465/R056; allowed 475; 5 WebP/10 M4A/9 alignments; style/cast PASS; Browser QA in progress; S04 lignum vitae source recorded. |
 
 ## Status Values
 
