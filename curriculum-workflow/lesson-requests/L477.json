@@ -1718,12 +1718,8 @@
     "status": "PASS",
     "manualListeningClaimed": false,
     "browserQa": {
-      "status": "PASS",
-      "scope": "targeted L477-S04 geometric/fold-direction repair",
-      "assetCommit": "ed3a0fd1671325f41cd3e9a78e16c2ea907273c5",
-      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L477&ref=ed3a0fd1671325f41cd3e9a78e16c2ea907273c5",
-      "browser": "Codex in-app Chromium",
-      "summary": "PASS: immutable repair commit loaded the new L477-S04 at 1024x1024 with no image error. Other assets are unchanged from prior QA."
+      "status": "PENDING",
+      "summary": "Third S04 targeted repair follows teacher-drawn construction lines; immutable-ref image QA pending."
     }
   }
 }
