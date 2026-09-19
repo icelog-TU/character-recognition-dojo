@@ -2471,3 +2471,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+## Package Rescue volume correction
+
+- Source package: `origin/codex/l467-complete-package` at `8a9e2d4d406f95166166d36fad585a720c318a45`.
+- Release blocker: `L467-G02-suffix.m4a` mean volume was `-28.5 dB`, below the `-28.0 dB` formal threshold.
+- Applied a volume-only `+1.0 dB` gain to the complete teacher-approved suffix recording. No regeneration, trimming, cutting, splicing, or timing change was performed.
+- Result: `1764 ms`, mono AAC `44100 Hz`, mean `-27.5 dB`, peak `-9.6 dB`, SHA-256 `23c7df4cf8bdc98166b17d1fa6f4fa52542831209115515205dc4f4fea1e949b`.
+- Decoded PCM before/after uses the same `77,824` samples with correlation `0.9997753962`; the teacher-approved neutral-著 workaround and pronunciation content are retained.
+- Five approved sentences, all images, nine other audio files, all timings, Stage 4 mapping, and learner-facing text are unchanged.

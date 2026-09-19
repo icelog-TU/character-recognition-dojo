@@ -1954,7 +1954,7 @@
     "timingReview": "Whisper word alignment recorded for all five sentences, both G02 fragments and both G05 wrong choices. Every timed track has one ordered timing per Han character and no terminal tail over 300 ms after final trimming.",
     "pronunciation": "Full-sentence ASR matched all five approved Han sequences after Traditional/Simplified normalization, including S05 小魚還活著快放回水裡. Both G05 wrong options matched exact approved Han sequences. Standalone 活 was independently regenerated and transcribed as 活. The short G02 prefix transcribed as pronunciation-equivalent 小愚孩 for 小魚還 (ㄒㄧㄠˇ ㄩˊ ㄏㄞˊ); suffix was generated with explicit neutral-tone 著 continuation instructions and transcribed its first syllable orthographically as 折 before exact 快放回水裡.",
     "browserQA": "Teacher manually reviewed immutable ref 293a6525c78c4dad9879ff35d763b458d0ad6b1a. S03 Taiwan pronunciation 星期日／期待 PASS. G02 suffix short, weakened 這 workaround for neutral 著 PASS. All L467 audio repair items are approved.",
-    "assetAudit": "PASS after final teacher-approved audio repair: lesson-local package audit, npm run validate:production, and pushed-ref package intake.",
+    "assetAudit": "PASS after Package Rescue volume-only correction: L467 scoped strict asset audit, validate:production, diff checks, and strict package intake.",
     "audioRepair": {
       "source": "teacher asset review",
       "reviewedRef": "c4433c6f55272fb15aa355d2d181f3d548ccd506",
@@ -1976,7 +1976,44 @@
       ],
       "status": "teacher-audio-review-pass",
       "repairedRef": "6b8dfa25a1665c4d1af794def2f6e8c5acaf647e",
-      "teacherApprovedRef": "293a6525c78c4dad9879ff35d763b458d0ad6b1a"
+      "teacherApprovedRef": "293a6525c78c4dad9879ff35d763b458d0ad6b1a",
+      "volumeCorrection": {
+        "status": "technical-pass",
+        "sourcePackageSha": "8a9e2d4d406f95166166d36fad585a720c318a45",
+        "file": "public/assets/lessons/L467/audio/L467-G02-suffix.m4a",
+        "result": "Mean volume raised from -28.5 dB to -27.5 dB with +1.0 dB gain; pronunciation content and timings preserved.",
+        "teacherApprovalPreservedBy": "Complete recording retained with identical decoded sample count and PCM correlation 0.9997753962."
+      }
+    },
+    "packageRescue": {
+      "sourcePackageSha": "8a9e2d4d406f95166166d36fad585a720c318a45",
+      "sourceBranch": "origin/codex/l467-complete-package",
+      "file": "public/assets/lessons/L467/audio/L467-G02-suffix.m4a",
+      "issue": "Mean volume was -28.5 dB, below the -28.0 dB formal asset threshold.",
+      "method": "Applied a volume-only +1.0 dB gain to the complete teacher-approved suffix recording; no regeneration, trimming, cutting, splicing, or timing change.",
+      "before": {
+        "sha256": "f8711a83964beb8852289dad68e21f8dd700c8791b1b2bc2252e01fda78149e8",
+        "durationMs": 1764,
+        "meanVolumeDb": -28.5,
+        "maxVolumeDb": -10.6
+      },
+      "after": {
+        "sha256": "23c7df4cf8bdc98166b17d1fa6f4fa52542831209115515205dc4f4fea1e949b",
+        "durationMs": 1764,
+        "meanVolumeDb": -27.5,
+        "maxVolumeDb": -9.6,
+        "codec": "AAC",
+        "sampleRateHz": 44100,
+        "channels": 1
+      },
+      "waveformEvidence": {
+        "beforePcmSamples": 77824,
+        "afterPcmSamples": 77824,
+        "correlation": 0.9997753962,
+        "rmsGain": 1.1209273567
+      },
+      "teacherApprovalContext": "The teacher-approved pronunciation/workaround recording is retained; the byte change is an amplitude-only correction with matching PCM sample count and near-unity correlation.",
+      "unchanged": "Five approved sentences, all images, nine other audio files, all sentence and G02 timings, Stage 4 mapping, and learner-facing text are unchanged."
     }
   }
 }

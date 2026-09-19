@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L467 | 活 | ready-blocked-by-dependency | Production B | codex/l467-complete-package | L462, L463, L464, L465, L466 | 日、期、待、招、絕 | `curriculum-workflow/lesson-requests/L467.json`; `curriculum-workflow/generated/L467-generation-packet.md`; `curriculum-workflow/drafts/L467-draft.json` | `public/assets/lessons/L467/` | Asset-complete package: 5 WebP, 10 M4A, complete timings and image/audio QA. Awaiting L462-L466 and R057/R058 release dependencies; Production must not merge main. |
+| L467 | 活 | ready-blocked-by-dependency | Package Rescue / Production B | codex/l467-package-rescue | L462, L463, L464, L465, L466 | 日、期、待、招、絕 | `curriculum-workflow/lesson-requests/L467.json`; `curriculum-workflow/generated/L467-generation-packet.md`; `curriculum-workflow/drafts/L467-draft.json` | `public/assets/lessons/L467/` | Package Rescue applied +1.0 dB volume-only correction to teacher-approved G02 suffix; mean -27.5 dB, PCM correlation 0.9997753962, timings/content unchanged. Complete package awaits ordered Release integration after L466. |
 
 ## Status Values
 
