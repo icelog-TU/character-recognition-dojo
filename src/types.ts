@@ -92,5 +92,6 @@ export interface SentenceGameOption {
   id: string;
   text: string;
   correct: boolean;
+  correctOrder?: number;
   audioSrc?: string;
 }

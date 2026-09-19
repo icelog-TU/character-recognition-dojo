@@ -5601,6 +5601,9 @@ function SentencePracticePreview({
     if (game.type === "choose-pronunciation") {
       return placeCorrectPronunciationOption(shuffled, (lesson.order - 1) % Math.min(shuffled.length, PRONUNCIATION_READERS.length));
     }
+    if (game.type === "partial-order") {
+      return keepPartialOrderOptionsUnsolved(shuffled);
+    }
     return shuffled;
   }, [game?.id, game?.options, game?.sentenceId, game?.type, lesson.id, lesson.order]);
 
@@ -6632,6 +6635,12 @@ function placeCorrectPronunciationOption(options: SentenceGameOption[], correctI
   const [correctOption] = ordered.splice(currentCorrectIndex, 1);
   ordered.splice(Math.min(correctIndex, ordered.length), 0, correctOption);
   return ordered;
+}
+
+function keepPartialOrderOptionsUnsolved(options: SentenceGameOption[]) {
+  if (options.length <= 1) return options;
+  if (!options.every((option, index) => option.correctOrder === index)) return options;
+  return [...options.slice(1), options[0]];
 }
 
 function hashSeed(value: string) {
