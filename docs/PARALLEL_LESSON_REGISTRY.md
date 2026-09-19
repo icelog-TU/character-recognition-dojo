@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L475 | 且 / 普通五句課 | claimed | Production D | codex/l475-complete-package | L470, L471, L472, L473, L474; R057/R058 | 答、題、案、反、而 | curriculum-workflow/lesson-requests/L475.json; generated/L475-generation-packet.md; drafts/L475-draft.json | public/assets/lessons/L475/; audio-inbox/L475/ | Base 29406e21 L465/R056; allowed 475; S04 verified lignum vitae sinking wood. |
 
 ## Status Values
 
