@@ -123,22 +123,54 @@ If the teacher is not signed in, review checkbox changes may be local-only. Trea
 
 ## Checks
 
-Run:
+Use the smallest validation scope that proves the repair. Asset Repair must not spend teacher quota or Codex time on full-course checks that are unrelated to the edited files.
+
+For an image-only repair that does not edit production JSON, audio, timings, scripts, or shared app code, run:
+
+```bash
+git diff --stat
+git diff --name-only
+git diff --check
+```
+
+Also verify the repaired image files directly:
+
+- Open or inspect each changed WebP after final export.
+- Confirm square `1:1` composition, expected dimensions, and reasonable file size.
+- Confirm the old marked defect is fixed.
+- Confirm the L058 side-by-side style-lock and recurring cast checks pass.
+- Confirm no unassigned image/audio/curriculum file changed.
+
+Do not run full-course `npm run assets:audit` or `npm run verify` for a pure image-only repair unless the teacher/Supervisor explicitly asks for it, or unless the diff touches shared code, production JSON, planner data, audio references, or generated asset-audit tooling.
+
+For an audio repair, run the local checks for the touched unit and touched audio files:
+
+```bash
+npm run validate:production
+git diff --stat
+git diff --name-only
+git diff --check
+```
+
+If sentence audio changed, regenerate the affected timings and inspect playback/highlight for the repaired unit. If a unit-scoped or file-scoped audio audit command exists for the current asset type, use that. Do not default to a full-course audio sweep just because one audio file changed.
+
+For repairs that change production JSON, Stage 4 metadata, asset references, scripts, shared app code, or more than one unit, run broader validation:
 
 ```bash
 npm run validate:production
 npm run verify
-git diff --stat
-git diff --name-only
 ```
 
-For audio/image repair diagnostics, also run:
+Run full-course `npm run assets:audit` only when:
 
-```bash
-npm run assets:audit
-```
+- the repair changes production JSON asset references across units,
+- the repair changes shared audio/asset tooling,
+- Release/Supervisor explicitly requests a full-course asset audit,
+- or a localized check reports a cross-unit risk that needs confirmation.
 
-Report any remaining findings, especially if they are outside the repaired unit.
+If a command starts scanning thousands of unrelated image/audio references for a one-unit image-only or one-file audio repair, stop and report that the scope is too broad instead of waiting on the scan.
+
+Report any remaining findings, especially if they are inside the repaired unit. Findings outside the repaired unit should be reported separately and must not block the current small repair unless they were caused by the repair.
 
 For image repair final reports, include a short style/cast self-check:
 

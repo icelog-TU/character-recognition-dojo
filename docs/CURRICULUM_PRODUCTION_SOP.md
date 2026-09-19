@@ -335,6 +335,8 @@ This inspects every referenced production lesson/review image and audio file. It
 npm run assets:audit -- --strict
 ```
 
+This is a full-library diagnostic, not the default check for small repairs. Do not run it for a one-unit image-only correction or a one-file audio correction unless Release/Supervisor asks for a whole-repo audit, shared code/tooling changed, production JSON asset references changed broadly, or a localized check indicates cross-unit risk. For narrow repairs, follow the scoped validation rules in `docs/ROLE_ASSET_REPAIR_SOP.md` and `docs/ROLE_PRODUCTION_SOP.md`.
+
 Process reviewed AI audio:
 
 ```bash

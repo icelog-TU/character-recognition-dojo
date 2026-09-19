@@ -169,6 +169,30 @@ If `curriculum:audit-state` reports any other failure, stop and report it.
 - Generate timings with `npm run assets:align:ai`.
 - Do not cut, splice, mute, patch, or extract production character/option audio from other files.
 
+## Targeted Correction Validation Scope
+
+When Production is asked to make a narrow correction to an existing package, such as regenerating one or two images, replacing one audio file, or fixing one timing issue, keep validation proportional to the changed surface.
+
+For image-only corrections:
+
+- Inspect only the changed final WebP files and their old versions.
+- Re-run the L058 style-lock and cast checks for the changed images.
+- Confirm dimensions, square `1:1` composition, file size, and intended asset paths.
+- Run `git diff --stat`, `git diff --name-only`, and `git diff --check`.
+- Do not run a full-course audio or asset audit merely because images changed.
+
+For audio-only corrections:
+
+- Regenerate or normalize only the touched audio files.
+- Regenerate `charTimings` only when sentence audio changed.
+- Recheck the touched unit's playback/highlight and any affected Stage 4 audio.
+- Run `validate:production` and diff checks.
+- Use unit-scoped/file-scoped audio checks when available; do not default to a full-course audio sweep.
+
+Run full-course `assets:audit`, full `verify`, or another repository-wide scan only when the change touches shared app code, shared scripts, production JSON asset references, planner data, multiple units, or when Release/Supervisor explicitly requests that broader check.
+
+If a command begins scanning thousands of unrelated image/audio references for a one-unit image-only or one-file audio-only correction, stop and report that the validation scope is too broad. Do not spend quota waiting for unrelated full-library scans unless they are required by the current change.
+
 ## Fast Package Audit Before Handoff
 
 Before reporting done, run a fast lesson-local audit. This should be minutes, not a second release process:
