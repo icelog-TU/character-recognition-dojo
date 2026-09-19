@@ -1759,7 +1759,7 @@
         "8": "ㄎㄨㄥˋ"
       },
       "imageNotes": "手工桌上，主角女孩翻起一張單面花紋紙的一角；正面大部分朝上，清楚露出小花圖案，翻起處露出空白反面。同一張紙的兩面同時可見，旁邊放剪刀與膠水。不要畫成兩張不同紙。",
-      "imagePrompt": "Square 1:1 warm pencil-and-gouache watercolor children lesson illustration. Close-up overhead view of a plain warm wooden tabletop containing only one large continuous sheet of one-sided pink floral paper and two child hands entering from the lower left and right edges. The patterned front lies flat across the rear half. Both hands lift and peel the near half toward the viewer so the large foreground surface is the completely blank white reverse. The broad natural curve must make the single continuous sheet and front/back relationship immediately clear. Show hands only from the wrists. No person, face, head, torso, clothing, room, tools, extra paper, text, labels, arrows, logos or watermark.",
+      "imagePrompt": "Square 1:1 warm watercolor children lesson illustration, closely following the teacher-supplied folding-paper composition. Top-down close-up on a wooden tabletop. Show only one rectangular sheet and two hands entering from the upper-left/left edge. The pink floral patterned sheet lies diagonally; its upper-left and lower-left patterned sections fold inward and frame a large clean white reverse-side area extending to the right. One hand pinches the small upper patterned flap while the other presses the larger left patterned flap flat. Preserve clear realistic fold edges and an immediate contrast between patterned front and blank white reverse. No person, body, sleeves, jewelry, extra paper, tools, room, text, labels, arrows, logos or watermark.",
       "approved": true,
       "imageSrc": "/assets/lessons/L476/images/L476-S04.webp",
       "audio": {
@@ -2470,12 +2470,12 @@
   },
   "latestMainChecked": "33ba62a69df2de88e8aaa49a2dd45c4347c540f7",
   "productionQA": {
-    "imageStyle": "Fourth S04 teacher repair completed from the supplied physical-paper reference: close-up tabletop only, with one continuous floral sheet and two hands. The patterned front lies flat at the rear; the broad lifted foreground is a completely blank white reverse. No person, room props, tools, extra paper or readable text.",
+    "imageStyle": "S04 rebuilt to closely match the latest teacher-supplied folding-paper reference while preserving the lesson watercolor style: top-down wooden table, hands only, patterned folds at left and a large blank white reverse at right. No person, tools, extra paper or readable text.",
     "audioPipeline": "L476-S05 was regenerated as one complete sentence with OpenAI gpt-4o-mini-tts shimmer after teacher heard 問題 as 溫題. No cutting or splicing. The same repaired S05 file is reused by G05 correct; all other audio is unchanged.",
     "timingReview": "Only L476-S05 charTimings were regenerated from the repaired final M4A; G05 correct reuses the same audio and timing. Ordered, nonoverlapping timing spans remain within the 4000 ms file duration.",
     "pronunciation": "Independent gpt-audio-1.5 review of the final processed S05 M4A returned exact transcript 這個問題我還沒想到答案, Taiwan Mandarin, 問 fourth tone (sounds like 問, not 溫), 題 second tone, 還 second tone, 答 second tone, no defects, confidence 0.99.",
     "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-    "packageIntake": "PASS on pushed origin/codex/l476-complete-package at 9baf9e9cec2a1d42d5d250203df68e0f7bc92382 with --strict: dependency-blocked-asset-complete, 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
-    "manualPlayback": "Teacher accepted all audio. At 4dbab67dd91dcced827d3e4e4c0aa7f87e679e43, teacher requested one final hands-only composition based directly on the supplied paper-flipping reference; renewed S04 visual acceptance is pending."
+    "packageIntake": "Pending strict intake on pushed reference-matched S04 repair.",
+    "manualPlayback": "Teacher accepted all audio. At 65b8bb3db678987e91784613f093ec8afd75a72b, teacher supplied a more precise folding-paper reference; S04 now closely follows its paper geometry and hand placement. Renewed visual acceptance is pending."
   }
 }
