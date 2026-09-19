@@ -1,0 +1,189 @@
+{
+  "unit": "L477",
+  "result": "PASS",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "productionBase": {
+    "ref": "33ba62a6",
+    "latestLesson": "L465",
+    "learnedCharCount": 469,
+    "latestReview": "R056"
+  },
+  "allowedCharacterCount": 475,
+  "disallowedLearnerFacingChars": [],
+  "coverage": {
+    "targets": {
+      "緣": 3,
+      "故": 2,
+      "且": 2,
+      "而": 2,
+      "反": 1,
+      "案": 1
+    },
+    "actual": {
+      "緣": 3,
+      "故": 2,
+      "且": 2,
+      "而": 2,
+      "反": 1,
+      "案": 1
+    },
+    "result": "PASS"
+  },
+  "sentences": [
+    {
+      "id": "L477-S01",
+      "hanCount": 11,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 5,
+      "audioDurationMs": 4133,
+      "charTimingCount": 11,
+      "expectedTimingCount": 11
+    },
+    {
+      "id": "L477-S02",
+      "hanCount": 11,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 5,
+      "audioDurationMs": 4187,
+      "charTimingCount": 11,
+      "expectedTimingCount": 11
+    },
+    {
+      "id": "L477-S03",
+      "hanCount": 11,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 6,
+      "audioDurationMs": 4192,
+      "charTimingCount": 11,
+      "expectedTimingCount": 11
+    },
+    {
+      "id": "L477-S04",
+      "hanCount": 10,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 6,
+      "audioDurationMs": 3249,
+      "charTimingCount": 10,
+      "expectedTimingCount": 10
+    },
+    {
+      "id": "L477-S05",
+      "hanCount": 9,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 4,
+      "audioDurationMs": 3583,
+      "charTimingCount": 9,
+      "expectedTimingCount": 9
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L477-G01",
+      "type": "find-character",
+      "sentenceId": "L477-S05",
+      "targetChar": "緣",
+      "targetCharIndex": 8,
+      "actualTarget": "緣",
+      "targetIndexPass": true,
+      "missingIndexes": null,
+      "missingText": null
+    },
+    {
+      "id": "L477-G02",
+      "type": "teach-character",
+      "sentenceId": "L477-S03",
+      "targetChar": "緣",
+      "targetCharIndex": 8,
+      "actualTarget": "緣",
+      "targetIndexPass": true,
+      "missingIndexes": null,
+      "missingText": null
+    },
+    {
+      "id": "L477-G03",
+      "type": "missing-character",
+      "sentenceId": "L477-S01",
+      "targetChar": "緣",
+      "targetCharIndex": 5,
+      "actualTarget": "緣",
+      "targetIndexPass": true,
+      "missingIndexes": [
+        5
+      ],
+      "missingText": "緣"
+    },
+    {
+      "id": "L477-G04",
+      "type": "partial-order",
+      "sentenceId": "L477-S04",
+      "targetChar": "反",
+      "targetCharIndex": 3,
+      "actualTarget": "反",
+      "targetIndexPass": true,
+      "missingIndexes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "missingText": "案在反面"
+    },
+    {
+      "id": "L477-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L477-S02",
+      "targetChar": "故",
+      "targetCharIndex": 2,
+      "actualTarget": "故",
+      "targetIndexPass": true,
+      "missingIndexes": null,
+      "missingText": null
+    }
+  ],
+  "gameOrderResult": "PASS",
+  "releaseBlockers": [
+    "R057",
+    "R058",
+    "L472",
+    "L473",
+    "L474",
+    "L475",
+    "L476"
+  ],
+  "sharedReleaseFilesTouched": false,
+  "browserQa": {
+    "status": "PASS",
+    "scope": "targeted L477-S04 upper-right corner correction",
+    "assetCommit": "c1b5009f59820ec37636868b3ef2ca48c8faf645",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L477&ref=c1b5009f59820ec37636868b3ef2ca48c8faf645",
+    "browser": "Codex in-app Chromium",
+    "summary": "PASS: immutable repair commit loaded corrected L477-S04 at 1024x1024 with no image error. Other assets are unchanged."
+  },
+  "packageRescue": {
+    "sourceBranch": "origin/codex/l477-complete-package",
+    "sourcePackageSha": "651bb42199c762081b6941a89de27946af5ca660",
+    "issue": "char-u7de3.m4a measured 699 ms, below the 700 ms standalone-character minimum",
+    "resolution": "Re-exported the complete same recording as mono 44.1 kHz AAC at 96 kbps; no speech regeneration, trimming, cutting, splicing, or timing edits",
+    "before": {
+      "durationMs": 699,
+      "sha256": "cbe4143c770782a3b676d5811f7197bd0e9fbfbcd8873891d32495ae4be17a54",
+      "meanVolumeDb": -15.9,
+      "maxVolumeDb": -0.5
+    },
+    "after": {
+      "durationMs": 720,
+      "sha256": "fbedf62f621f42bf01a6289a0726d7f21f15981bf3224fd30120ee464a07bb5b",
+      "meanVolumeDb": -15.9,
+      "maxVolumeDb": -0.5
+    },
+    "decodedPcmSamplesBefore": 31744,
+    "decodedPcmSamplesAfter": 31744,
+    "decodedPcmCorrelation": 0.9999566444540371,
+    "unchanged": "Five approved sentences, images, sentence/game audio, charTimings, Stage 4 data, and dependency blockers"
+  }
+}

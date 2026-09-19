@@ -1,0 +1,143 @@
+[
+  {
+    "file": "public/assets/lessons/L479/audio/char-u804a.m4a",
+    "sha256": "110aa06168639e8288df0f53bb9f0b28befdf5c4e45cb928621809f81e9b1677",
+    "model": "gpt-4o-transcribe",
+    "prompt": "這是臺灣華語單一漢字音。課程候選字是「聊」，請只轉寫實際聽到的漢字。",
+    "trials": [
+      {
+        "text": "聊",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 46,
+          "input_tokens": 43,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 10
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "聊",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 46,
+          "input_tokens": 43,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 10
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "聊",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 46,
+          "input_tokens": 43,
+          "input_token_details": {
+            "text_tokens": 33,
+            "audio_tokens": 10
+          },
+          "output_tokens": 3
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L479/audio/L479-G02-prefix.m4a",
+    "sha256": "615ddd3131f357dbbde32331d7e301d06d41e2681417461dd21f0d35e59df6b3",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "小光很會",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 25,
+          "input_tokens": 19,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 19
+          },
+          "output_tokens": 6
+        }
+      },
+      {
+        "text": "小光很會",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 25,
+          "input_tokens": 19,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 19
+          },
+          "output_tokens": 6
+        }
+      },
+      {
+        "text": "小光很會。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 26,
+          "input_tokens": 19,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 19
+          },
+          "output_tokens": 7
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L479/audio/L479-G02-suffix.m4a",
+    "sha256": "113f1b5e857fdecd3908155b428eee92281c5c6414813282b93b2b1a5856fff4",
+    "model": "gpt-4o-transcribe",
+    "prompt": "這是句中從「天」開始的獨立後半句，候選內容是「天而且人緣好」；請轉寫實際聽到的內容，尤其不要省略第一個音節。",
+    "trials": [
+      {
+        "text": "天而且人緣好。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 85,
+          "input_tokens": 75,
+          "input_token_details": {
+            "text_tokens": 50,
+            "audio_tokens": 25
+          },
+          "output_tokens": 10
+        }
+      },
+      {
+        "text": "天而且人緣好",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 84,
+          "input_tokens": 75,
+          "input_token_details": {
+            "text_tokens": 50,
+            "audio_tokens": 25
+          },
+          "output_tokens": 9
+        }
+      },
+      {
+        "text": "天而且人緣好。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 85,
+          "input_tokens": 75,
+          "input_token_details": {
+            "text_tokens": 50,
+            "audio_tokens": 25
+          },
+          "output_tokens": 10
+        }
+      }
+    ]
+  }
+]

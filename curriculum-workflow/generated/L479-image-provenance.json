@@ -1,0 +1,91 @@
+{
+  "unit": "L479",
+  "generator": "OpenAI imagegen built-in",
+  "references": [
+    "L058 style set",
+    "L154 family",
+    "L163 father/family",
+    "xiaoguang.webp",
+    "xiaoyue.webp"
+  ],
+  "discardedDrafts": [
+    {
+      "id": "L479-S01",
+      "generationId": "exec-926fdc46-f108-472a-978f-b4e463ecd8db",
+      "reason": "protagonist hair accessory drifted from fixed small pink clip"
+    },
+    {
+      "id": "L479-S03",
+      "generationId": "exec-9ddca6fa-801a-44dc-af58-c266230fc350",
+      "reason": "extra father weakened the mother-explains scene"
+    },
+    {
+      "id": "L479-S04",
+      "generationId": "exec-42b76cf0-5866-49d2-9dfb-b08fc5a2104b",
+      "reason": "posted paper on shelter contained text-like marks"
+    },
+    {
+      "id": "L479-S05",
+      "generationId": "exec-b98097fa-052b-40ee-a66f-36010661423b",
+      "reason": "extra mother made the father-plus-friend referent less clear"
+    },
+    {
+      "id": "L479-S02",
+      "generationId": "exec-bff74772-87b5-4699-b576-63ccf4bc1353",
+      "reason": "teacher identified overly photorealistic style drift; regenerated in refined watercolor"
+    },
+    {
+      "id": "L479-S04",
+      "generationId": "exec-7ea59501-85ef-4378-a515-7c52ff41e5ec",
+      "reason": "teacher identified overly photorealistic style drift; regenerated in refined watercolor"
+    },
+    {
+      "id": "L479-S05",
+      "generationId": "exec-9e0b4a86-3335-415f-b03c-38012913780d",
+      "reason": "teacher identified overly photorealistic style drift; regenerated in refined watercolor"
+    },
+    {
+      "id": "L479-S03",
+      "generationId": "exec-72dad4f4-c8a3-4f45-b081-519ec7c6141d",
+      "reason": "teacher clarified S03 was not a style-drift target; retained the prior accepted S03"
+    }
+  ],
+  "files": {
+    "L479-S01": {
+      "generationId": "exec-fab272cb-3e85-4012-a030-440b1c91509f",
+      "src": "/assets/lessons/L479/images/L479-S01.webp",
+      "bytes": 199942,
+      "sha256": "b4475027c61776aa56d88ddac2f338acb79707ccdeba2b989f1d3bb66f3ea4fc"
+    },
+    "L479-S02": {
+      "generationId": "exec-c5631667-af06-4936-8c16-15fa2ec35738",
+      "src": "/assets/lessons/L479/images/L479-S02.webp",
+      "bytes": 203694,
+      "sha256": "40ef8a8b8782cac3c3d6f9db81f3dae5eb9350a19ded261158b491c5682a68e4"
+    },
+    "L479-S03": {
+      "generationId": "exec-651d9c52-b6f2-4350-8259-1ed1ef4bf9d9",
+      "src": "/assets/lessons/L479/images/L479-S03.webp",
+      "bytes": 149992,
+      "sha256": "cf582c5d4432fa4d1700b18581762600e64d8288031f79368807f7e891625d5e"
+    },
+    "L479-S04": {
+      "generationId": "exec-425d277d-5b07-449a-95ce-11c2b68007ef",
+      "src": "/assets/lessons/L479/images/L479-S04.webp",
+      "bytes": 217646,
+      "sha256": "8065ed29b7e9449bb8a714796b88ce9c8cf65caa7ba649b0a3530c887d61aa17"
+    },
+    "L479-S05": {
+      "generationId": "exec-117ff34e-c74d-40ec-afed-bbee91c657ca",
+      "src": "/assets/lessons/L479/images/L479-S05.webp",
+      "bytes": 243828,
+      "sha256": "e1a85352229a67a73e39545c8c4dc4e0aa31adcf6cdf879de149f27cc78d9ba1",
+      "packageRescue": {
+        "sourceSha256": "7c3fcf6fab59f89b2c01977a7ce04ec671e358a1d9f53b42f354955343ad6545",
+        "method": "Re-encoded the approved 1024x1024 sRGB WebP at quality 79 with WebP method 6 and metadata stripped; composition and semantic content are unchanged",
+        "psnrDb": 37.8224,
+        "visualInspection": "PASS at original resolution; no visible composition, cast, text, crop, color-space, or semantic change"
+      }
+    }
+  }
+}

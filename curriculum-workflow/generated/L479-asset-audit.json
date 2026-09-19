@@ -1,0 +1,265 @@
+{
+  "unit": "L479",
+  "scope": "lesson-local image, audio and timing audit",
+  "images": [
+    {
+      "id": "L479-S01",
+      "file": "public\\assets\\lessons\\L479\\images\\L479-S01.webp",
+      "format": "webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 199942
+    },
+    {
+      "id": "L479-S02",
+      "file": "public\\assets\\lessons\\L479\\images\\L479-S02.webp",
+      "format": "webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 203694
+    },
+    {
+      "id": "L479-S03",
+      "file": "public\\assets\\lessons\\L479\\images\\L479-S03.webp",
+      "format": "webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 149992
+    },
+    {
+      "id": "L479-S04",
+      "file": "public\\assets\\lessons\\L479\\images\\L479-S04.webp",
+      "format": "webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 217646
+    },
+    {
+      "id": "L479-S05",
+      "file": "public\\assets\\lessons\\L479\\images\\L479-S05.webp",
+      "format": "webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 243828,
+      "sha256": "e1a85352229a67a73e39545c8c4dc4e0aa31adcf6cdf879de149f27cc78d9ba1",
+      "rescueCompression": {
+        "sourceBranch": "origin/codex/l479-complete-package",
+        "sourcePackageSha": "36bd9e5bf6e269ed3b6ab4be066e07a3f8c53a0e",
+        "issue": "L479-S05.webp measured 273,926 bytes (267.5 KiB), above the 250 KiB strict target",
+        "resolution": "Re-encoded the approved 1024x1024 sRGB WebP at quality 79 with WebP method 6 and metadata stripped; composition and semantic content are unchanged",
+        "before": {
+          "width": 1024,
+          "height": 1024,
+          "bytes": 273926,
+          "sha256": "7c3fcf6fab59f89b2c01977a7ce04ec671e358a1d9f53b42f354955343ad6545"
+        },
+        "after": {
+          "width": 1024,
+          "height": 1024,
+          "bytes": 243828,
+          "sha256": "e1a85352229a67a73e39545c8c4dc4e0aa31adcf6cdf879de149f27cc78d9ba1"
+        },
+        "comparison": {
+          "psnrDb": 37.8224,
+          "normalizedDistortion": 0.0118535,
+          "visualInspection": "PASS at original resolution; no visible composition, cast, text, crop, color-space, or semantic change"
+        },
+        "unchanged": "Five approved sentences, image prompts, all audio, charTimings, Stage 4 data, packageStatus, and dependency blockers"
+      }
+    }
+  ],
+  "audio": [
+    {
+      "src": "/assets/lessons/L479/audio/L479-G02-prefix.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-G02-prefix.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 1950,
+      "bytes": 35554,
+      "meanDb": -24.9,
+      "maxDb": -4.3
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-G02-suffix.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-G02-suffix.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 2530,
+      "bytes": 31933,
+      "meanDb": -20.5,
+      "maxDb": -6.7
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-G05-wrong-one.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-G05-wrong-one.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3990,
+      "bytes": 67235,
+      "meanDb": -17.1,
+      "maxDb": -2.8
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-G05-wrong-two.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-G05-wrong-two.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3870,
+      "bytes": 65579,
+      "meanDb": -17.4,
+      "maxDb": -4.7
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-S01.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-S01.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 4290,
+      "bytes": 72510,
+      "meanDb": -18.2,
+      "maxDb": -2.1
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-S02.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-S02.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 4430,
+      "bytes": 80146,
+      "meanDb": -18.5,
+      "maxDb": -3.1
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-S03.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-S03.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3810,
+      "bytes": 61917,
+      "meanDb": -17.1,
+      "maxDb": -3.1
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-S04.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-S04.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3510,
+      "bytes": 59116,
+      "meanDb": -17.6,
+      "maxDb": -3.9
+    },
+    {
+      "src": "/assets/lessons/L479/audio/L479-S05.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\L479-S05.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 4010,
+      "bytes": 66041,
+      "meanDb": -18.2,
+      "maxDb": -2
+    },
+    {
+      "src": "/assets/lessons/L479/audio/char-u804a.m4a",
+      "file": "public\\assets\\lessons\\L479\\audio\\char-u804a.m4a",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 1045,
+      "bytes": 13198,
+      "meanDb": -19,
+      "maxDb": -5
+    }
+  ],
+  "timing": [
+    {
+      "id": "L479-S01",
+      "characters": 11,
+      "durationMs": 4290,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-S02",
+      "characters": 12,
+      "durationMs": 4430,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-S03",
+      "characters": 12,
+      "durationMs": 3810,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-S04",
+      "characters": 9,
+      "durationMs": 3510,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-S05",
+      "characters": 11,
+      "durationMs": 4010,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-G02-prefix",
+      "characters": 4,
+      "durationMs": 1950,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-G02-suffix",
+      "characters": 6,
+      "durationMs": 2530,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-G05-O2",
+      "characters": 12,
+      "durationMs": 3990,
+      "tailMs": 250
+    },
+    {
+      "id": "L479-G05-O3",
+      "characters": 12,
+      "durationMs": 3870,
+      "tailMs": 250
+    }
+  ],
+  "failures": [],
+  "result": "PASS",
+  "packageRescue": {
+    "sourceBranch": "origin/codex/l479-complete-package",
+    "sourcePackageSha": "36bd9e5bf6e269ed3b6ab4be066e07a3f8c53a0e",
+    "issue": "L479-S05.webp measured 273,926 bytes (267.5 KiB), above the 250 KiB strict target",
+    "resolution": "Re-encoded the approved 1024x1024 sRGB WebP at quality 79 with WebP method 6 and metadata stripped; composition and semantic content are unchanged",
+    "before": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 273926,
+      "sha256": "7c3fcf6fab59f89b2c01977a7ce04ec671e358a1d9f53b42f354955343ad6545"
+    },
+    "after": {
+      "width": 1024,
+      "height": 1024,
+      "bytes": 243828,
+      "sha256": "e1a85352229a67a73e39545c8c4dc4e0aa31adcf6cdf879de149f27cc78d9ba1"
+    },
+    "comparison": {
+      "psnrDb": 37.8224,
+      "normalizedDistortion": 0.0118535,
+      "visualInspection": "PASS at original resolution; no visible composition, cast, text, crop, color-space, or semantic change"
+    },
+    "unchanged": "Five approved sentences, image prompts, all audio, charTimings, Stage 4 data, packageStatus, and dependency blockers"
+  }
+}

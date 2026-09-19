@@ -1,0 +1,56 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Use case: illustration-story. Create ONE square full-bleed opaque children’s curriculum illustration, no panels, no writing, letters, numbers, logos or watermark. Match the supplied reference sheet precisely: its top row is the five L058 STYLE-ONLY anchors (warm richly detailed colored-pencil and watercolor picture-book treatment, luminous natural light, clean detailed Taiwanese environments, softly modeled natural faces, stable preschool proportions). Second row is refined style/proportion examples. Bottom row first three pictures are the fixed FAMILY identities: protagonist girl short dark bob pink clip, pink cardigan cream top navy skirt pink shoes; mother shoulder-length dark brown hair cream blouse/cardigan blue lower clothing; father short swept dark hair blue open shirt pale undershirt tan trousers. Do not copy top-row woman for other roles. Bottom row last two are Xiaoyue (long wavy chestnut hair crescent clip lavender cardigan teal skirt) and Xiaoguang (tidy side part black hair round glasses white shirt navy vest khaki shorts). Match only people requested in scene, distinct generic adults. Bright phone-readable staging, safe margins, fully drawn background to every edge, realistic preschool body proportions, detailed texture, not flat cartoon/chibi/anime/photorealistic. ",
+  "scenes": [
+    [
+      "R059-S01",
+      "Backstage waiting: fixed girl in modest performance dress retaining pink hairclip and bob stands BEHIND the side-stage curtain, peeking through curtain gap at performers already on stage. Fixed teacher adult woman with neat tied-back hair and teal tidy teacher clothing watches the ongoing stage performance beside her, clearly distinct from mother. Girl has NOT stepped on stage. View inside the backstage wing with stage visible beyond curtain; not auditorium seats."
+    ],
+    [
+      "R059-S02",
+      "Bright warm family home dining area. Fixed protagonist girl actively carries a small tray of cut fruit/snacks to invite seated visiting friends Xiaoyue and Xiaoguang (both exact bottom-row reference identities) to sit and eat. Fixed mother helps at table. Girl is the host. Exactly these four people. No calendars/clocks/text."
+    ],
+    [
+      "R059-S03",
+      "Interior public bus braking suddenly. Fixed girl and fixed father are sitting together on bus seats, their upper bodies visibly leaning forward from the brief deceleration, surprised faces. Nearby seated generic passengers also lean toward the FRONT of bus. One standing generic adult grips overhead/vertical handrail securely. Safe brief loss of balance, no falls, collisions, injuries or accident. Make direction physically coherent and bus interior legible."
+    ],
+    [
+      "R059-S04",
+      "AFTER theater performance ENDED: an adult generic actor sits OFF STAGE in a side-stage rest area, bare human face clearly visible; the large furry friendly monster costume head rests beside him, his body still wears matching monster costume. Fixed girl and fixed father passing by stop surprised and recognize the performer. Actor has a distinctive face/hair clearly NOT father. Actor already removed head, no on-stage reveal, no active performance, no magic transformation. Curtain and backstage props contextualize quiet rest area."
+    ],
+    [
+      "R059-S05",
+      "Fixed girl at home writing desk just finished composition, paper body area densely filled with tiny UNREADABLE pencil texture, clearly EMPTY outlined name rectangle at top. She notices blank name box with mild surprised forgetful expression and reaches back to pick up pencil just set down. Angle makes body writing non-legible, no readable labels, no Han/English/numerals. Clear blank top rectangle contrasted with completed body."
+    ],
+    [
+      "R060-S01",
+      "Ground-floor family home interior doorway at street level, NO stairs. Fixed girl stayed inside playing and forgot promised chore; now belatedly picks up tied garbage bag by indoor door, remorseful face looking outside. Fixed mother points through broad window to a yellow Taiwan garbage truck already DRIVING AWAY beyond home, rear of truck visible outside heading away. Composition simultaneously shows girl with still-uncollected garbage bag INSIDE, mother’s pointing gesture, departing truck outside, a couple toys put aside. No chasing, roadway running, stairs, upstairs, books, truck letters/logo/license plate text."
+    ],
+    [
+      "R060-S02",
+      "Fixed girl at writing desk comparing her answer worksheet with open answer book, surprised, pencil paused/set down, points to the two different places to show fixed father leaning over to check. Both paper surfaces convey different arrangements with abstract unreadable marks, no readable answers/letters/numbers. No red cross/check judgement, do not decide which is wrong. Warm family study."
+    ],
+    [
+      "R060-S03",
+      "Parent-child painting activity in bright community classroom. Fixed girl and fixed mother seated at same table, EACH actively holds paintbrush touching own painting paper while turning heads to chat naturally with each other. Other DISTINCT generic family pairs making art nearby. Both continue painting, not an instructor addressing class. No words/numbers."
+    ],
+    [
+      "R060-S04",
+      "Sunny home balcony. Fixed girl examines a visibly DEAD/WITHERED potted plant with dry brown curled leaves and limp stalks. Fixed father points clearly to DRY CRACKED soil in the pot explaining lack of watering. Girl glances toward a neglected watering can set aside nearby. Dry pot/soil/leaves prominent; no healthy flourishing plant in focal pot. Show concrete lack-of-water cause, no spooky death symbols."
+    ],
+    [
+      "R060-S05",
+      "Warm living room. Fixed father holds open old FAMILY PHOTO ALBUM sharing funny real childhood memory; fixed girl laughs looking at photo, father gestures remembering. Compose album photograph large enough to see: young childhood version of father (dark swept hair, no glasses, NOT Xiaoguang), at real farm feeding a little goat that has caught his straw HAT in its mouth. Photo bordered in album, slightly aged warm colors, physical farm setting. Main adult father must match blue-shirt family reference. Clear nested photographic memory within illustrated scene, not magical story floating in room. No album writing."
+    ]
+  ],
+  "rejectedDrafts": [
+    "R059-S03 first bus image: wrong direction and mother clone",
+    "R059-S05 initial ruler digits",
+    "R060-S03 initial background cast clones"
+  ],
+  "revisions": {
+    "R059-S03": "Regenerated profile view all passengers leaning toward right/front; bald generic adult holds rail.",
+    "R059-S05": "Removed numbered ruler and book text only.",
+    "R060-S03": "Changed background people to distinct generic families, preserved foreground mother/girl."
+  }
+}

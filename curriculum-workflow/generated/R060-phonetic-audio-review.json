@@ -1,0 +1,61 @@
+{
+  "unit": "R060",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "R060-S01",
+      "sha256": "8d607c0e0a7fe4af6022abf61ffa3b5967797d1f757f6427184488e57aeea0fe",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"答應的事絕對不該忘記\",\"heardPronunciation\":\"ㄉㄚˊ ㄧㄥˋ ㄉㄜ˙ ㄕˋ ㄐㄩㄝˊ ㄉㄨㄟˋ ㄅㄨˋ ㄍㄞ ㄨㄤˋ ㄐㄧˋ\",\"uncertainty\":\"No repetitions or omissions detected.\"}"
+    },
+    {
+      "id": "R060-S02",
+      "sha256": "094cbcd83e8a8aa312c804d110aca5a0b4a51fff070f50b0a59bce0dc835f33c",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"這題的答案跟書上正好相反\", \"heardPronunciation\": \"ㄓˋ ㄊㄧˊ ㄉㄜ˙ ㄉㄚˊ ㄢˋ ㄍㄣ ㄕㄨ ㄕㄤˋ ㄓㄥˋ ㄏㄠˇ ㄒㄧㄤ ㄈㄢˇ\", \"uncertainty\": \"low\"}"
+    },
+    {
+      "id": "R060-S03",
+      "sha256": "06f1914a7b4f47c342a7ef4eea6a39263b89a0f2cfaddc81cc272a67fbeb8f60",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"親子活動中 我們邊畫邊聊\",\"heardPronunciation\":\"ㄑㄧㄣ(1) ㄗ(ˇ) ㄏㄨㄛ(2) ㄉㄨㄥ(4) ㄓㄨㄥ(1) / ㄨㄛ(3) ㄇㄣ(˙) / ㄅㄧㄢ(1) ㄏㄨㄚ(4) / ㄅㄧㄢ(1) ㄌㄧㄠ(2)\",\"uncertainty\":\"low\"}"
+    },
+    {
+      "id": "R060-S04",
+      "sha256": "d042f273f3f4fd1246451a1856a267c352ea6b2c2e0a328e5ce40e37a353f51e",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"話草 不會無緣無故死掉\",\"heardPronunciation\":\"ㄏㄨㄚˋ ㄘㄠˇ ㄅㄨˊ ㄏㄨㄟˋ ㄨˊ ㄩㄢˊ ㄨˊ ㄍㄨˋ ㄙˇ ㄉㄧㄠˋ\",\"uncertainty\":\"none\"}"
+    },
+    {
+      "id": "R060-S05",
+      "sha256": "3c402109fe08f349511d23ddd9c566c3089974b5e98dea55100173b08b80d945",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"這個故事有趣而且是真的\",\"heardPronunciation\":\"ㄓㄜˋ ㄍㄜ˙ ㄍㄨˋ ㄕˋ ㄧㄡˇ ㄑㄩˋ ㄦˊ ㄑㄧㄝˇ ㄕˋ ㄓㄣ ㄉㄜ˙\",\"uncertainty\":\"None, no omissions or repetitions detected.\"}"
+    },
+    {
+      "id": "R060-G02-prefix",
+      "sha256": "ef755011b2b958212577da2b77c02beed3c3b12a472f3e3fdd30564cf67edabe",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"這個故事有\", \"heardPronunciation\": \"ㄓㄜˋ ㄍㄜ˙ ㄍㄨˋ ㄕˋ ㄧㄡˇ\", \"uncertainty\": \"none\"}"
+    },
+    {
+      "id": "R060-G02-suffix",
+      "sha256": "001042cee53144f5e1b219c7560fa4938385ba53292790326426275e7bee1ae7",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"而且是真的\",\"heardPronunciation\":\"ㄦˊ ㄑ一ㄝˇ ㄕˋ ㄓㄣ\",\"uncertainty\":\"none\"}"
+    },
+    {
+      "id": "R060-G05-wrong-one",
+      "sha256": "50b41a7980b7a16ea752a67172437ab01c7452efd7f22ec8b3de88e8ec56ed78",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"這題的答案跟書上正好相同\",\"heardPronunciation\":\"ㄓㄜˋ ㄊㄧˊ ˙ㄉㄜ ㄉㄚˊ ㄢˋ ㄍㄣ ㄕㄨ ㄕㄤˋ ㄓㄥˋ ㄏㄠˇ ㄒㄧㄤ ㄊㄨㄥˊ\",\"uncertainty\":\"no omissions or repetitions detected\"}"
+    },
+    {
+      "id": "R060-G05-wrong-two",
+      "sha256": "10e1ecb486b3a31e164146daa004b67fe9dbe9c4657e86cde886fc171149102b",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"這題的答案跟紙上正好相反\",\"heardPronunciation\":\"ㄓㄜˋ ㄊㄧˊ ㄉㄜ˙ ㄉㄚˊ ㄢˋ ㄍㄣ ㄓˇ ㄕㄤˋ ㄓㄥˋ ㄏㄠˇ ㄒㄧㄤ ㄈㄢˇ\",\"uncertainty\":\"none\"}"
+    }
+  ]
+}

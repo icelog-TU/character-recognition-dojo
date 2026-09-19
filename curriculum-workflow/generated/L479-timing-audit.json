@@ -1,0 +1,512 @@
+{
+  "unit": "L479",
+  "method": "OpenAI whisper-1 word timestamps plus manual narrow-span review",
+  "manualAdjustments": [
+    "S03 的／緣／故 redistributed across 1060–1780 ms",
+    "S04 等 expanded into preceding pause to 1880–2020 ms",
+    "G05 wrong-one 的／緣／故 redistributed; 冷 expanded into preceding pause",
+    "G05 wrong-two 的／緣／故 redistributed",
+    "G02 suffix regenerated for a complete initial 天; six spans manually reviewed against Whisper word timestamps"
+  ],
+  "tracks": {
+    "L479-S01": {
+      "src": "/assets/lessons/L479/audio/L479-S01.m4a",
+      "durationMs": 4290,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 600
+        },
+        {
+          "charIndex": 1,
+          "startMs": 600,
+          "endMs": 820
+        },
+        {
+          "charIndex": 2,
+          "startMs": 820,
+          "endMs": 1540
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1540,
+          "endMs": 1840
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1840,
+          "endMs": 2040
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2040,
+          "endMs": 2400
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2780,
+          "endMs": 2910
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2910,
+          "endMs": 3040
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3040,
+          "endMs": 3560
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3560,
+          "endMs": 3800
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3800,
+          "endMs": 4040
+        }
+      ]
+    },
+    "L479-S02": {
+      "src": "/assets/lessons/L479/audio/L479-S02.m4a",
+      "durationMs": 4430,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "charIndex": 1,
+          "startMs": 240,
+          "endMs": 480
+        },
+        {
+          "charIndex": 2,
+          "startMs": 480,
+          "endMs": 1180
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1600,
+          "endMs": 1730
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1730,
+          "endMs": 1860
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1860,
+          "endMs": 2400
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2400,
+          "endMs": 2700
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2700,
+          "endMs": 2980
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2980,
+          "endMs": 3280
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3280,
+          "endMs": 3660
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3660,
+          "endMs": 4000
+        },
+        {
+          "charIndex": 11,
+          "startMs": 4000,
+          "endMs": 4180
+        }
+      ]
+    },
+    "L479-S03": {
+      "src": "/assets/lessons/L479/audio/L479-S03.m4a",
+      "durationMs": 3810,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 200
+        },
+        {
+          "charIndex": 1,
+          "startMs": 200,
+          "endMs": 400
+        },
+        {
+          "charIndex": 2,
+          "startMs": 400,
+          "endMs": 920
+        },
+        {
+          "charIndex": 3,
+          "startMs": 920,
+          "endMs": 1060
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1060,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1300,
+          "endMs": 1540
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1540,
+          "endMs": 1780
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2560,
+          "endMs": 2660
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2660,
+          "endMs": 2900
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2900,
+          "endMs": 3070
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3070,
+          "endMs": 3240
+        },
+        {
+          "charIndex": 11,
+          "startMs": 3240,
+          "endMs": 3560
+        }
+      ]
+    },
+    "L479-S04": {
+      "src": "/assets/lessons/L479/audio/L479-S04.m4a",
+      "durationMs": 3510,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 360
+        },
+        {
+          "charIndex": 1,
+          "startMs": 360,
+          "endMs": 720
+        },
+        {
+          "charIndex": 2,
+          "startMs": 720,
+          "endMs": 1000
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1000,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1880,
+          "endMs": 2020
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2020,
+          "endMs": 2200
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2200,
+          "endMs": 2860
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2860,
+          "endMs": 2980
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2980,
+          "endMs": 3260
+        }
+      ]
+    },
+    "L479-S05": {
+      "src": "/assets/lessons/L479/audio/L479-S05.m4a",
+      "durationMs": 4010,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 380
+        },
+        {
+          "charIndex": 1,
+          "startMs": 380,
+          "endMs": 640
+        },
+        {
+          "charIndex": 2,
+          "startMs": 640,
+          "endMs": 920
+        },
+        {
+          "charIndex": 3,
+          "startMs": 920,
+          "endMs": 1160
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1900,
+          "endMs": 2020
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2020,
+          "endMs": 2140
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2140,
+          "endMs": 2480
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2480,
+          "endMs": 2740
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2740,
+          "endMs": 3000
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3000,
+          "endMs": 3500
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3500,
+          "endMs": 3760
+        }
+      ]
+    },
+    "L479-G02-prefix": {
+      "src": "/assets/lessons/L479/audio/L479-G02-prefix.m4a",
+      "durationMs": 1950,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 540
+        },
+        {
+          "charIndex": 1,
+          "startMs": 540,
+          "endMs": 840
+        },
+        {
+          "charIndex": 2,
+          "startMs": 840,
+          "endMs": 1460
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1460,
+          "endMs": 1700
+        }
+      ]
+    },
+    "L479-G02-suffix": {
+      "src": "/assets/lessons/L479/audio/L479-G02-suffix.m4a",
+      "durationMs": 2530,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 500
+        },
+        {
+          "charIndex": 1,
+          "startMs": 1040,
+          "endMs": 1170
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1170,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1300,
+          "endMs": 1720
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1720,
+          "endMs": 2000
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2000,
+          "endMs": 2280
+        }
+      ]
+    },
+    "L479-G05-O2": {
+      "src": "/assets/lessons/L479/audio/L479-G05-wrong-one.m4a",
+      "durationMs": 3990,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 260
+        },
+        {
+          "charIndex": 1,
+          "startMs": 260,
+          "endMs": 520
+        },
+        {
+          "charIndex": 2,
+          "startMs": 520,
+          "endMs": 980
+        },
+        {
+          "charIndex": 3,
+          "startMs": 980,
+          "endMs": 1180
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1180,
+          "endMs": 1420
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1420,
+          "endMs": 1680
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1680,
+          "endMs": 1940
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2620,
+          "endMs": 2740
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2740,
+          "endMs": 3000
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3000,
+          "endMs": 3220
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3220,
+          "endMs": 3440
+        },
+        {
+          "charIndex": 11,
+          "startMs": 3440,
+          "endMs": 3740
+        }
+      ]
+    },
+    "L479-G05-O3": {
+      "src": "/assets/lessons/L479/audio/L479-G05-wrong-two.m4a",
+      "durationMs": 3870,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 300
+        },
+        {
+          "charIndex": 1,
+          "startMs": 300,
+          "endMs": 600
+        },
+        {
+          "charIndex": 2,
+          "startMs": 600,
+          "endMs": 1100
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1100,
+          "endMs": 1280
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1280,
+          "endMs": 1520
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1520,
+          "endMs": 1760
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1760,
+          "endMs": 1980
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2620,
+          "endMs": 2700
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2700,
+          "endMs": 2900
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2900,
+          "endMs": 3100
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3100,
+          "endMs": 3300
+        },
+        {
+          "charIndex": 11,
+          "startMs": 3300,
+          "endMs": 3620
+        }
+      ]
+    }
+  }
+}

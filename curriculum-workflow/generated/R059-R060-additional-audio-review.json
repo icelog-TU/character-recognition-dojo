@@ -1,0 +1,33 @@
+{
+  "method": "AI analysis excerpt from final files; no production audio cut/splice",
+  "results": [
+    {
+      "id": "R059-G02-prefix",
+      "analysisExcerptOnly": {
+        "startSeconds": 1.6,
+        "durationSeconds": 1.4
+      },
+      "review": "{\"syllables\":[{\"pinyin\":\"xi\",\"tone\":\"ˊ\"}]}",
+      "sha256": "93fac73ff1550fa114a9a31a59c0c861bb68a897fe89ada16d331749f770c1e1"
+    },
+    {
+      "id": "R059-G05-wrong-two",
+      "analysisExcerptOnly": {
+        "startSeconds": 0,
+        "durationSeconds": 1.1
+      },
+      "review": "I'm ready to transcribe. Please provide the audio you would like me to work on.",
+      "sha256": "9fe4ba3382700272538b2def872637bde084c7684856f94e9ad1d7e8428605e9"
+    },
+    {
+      "id": "R060-S04",
+      "analysisExcerptOnly": {
+        "startSeconds": 0,
+        "durationSeconds": 0.8
+      },
+      "review": "{\"syllables\": [{\"pinyin\": \"wo3\", \"zhuyin\": \"ㄨㄛˇ\"}, {\"pinyin\": \"chang4\", \"zhuyin\": \"ㄔㄤˋ\"}]}",
+      "sha256": "d042f273f3f4fd1246451a1856a267c352ea6b2c2e0a328e5ce40e37a353f51e"
+    }
+  ],
+  "interpretation": "Raw AI diagnostic output; models disagree on words/tones and may return invalid excerpt interpretations. Not human approval."
+}

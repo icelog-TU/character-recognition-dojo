@@ -1,0 +1,82 @@
+[
+  {
+    "file": "char-u804a.m4a",
+    "sha256": "110aa06168639e8288df0f53bb9f0b28befdf5c4e45cb928621809f81e9b1677",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"了\", \"pronunciation_observations\": \"The single syllable 'liǎo' was pronounced. The tone seems clear as third tone, though with a slight Mandarin Mainland contour rather than Taiwanese. No consonant or vowel issues.\", \"completeness\": {\"every_syllable_complete\": true, \"final_syllable_complete\": true}, \"clipped_syllables\": false, \"unnatural_pauses\": false, \"confidence\": \"high\"}"
+  },
+  {
+    "file": "L479-G02-prefix.m4a",
+    "sha256": "615ddd3131f357dbbde32331d7e301d06d41e2681417461dd21f0d35e59df6b3",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"小光很會\", \"pronunciation_observations\": \"All syllables have clear consonants and vowels. The tones sound accurate and there is a slight Mainland accent on '會' with a less rounded 'uei' sound.\", \"completeness\": \"Every syllable and the final syllable are complete.\", \"clipped_syllables\": false, \"unnatural_pauses\": false, \"confidence\": 0.91}"
+  },
+  {
+    "file": "L479-G02-suffix.m4a",
+    "sha256": "113f1b5e857fdecd3908155b428eee92281c5c6414813282b93b2b1a5856fff4",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"天而且人緣好\", \"pronunciation_observations\": \"All tones and consonants appear correct, no noticeable Mainland-accent drift.\", \"syllable_completeness\": {\"all_complete\": true, \"final_syllable_complete\": true}, \"clipped_syllables\": [], \"unnatural_pauses\": [], \"confidence\": 0.84}"
+  },
+  {
+    "file": "L479-G05-wrong-one.m4a",
+    "sha256": "a8303e825e4217db073c7af71851e1d0aaee10b7721523778224dff3a4bcba27",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"因為停電的緣故，冷氣不能用。\", \"pronunciation_observations\": \"Consonants and vowels sound clear and standard. Tones are accurate with a slight neutral tone at the end of '用'. No noticeable Mainland-accent drift.\", \"syllable_completeness\": \"Every syllable, including the final syllable, is complete.\", \"clipped_syllables\": \"None\", \"unnatural_pauses\": \"None\", \"confidence\": \"high\"}"
+  },
+  {
+    "file": "L479-G05-wrong-two.m4a",
+    "sha256": "35986b676ad8f9601668e8a0c1ca34ad9868689a8efaba622dd0dcb70bb7970f",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"因為跳電的緣故，冷氣不能開\", \"pronunciation_observations\": \"整體發音清晰，語調自然，無明顯錯誤輔音、母音或聲調偏差，沒聽出大陸口音影響\", \"syllable_completeness\": \"每個音節完整，結尾音節清楚\", \"clipped_syllables\": false, \"unnatural_pauses\": false, \"confidence\": \"high\"}"
+  },
+  {
+    "file": "L479-S01.m4a",
+    "sha256": "ef808fecbbc747cf57d96824c4df2ba9fcd612f667de7d256eaab768eab48dfe",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"小光很會聊天而且人緣好\", \"pronunciation_observations\": \"Consonants and vowels are clear, tones appear correct for Taiwan Mandarin. No noticeable Mainland accent drift.\", \"syllable_completeness\": \"All syllables, including the final, are complete.\", \"clipped_syllables\": \"None detected.\", \"unnatural_pauses\": \"No unnatural pauses.\", \"confidence\": \"high\"}"
+  },
+  {
+    "file": "L479-S02.m4a",
+    "sha256": "9ea9e5c15fb1953ba0cd4af41ab8fd1cbce5011abe2b835e44738be430aaa3d0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"無聊時，爸爸會說故事給我聽。\", \"pronunciation_observations\": \"Consonants and vowels are clear, tones are accurate with a Taiwanese Mandarin tone contour. Slight natural softness on the 'sh' sound in '說', typical in Taiwan. No Mainland-accent drift detected.\", \"syllable_completeness\": \"Every syllable and the final syllable are complete.\", \"clipped_syllables\": \"None detected.\", \"unnatural_pauses\": \"None detected.\", \"confidence\": \"high\"}"
+  },
+  {
+    "file": "L479-S03.m4a",
+    "sha256": "e57bf56c6c012e8a0d9fcc4b876cd81f21d5a2676d74324850d88570122ab173",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"因為跳電的緣故，冷氣不能用。\", \"pronunciation_observations\": \"發音大致清晰，聲調準確，略帶輕微大陸口音但不影響理解。\", \"syllables_complete\": true, \"final_syllable_complete\": true, \"clipped_syllables\": false, \"unnatural_pauses\": false, \"confidence\": 0.92}"
+  },
+  {
+    "file": "L479-S04.m4a",
+    "sha256": "a2798e38943f2c9a2f027aa2907cbadd741e4f6339d296fdfa099b053bcf424e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"車還沒來，等得好無聊\", \"pronunciation_observations\": \"Clear Taiwan Mandarin pronunciation, tones accurate, no noticeable Mainland-accent drift.\", \"syllable_completeness\": \"All syllables complete, final syllable complete.\", \"clipped_syllables\": false, \"unnatural_pauses\": false, \"confidence\": \"high\"}"
+  },
+  {
+    "file": "L479-S05.m4a",
+    "sha256": "f00e4eba87c4206c05ff3dd5289838a4a3815062e0458516bc2ec3ae2cde6fc6",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin learning recording. Return concise JSON with: transcript in Traditional Chinese, pronunciation observations including any wrong consonant/vowel/tone or Mainland-accent drift, whether every syllable and the final syllable are complete, clipped syllables, unnatural pauses, and confidence. Report only what is actually heard; do not infer from a supplied sentence because none is supplied.",
+    "result": "{\"transcript\": \"好久不見 我們坐下來聊聊\", \"pronunciation_observations\": \"Clear pronunciation of '好久不見' with correct tones. '我們坐下來聊聊' also pronounced clearly, no noticeable Mainland accent drift. All syllables carry appropriate Taiwan Mandarin intonation.\", \"completeness\": \"Every syllable and the final syllable are complete.\", \"clipped_syllables\": \"None detected.\", \"unnatural_pauses\": \"No unnatural pauses observed.\", \"confidence\": \"high\"}"
+  }
+]

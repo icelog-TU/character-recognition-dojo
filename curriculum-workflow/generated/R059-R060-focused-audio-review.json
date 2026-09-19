@@ -1,0 +1,33 @@
+{
+  "method": "AI analysis excerpt from final files; no production audio cut/splice",
+  "results": [
+    {
+      "id": "R060-S01",
+      "analysisExcerptOnly": {
+        "startSeconds": 0,
+        "durationSeconds": 1.5
+      },
+      "review": "{\"syllables\":[{\"zhuyin\":\"ㄉㄚ\",\"tone\":\"1\"},{\"zhuyin\":\"ㄧㄥˋ\",\"tone\":\"4\"},{\"zhuyin\":\"ㄉㄜ˙\",\"tone\":\"neutral\"},{\"zhuyin\":\"ㄕˋ\",\"tone\":\"4\"}]}",
+      "sha256": "8d607c0e0a7fe4af6022abf61ffa3b5967797d1f757f6427184488e57aeea0fe"
+    },
+    {
+      "id": "R059-S02",
+      "analysisExcerptOnly": {
+        "startSeconds": 0,
+        "durationSeconds": 1.4
+      },
+      "review": "{\"syllables\":[{\"text\":\"xīng\",\"zhuyin\":\"ㄒㄧㄥ\",\"tone\":\"high-level\"},{\"text\":\"qí\",\"zhuyin\":\"ㄑㄧˊ\",\"tone\":\"rising\"},{\"text\":\"rì\",\"zhuyin\":\"ㄖˋ\",\"tone\":\"falling\"}]}",
+      "sha256": "849d9b59b652745ae0dae3802f248b5802efd57f90a0442e3c93d81db834f308"
+    },
+    {
+      "id": "R059-G02-suffix",
+      "analysisExcerptOnly": {
+        "startSeconds": 0,
+        "durationSeconds": 3
+      },
+      "review": "{\"transcription\": [{\"syllable\": \"shì\", \"zhuyin\": \"ㄕˋ\"}, {\"syllable\": \"yǎn\", \"zhuyin\": \"ㄧㄢˇ\"}, {\"syllable\": \"yuán\", \"zhuyin\": \"ㄩㄢˊ\"}]}",
+      "sha256": "44f6410a8e1ecbb58cebe32e58169b24a69c2a343b20277d74e8a7e81ea415e8"
+    }
+  ],
+  "interpretation": "Raw AI diagnostic output; models disagree on words/tones and may return invalid excerpt interpretations. Not human approval."
+}
