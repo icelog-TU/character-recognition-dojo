@@ -1794,6 +1794,14 @@
     "pronunciation": "PASS by scoped AI listening/transcription evidence: complete sentence and wrong-option text matched; standalone 聊 and both G02 fragments passed three focused transcription trials. G02 suffix was regenerated until the initial 天 was complete and independently recognized. Taiwan Mandarin guardrails were reviewed; human asset review remains pending.",
     "timingReview": "PASS: OpenAI Whisper word alignment plus narrow manual span review covers five sentences, both G02 fragments and both G05 wrong options. Every span is ordered, nonoverlapping and 80–900 ms; every track ends with 250 ms trailing audio.",
     "browserQA": "PASS on immutable asset commit a3ea5862982783069a1c279a2ba0cf69f6cc2caa: asset-review loaded 5 sentence cards and 6 other-audio entries; all five images completed at natural 1024×1024; all 11 rendered audio controls reached readyState 4 with no media error. The G02 suffix control played through to currentTime 2.53/2.53 seconds.",
-    "validation": "PASS: lesson-local image/audio/timing audit, request mechanics, allowed-character audit, display-line joins, Han counts, Stage 4 indices and option mapping. Full-library asset audit intentionally not used under the scoped-validation SOP."
+    "validation": "PASS: lesson-local image/audio/timing audit, request mechanics, allowed-character audit, display-line joins, Han counts, Stage 4 indices and option mapping. Full-library asset audit intentionally not used under the scoped-validation SOP.",
+    "teacherManualAssetQA": {
+      "result": "PASS",
+      "reviewedCommit": "905d5cd8cba4a754d26bbf07cab01c03fd7e5287",
+      "reviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?repo=icelog-TU%2Fcharacter-recognition-dojo&unit=L479&ref=905d5cd8cba4a754d26bbf07cab01c03fd7e5287",
+      "scope": "All five L479 images and all ten unique L479 audio assets.",
+      "teacherConfirmation": "好，基本上圖片跟音檔都沒有問題。",
+      "recordType": "Metadata-only approval record; no media, timings, lesson text, or Stage 4 data changed after the reviewed commit."
+    }
   }
 }

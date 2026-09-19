@@ -2737,3 +2737,12 @@ The following records are the authoritative teacher-approved L479 content used b
 - Timings: nine timed tracks; all spans are 80–900 ms and each track has a 250 ms tail.
 - Evidence: `L479-image-provenance.json`, `L479-listening-evidence.json`, `L479-short-audio-audit.json`, `L479-timing-audit.json`, and `L479-asset-audit.json`.
 - Browser QA: PASS on immutable asset commit a3ea5862982783069a1c279a2ba0cf69f6cc2caa: asset-review loaded 5 sentence cards and 6 other-audio entries; all five images completed at natural 1024×1024; all 11 rendered audio controls reached readyState 4 with no media error. The G02 suffix control played through to currentTime 2.53/2.53 seconds.
+
+## Teacher manual pre-merge asset QA
+
+- Result: **PASS**.
+- Reviewed commit: `905d5cd8cba4a754d26bbf07cab01c03fd7e5287`.
+- Review URL: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?repo=icelog-TU%2Fcharacter-recognition-dojo&unit=L479&ref=905d5cd8cba4a754d26bbf07cab01c03fd7e5287
+- Scope: all five L479 images and all ten unique L479 audio files.
+- Teacher confirmation: 「好，基本上圖片跟音檔都沒有問題。」
+- This is a metadata-only acceptance record; no reviewed media, timings, lesson text, or Stage 4 data changed after the reviewed commit. Release dependencies remain L474-L478 and R057/R058.
