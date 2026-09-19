@@ -1,0 +1,79 @@
+{
+  "unit": "R058",
+  "tool": "Built-in imagegen",
+  "dimensions": "1024x1024",
+  "references": [
+    "public/assets/lessons/L058/images/L058-S01.webp",
+    "public/assets/lessons/L058/images/L058-S02.webp",
+    "public/assets/lessons/L058/images/L058-S03.webp",
+    "public/assets/reference/lesson-cast/xiaoyue.webp",
+    "recurring family anchors L154/L162/L163"
+  ],
+  "result": "PASS; teacher approved all five final images",
+  "images": [
+    {
+      "sentenceId": "R058-S01",
+      "path": "public/assets/reviews/R058/images/R058-S01.webp",
+      "bytes": 153506,
+      "sha256": "1a21843403e23018d6ae6fb0f654504322575ac550af2df928667936a11eac35",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Daytime nap context remains clear; protagonist wakes as the family dog lands safely on the bed."
+    },
+    {
+      "sentenceId": "R058-S02",
+      "path": "public/assets/reviews/R058/images/R058-S02.webp",
+      "bytes": 205878,
+      "sha256": "bdbdf6aba7bf38bfedf75403830354dacefd1713e110ee33b18ff56b36280e78",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Authoritative replacement scene: fixed father and protagonist observe a tall generic boy in the same elementary uniform as shorter classmates entering school; no archery scene or elements."
+    },
+    {
+      "sentenceId": "R058-S03",
+      "path": "public/assets/reviews/R058/images/R058-S03.webp",
+      "bytes": 137196,
+      "sha256": "ea4fe56decc6b9017167f8eb2ab5280c0e4162a4f7ee482fd33ebbac2c77204a",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Fixed mother and protagonist submit a blank registration form to generic staff in a neutral classroom setting; no flags, stereotypes or readable text."
+    },
+    {
+      "sentenceId": "R058-S04",
+      "path": "public/assets/reviews/R058/images/R058-S04.webp",
+      "bytes": 165646,
+      "sha256": "c7a714d6a03e409593e8169f7395cbd013ffafb3ce38d345199b7617f572501a",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Fixed father and protagonist watch an active baseball game from the stands; no scoreboard text or numbers."
+    },
+    {
+      "sentenceId": "R058-S05",
+      "path": "public/assets/reviews/R058/images/R058-S05.webp",
+      "bytes": 105434,
+      "sha256": "feb098ba79106a29fa67bb72218b83165d7137a2213f37411f259e293c07c4fb",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Station waiting room is clear; protagonist points out a closed private diary to fixed father without opening or reading it."
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "sentenceId": "R058-S03",
+      "reason": "Initial draft used cherry blossom and flag-like red-sun imagery; rejected and replaced with neutral classroom scene."
+    }
+  ],
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+    "scope": "All five final R058 images and all nine final R058 audio files",
+    "statement": "对了，忘记说复习课五十八没问题。"
+  }
+}

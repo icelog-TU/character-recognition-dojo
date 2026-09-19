@@ -1,0 +1,122 @@
+{
+  "unit": "R058",
+  "packageStatus": "asset-complete-package",
+  "baseMainSha": "c130f105",
+  "allowedChars": {
+    "expected": 469,
+    "actual": 469,
+    "result": "PASS"
+  },
+  "pairCoverage": "30/30 PASS",
+  "sentences": [
+    {
+      "id": "R058-S01",
+      "hanCount": 10,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 4,
+      "timingCount": 10,
+      "durationMs": 4179,
+      "tailMs": 279
+    },
+    {
+      "id": "R058-S02",
+      "hanCount": 12,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 4,
+      "timingCount": 12,
+      "durationMs": 4429,
+      "tailMs": 269
+    },
+    {
+      "id": "R058-S03",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3770,
+      "tailMs": 250
+    },
+    {
+      "id": "R058-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3618,
+      "tailMs": 238
+    },
+    {
+      "id": "R058-S05",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3735,
+      "tailMs": 275
+    }
+  ],
+  "stage4": {
+    "order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "result": "PASS"
+  },
+  "audio": {
+    "filesExpected": 9,
+    "filesActual": 9,
+    "result": "PASS; teacher audio review PASS"
+  },
+  "images": {
+    "filesExpected": 5,
+    "filesActual": 5,
+    "result": "PASS; teacher image review PASS"
+  },
+  "browserQa": {
+    "status": "PASS",
+    "assetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R058&ref=e6bd7143a64c0ab680b44b74bca425e7b842b747",
+    "browser": "Chrome",
+    "summary": "PASS: immutable pushed ref loaded 5 sentence cards and 5 other-audio cards with zero repair items; all 10 playback controls entered playing state and returned to ended/ready state.",
+    "scope": [
+      "R058-S01 through R058-S05",
+      "R058-G02 prefix and suffix",
+      "R058-G05 correct and two wrong options"
+    ],
+    "limitation": "Browser QA verifies rendering and complete playback. No human auditory-listening PASS is claimed; teacher image/audio review remains pending."
+  },
+  "releaseBlockers": [],
+  "sharedReleaseFiles": "Untouched; Release-owned",
+  "supersededContent": "R058-S02 authoritative middle-school/elementary-school mistaken-identity package is present. Every prior archery sentence, image, audio, timing and G02 asset/data is absent.",
+  "releaseSequence": "L465 → R057 → R058 → L466",
+  "dependencyResolution": "PASS: final fetch verified origin/main acd71a5b integrates L462-L465.",
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+    "scope": "All five final R058 images and all nine final R058 audio files",
+    "statement": "对了，忘记说复习课五十八没问题。"
+  },
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+    "scope": "All five final R058 images and all nine final R058 audio files",
+    "statement": "对了，忘记说复习课五十八没问题。"
+  }
+}

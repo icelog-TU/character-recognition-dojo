@@ -1,0 +1,135 @@
+{
+  "unit": "R057",
+  "packageStatus": "asset-complete-package",
+  "baseMainSha": "c130f105",
+  "allowedChars": {
+    "expected": 469,
+    "actual": 469,
+    "result": "PASS"
+  },
+  "pairCoverage": "30/30 PASS",
+  "sentences": [
+    {
+      "id": "R057-S01",
+      "hanCount": 8,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 8,
+      "durationMs": 2418,
+      "tailMs": 278
+    },
+    {
+      "id": "R057-S02",
+      "hanCount": 9,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 9,
+      "durationMs": 3012,
+      "tailMs": 272
+    },
+    {
+      "id": "R057-S03",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 4687,
+      "tailMs": 227
+    },
+    {
+      "id": "R057-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3572,
+      "tailMs": 252
+    },
+    {
+      "id": "R057-S05",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "timingCount": 11,
+      "durationMs": 3652,
+      "tailMs": 212
+    }
+  ],
+  "stage4": {
+    "order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "result": "PASS"
+  },
+  "audio": {
+    "filesExpected": 9,
+    "filesActual": 9,
+    "result": "REPAIRED PASS; teacher audio review PASS, including R057-S04 跳舞"
+  },
+  "images": {
+    "filesExpected": 5,
+    "filesActual": 5,
+    "result": "REPAIRED PASS; teacher image review PASS, including R057-S04"
+  },
+  "browserQa": {
+    "status": "PASS",
+    "assetCommit": "565ab4d1bf1cd9a35770aac4059a9c662d900efe",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R057&ref=565ab4d1bf1cd9a35770aac4059a9c662d900efe",
+    "browser": "Chrome",
+    "summary": "PASS: repaired fixed ref loaded all 5 sentence cards and 5 other-audio cards with zero repair flags; replacement R057-S04 image rendered and repaired R057-S04 audio entered playing state and returned after completion.",
+    "scope": [
+      "R057-S04 replacement image",
+      "R057-S04 replacement sentence audio"
+    ],
+    "limitation": "Browser QA verifies rendering and playback completion. Teacher visual/listening approval of repaired assets remains pending."
+  },
+  "releaseBlockers": [],
+  "sharedReleaseFiles": "Untouched; Release-owned",
+  "releaseSequence": "L465 → R057 → R058 → L466",
+  "dependencyResolution": "PASS: final fetch verified origin/main acd71a5b integrates L462-L465.",
+  "repairHistory": [
+    {
+      "reviewedRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+      "items": [
+        "R057-S04:image",
+        "R057-S04:audio"
+      ],
+      "resolution": "Image regenerated with equal-height classmates; full sentence audio regenerated with verified ㄊㄧㄠˋ ㄨˇ and final timings.",
+      "status": "resolved; fixed-ref Browser QA PASS; teacher repaired-image/audio review PASS"
+    }
+  ],
+  "preRepairBrowserQa": {
+    "status": "pending repaired-ref preview",
+    "previousAssetCommit": "e6bd7143a64c0ab680b44b74bca425e7b842b747"
+  },
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+    "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+    "statement": "复习五十七课也审核通过。"
+  },
+  "teacherAudioReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+    "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+    "statement": "复习五十七课也审核通过。"
+  }
+}

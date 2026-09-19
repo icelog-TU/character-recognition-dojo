@@ -1,0 +1,81 @@
+{
+  "unit": "R057",
+  "tool": "Built-in imagegen",
+  "dimensions": "1024x1024",
+  "references": [
+    "public/assets/lessons/L058/images/L058-S01.webp",
+    "public/assets/lessons/L058/images/L058-S02.webp",
+    "public/assets/lessons/L058/images/L058-S03.webp",
+    "public/assets/reference/lesson-cast/xiaoyue.webp",
+    "recurring family anchors L154/L162/L163"
+  ],
+  "result": "REPAIRED PASS; teacher approved all five final images, including equal-height R057-S04 repair",
+  "images": [
+    {
+      "sentenceId": "R057-S01",
+      "path": "public/assets/reviews/R057/images/R057-S01.webp",
+      "bytes": 161202,
+      "sha256": "d54639b1dbe259b5375eff1ed9c9f5b1782380c78d7892c32c5e564b77a845f9",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Fixed father demonstrates assembly of pre-cut wood pieces; protagonist safely aligns a small box; no dangerous child tool use."
+    },
+    {
+      "sentenceId": "R057-S02",
+      "path": "public/assets/reviews/R057/images/R057-S02.webp",
+      "bytes": 173012,
+      "sha256": "93fdb96b406ad13ebcb6aea3a2381530ffe49efbff653e8246ba72b116ab246c",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Generic adult coach, protagonist and fixed older brother each dribble a basketball on a safe court; no match or shooting action."
+    },
+    {
+      "sentenceId": "R057-S03",
+      "path": "public/assets/reviews/R057/images/R057-S03.webp",
+      "bytes": 243750,
+      "sha256": "c447954ad36485efc7575df903d0eec611de42c833f2f48a639b921c8b046372",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Generic adult workers use compact paving equipment on a visibly damaged track section behind barriers; no children in the work zone."
+    },
+    {
+      "sentenceId": "R057-S04",
+      "path": "public/assets/reviews/R057/images/R057-S04.webp",
+      "bytes": 171928,
+      "sha256": "bda9f4517ef57b2b6d85f8958dbcaa1f033ff4917b4b237031dfa22d292bf5f3",
+      "styleLock": "REPAIRED PASS: exported WebP retains the established warm pencil-and-watercolor style.",
+      "cast": "REPAIRED PASS: protagonist and Xiaoyue are same-age classmates at matching height and body scale; Xiaoyue reference features retained.",
+      "semantic": "PASS",
+      "notes": "Protagonist dances and Xiaoyue sings; both stand on the same floor plane with aligned head height. No extra people or text."
+    },
+    {
+      "sentenceId": "R057-S05",
+      "path": "public/assets/reviews/R057/images/R057-S05.webp",
+      "bytes": 160032,
+      "sha256": "84129b7f091aa3083e27b9726e7fe73706d0b4bf4f3b371bf95b5b2df3232fde",
+      "styleLock": "PASS: exported WebP compared in a 10-image contact sheet against the L058/refined style and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Generic performers bow on the raised stage after the show while the audience below visibly applauds."
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "sentenceId": "R057-S04",
+      "reviewedRef": "fc7c8e63eaa730d081aadb7436b262350559affb",
+      "reason": "Teacher found the two same-age children had too large a height difference.",
+      "resolution": "Regenerated with equal height and matching child proportions."
+    }
+  ],
+  "teacherImageReview": {
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "b18acab1ed934ebe99ebe1c85875dae46ae76776",
+    "scope": "All five final R057 images and all nine final R057 audio files, including repaired R057-S04 image and sentence audio",
+    "statement": "复习五十七课也审核通过。"
+  }
+}
