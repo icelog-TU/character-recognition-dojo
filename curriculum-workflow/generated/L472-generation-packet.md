@@ -35,7 +35,7 @@ Five square 1024px WebP, nine mono 44100Hz AAC M4A and eight complete timing rec
 - L472-S04: style-lock PASS; cast PASS. Mother and girl make a dog mask while other distinct parent-child pairs make bird and fish crafts, so the shared animal theme is visible without signage. Recurring mother and girl match family anchors; generic adults and children are distinct.
 - L472-S05: style-lock PASS; cast PASS. Girl compares a dog drawing on a separate plan sheet with a completely blank cloth schoolbag; pencil does not touch the bag and the plan remains unfinished. Recurring mother and girl match the fixed family identities.
 
-All final WebP were checked against the approved style/cast reference. S03 was regenerated after teacher feedback so the teacher is visibly distinct from the mother. No readable text, numbers, equations, labels, logos or watermarks appear. The immutable asset-review URL is the required pre-merge teacher image/audio review surface.
+All final WebP were checked against the approved style/cast reference. S03 was regenerated after teacher feedback so the teacher is visibly distinct from the mother. No readable text, numbers, equations, labels, logos or watermarks appear. Teacher pre-merge image/audio review: PASS for all L472 assets at commit 9ac13ee222d1900d9675c1f6365a4d6ef6193b4f. Reviewed URL: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L472&ref=9ac13ee222d1900d9675c1f6365a4d6ef6193b4f
 
 ## Release dependencies and ownership
 

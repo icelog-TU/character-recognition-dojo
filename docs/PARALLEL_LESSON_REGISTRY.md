@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L472 | 案 | ready-blocked-by-dependency | Production A / parallel-a | codex/l472-complete-package | L467-L471; R057/R058 after L465 | 活、該、應、答、題 | curriculum-workflow/lesson-requests/L472.json; curriculum-workflow/generated/L472-generation-packet.md; curriculum-workflow/drafts/L472-draft.json | public/assets/lessons/L472/ | dependency-blocked-asset-complete; 5 WebP, 9 M4A, 8 timing records; package-local and acoustic checks prepared. L471 remains owned by Production F. Release dependencies block integration. Pre-merge teacher asset review pending. |
+| L472 | 案 | ready-blocked-by-dependency | Production A / parallel-a | codex/l472-complete-package | L467-L471; R057/R058 after L465 | 活、該、應、答、題 | curriculum-workflow/lesson-requests/L472.json; curriculum-workflow/generated/L472-generation-packet.md; curriculum-workflow/drafts/L472-draft.json | public/assets/lessons/L472/ | dependency-blocked-asset-complete; 5 WebP, 9 M4A, 8 timing records; package-local and acoustic checks PASS. L471 remains owned by Production F. Release dependencies block integration. Pre-merge image/audio review OK at 9ac13ee222d1900d9675c1f6365a4d6ef6193b4f: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L472&ref=9ac13ee222d1900d9675c1f6365a4d6ef6193b4f |
 
 ## Status Values
 

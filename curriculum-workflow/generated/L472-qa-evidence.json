@@ -229,5 +229,12 @@
     "validateProduction": "PASS on isolated L472 fixture",
     "assetAuditStrict": "PASS with 0 warnings on isolated L472 fixture",
     "fullVerify": "Skipped: dependency-blocked; shared production integration belongs to Release."
+  },
+  "teacherAssetReview": {
+    "status": "PASS",
+    "scope": "all five images and all lesson/Stage 4 audio",
+    "reviewedCommit": "9ac13ee222d1900d9675c1f6365a4d6ef6193b4f",
+    "reviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L472&ref=9ac13ee222d1900d9675c1f6365a4d6ef6193b4f",
+    "teacherStatement": "圖片檔跟音訊審核通過。"
   }
 }
