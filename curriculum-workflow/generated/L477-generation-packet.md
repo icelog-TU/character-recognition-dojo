@@ -2498,3 +2498,10 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Vocabulary/coverage/Stage 4 indexes and mappings: PASS.
 - Browser QA: PASS at immutable asset commit `92d6a9997a3c6f5f98f12f2122602a1ade743e98`; 5/5 images loaded at 1024×1024 and all 11 playback controls reached ended with no media errors.
 - Release blockers: R057, R058, L472, L473, L474, L475, L476. These block main integration only.
+
+## S04 targeted repair
+
+- Teacher review source: `58cf0257add6f6d2044e129bd900d1b97ec10579`; issue: paper structure incorrect.
+- Repair: rebuilt S04 from three teacher-provided physical references as one continuous folded sheet with a shared hinge, consistent edges/perspective, blank face and puppy reverse face.
+- Scope: S04 image only; sentence, audio, timings and Stage 4 data unchanged.
+- Immutable-ref image QA: pending repair commit.

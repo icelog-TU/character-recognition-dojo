@@ -1718,17 +1718,8 @@
     "status": "PASS",
     "manualListeningClaimed": false,
     "browserQa": {
-      "status": "PASS",
-      "assetCommit": "92d6a9997a3c6f5f98f12f2122602a1ade743e98",
-      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L477&ref=92d6a9997a3c6f5f98f12f2122602a1ade743e98",
-      "browser": "Codex in-app Chromium",
-      "summary": "PASS: immutable commit page loaded 5 sentence cards and 6 other audio items; all five 1024x1024 images completed with natural dimensions 1024x1024; all 11 playback controls reached ended state with no media error.",
-      "scope": [
-        "L477-S01 through L477-S05",
-        "char-u7de3",
-        "L477-G02 prefix and suffix",
-        "L477-G05 correct and two wrong options"
-      ]
+      "status": "PENDING",
+      "summary": "S04 image repaired from teacher-provided paper-structure references; immutable-ref image QA pending repair commit."
     }
   }
 }
