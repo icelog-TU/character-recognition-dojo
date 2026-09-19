@@ -517,7 +517,7 @@
     "L473",
     "L474"
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "kind": "lesson",
   "targetSentenceCount": 5,
   "teacherNotes": "且 qie3; 答案 da2 an4; 相反/相同 xiang1. G02 exact prefix ends er2, suffix 有說明. No 並況慢. S04 specific sinking lignum vitae, no hands holding underwater. S03 fixed Xiaoyue.",
@@ -1116,7 +1116,74 @@
         "prefixText": "反面不但有答案而",
         "suffixText": "有說明",
         "prefixSrc": "/assets/lessons/L475/audio/L475-G02-prefix.m4a",
-        "suffixSrc": "/assets/lessons/L475/audio/L475-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L475/audio/L475-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L475/audio/L475-G02-prefix.m4a",
+          "durationMs": 3334,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 500
+            },
+            {
+              "charIndex": 1,
+              "startMs": 500,
+              "endMs": 800
+            },
+            {
+              "charIndex": 2,
+              "startMs": 800,
+              "endMs": 1280
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1280,
+              "endMs": 1480
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1480,
+              "endMs": 1880
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1880,
+              "endMs": 2160
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2160,
+              "endMs": 2520
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2520,
+              "endMs": 3100
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L475/audio/L475-G02-suffix.m4a",
+          "durationMs": 1382,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 400
+            },
+            {
+              "charIndex": 1,
+              "startMs": 400,
+              "endMs": 900
+            },
+            {
+              "charIndex": 2,
+              "startMs": 900,
+              "endMs": 1160
+            }
+          ]
+        }
       }
     },
     {

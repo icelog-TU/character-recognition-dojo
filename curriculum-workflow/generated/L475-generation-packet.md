@@ -1,8 +1,40 @@
-# L475 且 Production D
+# L475 且 Production D package
 
-Status: partial-package
+Status: dependency-blocked-asset-complete
 
-Base L465/R056, allowed 475.
+Branch codex/l475-complete-package. Claim a2088f3b; assets checkpoint 67d07ae09689ff6748e3210dd60cbbdfd696ba12. Base 29406e21ead23463b62b06812997e6a871ffcef1; formal L465 招, 469 learned chars, R056. Full allowedChars 475 = formal 469 + 答題案反而 + 且. Dependencies L470-L474 and prior R057/R058 release milestone. No main merge or production JSON/planner/ledger/shared app edits.
+
+## Image review
+
+- S01 style-lock PASS; cast PASS. Fixed father shows back of practice sheet with distinct compact answer area and diagram explanation panels; no readable text.
+- S02 style-lock PASS; cast PASS. Fixed mother prepares to close opened window; fixed girl fans herself, both hot; no active air conditioning or danger.
+- S03 style-lock PASS; cast PASS. Named Xiaoyue matches dedicated reference: long wavy hair, moon clip, lavender cardigan, teal skirt, purple shoes; singing and dancing simultaneously; fixed girl in audience.
+- S04 style-lock PASS; cast PASS. Specific lignum vitae dark wood-grain specimen rests naturally on basin bottom; both father hands clear of water; girl points to floating expectation diagram. Full-bleed opaque final image.
+- S05 style-lock PASS; cast PASS. Fixed mother and girl taste fresh cut fruit and buy modest bag; generic shopkeeper distinct; no price text or branding.
+
+Actual exported 1024-square WebPs compared side by side with L058 style-only full set, refined L115-S01/S02/L118-S02/L119-S01/L128-S03, family L154-S01/L162-S04/L163-S02 and dedicated xiaoyue.webp. All five <=250KB; total media 1374942 bytes. Built-in image_gen used; prompts and final source paths recorded. S04 first vignette version replaced with opaque full-bleed final.
+
+S04 material: specific high-density lignum vitae (Guaiacum sanctum), dark olive-brown wood grain; University of Florida IFAS records wood specific gravity 1.09 and sinking behavior: https://ask.ifas.ufl.edu/publication/ST286 . This is a specific specimen, not a general statement that all wood sinks. No hand pressure/weights, block visibly at basin bottom and hands out of water.
+
+## Audio/timings
+
+10 final M4A files, mono AAC 44100Hz, decode/volume PASS; G05 relative mean-volume spread 0.8dB. Char 且 1997ms, independent AI auditory reading qie3. S01/S04 答 da2 and G05 相 xiang1 confirmed. Nine final-file Whisper alignments preserve exact approved text. S05 initial Whisper inserted 一; independent unprompted audio model matched exact 12 syllables and final prompted alignment matched. S04 40ms 答 localized to 620–840ms with adjacent 的/案 boundary smoothing; S01 明 end corrected to 4000ms based on voiced tail through 3965ms. Details in timing QA. Sentence timing spans 80–900ms and final tail <=300ms. No uniform whole-sentence timing guess.
+
+G02 independently generated exact prefix 反面不但有答案而 and suffix 有說明; final er2 intact, no target leakage. G05 O1 references S04, two wrong utterances independently generated complete. No extraction/splicing. All 10 auditory-review SHA256 values match final media. Raw MP3 remains ignored locally.
+
+## Browser QA
+
+390x844 phone-width UI: Stage 1 playback and 且 ㄑㄧㄝˇ, Stage 2 3/3 accepted, Stage 3 five sentence cards played with active highlights/three-line layouts inspected. Explicit 答 ㄉㄚˊ / 相 ㄒㄧㄤ overrides visible. G01/G03 completed; G02 red target and answer reveal inspected, then skipped via UI because supported browser API lacks sustained pointer hold. G04 initial 而/熱/反/更 is not solved; correct order 反/而/更/熱 accepted. G05 three reader controls clicked, fox incorrect red/frog correct green.
+
+SOP browser-tool fallback: human listening, ear-verified syllable synchronization, G02 long hold/recording/ding audibility/stitched replay remain untested; no teacher manual PASS claimed. Full canonical isolated lesson preserves all five games; old-character zhuyin outside fixture awaits Release integration. Temporary tab closed, viewport reset, server stopped, shared curriculum/scripts restored byte-for-byte.
+
+## Validation and Release
+
+Startup tools:check, ai:check, curriculum:audit-state PASS. Approved text and expanded 475-character boundary checked; all allowed-character/coverage/index/display-line audits PASS. Lesson-local validate:production and strict assets:audit results recorded with pushed-ref intake checkpoint. Full integration and verify belong to Release; dependencies do not block this complete asset package.
+
+Post-merge review queue: https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main ; https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L475&ref=main . Command: npm run asset:review-status -- --unit L475 --ref main .
+
+## Final approved sentences
 
 ```json
 [
@@ -22,8 +54,69 @@ Base L465/R056, allowed 475.
     "imageSrc": "/assets/lessons/L475/images/L475-S01.webp",
     "audio": {
       "src": "/assets/lessons/L475/audio/L475-S01.m4a",
-      "durationMs": 0,
-      "charTimings": []
+      "durationMs": 4273,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 340
+        },
+        {
+          "charIndex": 1,
+          "startMs": 340,
+          "endMs": 660
+        },
+        {
+          "charIndex": 2,
+          "startMs": 660,
+          "endMs": 1000
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1000,
+          "endMs": 1200
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1200,
+          "endMs": 1520
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1520,
+          "endMs": 1720
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1720,
+          "endMs": 2280
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2280,
+          "endMs": 2590
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2590,
+          "endMs": 2900
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2900,
+          "endMs": 3460
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3460,
+          "endMs": 3660
+        },
+        {
+          "charIndex": 11,
+          "startMs": 3660,
+          "endMs": 4000
+        }
+      ]
     },
     "zhuyinOverrides": {
       "5": "ㄉㄚˊ"
@@ -45,8 +138,59 @@ Base L465/R056, allowed 475.
     "imageSrc": "/assets/lessons/L475/images/L475-S02.webp",
     "audio": {
       "src": "/assets/lessons/L475/audio/L475-S02.m4a",
-      "durationMs": 0,
-      "charTimings": []
+      "durationMs": 3343,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 320
+        },
+        {
+          "charIndex": 1,
+          "startMs": 320,
+          "endMs": 600
+        },
+        {
+          "charIndex": 2,
+          "startMs": 600,
+          "endMs": 900
+        },
+        {
+          "charIndex": 3,
+          "startMs": 900,
+          "endMs": 1640
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1640,
+          "endMs": 1920
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1920,
+          "endMs": 2200
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2200,
+          "endMs": 2420
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2420,
+          "endMs": 2740
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2740,
+          "endMs": 2960
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2960,
+          "endMs": 3180
+        }
+      ]
     }
   },
   {
@@ -65,8 +209,69 @@ Base L465/R056, allowed 475.
     "imageSrc": "/assets/lessons/L475/images/L475-S03.webp",
     "audio": {
       "src": "/assets/lessons/L475/audio/L475-S03.m4a",
-      "durationMs": 0,
-      "charTimings": []
+      "durationMs": 4306,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 500
+        },
+        {
+          "charIndex": 1,
+          "startMs": 500,
+          "endMs": 720
+        },
+        {
+          "charIndex": 2,
+          "startMs": 720,
+          "endMs": 1180
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1180,
+          "endMs": 1400
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1400,
+          "endMs": 1660
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1660,
+          "endMs": 1980
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1980,
+          "endMs": 2440
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2440,
+          "endMs": 2730
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2730,
+          "endMs": 3020
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3020,
+          "endMs": 3500
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3500,
+          "endMs": 3820
+        },
+        {
+          "charIndex": 11,
+          "startMs": 3820,
+          "endMs": 4080
+        }
+      ]
     }
   },
   {
@@ -85,8 +290,64 @@ Base L465/R056, allowed 475.
     "imageSrc": "/assets/lessons/L475/images/L475-S04.webp",
     "audio": {
       "src": "/assets/lessons/L475/audio/L475-S04.m4a",
-      "durationMs": 0,
-      "charTimings": []
+      "durationMs": 3073,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "charIndex": 1,
+          "startMs": 240,
+          "endMs": 460
+        },
+        {
+          "charIndex": 2,
+          "startMs": 460,
+          "endMs": 600
+        },
+        {
+          "charIndex": 3,
+          "startMs": 620,
+          "endMs": 840
+        },
+        {
+          "charIndex": 4,
+          "startMs": 840,
+          "endMs": 1240
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1240,
+          "endMs": 1640
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1640,
+          "endMs": 1870
+        },
+        {
+          "charIndex": 7,
+          "startMs": 1870,
+          "endMs": 2100
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2100,
+          "endMs": 2380
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2380,
+          "endMs": 2620
+        },
+        {
+          "charIndex": 10,
+          "startMs": 2620,
+          "endMs": 2860
+        }
+      ]
     },
     "zhuyinOverrides": {
       "3": "ㄉㄚˊ",
@@ -109,12 +370,75 @@ Base L465/R056, allowed 475.
     "imageSrc": "/assets/lessons/L475/images/L475-S05.webp",
     "audio": {
       "src": "/assets/lessons/L475/audio/L475-S05.m4a",
-      "durationMs": 0,
-      "charTimings": []
+      "durationMs": 4364,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "charIndex": 1,
+          "startMs": 240,
+          "endMs": 540
+        },
+        {
+          "charIndex": 2,
+          "startMs": 540,
+          "endMs": 780
+        },
+        {
+          "charIndex": 3,
+          "startMs": 780,
+          "endMs": 1660
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1660,
+          "endMs": 1860
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1860,
+          "endMs": 2140
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2140,
+          "endMs": 2420
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2420,
+          "endMs": 2760
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2760,
+          "endMs": 3140
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3140,
+          "endMs": 3520
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3520,
+          "endMs": 4020
+        },
+        {
+          "charIndex": 11,
+          "startMs": 4020,
+          "endMs": 4100
+        }
+      ]
     }
   }
 ]
 ```
+
+## Final Stage 4
 
 ```json
 [
@@ -137,7 +461,74 @@ Base L465/R056, allowed 475.
       "prefixText": "反面不但有答案而",
       "suffixText": "有說明",
       "prefixSrc": "/assets/lessons/L475/audio/L475-G02-prefix.m4a",
-      "suffixSrc": "/assets/lessons/L475/audio/L475-G02-suffix.m4a"
+      "suffixSrc": "/assets/lessons/L475/audio/L475-G02-suffix.m4a",
+      "prefixAudio": {
+        "src": "/assets/lessons/L475/audio/L475-G02-prefix.m4a",
+        "durationMs": 3334,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 500
+          },
+          {
+            "charIndex": 1,
+            "startMs": 500,
+            "endMs": 800
+          },
+          {
+            "charIndex": 2,
+            "startMs": 800,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1280,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1480,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1880,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2160,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2520,
+            "endMs": 3100
+          }
+        ]
+      },
+      "suffixAudio": {
+        "src": "/assets/lessons/L475/audio/L475-G02-suffix.m4a",
+        "durationMs": 1382,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 900
+          },
+          {
+            "charIndex": 2,
+            "startMs": 900,
+            "endMs": 1160
+          }
+        ]
+      }
     }
   },
   {
@@ -241,3 +632,5 @@ Base L465/R056, allowed 475.
   }
 ]
 ```
+
+Coverage 且3/3、而4/2、反3/2、案2/2、題1/1、答2/1 PASS. Han 12,10,12,11,12.
