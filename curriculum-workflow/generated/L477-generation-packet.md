@@ -2496,5 +2496,5 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Transcript audit: exact Han match PASS for all ten files; no manual-listening claim.
 - Timing audit: complete charTimings PASS for five sentences and G02 prefix/suffix.
 - Vocabulary/coverage/Stage 4 indexes and mappings: PASS.
-- Browser QA: pending immutable asset commit.
+- Browser QA: PASS at immutable asset commit `92d6a9997a3c6f5f98f12f2122602a1ade743e98`; 5/5 images loaded at 1024×1024 and all 11 playback controls reached ended with no media errors.
 - Release blockers: R057, R058, L472, L473, L474, L475, L476. These block main integration only.
