@@ -1759,7 +1759,7 @@
         "8": "ㄎㄨㄥˋ"
       },
       "imageNotes": "手工桌上，主角女孩翻起一張單面花紋紙的一角；正面大部分朝上，清楚露出小花圖案，翻起處露出空白反面。同一張紙的兩面同時可見，旁邊放剪刀與膠水。不要畫成兩張不同紙。",
-      "imagePrompt": "Square 1:1 rich warm pencil-and-gouache-watercolor modern children picture-book illustration matching the established lesson style. At a craft table, the recurring protagonist girl compares exactly two separate matching sheets of pink floral craft paper. The left sheet lies completely flat and shows its patterned front over the whole sheet. The right sheet is separate and clearly spaced apart; the girl lifts it so the large surface facing the viewer is its blank white reverse, while a narrow curled lower edge reveals the same pink floral pattern and proves it is matching one-sided paper. Make the two-sheet comparison physically plausible and immediately readable: one flat patterned front and one lifted blank reverse. Child-safe scissors and glue may sit nearby. No third sheet, readable text, letters, numbers, labels, arrows, logos, watermarks, torn paper or ambiguous joined sheets.",
+      "imagePrompt": "Square 1:1 warm watercolor children picture-book illustration in the established lesson style. At a craft table, the recurring protagonist girl compares exactly two separate sheets. The left sheet lies completely flat and displays a pink floral pattern over its whole visible surface. The right sheet is lifted by the girl and is completely plain clean white, with no pattern anywhere, no patterned underside, no colored border and no marks. Keep the two sheets clearly separated and immediately readable as one patterned example and one blank example. Child-safe scissors and glue may sit nearby. No third sheet, text, letters, numbers, arrows, labels, logos or watermarks.",
       "approved": true,
       "imageSrc": "/assets/lessons/L476/images/L476-S04.webp",
       "audio": {
@@ -2470,12 +2470,12 @@
   },
   "latestMainChecked": "33ba62a69df2de88e8aaa49a2dd45c4347c540f7",
   "productionQA": {
-    "imageStyle": "Second S04 teacher repair completed: exactly two separate matching floral sheets are shown side by side. The left sheet lies flat with the full patterned front visible; the right matching sheet is lifted with its blank white reverse dominant and a narrow curled floral edge proving the matching front. Recurring protagonist/style PASS; no readable text.",
+    "imageStyle": "Third S04 teacher repair completed: exactly two clearly separate sheets remain. The left sheet is fully floral and flat; the sheet held up on the right is completely plain white with no patterned edge, underside or reverse-side construction detail. Recurring protagonist/style PASS; no readable text.",
     "audioPipeline": "L476-S05 was regenerated as one complete sentence with OpenAI gpt-4o-mini-tts shimmer after teacher heard 問題 as 溫題. No cutting or splicing. The same repaired S05 file is reused by G05 correct; all other audio is unchanged.",
     "timingReview": "Only L476-S05 charTimings were regenerated from the repaired final M4A; G05 correct reuses the same audio and timing. Ordered, nonoverlapping timing spans remain within the 4000 ms file duration.",
     "pronunciation": "Independent gpt-audio-1.5 review of the final processed S05 M4A returned exact transcript 這個問題我還沒想到答案, Taiwan Mandarin, 問 fourth tone (sounds like 問, not 溫), 題 second tone, 還 second tone, 答 second tone, no defects, confidence 0.99.",
     "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-    "packageIntake": "PASS on pushed origin/codex/l476-complete-package at 67a3b8c971bf4cb032ec97e30e93a43711364764 with --strict: dependency-blocked-asset-complete, 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
-    "manualPlayback": "Teacher confirmed the repaired S05/G05-correct audio has no problem after 55b1eb9d3add0c563b6c670d18c329cc8e110b65. S04 image was still rejected as visually strange and has now been replaced with the teacher-suggested two-sheet comparison; renewed S04 visual acceptance is pending."
+    "packageIntake": "Pending strict intake on pushed third S04 repair.",
+    "manualPlayback": "Teacher confirmed the S05/G05-correct audio has no problem. At 420d703ad24e2486f395ee969751996597097ad9, teacher requested removing every attempted floral detail from the held sheet; the held sheet is now completely plain white. Renewed S04 visual acceptance is pending."
   }
 }

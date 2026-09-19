@@ -57,17 +57,18 @@
     {
       "id": "L476-S04",
       "path": "public/assets/lessons/L476/images/L476-S04.webp",
-      "sha256": "d9c4e847e3b648da5522868a769ee3e499802bb9a197fb782b3b8b31941c67a3",
+      "sha256": "ddfb2d584d96fb677243776b027713cae5e874a6855011b9f8939d6f66682eca",
       "dimensions": "1024x1024",
       "styleLock": "PASS",
       "cast": "PASS recurring protagonist",
-      "semantic": "PASS: exactly two separate matching sheets; left sheet shows the complete floral front, while the lifted right sheet shows a blank white reverse with a narrow curled floral edge.",
+      "semantic": "PASS: two separate sheets; left is a flat floral sheet, while the sheet held on the right is entirely plain white with no patterned edge or underside.",
       "readableText": "none",
       "rejectedDrafts": [
         "Original package S04 at review ref 3ae5ee3c1d6d4f71dfc2836731dbd2ec16dc7931: teacher rejected unclear page-turn geometry.",
-        "First repair at 55b1eb9d3add0c563b6c670d18c329cc8e110b65: teacher rejected the one-sheet page-turn composition as still visually strange."
+        "First repair at 55b1eb9d3add0c563b6c670d18c329cc8e110b65: teacher rejected the one-sheet page-turn composition as still visually strange.",
+        "Two-sheet repair at 420d703ad24e2486f395ee969751996597097ad9: teacher rejected the floral edge on the held sheet as visually strange."
       ],
-      "repairReference": "Teacher-directed two-sheet comparison: one flat patterned front and one lifted matching blank reverse."
+      "repairReference": "Teacher direction: do not attempt any pattern on the held sheet; make it completely plain white."
     },
     {
       "id": "L476-S05",
