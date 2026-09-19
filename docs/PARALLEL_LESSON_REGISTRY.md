@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L476 | 故 | request-ready | Production E | codex/l476-complete-package @ 9d220406 | L470, L471, L472, L473, L474, L475 | 答 題 案 反 而 且 | curriculum-workflow/lesson-requests/L476.json; curriculum-workflow/generated/L476-generation-packet.md; curriculum-workflow/drafts/L476-draft.json | curriculum-workflow/audio-inbox/L476/; public/assets/lessons/L476/ | Teacher-approved request captured; 476-character ceiling, pronunciation overrides, coverage, sentence breaks and Stage 4 indexes mechanically checked. New full package; dependencies and R057/R058 block Release integration only. |
+| L476 | 故 | ready-blocked-by-dependency | Production E | codex/l476-complete-package @ 9d220406 | L470, L471, L472, L473, L474, L475 | 答 題 案 反 而 且 | curriculum-workflow/lesson-requests/L476.json; curriculum-workflow/generated/L476-generation-packet.md; curriculum-workflow/drafts/L476-draft.json; curriculum-workflow/generated/L476-production-report.md | public/assets/lessons/L476/ | Production package complete locally: 5 final images, 10 final audio files, main/Stage 4 timings, image provenance, pronunciation review and technical QA. S01-S05 style-lock/cast PASS; no rejected image drafts. Initial S04 and G05 wrong-one audio rejected and regenerated as complete units; final listening PASS. Browser QA fallback remains. Dependencies L470-L475 and R057/R058 block Release integration only. |
 
 ## Status Values
 

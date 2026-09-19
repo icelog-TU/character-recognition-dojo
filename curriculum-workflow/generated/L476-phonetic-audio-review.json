@@ -1,0 +1,127 @@
+{
+  "unit": "L476",
+  "model": "gpt-audio-1.5",
+  "scope": "final processed M4A technical auditory review; not teacher human acceptance",
+  "results": [
+    {
+      "file": "char-u6545.m4a",
+      "expected": "故",
+      "critical": "One complete syllable 故 ㄍㄨˋ, fourth tone.",
+      "transcriptTraditional": "故",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The syllable was pronounced clearly with correct fourth tone.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.99
+    },
+    {
+      "file": "L476-S01.m4a",
+      "expected": "小光會寫故事而且會畫圖",
+      "critical": "小光 exact; 故事 ㄍㄨˋ ㄕˋ; 而且 natural Taiwan Mandarin.",
+      "transcriptTraditional": "小光會寫故事而且會畫圖",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.98
+    },
+    {
+      "file": "L476-S02.m4a",
+      "expected": "他故意說反話大家都笑了",
+      "critical": "故意 ㄍㄨˋ ㄧˋ; 反話 exact; no added 好熱 or explanation; no unnatural long pause.",
+      "transcriptTraditional": "他故意說反話大家都笑了",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All expected words and tones are correct, no extraneous content.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L476-S03.m4a",
+      "expected": "這本故事書很大而且很重",
+      "critical": "Final 重 must be ㄓㄨㄥˋ fourth tone, meaning heavy, not ㄔㄨㄥˊ.",
+      "transcriptTraditional": "這本故事書很大而且很重",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All words are present and correctly pronounced, final '重' was pronounced as ㄓㄨㄥˋ.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    },
+    {
+      "file": "L476-S04.m4a",
+      "expected": "正面有圖案反面是空白",
+      "critical": "圖案 exact; 反面 exact; 空白 must use 空 ㄎㄨㄥˋ fourth tone in Taiwan Mandarin, not ㄎㄨㄥ first tone; no unnatural long pause.",
+      "transcriptTraditional": "正面有圖案，反面是空白。",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All key terms correctly pronounced with appropriate tones. No unnatural pauses.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    },
+    {
+      "file": "L476-S05.m4a",
+      "expected": "這個問題我還沒想到答案",
+      "critical": "問題 ㄨㄣˋ ㄊㄧˊ; 還 ㄏㄞˊ; 答案 ㄉㄚˊ ㄢˋ.",
+      "transcriptTraditional": "這個問題我還沒想到答案",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All critical words were produced with correct tones and pronunciation.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L476-G02-prefix.m4a",
+      "expected": "小光會寫",
+      "critical": "Exactly prefix, complete final 寫, no 故.",
+      "transcriptTraditional": "小光會寫",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The phrase matches the expected wording with proper tone and clear articulation.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L476-G02-suffix.m4a",
+      "expected": "事而且會畫圖",
+      "critical": "Starts exactly with 事 ㄕˋ; must not add 故 or 故事; complete final 圖.",
+      "transcriptTraditional": "事而且會畫圖",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "No extra words; sentence starts correctly with 事 and ends with 圖 fully pronounced.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L476-G05-wrong-one.m4a",
+      "expected": "這個問題你還沒想到答案",
+      "critical": "Exact full sentence; 你 and 答案 ㄉㄚˊ ㄢˋ; complete final.",
+      "transcriptTraditional": "這個問題你還沒想到答案",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The sentence matches exactly, 你 and 答案 are correctly pronounced, tones are accurate, and the final syllable is complete.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.98
+    },
+    {
+      "file": "L476-G05-wrong-two.m4a",
+      "expected": "這個問題我還沒想到方法",
+      "critical": "Exact full sentence; 我 and 方法 ㄈㄤ ㄈㄚˇ; complete final.",
+      "transcriptTraditional": "這個問題我還沒想到方法",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "Sentence matches expected with correct tones for 我 and 方法. No major issues noted.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# L476「故」Production E package
+
+Status: `dependency-blocked-asset-complete`.
+
+L476 is based on `origin/main@33ba62a69df2de88e8aaa49a2dd45c4347c540f7`, where formal production ends at L465「招」and R056. The package preserves the teacher-approved 476-character ceiling: 469 formally learned characters, provisional `答、題、案、反、而、且`, and new `故`. Release blockers are R057/R058 and L470-L475.
+
+## Final content and Stage 4
+
+The five approved sentences, line breaks, image notes, pronunciation overrides, coverage counts and canonical G01-G05 plan match the handoff. The allowed-character sweep, Han-only indexes, G03 choices, G04 single-Han order mapping and G05 near misses pass mechanically. S02 uses the final teacher-approved cold-weather deliberate opposite-speech scene; abandoned joke concepts were not used.
+
+## Images
+
+- S01 style-lock PASS, cast PASS: fixed Xiaoguang writes and illustrates the same storybook while the recurring protagonist watches.
+- S02 style-lock PASS, cast PASS: the fixed sporty boy performs in a cold park; fixed Xiaoyue and the protagonist laugh, and the hot-weather thought bubble remains separate.
+- S03 style-lock PASS, cast PASS: the recurring protagonist and father safely handle one large, thick storybook.
+- S04 style-lock PASS, cast PASS: the recurring protagonist exposes the patterned front and blank reverse of one continuous sheet.
+- S05 style-lock PASS, cast PASS: the recurring protagonist and father play a supportive image-only guessing game.
+
+All five final WebPs were viewed together and compared with L058, refined proportion references and relevant cast anchors. They are square 1024px, 127-211KB, phone-readable and contain no readable text or numbers. No image draft was rejected.
+
+## Audio and timing
+
+Ten final files were generated with OpenAI `gpt-4o-mini-tts` / `shimmer`, then processed by `npm run assets:audio -- --lesson L476` to mono AAC 44.1kHz M4A. Standalone `故`, five sentences, both G02 fragments and both full G05 distractors were generated independently without cutting or splicing.
+
+The first S04 audio was rejected because `空白` used first-tone ㄎㄨㄥ and the clause pause was too long. It was regenerated as a complete sentence using spoken homophone `控白` to force Taiwan ㄎㄨㄥˋ. The first G05 wrong-one was rejected because it added `一` after `這`; it was regenerated as the exact eleven-Han sentence. Final exact-text alignment covers all nine timing-bearing tracks. Independent `gpt-audio-1.5` listening passes all ten M4As, including `故` ㄍㄨˋ, S03 `重` ㄓㄨㄥˋ, S04 `空白` ㄎㄨㄥˋ ㄅㄞˊ, S05 `還` ㄏㄞˊ and `答案` ㄉㄚˊ ㄢˋ.
+
+## Verification scope
+
+This is a new full lesson package, so lesson-local request/package audit, lesson-local production validation, strict asset-format audit and pushed-branch package intake are required. Full `npm run verify` is not applicable because the dependency-blocked package intentionally leaves shared production JSON, planner and ledger to Release. Browser playback QA was not certified because this control surface has no reliable computer-audio return or physical-phone microphone channel; live highlight synchronization and G02 phone recording/replay remain unverified. Teacher human image/audio review remains pending.
+
+Release owns production JSON, planner, ledger, review-pair sequencing, integration and deployment.
