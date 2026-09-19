@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L469 | 應 / 普通五句課 | needs-rework | Production D | codex/l469-complete-package; claim e266eefc; assets 1624da90 | L466, L467, L468; R057/R058 | 絕、活、該 | curriculum-workflow/lesson-requests/L469.json; generated/L469-generation-packet.md; drafts/L469-draft.json | public/assets/lessons/L469/; 5 WebP, 10 M4A, 9 alignments | Media/style/cast PASS; Browser QA found shared-app G04 initial order already correct; shared app owner follow-up required. G02 hold/replay tooling fallback. |
+| L469 | 應 / 普通五句課 | ready-blocked-by-dependency | Package Rescue / Production D | codex/l469-package-rescue | L466, L467, L468; R057/R058 | 絕、活、該 | curriculum-workflow/lesson-requests/L469.json; generated/L469-generation-packet.md; drafts/L469-draft.json | public/assets/lessons/L469/; 5 WebP, 10 M4A, 9 alignments | Main commit `29406e21` prevents G04 from starting solved; exact L469 seed now yields 手/絕/活/拿 and deterministic recheck PASS. Sentences, Stage 4 options, images, audio and timings unchanged. Complete package awaits dependency-ordered Release integration. |
 
 ## Status Values
 

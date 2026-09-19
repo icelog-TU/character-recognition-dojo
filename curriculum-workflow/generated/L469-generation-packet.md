@@ -1,12 +1,12 @@
 # L469 應 Production D package
 
-Status: needs-rework
+Status: dependency-blocked-asset-complete
 
-Branch codex/l469-complete-package. Claim e266eefc; pushed assets checkpoint 1624da90c9041b17c24fc8c1f24ad8ec91972924. Base acd71a5bd25e927c209ed749506aea1d3cc643a0, formal L465 招 / R056, 469 learned characters. Full allowedChars 473 = formal 469 + 絕活該 + 應. Dependencies L466/L467/L468 and R057/R058 release milestone. No main integration or shared app changes.
+Rescue branch codex/l469-package-rescue from source package 4e940b58028b5e221fa0f786fbe0edce9b46f65c. Original claim e266eefc; pushed assets checkpoint 1624da90c9041b17c24fc8c1f24ad8ec91972924. Base acd71a5bd25e927c209ed749506aea1d3cc643a0, formal L465 招 / R056, 469 learned characters. Full allowedChars 473 = formal 469 + 絕活該 + 應. Dependencies L466/L467/L468 and R057/R058 release milestone. No main integration or shared app changes.
 
-## Required shared-app follow-up
+## Resolved shared-app follow-up
 
-Browser QA found G04 initial cards already in correct order 拿/手/絕/活. The approved stored option order remains 絕/拿/活/手 with correctOrder 2/0/3/1. Source-backed deterministic reproduction of stableShuffledOptions in src/App.tsx:6613 with seed L469:L469-G04:L469-S03 yields correctOrder [0,1,2,3]. The helper prevents an unchanged input permutation but does not prevent the correct-answer permutation. This violates CURRICULUM_PRODUCTION_SOP initial partial-order shuffle requirement. Shared-app owner must repair the permutation guard, then rerun L469 G04. Production does not alter the teacher-approved options/ids to mask the shared behavior. Package is not represented as dependency-blocked-asset-complete.
+The original Browser QA correctly found that seed `L469:L469-G04:L469-S03` produced the solved initial order 拿/手/絕/活 with correctOrder [0,1,2,3]. Latest main includes commit `29406e21ead23463b62b06812997e6a871ffcef1` (`Prevent partial-order cards from starting solved`). Its `keepPartialOrderOptionsUnsolved` guard rotates this exact result to 手/絕/活/拿 with correctOrder [1,2,3,0], so the round no longer starts solved. Deterministic source-backed recheck against main `7d2827d50146a4a3a10ba2138b35b72802d497f8` PASS. The teacher-approved stored options, ids and correctOrder values remain unchanged; Release performs final integration browser smoke after dependencies enter main.
 
 ## Image review
 
@@ -24,11 +24,11 @@ Ten final M4As, mono AAC 44100Hz, decode and volume gates PASS. G05 mean-volume 
 
 ## Browser QA
 
-390x844 phone-width UI: Stage 1 playback/主讀音 and Stage 2 3/3 completed; Stage 3 all five card controls played, layouts and active highlights inspected; S05 ㄧㄥˋ visible. G01/G03 completed; G02 red target and answer reveal ㄧㄥˋ inspected, replay control used; sustained recording and stitched replay untested because supported browser APIs lack press-and-hold recording. SOP browser fallback recorded, no human listening or ear-verified synchronization claimed. G04 accepts all four correct placements but initial-order defect above needs shared-app correction. G05 all three reader controls clicked, wrong fox red/correct frog green. Preview uses full canonical isolated lesson; old-character zhuyin absent only in this fixture. Temporary tab closed, viewport reset, preview stopped; shared curriculum/scripts restored.
+390x844 phone-width UI: Stage 1 playback/主讀音 and Stage 2 3/3 completed; Stage 3 all five card controls played, layouts and active highlights inspected; S05 ㄧㄥˋ visible. G01/G03 completed; G02 red target and answer reveal ㄧㄥˋ inspected, replay control used; sustained recording and stitched replay untested because supported browser APIs lack press-and-hold recording. SOP browser fallback recorded, no human listening or ear-verified synchronization claimed. G04 accepts all four correct placements. Its former solved initial order is now prevented by main commit `29406e21`; deterministic recheck yields unsolved order 手/絕/活/拿. G05 all three reader controls clicked, wrong fox red/correct frog green. Preview uses full canonical isolated lesson; old-character zhuyin absent only in this fixture. Final integrated browser smoke remains Release-owned.
 
 ## Verification
 
-Startup tools:check, ai:check and curriculum:audit-state PASS. Allowed characters, coverage, display lines, Han counts and Stage 4 mapping PASS. Lesson-local validate:production PASS; all media decode/format/size/volume gates PASS. Final strict pushed-ref intake result is recorded separately; needs-rework is intentionally retained while shared-app QA finding remains. Full integration and npm run verify belong to Release.
+Startup tools:check, ai:check and curriculum:audit-state PASS. Allowed characters, coverage, display lines, Han counts and Stage 4 mapping PASS. Lesson-local validate:production PASS; all media decode/format/size/volume gates PASS. Package Rescue verified the main G04 guard against the exact L469 seed and updated status to dependency-blocked-asset-complete. Strict pushed-ref intake and broader verification are rerun on the rescue ref; final dependency-ordered integration remains Release-owned.
 
 ## Final approved sentences
 

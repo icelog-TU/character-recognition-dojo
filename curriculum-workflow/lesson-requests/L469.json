@@ -509,7 +509,7 @@
     "L467",
     "L468"
   ],
-  "packageStatus": "needs-rework",
+  "packageStatus": "dependency-blocked-asset-complete",
   "kind": "lesson",
   "targetSentenceCount": 5,
   "teacherNotes": "Standalone 應 and 應該 ㄧㄥ; S05/G02 回應 ㄧㄥˋ. Preserve indexed zhuyinOverrides. Prefix ends 回, suffix exactly 我. No 答反贏 in student text. No readable text/number image exception.",
@@ -1282,5 +1282,53 @@
     "絕": 2,
     "招": 1,
     "待": 1
+  },
+  "packageRescue": {
+    "sourcePackageSha": "4e940b58028b5e221fa0f786fbe0edce9b46f65c",
+    "sourceBranch": "origin/codex/l469-complete-package",
+    "originalIssue": "L469-G04 deterministic initial shuffle produced the solved order 拿／手／絕／活.",
+    "sharedFix": {
+      "commit": "29406e21ead23463b62b06812997e6a871ffcef1",
+      "title": "Prevent partial-order cards from starting solved",
+      "presentInMain": "7d2827d50146a4a3a10ba2138b35b72802d497f8",
+      "helper": "keepPartialOrderOptionsUnsolved"
+    },
+    "deterministicRecheck": {
+      "seed": "L469:L469-G04:L469-S03",
+      "storedOptionOrder": [
+        "絕",
+        "拿",
+        "活",
+        "手"
+      ],
+      "rawShuffle": [
+        "拿",
+        "手",
+        "絕",
+        "活"
+      ],
+      "rawCorrectOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "guardedInitialOrder": [
+        "手",
+        "絕",
+        "活",
+        "拿"
+      ],
+      "guardedCorrectOrder": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "startsSolved": false,
+      "result": "PASS"
+    },
+    "packageChanges": "Only package status and rescue QA records changed. Approved sentences, Stage 4 options/ids/correctOrder, images, audio, and timings are unchanged.",
+    "releaseNote": "Release must integrate in dependency order and perform the final browser smoke with latest main shared code."
   }
 }
