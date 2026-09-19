@@ -1023,57 +1023,57 @@
       "imageSrc": "/assets/lessons/L470/images/L470-S01.webp",
       "audio": {
         "src": "/assets/lessons/L470/audio/L470-S01.m4a",
-        "durationMs": 4042,
+        "durationMs": 4330,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 320
+            "endMs": 380
           },
           {
             "charIndex": 1,
-            "startMs": 320,
-            "endMs": 640
+            "startMs": 380,
+            "endMs": 760
           },
           {
             "charIndex": 2,
-            "startMs": 640,
-            "endMs": 1080
+            "startMs": 760,
+            "endMs": 1200
           },
           {
             "charIndex": 3,
-            "startMs": 1080,
-            "endMs": 1280
+            "startMs": 1200,
+            "endMs": 1460
           },
           {
             "charIndex": 4,
-            "startMs": 1280,
-            "endMs": 1680
+            "startMs": 1460,
+            "endMs": 1820
           },
           {
             "charIndex": 5,
-            "startMs": 1680,
-            "endMs": 2200
+            "startMs": 1820,
+            "endMs": 2320
           },
           {
             "charIndex": 6,
-            "startMs": 2200,
-            "endMs": 2540
+            "startMs": 2320,
+            "endMs": 2640
           },
           {
             "charIndex": 7,
-            "startMs": 2540,
-            "endMs": 2860
+            "startMs": 2640,
+            "endMs": 2920
           },
           {
             "charIndex": 8,
-            "startMs": 2860,
-            "endMs": 3160
+            "startMs": 2920,
+            "endMs": 3240
           },
           {
             "charIndex": 9,
-            "startMs": 3160,
-            "endMs": 3400
+            "startMs": 3240,
+            "endMs": 3440
           }
         ]
       }
@@ -1247,62 +1247,62 @@
       "imageSrc": "/assets/lessons/L470/images/L470-S04.webp",
       "audio": {
         "src": "/assets/lessons/L470/audio/L470-S04.m4a",
-        "durationMs": 4106,
+        "durationMs": 4338,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 220
+            "endMs": 360
           },
           {
             "charIndex": 1,
-            "startMs": 220,
-            "endMs": 620
+            "startMs": 360,
+            "endMs": 740
           },
           {
             "charIndex": 2,
-            "startMs": 620,
-            "endMs": 940
+            "startMs": 740,
+            "endMs": 1100
           },
           {
             "charIndex": 3,
-            "startMs": 940,
-            "endMs": 1200
+            "startMs": 1100,
+            "endMs": 1360
           },
           {
             "charIndex": 4,
-            "startMs": 1200,
-            "endMs": 1340
+            "startMs": 1360,
+            "endMs": 1520
           },
           {
             "charIndex": 5,
-            "startMs": 1340,
-            "endMs": 1660
+            "startMs": 1520,
+            "endMs": 1800
           },
           {
             "charIndex": 6,
-            "startMs": 1660,
-            "endMs": 2340
+            "startMs": 1800,
+            "endMs": 2520
           },
           {
             "charIndex": 7,
-            "startMs": 2340,
-            "endMs": 2580
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2580,
+            "startMs": 2520,
             "endMs": 2820
           },
           {
-            "charIndex": 9,
+            "charIndex": 8,
             "startMs": 2820,
-            "endMs": 3180
+            "endMs": 3020
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3020,
+            "endMs": 3360
           },
           {
             "charIndex": 10,
-            "startMs": 3180,
-            "endMs": 3420
+            "startMs": 3360,
+            "endMs": 3600
           }
         ]
       }
@@ -1915,11 +1915,11 @@
   "latestMainChecked": "acd71a5b",
   "productionQA": {
     "imageStyle": "S01-S04 style-lock and recurring family cast PASS; S03 generic host remains distinct; S05 Xiaoyue reference and inside/outside bus positions PASS. Five final WebPs were reviewed together. No readable text, numbers or logos; no rejected drafts.",
-    "audioPipeline": "OpenAI gpt-4o-mini-tts shimmer; repository assets:audio produced 10 final mono AAC 44.1kHz M4As. Standalone 答, five sentences, both G02 fragments and both G05 distractors were generated as independent complete units; no cutting or splicing.",
-    "timingReview": "OpenAI whisper-1 word timestamps with exact text context produced complete main-sentence, G02-prefix and G05 distractor tracks. Independent listening verified the two-syllable G02 suffix after short-audio ASR hallucination; its two syllables were manually bounded. S05 final 我／招／手 span was redistributed after independent listening because Whisper assigned only 20ms to 招. All final spans are ordered, nonoverlapping, within duration and at least 80ms.",
-    "pronunciation": "Independent gpt-audio-1.5 technical listening PASS on all 10 final processed M4As: standalone 答 and 答應 use ㄉㄚ; 回答、問答、答對 use ㄉㄚˊ; 應 is ㄧㄥˋ; 絕活 is ㄐㄩㄝˊ ㄏㄨㄛˊ. Exact wording and final syllables pass.",
+    "audioPipeline": "OpenAI gpt-4o-mini-tts shimmer; repository assets:audio produced 10 final mono AAC 44.1kHz M4As. Standalone 答, five sentences, both G02 fragments and both G05 distractors were generated as independent complete units; no cutting or splicing. Teacher repair after ref c6a4ebceffe8f67fb2131ff73dab9645bb917b59: S01 and S04 were regenerated as complete units using the spoken homophone 搭應 to force the Taiwan-realized first-tone ㄉㄚ; no cutting or splicing.",
+    "timingReview": "OpenAI whisper-1 word timestamps with exact text context produced complete main-sentence, G02-prefix and G05 distractor tracks. Independent listening verified the two-syllable G02 suffix after short-audio ASR hallucination; its two syllables were manually bounded. S05 final 我／招／手 span was redistributed after independent listening because Whisper assigned only 20ms to 招. All final spans are ordered, nonoverlapping, within duration and at least 80ms. S01 and S04 timings were regenerated from the repaired final M4As.",
+    "pronunciation": "Independent gpt-audio-1.5 technical listening PASS on all 10 final processed M4As. After teacher review at c6a4ebce, repaired S01 and S04 specifically pass 答應 as Taiwan-realized 搭應: first-tone ㄉㄚ, not second-tone 達; both are Taiwan-natural and exact. Other contexts retain 回答、問答、答對 ㄉㄚˊ, 應 ㄧㄥˋ and 絕活 ㄐㄩㄝˊ ㄏㄨㄛˊ.",
     "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-    "packageIntake": "PASS on pushed origin/codex/l470-complete-package at e66f3136b1602b0798f7248a6fab1f848a4a57a0 with --strict: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
-    "manualPlayback": "Teacher human image/audio review is pending. Independent technical image, transcript, pronunciation, timing and format checks pass."
+    "packageIntake": "Pending pushed-branch strict intake after S01/S04 pronunciation repair.",
+    "manualPlayback": "Teacher review at c6a4ebceffe8f67fb2131ff73dab9645bb917b59 requested Taiwan-realized 搭應 pronunciation for S01 and S04. Both complete audio units were replaced; renewed teacher listening remains pending."
   }
 }

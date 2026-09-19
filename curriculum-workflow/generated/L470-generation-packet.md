@@ -2506,3 +2506,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 ## Pushed package intake evidence
 
 Asset package commit `e66f3136b1602b0798f7248a6fab1f848a4a57a0` passed `npm run curriculum:package-intake -- --unit L470 --ref origin/codex/l470-complete-package --strict`: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.
+
+## Teacher pronunciation repair after ref c6a4ebceffe8f67fb2131ff73dab9645bb917b59
+
+S01 and S04 were regenerated as complete audio units so `答應` is realized like `搭應`, with first-tone ㄉㄚ rather than second-tone `達`. The S04 image was retained because its review note concerns pronunciation. Final processed audio was re-aligned and independently heard as first-tone `搭`, Taiwan-natural and exact. Renewed teacher listening remains pending.

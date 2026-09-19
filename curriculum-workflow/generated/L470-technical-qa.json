@@ -23,9 +23,18 @@
   },
   "images": "PASS",
   "audio": "PASS",
-  "pronunciation": "PASS",
+  "pronunciation": "PASS; repaired S01/S04 final M4As heard as Taiwan-realized 搭應, first-tone ㄉㄚ, Taiwan-natural and defect-free",
   "timings": "PASS",
   "stage4": "PASS",
   "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
-  "packageIntake": "PASS on pushed origin/codex/l470-complete-package at e66f3136b1602b0798f7248a6fab1f848a4a57a0 with --strict: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects."
+  "packageIntake": "pending pushed ref after pronunciation repair",
+  "teacherRepair": {
+    "sourceRef": "c6a4ebceffe8f67fb2131ff73dab9645bb917b59",
+    "scope": [
+      "L470-S01 audio",
+      "L470-S04 audio"
+    ],
+    "note": "S04 marker was attached to image but requested pronunciation; image unchanged",
+    "status": "technical PASS; renewed teacher listening pending"
+  }
 }

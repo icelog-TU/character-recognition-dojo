@@ -27,3 +27,7 @@ Release owns production JSON, planner, ledger, review-pair sequencing, integrati
 ## Pushed package intake evidence
 
 Asset package commit `e66f3136b1602b0798f7248a6fab1f848a4a57a0` passed `npm run curriculum:package-intake -- --unit L470 --ref origin/codex/l470-complete-package --strict`: status `dependency-blocked-asset-complete`, 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.
+
+## Teacher pronunciation repair after ref c6a4ebceffe8f67fb2131ff73dab9645bb917b59
+
+Teacher review requested the Taiwan-realized pronunciation of `答應`, with `答` sounding like `搭` rather than `達`, in S01 and S04. Although the second review marker was attached to the S04 image row, its text is explicitly an audio pronunciation request, so the accepted S04 image was preserved. Both sentence audio files were regenerated as complete units with `gpt-4o-mini-tts` / `shimmer`, using the spoken homophone `搭應` to force first-tone ㄉㄚ. No cutting or splicing was used. Final processed M4As were re-aligned; independent `gpt-audio-1.5` review identifies both as first-tone `搭`, Taiwan-natural, exact and defect-free. Renewed teacher listening remains pending.
