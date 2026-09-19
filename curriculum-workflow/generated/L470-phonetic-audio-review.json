@@ -1,0 +1,127 @@
+{
+  "unit": "L470",
+  "model": "gpt-audio-1.5",
+  "scope": "final processed M4A technical auditory review; not teacher human acceptance",
+  "results": [
+    {
+      "file": "char-u7b54.m4a",
+      "expected": "答",
+      "critical": "One complete syllable 答 ㄉㄚ dā, first tone, as in 答應; not ㄉㄚˊ.",
+      "transcriptTraditional": "答",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "Single syllable '答' heard clearly with correct first tone. No additional syllables or unnatural pauses detected.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    },
+    {
+      "file": "L470-S01.m4a",
+      "expected": "爸爸答應教我拿手絕活",
+      "critical": "答應 must be ㄉㄚ ㄧㄥˋ; 絕活 must be ㄐㄩㄝˊ ㄏㄨㄛˊ and not 活佛.",
+      "transcriptTraditional": "爸爸答應教我拿手絕活",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All key words articulated with correct tones and pronunciation. No unintended substitutions or omissions.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L470-S02.m4a",
+      "expected": "不知道就不該亂回答",
+      "critical": "回答 must use 答 ㄉㄚˊ second tone; complete final syllable.",
+      "transcriptTraditional": "不知道就不該亂回答",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The sentence matches word-for-word and tones are correct. The final syllable '答' is in the second tone as required.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    },
+    {
+      "file": "L470-S03.m4a",
+      "expected": "問答活動中我全都答對了",
+      "critical": "Both 答 in 問答 and 答對 must be ㄉㄚˊ second tone.",
+      "transcriptTraditional": "問答活動中我全都答對了",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "Both occurrences of 答 were pronounced with the correct second tone (ㄉㄚˊ).",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.98
+    },
+    {
+      "file": "L470-S04.m4a",
+      "expected": "答應別人的事就不該忘記",
+      "critical": "Initial 答應 must be ㄉㄚ ㄧㄥˋ; no missing words.",
+      "transcriptTraditional": "答應別人的事就不該忘記",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "All words present. Initial 答應 pronounced with ㄉㄚ ㄧㄥˋ correctly. No unnatural pauses or accent issues.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    },
+    {
+      "file": "L470-S05.m4a",
+      "expected": "小月在公車上向我招手",
+      "critical": "Exact sentence with 小月 and 我; complete final 手.",
+      "transcriptTraditional": "小月在公車上向我招手",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "Speaker delivered the sentence clearly with correct words and tones.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L470-G02-prefix.m4a",
+      "expected": "問答活動中我全都",
+      "critical": "答 in 問答 must be ㄉㄚˊ second tone; complete final 都.",
+      "transcriptTraditional": "問答活動中我全都",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The tones and words match the expected sentence. The second tone on 答 is correct, and 都 is fully pronounced.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.98
+    },
+    {
+      "file": "L470-G02-suffix.m4a",
+      "expected": "對了",
+      "critical": "Exactly two complete syllables 對了, no added speech.",
+      "transcriptTraditional": "對了",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "Both syllables are clear with correct tones. No extra or missing speech.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.98
+    },
+    {
+      "file": "L470-G05-wrong-one.m4a",
+      "expected": "小光在公車上向我招手",
+      "critical": "Exact full sentence with 小光 and 我; complete final 手.",
+      "transcriptTraditional": "小光在公車上向我招手",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The sentence was articulated clearly with correct tones and no noticeable accent issues.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    },
+    {
+      "file": "L470-G05-wrong-two.m4a",
+      "expected": "小月在公車上向他招手",
+      "critical": "Exact full sentence with 小月 and 他; complete final 手.",
+      "transcriptTraditional": "小月在公車上向他招手",
+      "matchesExpected": true,
+      "pronunciationResult": "PASS",
+      "criticalObservations": "The sentence was clear with correct wording, tones, and complete final syllable '手'.",
+      "finalSyllableComplete": true,
+      "defects": [],
+      "confidence": 0.96
+    }
+  ]
+}

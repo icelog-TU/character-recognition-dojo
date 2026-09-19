@@ -1,0 +1,37 @@
+{
+  "method": "Final-file Whisper alignments plus localized acoustic-envelope correction; not human ear verification",
+  "corrections": [
+    {
+      "sentence": "L475-S04",
+      "reason": "AI assigned 答 only 40ms. Acoustic envelope shows boundary after 的 around 600ms and rising 答 voiced onset around 620ms; adjusted local 的/答/案 boundaries only.",
+      "changes": [
+        {
+          "charIndex": 2,
+          "startMs": 460,
+          "endMs": 600
+        },
+        {
+          "charIndex": 3,
+          "startMs": 620,
+          "endMs": 840
+        },
+        {
+          "charIndex": 4,
+          "startMs": 840,
+          "endMs": 1240
+        }
+      ]
+    },
+    {
+      "sentence": "L475-S01",
+      "reason": "Final 明 voiced energy continues through about 3965ms; original AI end 3900ms too early. End placed at 4000ms, before silent tail.",
+      "changes": [
+        {
+          "charIndex": 11,
+          "startMs": 3660,
+          "endMs": 4000
+        }
+      ]
+    }
+  ]
+}

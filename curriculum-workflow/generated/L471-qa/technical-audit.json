@@ -1,0 +1,222 @@
+{
+  "unit": "L471",
+  "result": "REPAIRED PASS — TEACHER APPROVED",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "productionBase": {
+    "ref": "acd71a5bd25e927c209ed749506aea1d3cc643a0",
+    "latestLesson": "L465",
+    "learnedCharCount": 469,
+    "latestReview": "R056"
+  },
+  "allowedCharacterCount": 475,
+  "disallowedLearnerFacingChars": [],
+  "coverage": {
+    "targets": {
+      "題": 4,
+      "答": 3,
+      "應": 2,
+      "該": 3,
+      "活": 1,
+      "絕": 1
+    },
+    "actual": {
+      "題": 4,
+      "答": 3,
+      "應": 2,
+      "該": 3,
+      "活": 1,
+      "絕": 1
+    },
+    "result": "PASS"
+  },
+  "sentences": [
+    {
+      "id": "L471-S01",
+      "hanCount": 11,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 5,
+      "audioDurationMs": 2989,
+      "charTimingCount": 11,
+      "expectedTimingCount": 11
+    },
+    {
+      "id": "L471-S02",
+      "hanCount": 11,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 5,
+      "audioDurationMs": 3218,
+      "charTimingCount": 11,
+      "expectedTimingCount": 11
+    },
+    {
+      "id": "L471-S03",
+      "hanCount": 12,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 6,
+      "audioDurationMs": 5046,
+      "charTimingCount": 12,
+      "expectedTimingCount": 12
+    },
+    {
+      "id": "L471-S04",
+      "hanCount": 12,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 6,
+      "audioDurationMs": 3887,
+      "charTimingCount": 12,
+      "expectedTimingCount": 12
+    },
+    {
+      "id": "L471-S05",
+      "hanCount": 11,
+      "spokenHanMatch": true,
+      "displayJoinMatch": true,
+      "maxDisplayLineVisibleChars": 6,
+      "audioDurationMs": 3061,
+      "charTimingCount": 11,
+      "expectedTimingCount": 11
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L471-G01",
+      "type": "find-character",
+      "sentenceId": "L471-S01",
+      "targetChar": "題",
+      "targetCharIndex": 3,
+      "actualTarget": "題",
+      "targetIndexPass": true,
+      "missingIndexes": null,
+      "missingText": null
+    },
+    {
+      "id": "L471-G02",
+      "type": "teach-character",
+      "sentenceId": "L471-S04",
+      "targetChar": "題",
+      "targetCharIndex": 4,
+      "actualTarget": "題",
+      "targetIndexPass": true,
+      "missingIndexes": null,
+      "missingText": null
+    },
+    {
+      "id": "L471-G03",
+      "type": "missing-character",
+      "sentenceId": "L471-S03",
+      "targetChar": "題",
+      "targetCharIndex": 5,
+      "actualTarget": "題",
+      "targetIndexPass": true,
+      "missingIndexes": [
+        5
+      ],
+      "missingText": "題"
+    },
+    {
+      "id": "L471-G04",
+      "type": "partial-order",
+      "sentenceId": "L471-S02",
+      "targetChar": "答",
+      "targetCharIndex": 7,
+      "actualTarget": "答",
+      "targetIndexPass": true,
+      "missingIndexes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "missingText": "答不出來"
+    },
+    {
+      "id": "L471-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L471-S05",
+      "targetChar": "應",
+      "targetCharIndex": 8,
+      "actualTarget": "應",
+      "targetIndexPass": true,
+      "missingIndexes": null,
+      "missingText": null
+    }
+  ],
+  "gameOrderResult": "PASS",
+  "releaseBlockers": [
+    "R057",
+    "R058",
+    "L466",
+    "L467",
+    "L468",
+    "L469",
+    "L470"
+  ],
+  "sharedReleaseFilesTouched": false,
+  "browserQa": {
+    "status": "PASS",
+    "assetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L471&ref=46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "browser": "Chrome",
+    "summary": "PASS: repaired immutable commit loaded 5 sentence cards and 6 other audio items; all five 1024x1024 images loaded, including replaced S03/S05; all 11 playback controls reached ended state without media error, including replaced S01 and both G05 wrong options.",
+    "scope": [
+      "replaced L471-S03 and L471-S05 images",
+      "replaced L471-S01 audio",
+      "replaced L471-G05 wrong-one and wrong-two audio",
+      "full 5-image and 11-control regression playback"
+    ]
+  },
+  "repairHistory": [
+    {
+      "item": "L471-S01:audio",
+      "issue": "回答的回被老師聽成會",
+      "resolution": "Regenerated full sentence; selected S01-c after phonetic model identified 回答 as ㄏㄨㄟˊ ㄉㄚˊ; rebuilt S01 timing alignment.",
+      "status": "resolved-teacher-approved"
+    },
+    {
+      "item": "L471-S03:image",
+      "issue": "Open-book left/right page geometry and page sizes were inconsistent",
+      "resolution": "Regenerated with equal-width symmetric pages, centered binding, bird scene confined to left page and puppy/fish panels confined to right page.",
+      "status": "resolved-teacher-approved"
+    },
+    {
+      "item": "L471-S05:image",
+      "issue": "Watering can intersected the plant table; teacher requested a thought bubble showing daily watering",
+      "resolution": "Regenerated with the watering can fully separated on open floor and a mother-linked thought bubble showing the same girl watering a healthy plant.",
+      "status": "resolved-teacher-approved"
+    },
+    {
+      "item": "L471-G05-O2:audio",
+      "issue": "答應 required the audible 搭應 reading",
+      "resolution": "Regenerated full wrong-one sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+      "status": "resolved-teacher-approved"
+    },
+    {
+      "item": "L471-G05-O3:audio",
+      "issue": "答應 required the audible 搭應 reading",
+      "resolution": "Regenerated full wrong-two sentence; selected candidate after phonetic model identified 答應 as ㄉㄚ ㄧㄥˋ.",
+      "status": "resolved-teacher-approved"
+    }
+  ],
+  "teacherImageReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-09-19",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "5d4ed2bec49ec288138c6f40053972d46bf9df2f",
+    "repairedAssetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "scope": "All five final L471 images, including repaired S03 symmetric book spread and repaired S05 watering-can geometry plus thought bubble",
+    "statement": "471 图档跟音讯都审核通过了。"
+  },
+  "teacherAudioReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-09-19",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "5d4ed2bec49ec288138c6f40053972d46bf9df2f",
+    "repairedAssetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "scope": "All final L471 audio, including repaired S01 回答 and both G05 答應 wrong-option files",
+    "statement": "471 图档跟音讯都审核通过了。"
+  }
+}

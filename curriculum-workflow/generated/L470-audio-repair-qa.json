@@ -1,0 +1,45 @@
+{
+  "unit": "L470",
+  "sourceReview": {
+    "ref": "c6a4ebceffe8f67fb2131ff73dab9645bb917b59",
+    "findings": [
+      "S01 答應 should use Taiwan-realized 搭應 pronunciation",
+      "S04 review item was attached to image but its text requests the same pronunciation repair"
+    ]
+  },
+  "repair": "S01 and S04 regenerated as complete audio units with OpenAI gpt-4o-mini-tts shimmer; spoken homophone 搭應 forced first-tone ㄉㄚ. No cutting or splicing.",
+  "candidateReview": "alloy, shimmer and sage complete-unit candidates all passed first-tone 搭 and Taiwan-natural checks; shimmer selected to preserve package voice consistency.",
+  "technicalScope": "gpt-audio-1.5 review of final processed M4As; renewed teacher listening still required.",
+  "results": [
+    {
+      "file": "L470-S01.m4a",
+      "sha256": "fa5c5fc2fffeffa77510929985097d80c1c73901bb5195dd5b25a11e35d0dc86",
+      "expected": "爸爸答應教我拿手絕活",
+      "transcriptTraditional": "爸爸答應教我拿手絕活",
+      "matchesExpectedMeaning": true,
+      "daTone": "1",
+      "daContour": "high-level",
+      "daSoundsLike": "搭",
+      "yingTone": "4",
+      "overallAccent": "Taiwan-natural",
+      "finalComplete": true,
+      "defects": [],
+      "confidence": 0.95
+    },
+    {
+      "file": "L470-S04.m4a",
+      "sha256": "2a407e314cebe3eb26b4f0eefa2d644a95c80d548e5ea519cfc3e65d56750aee",
+      "expected": "答應別人的事就不該忘記",
+      "transcriptTraditional": "答應別人的事就不該忘記",
+      "matchesExpectedMeaning": true,
+      "daTone": "1",
+      "daContour": "high-level",
+      "daSoundsLike": "搭",
+      "yingTone": "4",
+      "overallAccent": "Taiwan-natural",
+      "finalComplete": true,
+      "defects": [],
+      "confidence": 0.97
+    }
+  ]
+}

@@ -1,0 +1,1465 @@
+{
+  "id": "L472",
+  "kind": "lesson",
+  "order": 472,
+  "title": "案",
+  "newChars": [
+    "案"
+  ],
+  "zhuyin": {
+    "案": "ㄢˋ"
+  },
+  "charAudio": {
+    "案": "/assets/lessons/L472/audio/char-u6848.m4a"
+  },
+  "requiredRounds": 5,
+  "packageStatus": "dependency-blocked-asset-complete",
+  "dependsOnLessons": [
+    "L467",
+    "L468",
+    "L469",
+    "L470",
+    "L471"
+  ],
+  "provisionalLearnedChars": [
+    "活",
+    "該",
+    "應",
+    "答",
+    "題"
+  ],
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L471",
+    "reviewMilestones": [
+      "R057",
+      "R058"
+    ],
+    "milestoneAfterLesson": 465
+  },
+  "teacherNotes": "Formal Editor handoff assigned to Production A. Base origin/main 29406e21 with formal L001-L465 招 and 469 unique learned Han. L467-L471 provide provisional 活、該、應、答、題; Release must also satisfy R057/R058 after L465. Allowed set has 475 unique Han. 反、植、汽 remain forbidden. S01 uses facial expression only, with no blocks or checking tools. S05 bag remains completely blank and undecorated. Production package only; Release owns shared production integration and main merge.",
+  "sourceMainCommit": "29406e21ead23463b62b06812997e6a871ffcef1",
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已",
+    "近",
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名",
+    "第",
+    "念",
+    "號",
+    "數",
+    "報",
+    "頁",
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙",
+    "選",
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算",
+    "弱",
+    "越",
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "果",
+    "如",
+    "結",
+    "合",
+    "教",
+    "室",
+    "班",
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員",
+    "自",
+    "己",
+    "主",
+    "由",
+    "意",
+    "願",
+    "互",
+    "助",
+    "補",
+    "修",
+    "習",
+    "練",
+    "運",
+    "賽",
+    "機",
+    "操",
+    "器",
+    "樂",
+    "音",
+    "拍",
+    "歌",
+    "唱",
+    "舞",
+    "台",
+    "候",
+    "演",
+    "表",
+    "現",
+    "突",
+    "實",
+    "其",
+    "中",
+    "午",
+    "文",
+    "日",
+    "期",
+    "待",
+    "招",
+    "活",
+    "該",
+    "應",
+    "答",
+    "題",
+    "案"
+  ],
+  "sentences": [
+    {
+      "id": "L472-S01",
+      "text": "這個答案很怪，應該有問題。",
+      "spokenText": "這個答案很怪應該有問題",
+      "displayLines": [
+        "這個答案",
+        "很怪，",
+        "應該有問題。"
+      ],
+      "focusChar": "案",
+      "zhuyinOverrides": {
+        "2": "ㄉㄚˊ",
+        "6": "ㄧㄥ"
+      },
+      "imageNotes": "家中書桌，主角小女孩看著自己的作業，皺眉、露出疑惑表情，指著作業向旁邊的主角爸爸詢問。爸爸專注看她指的地方。老師最後明確修正：不放積木，不放計數工具或其他核對道具，只靠疑惑表情和互動表達。作業內容不需可讀，不必把錯誤答案具體畫出來。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern children picture-book illustration. Use the approved L058 set as STYLE ONLY, with natural refined preschool-child proportions, warm Taiwan environments, rich paper and fabric texture, clear safe action, uncluttered phone-readable composition and safe margins. Preserve recurring cast identities from the approved family and teacher anchors. Recurring protagonist girl: preschool child with short dark-brown bob, pink hair clip, expressive dark eyes, pink cardigan over cream blouse, navy skirt and pink shoes. Recurring mother: adult woman with warm brown bob, cream blouse and blue jeans. Recurring father: adult man with short dark hair, warm approachable face, pale-blue collared shirt and khaki trousers. Generic people remain visually distinct. No visible or readable text, letters, numbers, equations, labels, brands, logos, captions, symbols, or watermarks. At the home study desk, the recurring protagonist girl looks at her own open workbook with a clearly puzzled frown. She points to one place on the page and turns to ask the recurring father seated beside her; father leans in and looks attentively at exactly where she points. Express that the answer seems strange only through her doubtful face and their interaction. The workbook content is angled away and unreadable. Absolutely no building blocks, counters, counting tools, calculator, checking aids, correction marks, legible answer, equation, or numbers.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L472/images/L472-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L472/audio/L472-S01.m4a",
+        "durationMs": 3237,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 180
+          },
+          {
+            "charIndex": 1,
+            "startMs": 180,
+            "endMs": 360
+          },
+          {
+            "charIndex": 2,
+            "startMs": 360,
+            "endMs": 760
+          },
+          {
+            "charIndex": 3,
+            "startMs": 760,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1000,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1500,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1980,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2060,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2260,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2600,
+            "endMs": 2850
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2850,
+            "endMs": 3100
+          }
+        ]
+      }
+    },
+    {
+      "id": "L472-S02",
+      "text": "答錯了，應該再想一想。",
+      "spokenText": "答錯了應該再想一想",
+      "displayLines": [
+        "答錯了，應該",
+        "再想一想。"
+      ],
+      "focusChar": "應",
+      "zhuyinOverrides": {
+        "0": "ㄉㄚˊ",
+        "3": "ㄧㄥ"
+      },
+      "imageNotes": "家中，主角爸爸和主角小女孩玩看局部猜動物的圖卡遊戲。爸爸展示一張動物局部圖，女孩剛選出的完整動物圖卡與之不符；爸爸溫和示意再觀察，女孩收回手、認真思考。靠圖像明確表現是猜錯後再想，不需題目文字、數字或打叉符號；不是責罵，也不直接揭露正解。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern children picture-book illustration. Use the approved L058 set as STYLE ONLY, with natural refined preschool-child proportions, warm Taiwan environments, rich paper and fabric texture, clear safe action, uncluttered phone-readable composition and safe margins. Preserve recurring cast identities from the approved family and teacher anchors. Recurring protagonist girl: preschool child with short dark-brown bob, pink hair clip, expressive dark eyes, pink cardigan over cream blouse, navy skirt and pink shoes. Recurring mother: adult woman with warm brown bob, cream blouse and blue jeans. Recurring father: adult man with short dark hair, warm approachable face, pale-blue collared shirt and khaki trousers. Generic people remain visually distinct. No visible or readable text, letters, numbers, equations, labels, brands, logos, captions, symbols, or watermarks. At home, recurring father and recurring girl play a picture-card game about guessing an animal from a close-up detail. Father holds one card showing only a distinctive cropped animal detail such as spotted fur and a curved ear. On the table, the girl's just-selected full-animal card clearly does not match that detail. Father gently gestures to look again; the girl pulls her hand back and studies both cards thoughtfully. Make the incorrect guess and renewed thinking visible through image differences and body language. Do not reveal the correct full animal. No scolding, red X, written question, numbers, or text.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L472/images/L472-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L472/audio/L472-S02.m4a",
+        "durationMs": 2497,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1020,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1140,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1420,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1780,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2040,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2260,
+            "endMs": 2460
+          }
+        ]
+      }
+    },
+    {
+      "id": "L472-S03",
+      "text": "你不該看別人的答案。",
+      "spokenText": "你不該看別人的答案",
+      "displayLines": [
+        "你不該看",
+        "別人的答案。"
+      ],
+      "focusChar": "案",
+      "zhuyinOverrides": {
+        "7": "ㄉㄚˊ"
+      },
+      "imageNotes": "小學教室各自作答，主角小女孩偏頭想看旁邊 generic 同學的作業紙，固定老師在旁溫和但明確地指回女孩自己的紙。老師使用低髮髻、圓框眼鏡、墨綠襯衫與深藍教師背心的明確教師造型，不能像主角媽媽。不是合作討論或互相核對。「你」指被老師提醒的主角小女孩，不要換成固定「你」小男孩；鄰座用 generic 同學即可，不需小光、小月。紙上無需可讀內容。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern children picture-book illustration. Use the approved L058 set as STYLE ONLY, with natural refined preschool-child proportions, warm Taiwan environments, rich paper and fabric texture, clear safe action, uncluttered phone-readable composition and safe margins. Preserve recurring cast identities. Recurring protagonist girl: preschool child with short dark-brown bob, pink hair clip, expressive dark eyes, pink cardigan over cream blouse, navy skirt and pink shoes. The recurring school teacher must be visually distinct from the protagonist mother: dark hair neatly tied in a low bun, thin round glasses, muted teal collared blouse under a navy classroom vest, charcoal ankle-length trousers, practical dark flats, and a blank teacher lanyard; no cream blouse, cardigan, apron, jeans, or mother-like home styling. Generic people remain visually distinct. No visible or readable text, letters, numbers, equations, labels, brands, logos, captions, symbols, or watermarks. In a primary-school classroom during quiet individual work, the recurring protagonist girl tilts her head and eyes toward a neighboring generic classmate's paper. The recurring teacher stands nearby and gently but clearly points back to the girl's own separate paper. Desks and body orientation must show independent answering, not collaboration or checking together. The reminded child is the recurring girl; the neighbor is a generic classmate unlike Xiaoguang or Xiaoyue. Papers remain unreadable and contain no legible marks, words, numbers, or answers. Calm correction, no humiliation.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L472/images/L472-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L472/audio/L472-S03.m4a",
+        "durationMs": 2811,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1420,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1780,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2040,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2260,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2540,
+            "endMs": 2720
+          }
+        ]
+      }
+    },
+    {
+      "id": "L472-S04",
+      "text": "這次活動的主題是動物。",
+      "spokenText": "這次活動的主題是動物",
+      "displayLines": [
+        "這次活動的",
+        "主題是動物。"
+      ],
+      "focusChar": "題",
+      "imageNotes": "親子手作活動，主角小女孩和主角媽媽一起做小狗造型紙面具；旁邊其他 generic 親子分別做鳥、魚等動物造型作品。各組都在做動物，讓共同主題直接可見，不混入車子、太空等其他主題，不靠海報標題解釋。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern children picture-book illustration. Use the approved L058 set as STYLE ONLY, with natural refined preschool-child proportions, warm Taiwan environments, rich paper and fabric texture, clear safe action, uncluttered phone-readable composition and safe margins. Preserve recurring cast identities from the approved family and teacher anchors. Recurring protagonist girl: preschool child with short dark-brown bob, pink hair clip, expressive dark eyes, pink cardigan over cream blouse, navy skirt and pink shoes. Recurring mother: adult woman with warm brown bob, cream blouse and blue jeans. Recurring father: adult man with short dark hair, warm approachable face, pale-blue collared shirt and khaki trousers. Generic people remain visually distinct. No visible or readable text, letters, numbers, equations, labels, brands, logos, captions, symbols, or watermarks. At a warm parent-child craft activity, the recurring protagonist girl and recurring mother work together on a clearly dog-shaped paper mask with ears and a muzzle. Nearby, two visually distinct generic parent-child pairs make a bird-shaped craft and a fish-shaped craft. Every visible project is an animal, making the common theme immediately clear without any sign. Preserve mother and girl identities; other adults and children must look distinct. No cars, rockets, space motifs, non-animal themes, title poster, labels, letters, or numbers.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L472/images/L472-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L472/audio/L472-S04.m4a",
+        "durationMs": 2740,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1060,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1220,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1460,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1700,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2140,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2480,
+            "endMs": 2660
+          }
+        ]
+      }
+    },
+    {
+      "id": "L472-S05",
+      "text": "我想在書包上畫小狗圖案。",
+      "spokenText": "我想在書包上畫小狗圖案",
+      "displayLines": [
+        "我想在書包上",
+        "畫小狗圖案。"
+      ],
+      "focusChar": "案",
+      "imageNotes": "家中桌上放主角小女孩自己的素面布書包；女孩拿著一張小狗圖案草圖靠近書包，比較想畫的位置，轉頭向主角媽媽表達想法。書包仍未畫上圖案，保留「我想」的計畫狀態；草圖可畫狗，不要寫姓名或品牌。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern children picture-book illustration. Use the approved L058 set as STYLE ONLY, with natural refined preschool-child proportions, warm Taiwan environments, rich paper and fabric texture, clear safe action, uncluttered phone-readable composition and safe margins. Preserve recurring cast identities from the approved family and teacher anchors. Recurring protagonist girl: preschool child with short dark-brown bob, pink hair clip, expressive dark eyes, pink cardigan over cream blouse, navy skirt and pink shoes. Recurring mother: adult woman with warm brown bob, cream blouse and blue jeans. Recurring father: adult man with short dark hair, warm approachable face, pale-blue collared shirt and khaki trousers. Generic people remain visually distinct. No visible or readable text, letters, numbers, equations, labels, brands, logos, captions, symbols, or watermarks. At a home table lies the recurring girl's own completely plain blank cloth schoolbag. The recurring girl holds a separate sheet with one simple dog illustration close to the bag, comparing possible placement, and turns toward recurring mother to share her idea. Her pencil remains above the table, not touching the bag. The bag must still be entirely undecorated: no dog, sketch, outline, paint, print, patch, or finished design on it. The plan sheet may show only a dog picture, with no name, words, brand, or pseudo-text. Preserve the not-yet-done planning state.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L472/images/L472-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L472/audio/L472-S05.m4a",
+        "durationMs": 3719,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 270
+          },
+          {
+            "charIndex": 1,
+            "startMs": 270,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1080,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1700,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2060,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2260,
+            "endMs": 2840
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2840,
+            "endMs": 3100
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3100,
+            "endMs": 3440
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3440,
+            "endMs": 3640
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L472-G01",
+      "type": "find-character",
+      "sentenceId": "L472-S01",
+      "targetChar": "案",
+      "targetCharIndex": 3,
+      "prompt": "請幫小兔子找出案，點一下句子中的案。"
+    },
+    {
+      "id": "L472-G02",
+      "type": "teach-character",
+      "sentenceId": "L472-S05",
+      "targetChar": "案",
+      "targetCharIndex": 10,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "我想在書包上畫小狗圖",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L472/audio/L472-G02-prefix.m4a",
+        "prefixAudio": {
+          "spokenText": "我想在書包上畫小狗圖",
+          "src": "/assets/lessons/L472/audio/L472-G02-prefix.m4a",
+          "durationMs": 3322,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 300
+            },
+            {
+              "charIndex": 1,
+              "startMs": 300,
+              "endMs": 600
+            },
+            {
+              "charIndex": 2,
+              "startMs": 600,
+              "endMs": 1000
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1000,
+              "endMs": 1360
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1360,
+              "endMs": 1660
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1660,
+              "endMs": 2000
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2000,
+              "endMs": 2140
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2140,
+              "endMs": 2640
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2640,
+              "endMs": 2920
+            },
+            {
+              "charIndex": 9,
+              "startMs": 2920,
+              "endMs": 3240
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L472-G03",
+      "type": "missing-character",
+      "sentenceId": "L472-S03",
+      "targetChar": "案",
+      "targetCharIndex": 8,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "L472-G03-O1",
+          "text": "對",
+          "correct": false
+        },
+        {
+          "id": "L472-G03-O2",
+          "text": "案",
+          "correct": true
+        },
+        {
+          "id": "L472-G03-O3",
+          "text": "錯",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L472-G04",
+      "type": "partial-order",
+      "sentenceId": "L472-S02",
+      "targetChar": "應",
+      "targetCharIndex": 3,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "L472-G04-O1",
+          "text": "再",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L472-G04-O2",
+          "text": "應",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L472-G04-O3",
+          "text": "想",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "L472-G04-O4",
+          "text": "該",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L472-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L472-S04",
+      "targetChar": "題",
+      "targetCharIndex": 6,
+      "prompt": "先按朋友的頭聽，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "L472-G05-O1",
+          "text": "這次活動的主題是動物。",
+          "spokenText": "這次活動的主題是動物",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L472/audio/L472-S04.m4a",
+          "audio": {
+            "spokenText": "這次活動的主題是動物",
+            "src": "/assets/lessons/L472/audio/L472-S04.m4a",
+            "durationMs": 2740,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1060,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1220,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1460,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1700,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2140,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2480,
+                "endMs": 2660
+              }
+            ]
+          }
+        },
+        {
+          "id": "L472-G05-O2",
+          "text": "這次活動的主題是水果。",
+          "spokenText": "這次活動的主題是水果",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L472/audio/L472-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "這次活動的主題是水果",
+            "src": "/assets/lessons/L472/audio/L472-G05-wrong-one.m4a",
+            "durationMs": 3384,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1480,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1780,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2100,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2500,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3040,
+                "endMs": 3300
+              }
+            ]
+          }
+        },
+        {
+          "id": "L472-G05-O3",
+          "text": "這次活動的主題是運動。",
+          "spokenText": "這次活動的主題是運動",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L472/audio/L472-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "這次活動的主題是運動",
+            "src": "/assets/lessons/L472/audio/L472-G05-wrong-two.m4a",
+            "durationMs": 2786,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1040,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1220,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1500,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1780,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2160,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2520,
+                "endMs": 2700
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "stage4AudioAlignment": {
+    "L472-G02-prefix": {
+      "spokenText": "我想在書包上畫小狗圖",
+      "src": "/assets/lessons/L472/audio/L472-G02-prefix.m4a",
+      "durationMs": 3322,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 300
+        },
+        {
+          "charIndex": 1,
+          "startMs": 300,
+          "endMs": 600
+        },
+        {
+          "charIndex": 2,
+          "startMs": 600,
+          "endMs": 1000
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1000,
+          "endMs": 1360
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1360,
+          "endMs": 1660
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1660,
+          "endMs": 2000
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2000,
+          "endMs": 2140
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2140,
+          "endMs": 2640
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2640,
+          "endMs": 2920
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2920,
+          "endMs": 3240
+        }
+      ]
+    },
+    "L472-G05-wrong-one": {
+      "spokenText": "這次活動的主題是水果",
+      "src": "/assets/lessons/L472/audio/L472-G05-wrong-one.m4a",
+      "durationMs": 3384,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 200
+        },
+        {
+          "charIndex": 1,
+          "startMs": 200,
+          "endMs": 720
+        },
+        {
+          "charIndex": 2,
+          "startMs": 720,
+          "endMs": 1020
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1020,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1300,
+          "endMs": 1480
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1480,
+          "endMs": 1780
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1780,
+          "endMs": 2100
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2100,
+          "endMs": 2500
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2500,
+          "endMs": 3040
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3040,
+          "endMs": 3300
+        }
+      ]
+    },
+    "L472-G05-wrong-two": {
+      "spokenText": "這次活動的主題是運動",
+      "src": "/assets/lessons/L472/audio/L472-G05-wrong-two.m4a",
+      "durationMs": 2786,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 220
+        },
+        {
+          "charIndex": 1,
+          "startMs": 220,
+          "endMs": 560
+        },
+        {
+          "charIndex": 2,
+          "startMs": 560,
+          "endMs": 780
+        },
+        {
+          "charIndex": 3,
+          "startMs": 780,
+          "endMs": 1040
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1040,
+          "endMs": 1220
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1220,
+          "endMs": 1500
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1500,
+          "endMs": 1780
+        },
+        {
+          "charIndex": 7,
+          "startMs": 1780,
+          "endMs": 2160
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2160,
+          "endMs": 2520
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2520,
+          "endMs": 2700
+        }
+      ]
+    }
+  },
+  "productionQA": {
+    "imageChecks": [
+      {
+        "sentenceId": "L472-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Girl points to her workbook with a puzzled expression while father looks at the same place; no blocks, counters, calculator, checking aids, readable answer or numbers.",
+        "castEvidence": "Recurring protagonist girl and father match the fixed family identities.",
+        "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+      },
+      {
+        "sentenceId": "L472-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Father presents a cropped animal-detail card; the girl retracts her hand and reconsiders a visibly nonmatching full-animal card without the correct animal being revealed.",
+        "castEvidence": "Recurring protagonist girl and father match the fixed family identities.",
+        "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+      },
+      {
+        "sentenceId": "L472-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "During independent work, the girl glances at a generic neighbor’s separate paper while the teacher points back to the girl’s own paper.",
+        "castEvidence": "Teacher has low bun, round glasses, muted teal collared blouse, navy classroom vest and lanyard, visibly distinct from the protagonist mother; girl remains the recurring protagonist.",
+        "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+      },
+      {
+        "sentenceId": "L472-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Mother and girl make a dog mask while other distinct parent-child pairs make bird and fish crafts, so the shared animal theme is visible without signage.",
+        "castEvidence": "Recurring mother and girl match family anchors; generic adults and children are distinct.",
+        "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+      },
+      {
+        "sentenceId": "L472-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Girl compares a dog drawing on a separate plan sheet with a completely blank cloth schoolbag; pencil does not touch the bag and the plan remains unfinished.",
+        "castEvidence": "Recurring mother and girl match the fixed family identities.",
+        "comparison": "Final exported WebP checked against the approved L058-derived style/cast reference and the role-separation rules in LESSON_VISUAL_CAST_SOP."
+      }
+    ],
+    "browserQA": {
+      "phoneLayout": "All approved displayLines retained exactly; every visible line is at most six characters. Static schema and package checks cover all five canonical Stage 4 games.",
+      "playback": "All nine final AAC tracks decode successfully; interactive pre-merge asset QA is provided by the immutable asset-review URL after push.",
+      "limitations": [
+        "Physical microphone capture and human listening are not claimed; final processed media was supplied to an acoustic AI model and Whisper for pronunciation/transcript verification."
+      ]
+    },
+    "evidence": "curriculum-workflow/generated/L472-qa-evidence.json",
+    "alignmentEvidence": "curriculum-workflow/generated/L472-alignment-evidence.json",
+    "teacherAssetReview": {
+      "status": "PASS",
+      "scope": "all five images and all lesson/Stage 4 audio",
+      "reviewedCommit": "9ac13ee222d1900d9675c1f6365a4d6ef6193b4f",
+      "reviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L472&ref=9ac13ee222d1900d9675c1f6365a4d6ef6193b4f",
+      "teacherStatement": "圖片檔跟音訊審核通過。"
+    }
+  }
+}

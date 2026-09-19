@@ -1,0 +1,148 @@
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "speed": 0.9,
+  "inputPolicy": "Exact approved spokenText, full independent utterances. No homophone substitution, speech extraction or splicing.",
+  "standaloneInstructions": "Pronounce the input 應 with its 應該 pronunciation: yīng, ying1, ㄧㄥ. This is FIRST TONE, high and completely LEVEL, with a sustained steady musical pitch from beginning to end. Exactly one syllable. Gentle clear female Taiwan Mandarin voice. Say only yīng.",
+  "contextReadings": {
+    "S01": "yun4 dong4 hou4 ying1 gai1 he1 yi4 dian3 shui3",
+    "S02": "xiao3 gou3 mei2 huo2 li4 ying1 gai1 shi4 sheng1 bing4 le5",
+    "S05": "jie1 dai4 ren2 yuan2 mang2 zhe5 tong1 hua4 mei2 hui2 ying4 wo3",
+    "G02prefix": "jie1 dai4 ren2 yuan2 mang2 zhe5 tong1 hua4 mei2 hui2",
+    "G02suffix": "wo3"
+  },
+  "rawLocation": "curriculum-workflow/audio-inbox/L469/ (Git ignored local MP3)",
+  "processing": "Standard mono AAC 44100Hz 96k processing; near-silent trailing tail shortened only after final decay retaining 150ms, no speech cuts. Single-character normalization applied.",
+  "standalonePitchEvidence": [
+    [
+      0.245,
+      205.1,
+      0.036
+    ],
+    [
+      0.265,
+      195.1,
+      0.082
+    ],
+    [
+      0.285,
+      195.1,
+      0.124
+    ],
+    [
+      0.305,
+      190.5,
+      0.147
+    ],
+    [
+      0.325,
+      192.8,
+      0.152
+    ],
+    [
+      0.345,
+      195.1,
+      0.157
+    ],
+    [
+      0.365,
+      200,
+      0.186
+    ],
+    [
+      0.385,
+      202.5,
+      0.228
+    ],
+    [
+      0.405,
+      205.1,
+      0.269
+    ],
+    [
+      0.425,
+      205.1,
+      0.29
+    ],
+    [
+      0.445,
+      202.5,
+      0.283
+    ],
+    [
+      0.465,
+      202.5,
+      0.252
+    ],
+    [
+      0.485,
+      200,
+      0.219
+    ],
+    [
+      0.505,
+      202.5,
+      0.196
+    ],
+    [
+      0.525,
+      202.5,
+      0.182
+    ],
+    [
+      0.545,
+      202.5,
+      0.166
+    ],
+    [
+      0.565,
+      205.1,
+      0.161
+    ],
+    [
+      0.585,
+      205.1,
+      0.161
+    ],
+    [
+      0.605,
+      200,
+      0.163
+    ],
+    [
+      0.625,
+      200,
+      0.164
+    ],
+    [
+      0.645,
+      200,
+      0.164
+    ],
+    [
+      0.665,
+      200,
+      0.149
+    ],
+    [
+      0.685,
+      197.5,
+      0.125
+    ],
+    [
+      0.705,
+      192.8,
+      0.093
+    ],
+    [
+      0.725,
+      188.2,
+      0.055
+    ],
+    [
+      0.745,
+      188.2,
+      0.019
+    ]
+  ]
+}

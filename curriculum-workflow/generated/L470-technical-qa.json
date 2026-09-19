@@ -1,0 +1,46 @@
+{
+  "unit": "L470",
+  "status": "dependency-blocked-asset-complete",
+  "productionBase": "acd71a5b",
+  "releaseBlockers": [
+    "R057",
+    "R058",
+    "L466",
+    "L467",
+    "L468",
+    "L469"
+  ],
+  "assets": {
+    "images": 5,
+    "audio": 10,
+    "imageFormat": "WebP 1024x1024",
+    "audioFormat": "mono AAC 44.1kHz M4A"
+  },
+  "allowedChars": {
+    "expectedUnique": 474,
+    "actualUnique": 474,
+    "result": "PASS"
+  },
+  "images": "PASS",
+  "audio": "PASS",
+  "pronunciation": "PASS; repaired S01/S04 final M4As heard as Taiwan-realized 搭應, first-tone ㄉㄚ, Taiwan-natural and defect-free",
+  "timings": "PASS",
+  "stage4": "PASS",
+  "browserQA": "Browser QA fallback: playback/highlight/recording QA was not certified because the current control surface has no reliable computer-audio return or physical-phone microphone channel. Live syllable-highlight synchronization and G02 phone recording/replay remain unverified.",
+  "packageIntake": "PASS on pushed origin/codex/l470-complete-package at 7f118a318c624a5599f5cc3b8ed23706cbe9cd91 after S01/S04 Taiwan pronunciation repair: 5 images, 10 audio files, canonical Stage 4 and zero blocking defects.",
+  "teacherRepair": {
+    "sourceRef": "c6a4ebceffe8f67fb2131ff73dab9645bb917b59",
+    "scope": [
+      "L470-S01 audio",
+      "L470-S04 audio"
+    ],
+    "note": "S04 marker was attached to image but requested pronunciation; image unchanged",
+    "status": "technical PASS; renewed teacher listening pending"
+  },
+  "teacherAudioAcceptance": {
+    "ref": "fedb9fe92a418585109624e798fb45dc963ecb6a",
+    "date": "2026-09-19",
+    "scope": "all L470 audio, including repaired S01 and S04 答應 pronunciation",
+    "result": "PASS; no remaining audio issue"
+  }
+}

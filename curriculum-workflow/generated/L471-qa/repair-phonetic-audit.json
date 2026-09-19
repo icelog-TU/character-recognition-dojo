@@ -1,0 +1,40 @@
+{
+  "unit": "L471",
+  "reviewedRef": "ca8f00546f161003a4afba476ce2d03ecabfbf30",
+  "result": "PASS — TEACHER APPROVED",
+  "method": "gpt-audio tone inspection on selected full-sentence TTS candidates, followed only by silence trim, loudness normalization and AAC encoding; exact-Han transcript QA rerun on final M4A",
+  "manualListeningClaimed": false,
+  "files": [
+    {
+      "file": "L471-S01.m4a",
+      "sourceCandidate": "S01-c.mp3",
+      "expected": "這個問題我應該怎麼回答",
+      "phoneticEvidence": "回答 = ㄏㄨㄟˊ ㄉㄚˊ; all syllables clear",
+      "finalDurationMs": 2989
+    },
+    {
+      "file": "L471-G05-wrong-one.m4a",
+      "sourceCandidate": "wrong-one-b.mp3",
+      "expected": "做不到的事不該答應朋友",
+      "phoneticEvidence": "答應 = ㄉㄚ ㄧㄥˋ; all syllables clear",
+      "finalTranscript": "做不到的事不該答應朋友"
+    },
+    {
+      "file": "L471-G05-wrong-two.m4a",
+      "sourceCandidate": "wrong-two-e.mp3",
+      "expected": "做不到的事不該答應老師",
+      "phoneticEvidence": "答應 = ㄉㄚ ㄧㄥˋ; no unclear or clipped syllable",
+      "finalTranscript": "做不到的事不該答應老師"
+    }
+  ],
+  "teacherReReview": "PASS",
+  "teacherAudioReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-09-19",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "5d4ed2bec49ec288138c6f40053972d46bf9df2f",
+    "repairedAssetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "scope": "All final L471 audio, including repaired S01 回答 and both G05 答應 wrong-option files",
+    "statement": "471 图档跟音讯都审核通过了。"
+  }
+}

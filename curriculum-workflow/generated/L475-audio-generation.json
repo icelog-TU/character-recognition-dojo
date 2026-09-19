@@ -1,0 +1,9 @@
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "coral",
+  "speed": 0.9,
+  "inputPolicy": "Exact approved spokenText; independent complete sentence and G02 fragment utterances; no extraction/splicing/homophone substitution",
+  "readingInstructions": "且 qie3; 答案 da2 an4; 相反/相同 xiang1; G02 反面不但有答案而 / 有說明; final er2 complete",
+  "processing": "Standard mono AAC 44100Hz 96k, near-silence-only tail shortening retaining 150ms after final decay; no spoken syllable cuts",
+  "rawLocation": "curriculum-workflow/audio-inbox/L475/ (ignored local MP3)"
+}

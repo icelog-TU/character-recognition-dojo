@@ -1,0 +1,498 @@
+{
+  "unit": "L471",
+  "engine": "OpenAI gpt-4o-mini-tts + whisper-1",
+  "result": "REPAIRED PASS — TEACHER APPROVED",
+  "manualListeningClaimed": false,
+  "pronunciationGuardrails": [
+    "題 ㄊㄧˊ",
+    "S01 應該 ㄧㄥ ㄍㄞ",
+    "S01 回答 ㄏㄨㄟˊ ㄉㄚˊ",
+    "S02 答不出來 ㄉㄚˊ",
+    "S05 and G05 答應 ㄉㄚ ㄧㄥˋ"
+  ],
+  "files": [
+    {
+      "file": "L471-S01.m4a",
+      "expected": "這個問題我應該怎麼回答",
+      "transcript": "這個問題我應該怎麼回答",
+      "expectedHan": "這個問題我應該怎麼回答",
+      "actualHan": "這個問題我應該怎麼回答",
+      "contentMatch": true,
+      "durationMs": 2989,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 180
+        },
+        {
+          "charIndex": 1,
+          "startMs": 180,
+          "endMs": 360
+        },
+        {
+          "charIndex": 2,
+          "startMs": 360,
+          "endMs": 660
+        },
+        {
+          "charIndex": 3,
+          "startMs": 660,
+          "endMs": 960
+        },
+        {
+          "charIndex": 4,
+          "startMs": 960,
+          "endMs": 1540
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1540,
+          "endMs": 1710
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1710,
+          "endMs": 1880
+        },
+        {
+          "charIndex": 7,
+          "startMs": 1880,
+          "endMs": 2100
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2100,
+          "endMs": 2320
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2320,
+          "endMs": 2580
+        },
+        {
+          "charIndex": 10,
+          "startMs": 2580,
+          "endMs": 2800
+        }
+      ],
+      "timingMethod": "whisper-1-word-timestamps",
+      "tailMs": 189
+    },
+    {
+      "file": "L471-S02.m4a",
+      "expected": "這個問題你不該答不出來",
+      "transcript": "這個問題你不該答不出來",
+      "expectedHan": "這個問題你不該答不出來",
+      "actualHan": "這個問題你不該答不出來",
+      "contentMatch": true,
+      "durationMs": 3218,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "charIndex": 1,
+          "startMs": 160,
+          "endMs": 320
+        },
+        {
+          "charIndex": 2,
+          "startMs": 320,
+          "endMs": 580
+        },
+        {
+          "charIndex": 3,
+          "startMs": 580,
+          "endMs": 840
+        },
+        {
+          "charIndex": 4,
+          "startMs": 840,
+          "endMs": 1480
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1480,
+          "endMs": 1780
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1780,
+          "endMs": 1960
+        },
+        {
+          "charIndex": 7,
+          "startMs": 1960,
+          "endMs": 2240
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2240,
+          "endMs": 2520
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2520,
+          "endMs": 2700
+        },
+        {
+          "charIndex": 10,
+          "startMs": 2700,
+          "endMs": 2880
+        }
+      ],
+      "timingMethod": "whisper-1-word-timestamps",
+      "tailMs": 338
+    },
+    {
+      "file": "L471-S03.m4a",
+      "expected": "這本書的主題是動物的生活",
+      "transcript": "這本書的主題是動物的生活",
+      "expectedHan": "這本書的主題是動物的生活",
+      "actualHan": "這本書的主題是動物的生活",
+      "contentMatch": true,
+      "durationMs": 5046,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 400
+        },
+        {
+          "charIndex": 1,
+          "startMs": 400,
+          "endMs": 740
+        },
+        {
+          "charIndex": 2,
+          "startMs": 740,
+          "endMs": 1020
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1020,
+          "endMs": 1600
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1600,
+          "endMs": 1980
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1980,
+          "endMs": 2340
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2340,
+          "endMs": 3100
+        },
+        {
+          "charIndex": 7,
+          "startMs": 3100,
+          "endMs": 3540
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3540,
+          "endMs": 3760
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3760,
+          "endMs": 4420
+        },
+        {
+          "charIndex": 10,
+          "startMs": 4420,
+          "endMs": 4550
+        },
+        {
+          "charIndex": 11,
+          "startMs": 4550,
+          "endMs": 4680
+        }
+      ],
+      "timingMethod": "whisper-1-word-timestamps",
+      "tailMs": 366
+    },
+    {
+      "file": "L471-S04.m4a",
+      "expected": "車子有問題絕對不能開上路",
+      "transcript": "車子有問題絕對不能開上路",
+      "expectedHan": "車子有問題絕對不能開上路",
+      "actualHan": "車子有問題絕對不能開上路",
+      "contentMatch": true,
+      "durationMs": 3887,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 280
+        },
+        {
+          "charIndex": 1,
+          "startMs": 280,
+          "endMs": 640
+        },
+        {
+          "charIndex": 2,
+          "startMs": 640,
+          "endMs": 1040
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1040,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1300,
+          "endMs": 1560
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1560,
+          "endMs": 2180
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2180,
+          "endMs": 2500
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2500,
+          "endMs": 2660
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2660,
+          "endMs": 2820
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2820,
+          "endMs": 3220
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3220,
+          "endMs": 3540
+        },
+        {
+          "charIndex": 11,
+          "startMs": 3540,
+          "endMs": 3660
+        }
+      ],
+      "timingMethod": "whisper-1-word-timestamps",
+      "tailMs": 227
+    },
+    {
+      "file": "L471-S05.m4a",
+      "expected": "做不到的事不該答應別人",
+      "transcript": "做不到的事不該答應別人",
+      "expectedHan": "做不到的事不該答應別人",
+      "actualHan": "做不到的事不該答應別人",
+      "contentMatch": true,
+      "durationMs": 3061,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 300
+        },
+        {
+          "charIndex": 1,
+          "startMs": 300,
+          "endMs": 470
+        },
+        {
+          "charIndex": 2,
+          "startMs": 470,
+          "endMs": 640
+        },
+        {
+          "charIndex": 3,
+          "startMs": 640,
+          "endMs": 920
+        },
+        {
+          "charIndex": 4,
+          "startMs": 920,
+          "endMs": 1200
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1200,
+          "endMs": 1580
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1580,
+          "endMs": 1780
+        },
+        {
+          "charIndex": 7,
+          "startMs": 1780,
+          "endMs": 2080
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2080,
+          "endMs": 2300
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2300,
+          "endMs": 2540
+        },
+        {
+          "charIndex": 10,
+          "startMs": 2540,
+          "endMs": 2820
+        }
+      ],
+      "timingMethod": "whisper-1-word-timestamps",
+      "tailMs": 241
+    },
+    {
+      "file": "L471-G02-prefix.m4a",
+      "expected": "車子有問",
+      "transcript": "車子有問",
+      "expectedHan": "車子有問",
+      "actualHan": "車子有問",
+      "contentMatch": true,
+      "durationMs": 1814,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 400
+        },
+        {
+          "charIndex": 1,
+          "startMs": 400,
+          "endMs": 760
+        },
+        {
+          "charIndex": 2,
+          "startMs": 760,
+          "endMs": 1280
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1280,
+          "endMs": 1520
+        }
+      ],
+      "timingMethod": "whisper-1-word-timestamps",
+      "tailMs": 294
+    },
+    {
+      "file": "L471-G02-suffix.m4a",
+      "expected": "絕對不能開上路",
+      "transcript": "絕對不能開上路",
+      "expectedHan": "絕對不能開上路",
+      "actualHan": "絕對不能開上路",
+      "contentMatch": true,
+      "durationMs": 2153,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 340
+        },
+        {
+          "charIndex": 1,
+          "startMs": 340,
+          "endMs": 820
+        },
+        {
+          "charIndex": 2,
+          "startMs": 820,
+          "endMs": 980
+        },
+        {
+          "charIndex": 3,
+          "startMs": 980,
+          "endMs": 1140
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1140,
+          "endMs": 1460
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1460,
+          "endMs": 1720
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1720,
+          "endMs": 1880
+        }
+      ],
+      "timingMethod": "whisper-1-word-timestamps",
+      "tailMs": 273
+    },
+    {
+      "file": "L471-G05-wrong-one.m4a",
+      "expected": "做不到的事不該答應朋友",
+      "transcript": "做不到的事不該答應朋友",
+      "expectedHan": "做不到的事不該答應朋友",
+      "actualHan": "做不到的事不該答應朋友",
+      "contentMatch": true,
+      "durationMs": 3500
+    },
+    {
+      "file": "L471-G05-wrong-two.m4a",
+      "expected": "做不到的事不該答應老師",
+      "transcript": "做不到的事不該答應老師",
+      "expectedHan": "做不到的事不該答應老師",
+      "actualHan": "做不到的事不該答應老師",
+      "contentMatch": true,
+      "durationMs": 3500
+    },
+    {
+      "file": "char-u984c.m4a",
+      "expected": "題",
+      "transcript": "題",
+      "expectedHan": "題",
+      "actualHan": "題",
+      "contentMatch": true,
+      "durationMs": 795
+    }
+  ],
+  "pronunciationRepair": {
+    "reviewedRef": "ca8f00546f161003a4afba476ce2d03ecabfbf30",
+    "selectedCandidates": {
+      "L471-S01.m4a": "S01-c.mp3",
+      "L471-G05-wrong-one.m4a": "wrong-one-b.mp3",
+      "L471-G05-wrong-two.m4a": "wrong-two-e.mp3"
+    },
+    "evidence": [
+      "S01-c: 回答 = ㄏㄨㄟˊ ㄉㄚˊ",
+      "wrong-one-b: 答應 = ㄉㄚ ㄧㄥˋ",
+      "wrong-two-e: 答應 = ㄉㄚ ㄧㄥˋ"
+    ],
+    "finalTranscode": "Silence trim, loudness normalization and AAC encoding only; no splicing and no pitch/time modification.",
+    "manualListeningClaimed": false,
+    "teacherReReview": "PASS"
+  },
+  "teacherAudioReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-09-19",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "5d4ed2bec49ec288138c6f40053972d46bf9df2f",
+    "repairedAssetCommit": "46e2424c17c1b84f8310accc06bb18655ca1b119",
+    "scope": "All final L471 audio, including repaired S01 回答 and both G05 答應 wrong-option files",
+    "statement": "471 图档跟音讯都审核通过了。"
+  }
+}

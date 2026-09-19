@@ -1,0 +1,82 @@
+[
+  {
+    "file": "char-u800c.m4a",
+    "sha256": "9c985f2e9c69e2446a124b376bc8323c7247d97cb1909e1f835717ac88496f8a",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Transcribe the single Taiwan Mandarin Chinese syllable in this recording and identify its zhuyin and tone. Check whether it is exactly 而 ㄦˊ with a complete rising second tone, spoken once, with no added word, clipping, or awkward silence. Return concise JSON. Do not identify or describe the speaker.",
+    "result": "{\"syllable\": \"而\", \"zhuyin\": \"ㄦˊ\", \"tone\": 2, \"matches_criteria\": true}"
+  },
+  {
+    "file": "L474-G02-prefix.m4a",
+    "sha256": "c636715cb5a36a225f3fea04126beba64dc8371e75513d92733e75a57be66a85",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"想幫忙反\", \"omissions\": null, \"clipped\": false, \"repeated_syllables\": null, \"substituted_syllables\": null, \"awkward_pauses\": false, \"pronunciation_notes\": {\"final_反_complete\": true, \"no_而_following\": true}, \"delivery_style\": \"natural Taiwan Mandarin\"}"
+  },
+  {
+    "file": "L474-G02-suffix.m4a",
+    "sha256": "56e809a1d2a34198b8efd12524a879725f6b9876db8e55843c4a59b9dd60da81",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"把水打翻了\", \"notes\": {\"omissions\": null, \"clipped\": null, \"repeated\": null, \"substituted\": null, \"awkward_pauses\": null, \"pronunciation\": {\"了_neutral_tone_audible\": true}, \"natural_taiwan_mandarin\": true}}"
+  },
+  {
+    "file": "L474-G05-wrong-one.m4a",
+    "sha256": "e3f156f2b3bb70fea86df0e5068fcb1b404ed02750e2516f0f8a26787438fd59",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"這題應該有一個答案\", \"notes\": {\"syllable_issues\": [], \"awkward_pauses\": \"沒有明顯停頓\", \"pronunciation\": {\"natural_taiwan_mandarin\": true, \"應該_應\": \"第一聲 ㄧㄥ\", \"答案_答\": \"ㄉㄚˊ\"}, \"other_observations\": \"整體語調自然，偏台灣腔\"}}"
+  },
+  {
+    "file": "L474-G05-wrong-two.m4a",
+    "sha256": "ab6ed47d0bedd672ce8df8577ad1bf77664b7f99ce17fd0e943aa43502470f20",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"這題應該有三個答案。\", \"notes\": {\"omissions\": null, \"clipped\": null, \"repetitions\": null, \"substitutions\": null, \"awkward_pauses\": null, \"pronunciation\": {\"應該\":\"應 appears to be first tone ㄧㄥ.\", \"答案\":\"答 sounds like ㄉㄚˊ.\"}, \"dialect_judgment\": \"The delivery sounds like natural Taiwan Mandarin, not Mainland broadcast Mandarin.\"}}"
+  },
+  {
+    "file": "L474-S01.m4a",
+    "sha256": "6a53793055fa084873ce1e84e4c6b6856a7cdd78f95d9de48d2c00eda6f6414e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"這題太難了，我不知道答案。\", \"details\": {\"syllable_issues\": \"None detected\", \"awkward_pauses\": \"No awkward pauses noted\", \"pronunciation_notes\": \"The phrase 答案 appears; 答 is pronounced ㄉㄚˊ. Delivery sounds like natural Taiwan Mandarin, not Mainland broadcast style.\"}}"
+  },
+  {
+    "file": "L474-S02.m4a",
+    "sha256": "72a787d965832b93d757fc516343a2a8a430df1a8a130345893d70160306f651",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"這題應該有兩個答案\", \"issues\": {\"omitted_clipped_repeated_substituted\": \"none noted\", \"awkward_pauses\": \"none detected\", \"pronunciation_notes\": {\"應\": \"first tone ㄧㄥ\", \"答\": \"pronounced ㄉㄚˊ\"}}, \"delivery\": \"Sounds like natural Taiwan Mandarin\"}"
+  },
+  {
+    "file": "L474-S03.m4a",
+    "sha256": "119ffa65b8c6ce91bcda56f471d295d942775cfdfc9edb714fd5b959a00b604d",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"越想睡反而越睡不著\", \"notes\": {\"omissions\": null, \"clipped\": null, \"repeated\": null, \"substitutions\": null, \"awkward_pauses\": false, \"pronunciation\": {\"而\": \"sounds like ㄦˊ\", \"睡不著\": \"著 sounds like ㄓㄠˊ\"}, \"natural_taiwan_mandarin\": true}}"
+  },
+  {
+    "file": "L474-S04.m4a",
+    "sha256": "7d6d12fa0d088cf68eeacb210600e379ec2b006156a24c563f922587f219fa16",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\n  \"transcript\": \"想幫忙，反而把水打翻了。\",\n  \"details\": {\n    \"omissions_clipped_repeated_substitutions\": \"No noticeable omissions, clipping, repeats, or substitutions.\",\n    \"awkward_pauses\": \"There is a slight pause after 想幫忙, which sounds natural.\",\n    \"pronunciation_notes\": \"The pronunciation aligns closely with Taiwan Mandarin. The word 而 is pronounced as ㄦˊ, consistent with Taiwan Mandarin. The final '了' in 打翻了 is clearly a neutral tone.\",\n    \"tone_checks\": {\n      \"而\": \"ㄦˊ\",\n      \"答案\": \"Not present\",\n      \"應該\": \"Not present\",\n      \"睡不著\": \"Not present\",\n      \"而已\": \"Not present\",\n      \"想幫忙反\": \"The final 反 ㄈㄢˇ is complete, and no additional 而 occurs immediately after it.\",\n      \"把水打翻了\": \"The final 了 is audible and neutral tone.\"\n    },\n    \"naturalness\": \"The delivery sounds natural for Taiwan Mandarin, not like Mainland broadcast Mandarin.\"\n  }\n}"
+  },
+  {
+    "file": "L474-S05.m4a",
+    "sha256": "4e194e349c624e40f08d3c444a3eb31ac77755a7d49ce06e0fb9dc63dbad9934",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Without being given an expected transcript, return concise JSON with the exact Traditional Chinese transcript heard, any omitted/clipped/repeated/substituted syllable, awkward pauses, and pronunciation notes. Judge whether the delivery sounds like natural Taiwan Mandarin rather than Mainland broadcast Mandarin. If 而 occurs, report whether it is ㄦˊ. If 答案 occurs, report whether 答 is ㄉㄚˊ. If 應該 occurs, report whether 應 is first tone ㄧㄥ. If 睡不著 occurs, report whether 著 is ㄓㄠˊ. If 而已 occurs, report whether 已 is ㄧˇ. For the isolated prefix 想幫忙反, verify final 反 ㄈㄢˇ is complete and no 而 follows. For suffix 把水打翻了, verify final 了 is audible neutral tone. Do not infer only from likely context; state uncertainty. This is AI listening, not human QA.",
+    "result": "{\"transcript\": \"我只吃了一口而已\", \"pronunciation_notes\": {\"而已\": {\"而\": \"sounds like ㄦˊ\", \"已\": \"sounds like ㄧˇ\"}}, \"delivery\": \"The delivery sounds natural Taiwan Mandarin rather than Mainland broadcast Mandarin.\", \"issues\": {\"omitted\": false, \"clipped\": false, \"repeated\": false, \"substituted\": false, \"awkward_pauses\": false}}"
+  }
+]
