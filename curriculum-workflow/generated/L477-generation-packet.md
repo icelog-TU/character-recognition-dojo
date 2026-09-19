@@ -2520,4 +2520,4 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Correction: followed the marked flat-panel perimeter, continuous fold curve and raised-panel contour; removed the unwanted white triangular under-layer.
 - Pattern remains sparse, meaningless geometric shapes only on the raised reverse face.
 - Scope: S04 image only; text, audio, timings and Stage 4 data unchanged.
-- Immutable-ref targeted image QA: pending repair commit.
+- Immutable-ref targeted image QA: PASS at `e68df4dfc5dfaca92761f1cade5f6e15495e3929`; markup-guided S04 loaded at 1024×1024 with no image error.
