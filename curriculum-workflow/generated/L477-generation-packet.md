@@ -2504,4 +2504,4 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Teacher review source: `58cf0257add6f6d2044e129bd900d1b97ec10579`; issue: paper structure incorrect.
 - Repair: rebuilt S04 from three teacher-provided physical references as one continuous folded sheet with a shared hinge, consistent edges/perspective, blank face and puppy reverse face.
 - Scope: S04 image only; sentence, audio, timings and Stage 4 data unchanged.
-- Immutable-ref image QA: pending repair commit.
+- Immutable-ref targeted image QA: PASS at `3f377469b5a1b9f3ee843c1212c38446585c87bc`; repaired S04 loaded at 1024×1024 with no image error.
